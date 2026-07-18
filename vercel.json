@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Terme Leonardo · Abano Terme</title>
+<meta name="robots" content="noindex">
+<style>
+  body{font-family:Georgia,serif;background:#154e55;color:#fff;display:flex;min-height:100vh;
+       align-items:center;justify-content:center;text-align:center;margin:0}
+  a{color:#d8b95f;font-size:1.3rem;margin:0 .8rem;text-decoration:none;font-weight:bold}
+  h1{font-weight:normal}
+</style>
+<script>
+  var l=(navigator.language||'it').slice(0,2).toLowerCase();
+  if(['it','de','en','fr'].indexOf(l)<0)l='en';
+  location.replace(l+'.html');
+</script>
+</head>
+<body>
+  <div>
+    <h1>Hotel Terme Leonardo ★★★★</h1>
+    <p><a href="it.html">Italiano</a><a href="de.html">Deutsch</a><a href="en.html">English</a><a href="fr.html">Français</a></p>
+  </div>
+</body>
+</html>
