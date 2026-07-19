@@ -1,4 +1,4 @@
-# Hotel Terme Leonardo — Sito Web Multilingue
+# Hotel Terme Leonardo — Sito Web 
 
 Sito web moderno e responsive per l'Hotel Terme Leonardo, hotel 4 stelle ad Abano Terme (PD).
 
