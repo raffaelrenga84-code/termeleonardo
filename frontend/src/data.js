@@ -1,12 +1,15 @@
+const BASE = "https://www.termeleonardo.com/img";
+
 export const IMG = {
-  heroPool: "https://images.unsplash.com/photo-1676302144341-10563603f99a?crop=entropy&cs=srgb&fm=jpg&q=85&w=2000",
-  wellnessPool: "https://images.unsplash.com/photo-1680609989998-6183fcea718b?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  spaMassage: "https://images.unsplash.com/photo-1639162906614-0603b0ae95fd?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
-  golf: "https://images.unsplash.com/photo-1777738859687-e79ed3b5acc5?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  golf2: "https://images.unsplash.com/photo-1778305596101-4e0c5154d361?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
-  roomView: "https://images.unsplash.com/photo-1696854649609-1fd6e5abf87f?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
-  roomBalcony: "https://images.unsplash.com/photo-1719266084633-24981ecdc417?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
-  dining: "https://images.unsplash.com/photo-1616671285410-2a676a9a433d?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
+  heroPool: `${BASE}/outdoor-pool-hotel-leonardo-da-vinci-terme.jpg`,
+  wellnessPool: `${BASE}/view-hotel-leonardo-da-vinci-terme.jpg`,
+  spaMassage: `${BASE}/grotto-hotel-leonardo-da-vinci-terme.jpg`,
+  golf: `${BASE}/7-days-golf.jpg`,
+  roomView: `${BASE}/-hotel-leonardo-da-vinci-terme-3.jpg`,
+  roomBalcony: `${BASE}/suite-533-hotel-terme-lonardo-@2x.jpg`,
+  roomJunior: `${BASE}/junior-suite-32-1-hotel-terme-leonardo@2x.jpg`,
+  dining: `${BASE}/sommer-spezial-hotel-terme-leonardo.jpg`,
+  membership: `${BASE}/membership.jpg`,
 };
 
 export const NAV = [
@@ -25,6 +28,7 @@ export const OFFERS = [
     desc: "Offerta Golf, 7 Giorni all'Hotel Terme Leonardo ad Abano Terme.",
     price: "820",
     unit: "a persona",
+    img: `${BASE}/7-days-golf.jpg`,
     featured: true,
   },
   {
@@ -33,6 +37,7 @@ export const OFFERS = [
     desc: "3 Notti & Massaggio in camera Deluxe con vista sui Colli.",
     price: "400",
     unit: "a persona",
+    img: `${BASE}/sommer-spezial-hotel-terme-leonardo.jpg`,
   },
   {
     tag: "Smart",
@@ -40,6 +45,7 @@ export const OFFERS = [
     desc: "1 Notte & Massaggio. La fuga breve dedicata al relax.",
     price: "180",
     unit: "a persona",
+    img: `${BASE}/dolce-vita-mud-offer.jpg`,
   },
   {
     tag: "Escape",
@@ -47,6 +53,7 @@ export const OFFERS = [
     desc: "2 Notti immersi nelle piscine termali e nella natura.",
     price: "280",
     unit: "a persona",
+    img: `${BASE}/november-special.jpg`,
   },
 ];
 
