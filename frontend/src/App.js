@@ -8,6 +8,7 @@ import Golf from "@/components/site/Golf";
 import Rooms from "@/components/site/Rooms";
 import Dining from "@/components/site/Dining";
 import Offers from "@/components/site/Offers";
+import DaySpa from "@/components/site/DaySpa";
 import BookingForm from "@/components/site/BookingForm";
 import Footer from "@/components/site/Footer";
 
@@ -35,6 +36,7 @@ function App() {
         <Golf />
         <Rooms />
         <Dining />
+        <DaySpa />
         <Offers />
         <BookingForm />
       </main>

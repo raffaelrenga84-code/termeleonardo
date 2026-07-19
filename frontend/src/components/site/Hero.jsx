@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import { IMG } from "../../data";
+import { IMG, BOOKING_URL } from "../../data";
 
 export default function Hero() {
   return (
@@ -34,7 +34,9 @@ export default function Hero() {
           </p>
           <div className="flex flex-wrap gap-4 mt-10">
             <a
-              href="#prenota"
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               data-testid="hero-book-btn"
               className="rounded-full bg-[#F9F6F0] text-[#1A3626] px-8 py-4 text-sm font-semibold hover:bg-[#B08D57] hover:text-white transition-colors"
             >

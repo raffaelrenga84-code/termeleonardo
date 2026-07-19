@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { NAV } from "../../data";
+import { NAV, BOOKING_URL } from "../../data";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -43,7 +43,9 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#prenota"
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             data-testid="nav-book-btn"
             className="rounded-full bg-[#1A3626] text-[#F9F6F0] px-6 py-2.5 text-sm font-semibold hover:bg-[#B08D57] transition-colors"
           >
@@ -74,7 +76,7 @@ export default function Navbar() {
               {n.label}
             </a>
           ))}
-          <a href="#prenota" onClick={() => setOpen(false)} className="rounded-full bg-[#1A3626] text-[#F9F6F0] px-6 py-3 text-center font-semibold">
+          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="rounded-full bg-[#1A3626] text-[#F9F6F0] px-6 py-3 text-center font-semibold">
             Prenota
           </a>
         </div>

@@ -12,14 +12,37 @@ export const IMG = {
   membership: `${BASE}/membership.jpg`,
 };
 
+export const BOOKING_URL = "https://www.termeleonardo.com/it";
+export const DAYSPA_URL = "https://www.termeleonardo.com/it/day-spa/prenotazioni";
+
 export const NAV = [
   { label: "Benessere", href: "#benessere" },
   { label: "Sport & Natura", href: "#golf" },
   { label: "Camere", href: "#camere" },
   { label: "Ristorante", href: "#ristorante" },
+  { label: "Day Spa", href: "#dayspa" },
   { label: "Offerte", href: "#offerte" },
   { label: "Contatti", href: "#prenota" },
 ];
+
+export const DAYSPA = {
+  intro:
+    "Con la formula Day Spa puoi coccolarti anche solo per un giorno nelle nostre piscine e grotte termali, usufruendo di tutti i servizi senza pernottare.",
+  orari: "Aperto ogni giorno dalle 9:00 alle 18:30 · Apertura serale Ven. e Sab. 18:00–22:30",
+  prezzi: [
+    { nome: "Ingresso Giornaliero", sub: "Piscine & Grotte Termali", price: "35", note: "Feriale · €45 Weekend e Festivi" },
+    { nome: "Ingresso Serale", sub: "Ven. e Sab. · 18:00–22:30", price: "29", note: "Percorso Spa + area relax" },
+    { nome: "Abbonamento", sub: "10 ingressi a persona", price: "300", note: "Feriale · €400 tutti i giorni" },
+  ],
+  incluso: [
+    "Ingresso Piscine Termali",
+    "Ingresso Grotte Termali",
+    "Bagno Turco & Bio-Grotta",
+    "Docce emozionali & Cromoterapia",
+    "Parcheggio gratuito",
+    "Wi-Fi gratuito",
+  ],
+};
 
 export const OFFERS = [
   {
