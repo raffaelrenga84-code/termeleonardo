@@ -12,13 +12,28 @@
 <link rel="alternate" hreflang="en" href="https://termeleonardo.vercel.app/en.html">
 <link rel="alternate" hreflang="de" href="https://termeleonardo.vercel.app/de.html">
 <link rel="alternate" hreflang="fr" href="https://termeleonardo.vercel.app/fr.html">
+
+<style>
+  /* Override colore primario - Verde Oliva Pastello */
+  :root {
+    --primary: #5a6b4a !important;
+    --primary-dark: #4a5a3a !important;
+    --primary-light: #6b7d5a !important;
+  }
+  .header, .footer, .cookie-banner { background: #5a6b4a !important; }
+  .btn-primary { background: #5a6b4a !important; }
+  .btn-primary:hover { background: #4a5a3a !important; }
+  .section-label { color: #5a6b4a !important; }
+  .gallery-filter.active { background: #5a6b4a !important; }
+  .hero::before { background: linear-gradient(135deg, #5a6b4a 50%, transparent 50%) !important; }
+</style>
 <base target="_blank">
 </head>
 <body>
 
 <header class="header">
   <div class="header-inner">
-    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;"><img src="https://res.cloudinary.com/u9uel4ty/image/upload/7157830d-3077-4e29-96bf-07c96b71b0d6_rwzuh3.png" alt="Hotel Terme Leonardo" style="height:65px;width:auto;display:block;background:var(--primary);padding:8px 16px;border-radius:8px;"></a>
+    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;"><img src="https://res.cloudinary.com/u9uel4ty/image/upload/7157830d-3077-4e29-96bf-07c96b71b0d6_rwzuh3.png" alt="Hotel Terme Leonardo" style="height:55px;width:auto;display:block;background:#fff;padding:6px 14px;border-radius:8px;border:2px solid var(--primary);box-shadow:0 2px 8px rgba(0,0,0,0.15);"></a>
     <nav class="nav-desktop">
       <a href="#camere">Zimmer</a>
       <a href="#terme">Thermalbad</a>
@@ -364,7 +379,7 @@
 
     <!-- Filtri galleria -->
     <div class="gallery-filters" style="display:flex;gap:12px;justify-content:center;margin-bottom:32px;flex-wrap:wrap;">
-      <button class="gallery-filter active" data-filter="all" style="padding:8px 20px;border-radius:24px;border:1px solid var(--primary);background:var(--primary);color:#fff;cursor:pointer;font-family:Inter,sans-serif;font-size:0.9rem;">Tutte</button>
+      <button class="gallery-filter active" data-filter="all" style="padding:8px 20px;border-radius:24px;border:1px solid var(--primary);background:#5a6b4a;color:#fff;cursor:pointer;font-family:Inter,sans-serif;font-size:0.9rem;">Tutte</button>
       <button class="gallery-filter" data-filter="camere" style="padding:8px 20px;border-radius:24px;border:1px solid var(--primary);background:transparent;color:var(--primary);cursor:pointer;font-family:Inter,sans-serif;font-size:0.9rem;">Zimmer</button>
       <button class="gallery-filter" data-filter="ristorante" style="padding:8px 20px;border-radius:24px;border:1px solid var(--primary);background:transparent;color:var(--primary);cursor:pointer;font-family:Inter,sans-serif;font-size:0.9rem;">Restaurant</button>
       <button class="gallery-filter" data-filter="terme" style="padding:8px 20px;border-radius:24px;border:1px solid var(--primary);background:transparent;color:var(--primary);cursor:pointer;font-family:Inter,sans-serif;font-size:0.9rem;">Terme</button>
