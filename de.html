@@ -1,4 +1,278 @@
-{
-  "cleanUrls": true,
-  "trailingSlash": false
-}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Terme Leonardo | 4-Sterne-Thermalhotel in Abano Terme — Thermen, Golf & Wellness</title>
+  <meta name="description" content="4-Sterne-Thermalhotel in Abano Terme mit Thermalbecken, Golf, Spa und SSN-Kuren. Direkt buchen für die beste Preisgarantie.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="it" href="https://termeleonardo.vercel.app/">
+  <link rel="alternate" hreflang="en" href="https://termeleonardo.vercel.app/en.html">
+  <link rel="alternate" hreflang="de" href="https://termeleonardo.vercel.app/de.html">
+  <link rel="alternate" hreflang="fr" href="https://termeleonardo.vercel.app/fr.html">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="de.html" class="logo"><span class="logo-icon">☀</span>Terme Leonardo</a>
+    <nav class="nav-desktop">
+      <a href="#zimmer">Zimmer</a>
+      <a href="#therme">Therme & Wellness</a>
+      <a href="#golf">Golf</a>
+      <a href="#angebote">Angebote</a>
+      <a href="#info">Nützliche Infos</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="https://www.termeleonardo.com/de/booking" target="_blank" class="nav-cta">Jetzt buchen</a>
+      <div class="lang-switcher">
+        <a href="index.html">IT</a><a href="en.html">EN</a><a href="de.html" class="active">DE</a><a href="fr.html">FR</a>
+      </div>
+    </nav>
+    <button class="mobile-toggle" aria-label="Menü">☰</button>
+  </div>
+  <nav class="nav-mobile">
+    <a href="#zimmer">Zimmer</a><a href="#therme">Therme & Wellness</a><a href="#golf">Golf</a>
+    <a href="#angebote">Angebote</a><a href="#info">Nützliche Infos</a><a href="#kontakt">Kontakt</a>
+    <a href="https://www.termeleonardo.com/de/booking" target="_blank" class="mobile-cta">Jetzt buchen</a>
+    <div style="display:flex;gap:8px;padding:12px 16px;">
+      <a href="index.html">IT</a><a href="en.html">EN</a><a href="de.html" style="background:rgba(26,92,74,0.08);color:var(--primary);">DE</a><a href="fr.html">FR</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=80');"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">★★★★ 4-Sterne-Hotel</div>
+      <h1>Ein Erlebnis zwischen Thermalbädern und Golf in den Euganeischen Hügeln</h1>
+      <p class="hero-subtitle">Hotel Terme Leonardo in Abano Terme: Thermalbecken bei 30–35°C, Wellnessgrotten, SSN-Kuren und eine Golf-Driving-Range in einem 38.000 m² großen Park.</p>
+      <div class="hero-btns">
+        <a href="https://www.termeleonardo.com/de/booking" target="_blank" class="btn btn-primary">Aufenthalt buchen →</a>
+        <a href="https://www.termeleonardo.com/it/day-spa/prenotazioni" target="_blank" class="btn btn-outline">Day-Spa buchen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <form class="booking-bar" id="booking-form">
+    <div><label>Anreise</label><input type="date" id="arrival" required></div>
+    <div><label>Abreise</label><input type="date" id="departure" required></div>
+    <div><label>Erwachsene</label><select id="adults"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option></select></div>
+    <div><label>Kinder</label><select id="children"><option value="0" selected>0</option><option value="1">1</option><option value="2">2</option></select></div>
+    <button type="submit" class="btn btn-primary">Verfügbarkeit prüfen</button>
+  </form>
+</div>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Warum wir</span>
+      <h2>Ihr Wellness-Rückzugsort in Abano Terme</h2>
+      <p>Mehr als ein einfaches 4-Sterne-Hotel: eine Oase, in der Körper und Geist zwischen Thermalwasser, Natur und Sport regenerieren.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card fade-in"><div class="feature-icon">🏊</div><h3>Thermalbecken</h3><p>Überdachter Pool mit zwei Außenbecken in einem grünen Park. Salz-Brom-Jod-Wasser bei 30–35°C mit Hydromassage und Kneipp-Becken.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">⛳</div><h3>Golf-Driving-Range</h3><p>15.000 m² direkt neben dem Hotel: 10 Abschlagstationen (teilweise überdacht), Putting-Green, Pitching-Green und Bunker. Ermäßigte Green Fees in nahegelegenen Clubs.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">🧖</div><h3>Grotten & Wellness</h3><p>Biogrotte, Dampfgrotte, Thermalwasserfälle, Erlebnisduschen mit Chromo-Aromatherapie, Türkisches Bad und Biosauna.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">🏥</div><h3>SSN-Kuren</h3><p>Fangotherapie, Inhalationen, Aerosol, Balneotherapie, ozonisiertes Bad und Physiotherapie durch erfahrenes Fachpersonal.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">🍽️</div><h3>Restaurant & Venetische Küche</h3><p>Traditionelle venetische Gerichte mit lokalen Zutaten in einem eleganten Ambiente, das die Aromen der Euganeischen Hügel hervorhebt.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">🌿</div><h3>38.000 m² Park</h3><p>Eine grüne Oase am Fuße der Euganeischen Hügel, nur 10 Gehminuten vom Zentrum von Abano Terme und eine Stunde von Venedig entfernt.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="zimmer">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Unterkunft</span>
+      <h2>Zimmer & Suiten</h2>
+      <p>98 individuell eingerichtete Zimmer mit 4-Sterne-Komfort, Balkon und allen Annehmlichkeiten für einen erholsamen Aufenthalt.</p>
+    </div>
+    <div class="rooms-grid">
+      <div class="room-card fade-in">
+        <div class="room-img" style="background-image:url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80');"><span class="room-tag">Einzelzimmer</span></div>
+        <div class="room-info"><h3>Einzelzimmer</h3><p>Einzelbett 1,45 m, ideal für Alleinreisende, die Komfort und Ruhe suchen.</p><div class="room-amenities"><span>Balkon</span><span>Wi-Fi</span><span>Sat-TV</span><span>Klimaanlage</span></div></div>
+      </div>
+      <div class="room-card fade-in">
+        <div class="room-img" style="background-image:url('https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80');"><span class="room-tag">Doppelzimmer</span></div>
+        <div class="room-info"><h3>Doppelzimmer</h3><p>Queen-Bett 1,60 m, elegante Einrichtung und Balkon mit Blick auf den Park oder die Euganeischen Hügel.</p><div class="room-amenities"><span>Balkon</span><span>Dusche</span><span>Parkett</span><span>Minibar</span><span>Safe</span></div></div>
+      </div>
+      <div class="room-card fade-in">
+        <div class="room-img" style="background-image:url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80');"><span class="room-tag">Junior Suite</span></div>
+        <div class="room-info"><h3>Junior Suite</h3><p>Großzügige Räume, Bad mit Doppelwaschbecken, separater Wohnbereich und Panoramabalkon.</p><div class="room-amenities"><span>Doppelwaschbecken</span><span>Glasfaser-Wi-Fi</span><span>Fön</span><span>Schreibtisch</span></div></div>
+      </div>
+      <div class="room-card fade-in">
+        <div class="room-img" style="background-image:url('https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80');"><span class="room-tag">Suite</span></div>
+        <div class="room-info"><h3>Suite</h3><p>Höchster Komfort: großes Schlafzimmer, Wohnzimmer, luxuriöses Bad und atemberaubende Aussicht.</p><div class="room-amenities"><span>Wohnzimmer</span><span>Doppelwaschbecken</span><span>Bademantel</span><span>Poolhandtuch</span></div></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px;"><a href="https://www.termeleonardo.com/de/booking" target="_blank" class="btn btn-primary">Alle Zimmer und Preise →</a></div>
+  </div>
+</section>
+
+<section class="section section-alt" id="therme">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Wellness</span>
+      <h2>Therme & Wellness</h2>
+      <p>Salz-Brom-Jod-Hyperthermalwasser (Quelltemperatur ~75°C) für medizinische Behandlungen, Entspannung und Regeneration.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card fade-in"><div class="feature-icon">🌊</div><h3>Thermalbecken</h3><p>Überdachter Pool mit zwei Außenbecken im Park. Temperaturen ~34–35°C und ein Becken bei ~30°C. Hydromassage, Wasserspiele und Kneipp-Becken. Badekappe Pflicht. Öffnungszeiten: 08:00–19:30, Freitag und Samstag bis 22:30.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">🪨</div><h3>Thermalgrotten</h3><p>Biogrotte, Dampfgrotte, Thermalwasserfälle, Erlebnisduschen mit Aroma- und Chromotherapie, Türkisches Bad und Biosauna.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">💆</div><h3>Konventionelle Kuren</h3><p>Fangotherapie, Inhalationen, Aerosol, Balneotherapie, ozonisiertes Bad und Physiotherapie durch erfahrenes Fachpersonal. SSN-Vereinbarung.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">✨</div><h3>Day Spa</h3><p>Zugang zu Becken und Thermalgrotten auch nur für einen Tag, ohne Übernachtung. Umkleidekabinen mit Duschen, Fön und Schließfach. Abendzugang Freitag und Samstag 18:00–22:30. Online-Buchung verpflichtend.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:36px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="https://www.termeleonardo.com/it/day-spa/prenotazioni" target="_blank" class="btn btn-primary">Day-Spa buchen →</a>
+      <a href="/pdf/listino-spa-trattamenti-e-massaggi-hotel-leonardo-da-vinci-terme.pdf" target="_blank" class="btn btn-outline" style="color:var(--primary);border-color:var(--primary);">Spa-Preisliste (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="golf">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Sport</span>
+      <h2>Golf & Driving Range</h2>
+      <p>15.000 m² Driving Range direkt neben den Becken, eingebettet in die Grünflächen der Euganeischen Hügel.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-bottom:40px;">
+      <div class="fade-in">
+        <h3 style="margin-bottom:16px;">Unsere Anlage</h3>
+        <ul style="list-style:none;padding:0;">
+          <li style="padding:8px 0;border-bottom:1px solid #eee;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> 10 Übungsstationen (teilweise überdacht)</li>
+          <li style="padding:8px 0;border-bottom:1px solid #eee;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> Putting-Green</li>
+          <li style="padding:8px 0;border-bottom:1px solid #eee;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> Pitching-Green</li>
+          <li style="padding:8px 0;border-bottom:1px solid #eee;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> Bunker</li>
+          <li style="padding:8px 0;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> Ermäßigte Green Fees in nahegelegenen Clubs</li>
+        </ul>
+      </div>
+      <div class="fade-in" style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);">
+        <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&q=80" alt="Golfplatz" style="width:100%;height:320px;object-fit:cover;display:block;">
+      </div>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card fade-in"><h4 style="margin-bottom:8px;">⛳ Golf Club Montecchia</h4><p style="font-size:0.9rem;">5,6 km — 27 Löcher, einer der prestigeträchtigsten Italiens.</p></div>
+      <div class="feature-card fade-in"><h4 style="margin-bottom:8px;">⛳ Frassanelle</h4><p style="font-size:0.9rem;">9,6 km — 18 Löcher in einem historischen Park.</p></div>
+      <div class="feature-card fade-in"><h4 style="margin-bottom:8px;">⛳ Golf Club Padova</h4><p style="font-size:0.9rem;">8,6 km — 27 Löcher, leicht und panoramisch.</p></div>
+      <div class="feature-card fade-in"><h4 style="margin-bottom:8px;">⛳ Ca' della Nave</h4><p style="font-size:0.9rem;">Martellago — 18 Löcher, 25 Minuten entfernt.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="angebote">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Aktionen</span>
+      <h2>Unsere Angebote</h2>
+      <p>Wellness-Pakete, Wochenenden, Last-Minute- und Saisonaktionen für Ihren Aufenthalt in Abano Terme.</p>
+    </div>
+    <div class="offers-grid">
+      <div class="offer-card fade-in">
+        <div class="offer-img" style="background-image:url('https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=600&q=80');"><span class="offer-badge">Golf</span></div>
+        <div class="offer-body"><h3>7 Tage Golf</h3><p>Eine Woche dem Golf gewidmet mit Zugang zur Driving Range, ermäßigten Green Fees und Thermal-Entspannung am Ende des Tages.</p><div class="offer-price">ab €820 <small>/ 7 Nächte</small></div><a href="https://www.termeleonardo.com/it/offerte/7-giorni-di-golf" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;">Angebot entdecken →</a></div>
+      </div>
+      <div class="offer-card fade-in">
+        <div class="offer-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80');"><span class="offer-badge">Wellness</span></div>
+        <div class="offer-body"><h3>Deluxe — 3 Nächte & Massage</h3><p>3-Nächte-Aufenthalt mit inklusivem Wellness-Behandlung: entspannende Massage und unbegrenzter Zugang zu Thermalbecken und Grotten.</p><div class="offer-price">ab €400 <small>/ 3 Nächte</small></div><a href="https://www.termeleonardo.com/de/booking" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;">Jetzt buchen →</a></div>
+      </div>
+      <div class="offer-card fade-in">
+        <div class="offer-img" style="background-image:url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80');"><span class="offer-badge">Smart</span></div>
+        <div class="offer-body"><h3>Smart — 1 Nacht & Massage</h3><p>Perfekt für eine kurze Pause: eine Nacht mit Frühstück und einer 50-minütigen regenerierenden Massage.</p><div class="offer-price">ab €180 <small>/ 1 Nacht</small></div><a href="https://www.termeleonardo.com/de/booking" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;">Jetzt buchen →</a></div>
+      </div>
+      <div class="offer-card fade-in">
+        <div class="offer-img" style="background-image:url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=600&q=80');"><span class="offer-badge">Therme</span></div>
+        <div class="offer-body"><h3>Thermal Escape — 2 Nächte</h3><p>Thermales Wochenende mit Zugang zu Becken, Grotten und einer Fangotherapie- oder Inhalationsbehandlung.</p><div class="offer-price">ab €280 <small>/ 2 Nächte</small></div><a href="https://www.termeleonardo.com/de/booking" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;">Jetzt buchen →</a></div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:24px;color:var(--text-muted);font-size:0.9rem;">* Indikative Preise, vorbehaltlich Änderungen und Verfügbarkeit. Bestpreisgarantie auf der offiziellen Website.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in"><span class="section-label">Galerie</span><h2>Das Hotel entdecken</h2></div>
+    <div class="gallery-grid">
+      <div class="gallery-item wide" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80');" data-label="Hotel-Außenansicht"></div>
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=400&q=80');" data-label="Thermalbecken"></div>
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400&q=80');" data-label="Spa & Wellness"></div>
+      <div class="gallery-item tall" style="background-image:url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=400&q=80');" data-label="Zimmer"></div>
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=400&q=80');" data-label="Golf"></div>
+      <div class="gallery-item wide" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80');" data-label="Restaurant"></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <h2 class="fade-in">Was unsere Gäste sagen</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card fade-in"><div class="stars">★★★★★</div><p>"Fantastischer Aufenthalt! Die Thermalbecken sind wunderbar, das Personal äußerst zuvorkommend und der Golfplatz in der Nähe ein echtes Plus. Wir kommen definitiv wieder."</p><div class="author">Marco R. <small>Verona, Italien</small></div></div>
+      <div class="testimonial-card fade-in"><div class="stars">★★★★★</div><p>"Wir haben die konventionellen Kuren genutzt: professioneller Fango und Inhalationen. Das Hotel liegt inmitten von Grün und ist sehr ruhig. Sehr empfohlen!"</p><div class="author">Anna B. <small>Mailand, Italien</small></div></div>
+      <div class="testimonial-card fade-in"><div class="stars">★★★★★</div><p>"Perfektes Thermal-Spa-Hotel! Die Becken sind fantastisch, der Golfplatz in der Nähe wunderschön und Venedig nur eine Stunde entfernt. Sehr empfohlen für einen erholsamen Urlaub."</p><div class="author">Thomas K. <small>München, Deutschland</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="info">
+  <div class="container">
+    <div class="section-header fade-in"><span class="section-label">Vor dem Aufenthalt</span><h2>Nützliche Infos</h2></div>
+    <div class="info-grid">
+      <div class="info-item fade-in"><div class="icon">🕐</div><h4>Check-in / Check-out</h4><p>Check-in ab 15:00 Uhr<br>Check-out bis 11:00 Uhr</p></div>
+      <div class="info-item fade-in"><div class="icon">📍</div><h4>Anreise</h4><p>Via Monteortone, 46<br>35037 Abano Terme (PD)<br>1 km vom Zentrum, 45 Min. von Venedig</p></div>
+      <div class="info-item fade-in"><div class="icon">🏊</div><h4>Beckenöffnungszeiten</h4><p>Täglich 08:00–19:30 Uhr<br>Freitag und Samstag bis 22:30 Uhr<br>Badekappe Pflicht</p></div>
+      <div class="info-item fade-in"><div class="icon">🚭</div><h4>Regeln</h4><p>Rauchverbot in den Zimmern<br>Auf dem Balkon erlaubt<br>Kostenloses Glasfaser-Wi-Fi überall</p></div>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="/pdf/hotel-leonardo-listino-prezzi.pdf" target="_blank" class="btn btn-outline" style="color:var(--primary);border-color:var(--primary);margin-right:12px;">Hotel-Preisliste (PDF)</a>
+      <a href="/pdf/hotel-leonardo-depliant.pdf" target="_blank" class="btn btn-outline" style="color:var(--primary);border-color:var(--primary);">Prospekt (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="container">
+    <div class="fade-in">
+      <h3>Newsletter abonnieren</h3>
+      <p>Erhalten Sie als Erste unsere Sonderangebote, Last-Minute-Aktionen und Neuigkeiten vom Hotel Terme Leonardo.</p>
+      <form class="newsletter-form" id="newsletter-form"><input type="email" placeholder="Ihre E-Mail" required><button type="submit">Abonnieren</button></form>
+      <p style="font-size:0.8rem;color:var(--text-muted);margin-top:16px;">Mit der Anmeldung stimmen Sie unserer <a href="https://www.termeleonardo.com/it/privacy" target="_blank" style="color:var(--primary);">Datenschutzerklärung</a> zu. Sie können sich jederzeit abmelden.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" id="kontakt">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="de.html" class="logo" style="color:#fff;"><span class="logo-icon">☀</span>Terme Leonardo</a>
+        <p>4-Sterne-Hotel in Abano Terme, im Herzen der Euganeischen Hügel. Thermalbecken, Golf, Spa und SSN-Kuren für einen Wellness-Urlaub der Extraklasse.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/HotelTermeLeonardoAbanoTerme" target="_blank" aria-label="Facebook">f</a>
+          <a href="https://www.instagram.com/hoteltermeleonardo" target="_blank" aria-label="Instagram">📷</a>
+          <a href="https://www.youtube.com/user/HotelLeonardoTerme" target="_blank" aria-label="YouTube">▶</a>
+          <a href="https://www.yelp.it/biz/hotel-leonardo-da-vinci-teolo-2" target="_blank" aria-label="Yelp">Y</a>
+        </div>
+      </div>
+      <div><h4>Entdecken</h4><ul class="footer-links"><li><a href="#zimmer">Zimmer & Suiten</a></li><li><a href="#therme">Therme & Wellness</a></li><li><a href="#golf">Golf & Driving Range</a></li><li><a href="#angebote">Angebote</a></li><li><a href="https://www.termeleonardo.com/it/shop" target="_blank">Gutscheine</a></li></ul></div>
+      <div><h4>Hotel</h4><ul class="footer-links"><li><a href="#info">Nützliche Infos</a></li><li><a href="https://www.termeleonardo.com/it/day-spa/prenotazioni" target="_blank">Day Spa</a></li><li><a href="#kontakt">Kontakt</a></li><li><a href="https://www.termeleonardo.com/it/privacy" target="_blank">Datenschutz</a></li><li><a href="https://www.termeleonardo.com/it/cookies" target="_blank">Cookie-Richtlinie</a></li></ul></div>
+      <div><h4>Kontakt</h4><ul class="footer-links"><li>📍 Via Monteortone, 46<br>35037 Abano Terme (PD)</li><li>📞 <a href="tel:+390499939200">+39 049 9939 200</a></li><li>✉️ <a href="mailto:info@termeleonardo.com">info@termeleonardo.com</a></li><li style="margin-top:12px;font-size:0.85rem;color:rgba(255,255,255,0.4);">Betreiber: Tria S.r.l.<br>MWSt. IT 02042330288</li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Hotel Terme Leonardo. Alle Rechte vorbehalten.</p><div><a href="https://www.termeleonardo.com/it/privacy" target="_blank">Datenschutz</a><a href="https://www.termeleonardo.com/it/cookies" target="_blank">Cookies</a></div></div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookie-banner">
+  <p>Wir verwenden Cookies für die wesentliche Funktionalität der Website und, nur mit Ihrer Zustimmung, zur Traffic-Analyse. <a href="https://www.termeleonardo.com/it/cookies" target="_blank">Cookie-Richtlinie</a></p>
+  <button class="cookie-btn accept" id="cookie-accept">Alle akzeptieren</button>
+  <button class="cookie-btn reject" id="cookie-reject">Nur notwendige</button>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
