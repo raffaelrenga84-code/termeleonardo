@@ -1,6 +1,5 @@
-
 // ============================================
-// HOTEL TERME LEONARDO — Main JavaScript
+// HOTEL TERME LEONARDO — Main JavaScript (Corretto)
 // ============================================
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -15,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
       mobileToggle.textContent = navMobile.classList.contains('open') ? '✕' : '☰';
     });
 
-    // Close mobile menu on link click
     navMobile.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navMobile.classList.remove('open');
@@ -102,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
       const email = this.querySelector('input[type="email"]').value;
       if (email) {
-        alert('Grazie per l'iscrizione! Ti terremo aggiornato sulle nostre offerte.');
+        alert("Grazie per l'iscrizione! Ti terremo aggiornato sulle nostre offerte.");
         this.reset();
       }
     });
