@@ -18,7 +18,7 @@
 
 <header class="header">
   <div class="header-inner">
-    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;"><img src="https://res.cloudinary.com/u9uel4ty/image/upload/7157830d-3077-4e29-96bf-07c96b71b0d6_rwzuh3.png" alt="Hotel Terme Leonardo" style="height:50px;width:auto;display:block;background:var(--primary);padding:6px 12px;border-radius:6px;"></a>
+    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;"><img src="https://res.cloudinary.com/u9uel4ty/image/upload/7157830d-3077-4e29-96bf-07c96b71b0d6_rwzuh3.png" alt="Hotel Terme Leonardo" style="height:65px;width:auto;display:block;background:var(--primary);padding:8px 16px;border-radius:8px;"></a>
     <nav class="nav-desktop">
       <a href="#camere">Camere</a>
       <a href="#terme">Terme & Spa</a>
@@ -373,176 +373,71 @@
     </div>
 
     <!-- Griglia galleria -->
-    <div class="gallery-grid-extended" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;">
-      <div class="gallery-item-extended" data-category="camere" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2023_HotelTermeLeonardo_Stanze_Queen_7_b5l7mu.jpg" alt="Camera" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Camera</div>
+    <div class="gallery-slider-container" style="position:relative;overflow:hidden;">
+      <div class="gallery-slider" style="display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding-bottom:16px;-webkit-overflow-scrolling:touch;">
+        <!-- Foto Camere -->
+        <div class="gallery-slide" style="flex:0 0 320px;scroll-snap-align:start;">
+          <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_400/2018_HotelTermeLeonardo_Camere_2_ndaysp.jpg" alt="Camera" style="width:100%;height:240px;object-fit:cover;border-radius:var(--radius-lg);display:block;" loading="lazy">
+        </div>
+        <div class="gallery-slide" style="flex:0 0 320px;scroll-snap-align:start;">
+          <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_400/2023_HotelTermeLeonardo_Stanze_Queen_1_gqsfzw.jpg" alt="Camera" style="width:100%;height:240px;object-fit:cover;border-radius:var(--radius-lg);display:block;" loading="lazy">
+        </div>
+        <div class="gallery-slide" style="flex:0 0 320px;scroll-snap-align:start;">
+          <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_400/2023_HotelTermeLeonardo_Stanze_Queen_3_gnyoxh.jpg" alt="Camera" style="width:100%;height:240px;object-fit:cover;border-radius:var(--radius-lg);display:block;" loading="lazy">
+        </div>
+        <div class="gallery-slide" style="flex:0 0 320px;scroll-snap-align:start;">
+          <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_400/2023_HotelTermeLeonardo_Stanze_Queen_9_tnm4wx.jpg" alt="Camera" style="width:100%;height:240px;object-fit:cover;border-radius:var(--radius-lg);display:block;" loading="lazy">
+        </div>
+        <!-- Foto Terme -->
+        <div class="gallery-slide" style="flex:0 0 320px;scroll-snap-align:start;">
+          <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_400/2018_HotelTermeLeonardo_Cure_1_eftuyj.jpg" alt="Terme" style="width:100%;height:240px;object-fit:cover;border-radius:var(--radius-lg);display:block;" loading="lazy">
+        </div>
+        <div class="gallery-slide" style="flex:0 0 320px;scroll-snap-align:start;">
+          <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_400/2018_HotelTermeLeonardo_Cure_8_p3txmo.jpg" alt="Terme" style="width:100%;height:240px;object-fit:cover;border-radius:var(--radius-lg);display:block;" loading="lazy">
+        </div>
+        <div class="gallery-slide" style="flex:0 0 320px;scroll-snap-align:start;">
+          <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_400/2022_HotelTermeLeonardo_SPA_28_t2ylpo.jpg" alt="Spa" style="width:100%;height:240px;object-fit:cover;border-radius:var(--radius-lg);display:block;" loading="lazy">
+        </div>
+        <!-- Foto Golf -->
+        <div class="gallery-slide" style="flex:0 0 320px;scroll-snap-align:start;">
+          <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_400/2023_HotelTermeLeonardo_Golf_5_af83ig.jpg" alt="Golf" style="width:100%;height:240px;object-fit:cover;border-radius:var(--radius-lg);display:block;" loading="lazy">
+        </div>
+        <div class="gallery-slide" style="flex:0 0 320px;scroll-snap-align:start;">
+          <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_400/2023_HotelTermeLeonardo_Golf_4_zmpv31.jpg" alt="Golf" style="width:100%;height:240px;object-fit:cover;border-radius:var(--radius-lg);display:block;" loading="lazy">
+        </div>
+        <!-- Foto Bistrot -->
+        <div class="gallery-slide" style="flex:0 0 320px;scroll-snap-align:start;">
+          <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_400/2024_HotelTermeLeonardo_Bistrot_45_emdnii.jpg" alt="Bistrot" style="width:100%;height:240px;object-fit:cover;border-radius:var(--radius-lg);display:block;" loading="lazy">
+        </div>
+        <div class="gallery-slide" style="flex:0 0 320px;scroll-snap-align:start;">
+          <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_400/2025_HotelTermeLeonardo_Bistrot_34_orf4yr.jpg" alt="Bistrot" style="width:100%;height:240px;object-fit:cover;border-radius:var(--radius-lg);display:block;" loading="lazy">
+        </div>
+        <!-- Foto Generiche -->
+        <div class="gallery-slide" style="flex:0 0 320px;scroll-snap-align:start;">
+          <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_400/2025_HotelTermeLeonardo_Generiche_5_it8qsa.jpg" alt="Hotel" style="width:100%;height:240px;object-fit:cover;border-radius:var(--radius-lg);display:block;" loading="lazy">
+        </div>
+        <div class="gallery-slide" style="flex:0 0 320px;scroll-snap-align:start;">
+          <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_400/2025_HotelTermeLeonardo_Generiche_55_n9czal.jpg" alt="Hotel" style="width:100%;height:240px;object-fit:cover;border-radius:var(--radius-lg);display:block;" loading="lazy">
+        </div>
+        <div class="gallery-slide" style="flex:0 0 320px;scroll-snap-align:start;">
+          <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_400/2017_HotelTermeLeonardo_Generic_ColliEuganei_ukcf76.jpg" alt="Colli Euganei" style="width:100%;height:240px;object-fit:cover;border-radius:var(--radius-lg);display:block;" loading="lazy">
+        </div>
       </div>
-      <div class="gallery-item-extended" data-category="camere" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2018_HotelTermeLeonardo_Camere_13_sosra4.jpg" alt="Camera" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Camera</div>
-      </div>
-      <div class="gallery-item-extended" data-category="camere" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2018_HotelTermeLeonardo_Camere_20_batyxv.jpg" alt="Camera" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Camera</div>
-      </div>
-      <div class="gallery-item-extended" data-category="camere" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2018_HotelTermeLeonardo_Camere_11_th9zur.jpg" alt="Camera" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Camera</div>
-      </div>
-      <div class="gallery-item-extended" data-category="camere" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2018_HotelTermeLeonardo_Camere_10_qyavap.jpg" alt="Camera" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Camera</div>
-      </div>
-      <div class="gallery-item-extended" data-category="terme" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2023_HotelTermeLeonardo_Cure_6_pdbagb.jpg" alt="Terme & Benessere" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Terme & Benessere</div>
-      </div>
-      <div class="gallery-item-extended" data-category="terme" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2023_HotelTermeLeonardo_Cure_4_uxcwgr.jpg" alt="Terme & Benessere" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Terme & Benessere</div>
-      </div>
-      <div class="gallery-item-extended" data-category="terme" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2023_HotelTermeLeonardo_Cure_5_laon69.jpg" alt="Terme & Benessere" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Terme & Benessere</div>
-      </div>
-      <div class="gallery-item-extended" data-category="terme" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2023_HotelTermeLeonardo_Cure_1_dshnkb.jpg" alt="Terme & Benessere" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Terme & Benessere</div>
-      </div>
-      <div class="gallery-item-extended" data-category="terme" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2023_HotelTermeLeonardo_Cure_3_i0ybh9.jpg" alt="Terme & Benessere" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Terme & Benessere</div>
-      </div>
-      <div class="gallery-item-extended" data-category="terme" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2023_HotelTermeLeonardo_Cure_2_qe6l0t.jpg" alt="Terme & Benessere" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Terme & Benessere</div>
-      </div>
-      <div class="gallery-item-extended" data-category="golf" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2023_HotelTermeLeonardo_Golf_4_zmpv31.jpg" alt="Golf" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Golf</div>
-      </div>
-      <div class="gallery-item-extended" data-category="golf" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2023_HotelTermeLeonardo_Golf_3_jwikgy.jpg" alt="Golf" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Golf</div>
-      </div>
-      <div class="gallery-item-extended" data-category="golf" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2023_HotelTermeLeonardo_Golf_1_nq9lxx.jpg" alt="Golf" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Golf</div>
-      </div>
-      <div class="gallery-item-extended" data-category="golf" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2023_HotelTermeLeonardo_Golf_2_mzkq2c.jpg" alt="Golf" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Golf</div>
-      </div>
-      <div class="gallery-item-extended" data-category="golf" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2017_HotelTermeLeonardo_Golf_i0prfd.jpg" alt="Golf" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Golf</div>
-      </div>
-      <div class="gallery-item-extended" data-category="ristorante" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Bistrot_34_orf4yr.jpg" alt="Ristorante & Bistrot" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Ristorante & Bistrot</div>
-      </div>
-      <div class="gallery-item-extended" data-category="ristorante" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Bistrot_29_lgbo2q.jpg" alt="Ristorante & Bistrot" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Ristorante & Bistrot</div>
-      </div>
-      <div class="gallery-item-extended" data-category="ristorante" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Bistrot_30_uxteye.jpg" alt="Ristorante & Bistrot" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Ristorante & Bistrot</div>
-      </div>
-      <div class="gallery-item-extended" data-category="ristorante" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2024_HotelTermeLeonardo_Bistrot_48_dfscdk.jpg" alt="Ristorante & Bistrot" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Ristorante & Bistrot</div>
-      </div>
-      <div class="gallery-item-extended" data-category="ristorante" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2024_HotelTermeLeonardo_Bistrot_60_ya4wbd.jpg" alt="Ristorante & Bistrot" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Ristorante & Bistrot</div>
-      </div>
-      <div class="gallery-item-extended" data-category="ristorante" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2024_HotelTermeLeonardo_Bistrot_44_cspjqt.jpg" alt="Ristorante & Bistrot" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Ristorante & Bistrot</div>
-      </div>
-      <div class="gallery-item-extended" data-category="ristorante" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Bistrot_24_kknf9f.jpg" alt="Ristorante & Bistrot" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Ristorante & Bistrot</div>
-      </div>
-      <div class="gallery-item-extended" data-category="ristorante" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Bistrot_27_qpkgqa.jpg" alt="Ristorante & Bistrot" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Ristorante & Bistrot</div>
-      </div>
-      <div class="gallery-item-extended" data-category="generic" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Generiche_3_xqf4xg.jpg" alt="Hotel" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Hotel</div>
-      </div>
-      <div class="gallery-item-extended" data-category="generic" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Generiche_4_jtkko4.jpg" alt="Hotel" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Hotel</div>
-      </div>
-      <div class="gallery-item-extended" data-category="generic" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Generiche_47_fihe7j.jpg" alt="Hotel" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Hotel</div>
-      </div>
-      <div class="gallery-item-extended" data-category="generic" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Generiche_53_bbw06t.jpg" alt="Hotel" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Hotel</div>
-      </div>
-      <div class="gallery-item-extended" data-category="generic" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Generiche_52_sbwvyh.jpg" alt="Hotel" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Hotel</div>
-      </div>
-      <div class="gallery-item-extended" data-category="generic" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2017_HotelTermeLeonardo_Generic_ColliEuganei_ukcf76.jpg" alt="Hotel" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Hotel</div>
-      </div>
-      <div class="gallery-item-extended" data-category="generic" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Generiche_51_hklg6k.jpg" alt="Hotel" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Hotel</div>
-      </div>
-      <div class="gallery-item-extended" data-category="generic" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Generiche_48_kjgtct.jpg" alt="Hotel" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Hotel</div>
-      </div>
-      <div class="gallery-item-extended" data-category="generic" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Generiche_46_qtzjig.jpg" alt="Hotel" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Hotel</div>
-      </div>
-      <div class="gallery-item-extended" data-category="generic" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Generiche_13_kulshx.jpg" alt="Hotel" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Hotel</div>
-      </div>
-      <div class="gallery-item-extended" data-category="generic" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Generiche_44_jaakch.jpg" alt="Hotel" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Hotel</div>
-      </div>
-      <div class="gallery-item-extended" data-category="generic" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Generiche_22_fa8cs0.jpg" alt="Hotel" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Hotel</div>
-      </div>
-      <div class="gallery-item-extended" data-category="generic" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Generiche_20_alml6e.jpg" alt="Hotel" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Hotel</div>
-      </div>
-      <div class="gallery-item-extended" data-category="generic" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Generiche_18_yjyjef.jpg" alt="Hotel" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Hotel</div>
-      </div>
-      <div class="gallery-item-extended" data-category="generic" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Generiche_15_r1of0m.jpg" alt="Hotel" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Hotel</div>
-      </div>
-      <div class="gallery-item-extended" data-category="generic" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Generiche_14_ek64pk.jpg" alt="Hotel" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Hotel</div>
-      </div>
-      <div class="gallery-item-extended" data-category="generic" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Generiche_19_takj2w.jpg" alt="Hotel" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Hotel</div>
-      </div>
-      <div class="gallery-item-extended" data-category="generic" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/q_auto,f_auto,w_600/2025_HotelTermeLeonardo_Generiche_12_xdzooq.jpg" alt="Hotel" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;font-weight:600;">Hotel</div>
-      </div>
+
+      <!-- Frecce di navigazione -->
+      <button onclick="document.querySelector('.gallery-slider').scrollBy({left:-340,behavior:'smooth'})" 
+              style="position:absolute;left:8px;top:50%;transform:translateY(-50%);width:40px;height:40px;background:rgba(255,255,255,0.9);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.2);z-index:10;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <button onclick="document.querySelector('.gallery-slider').scrollBy({left:340,behavior:'smooth'})" 
+              style="position:absolute;right:8px;top:50%;transform:translateY(-50%);width:40px;height:40px;background:rgba(255,255,255,0.9);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.2);z-index:10;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
     </div>
+
+    <p style="text-align:center;color:var(--text-light);font-size:0.85rem;margin-top:8px;">
+      ← Scorri per vedere tutte le foto →
+    </p>
   </div>
 </section>
 
