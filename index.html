@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hotel Terme Leonardo | 4 Stelle ad Abano Terme — Terme, Golf & Benessere</title>
-  <meta name="description" content="Hotel 4 stelle ad Abano Terme con piscine termali, golf, spa e cure convenzionate SSN. Prenota direttamente per il miglior prezzo garantito.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="alternate" hreflang="it" href="https://termeleonardo.vercel.app/">
-  <link rel="alternate" hreflang="en" href="https://termeleonardo.vercel.app/en.html">
-  <link rel="alternate" hreflang="de" href="https://termeleonardo.vercel.app/de.html">
-  <link rel="alternate" hreflang="fr" href="https://termeleonardo.vercel.app/fr.html">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Terme Leonardo | 4 Stelle ad Abano Terme — Terme, Golf & Benessere</title>
+<meta name="description" content="Hotel 4 stelle ad Abano Terme con piscine termali, golf, spa e cure convenzionate SSN. Prenota direttamente per il miglior prezzo garantito.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="alternate" hreflang="it" href="https://termeleonardo.vercel.app/">
+<link rel="alternate" hreflang="en" href="https://termeleonardo.vercel.app/en.html">
+<link rel="alternate" hreflang="de" href="https://termeleonardo.vercel.app/de.html">
+<link rel="alternate" hreflang="fr" href="https://termeleonardo.vercel.app/fr.html">
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="header">
   <div class="header-inner">
-    <a href="index.html" class="logo">
-      <span class="logo-icon">☀</span>
-      Terme Leonardo
-    </a>
+    <a href="index.html" class="logo"><span class="logo-icon">☀</span>Terme Leonardo</a>
     <nav class="nav-desktop">
       <a href="#camere">Camere</a>
       <a href="#terme">Terme & Spa</a>
       <a href="#golf">Golf</a>
       <a href="#offerte">Offerte</a>
+      <a href="#ristorante">Ristorante</a>
       <a href="#info">Info Utili</a>
       <a href="#contatti">Contatti</a>
       <a href="https://www.termeleonardo.com/it/booking" target="_blank" class="nav-cta">Prenota Ora</a>
@@ -44,6 +41,7 @@
     <a href="#terme">Terme & Spa</a>
     <a href="#golf">Golf</a>
     <a href="#offerte">Offerte</a>
+    <a href="#ristorante">Ristorante</a>
     <a href="#info">Info Utili</a>
     <a href="#contatti">Contatti</a>
     <a href="https://www.termeleonardo.com/it/booking" target="_blank" class="mobile-cta">Prenota Ora</a>
@@ -56,9 +54,8 @@
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=80');"></div>
+  <div class="hero-img" style="background-image:url('https://images.trvl-media.com/lodging/7600000/7597000/7596682/7596682/9c8743d3a32949f5afed802325c3656b72600c4d.jpg');"></div>
   <div class="container">
     <div class="hero-content">
       <div class="hero-badge">★★★★ Hotel 4 Stelle</div>
@@ -72,39 +69,16 @@
   </div>
 </section>
 
-<!-- BOOKING BAR -->
 <div class="container">
   <form class="booking-bar" id="booking-form">
-    <div>
-      <label>Arrivo</label>
-      <input type="date" id="arrival" required>
-    </div>
-    <div>
-      <label>Partenza</label>
-      <input type="date" id="departure" required>
-    </div>
-    <div>
-      <label>Adulti</label>
-      <select id="adults">
-        <option value="1">1</option>
-        <option value="2" selected>2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-      </select>
-    </div>
-    <div>
-      <label>Bambini</label>
-      <select id="children">
-        <option value="0" selected>0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-      </select>
-    </div>
+    <div><label>Arrivo</label><input type="date" id="arrival" required></div>
+    <div><label>Partenza</label><input type="date" id="departure" required></div>
+    <div><label>Adulti</label><select id="adults"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option></select></div>
+    <div><label>Bambini</label><select id="children"><option value="0" selected>0</option><option value="1">1</option><option value="2">2</option></select></div>
     <button type="submit" class="btn btn-primary">Cerca disponibilità</button>
   </form>
 </div>
 
-<!-- FEATURES -->
 <section class="section section-alt">
   <div class="container">
     <div class="section-header fade-in">
@@ -147,7 +121,6 @@
   </div>
 </section>
 
-<!-- CAMERE -->
 <section class="section" id="camere">
   <div class="container">
     <div class="section-header fade-in">
@@ -157,51 +130,35 @@
     </div>
     <div class="rooms-grid">
       <div class="room-card fade-in">
-        <div class="room-img" style="background-image:url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80');">
-          <span class="room-tag">Camera Singola</span>
-        </div>
+        <div class="room-img" style="background-image:url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/00240d3f94c7d3b8fc60dc73bee9370ba95ddadf.jpg');"><span class="room-tag">Camera Singola</span></div>
         <div class="room-info">
           <h3>Camera Singola</h3>
           <p>Letto singolo 1,45 m, ideale per viaggiatori solitari che cercano comfort e tranquillità.</p>
-          <div class="room-amenities">
-            <span>Balcone</span><span>Wi-Fi</span><span>TV Sat</span><span>Aria condizionata</span>
-          </div>
+          <div class="room-amenities"><span>Balcone</span><span>Wi-Fi</span><span>TV Sat</span><span>Aria condizionata</span></div>
         </div>
       </div>
       <div class="room-card fade-in">
-        <div class="room-img" style="background-image:url('https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80');">
-          <span class="room-tag">Matrimoniale</span>
-        </div>
+        <div class="room-img" style="background-image:url('https://q-xx.bstatic.com/xdata/images/hotel/max500x500/2b1b62144ababb76bf2295ac357e4bf77fa9fd27.jpg');"><span class="room-tag">Matrimoniale</span></div>
         <div class="room-info">
           <h3>Camera Matrimoniale</h3>
           <p>Letto queen 1,60 m, arredi eleganti e balcone con vista sul parco o sui Colli Euganei.</p>
-          <div class="room-amenities">
-            <span>Balcone</span><span>Doccia</span><span>Parquet</span><span>Minibar</span><span>Cassaforte</span>
-          </div>
+          <div class="room-amenities"><span>Balcone</span><span>Doccia</span><span>Parquet</span><span>Minibar</span><span>Cassaforte</span></div>
         </div>
       </div>
       <div class="room-card fade-in">
-        <div class="room-img" style="background-image:url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80');">
-          <span class="room-tag">Junior Suite</span>
-        </div>
+        <div class="room-img" style="background-image:url('https://q-xx.bstatic.com/xdata/images/hotel/max500x500/ce00924d721578190da7024a6c047242a2a2141d.jpg');"><span class="room-tag">Junior Suite</span></div>
         <div class="room-info">
           <h3>Junior Suite</h3>
           <p>Spazi generosi, bagno con doppio lavabo, soggiorno separato e balcone panoramico.</p>
-          <div class="room-amenities">
-            <span>Doppio lavabo</span><span>Wi-Fi fibra</span><span>Asciugacapelli</span><span>Scrivania</span>
-          </div>
+          <div class="room-amenities"><span>Doppio lavabo</span><span>Wi-Fi fibra</span><span>Asciugacapelli</span><span>Scrivania</span></div>
         </div>
       </div>
       <div class="room-card fade-in">
-        <div class="room-img" style="background-image:url('https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80');">
-          <span class="room-tag">Suite</span>
-        </div>
+        <div class="room-img" style="background-image:url('https://images.trvl-media.com/lodging/7600000/7597000/7596682/7596682/fa0e8fa7f828afbd3af25a9134c91d9d5dd538c2.jpg');"><span class="room-tag">Suite</span></div>
         <div class="room-info">
           <h3>Suite</h3>
           <p>Il massimo del comfort: ampia camera da letto, salotto, bagno lussuoso e vista mozzafiato.</p>
-          <div class="room-amenities">
-            <span>Salotto</span><span>Doppio lavabo</span><span>Accappatoio</span><span>Telo piscina</span>
-          </div>
+          <div class="room-amenities"><span>Salotto</span><span>Doppio lavabo</span><span>Accappatoio</span><span>Telo piscina</span></div>
         </div>
       </div>
     </div>
@@ -211,7 +168,6 @@
   </div>
 </section>
 
-<!-- TERME -->
 <section class="section section-alt" id="terme">
   <div class="container">
     <div class="section-header fade-in">
@@ -248,7 +204,6 @@
   </div>
 </section>
 
-<!-- GOLF -->
 <section class="section" id="golf">
   <div class="container">
     <div class="section-header fade-in">
@@ -268,32 +223,44 @@
         </ul>
       </div>
       <div class="fade-in" style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);">
-        <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&q=80" alt="Campo da golf" style="width:100%;height:320px;object-fit:cover;display:block;">
+        <img src="https://foto.hrsstatic.com/fotos/0/3/1098/700/80/000000/2d43f3e6a66fd126775b5494b30738f67960ba47.jpg" alt="Campo da golf" style="width:100%;height:320px;object-fit:cover;display:block;">
       </div>
     </div>
     <div class="features-grid">
-      <div class="feature-card fade-in">
-        <h4 style="margin-bottom:8px;">⛳ Golf Club Montecchia</h4>
-        <p style="font-size:0.9rem;">5,6 km — 27 buche, uno dei più prestigiosi d'Italia.</p>
+      <div class="feature-card fade-in"><h4 style="margin-bottom:8px;">⛳ Golf Club Montecchia</h4><p style="font-size:0.9rem;">5,6 km — 27 buche, uno dei più prestigiosi d'Italia.</p></div>
+      <div class="feature-card fade-in"><h4 style="margin-bottom:8px;">⛳ Frassanelle</h4><p style="font-size:0.9rem;">9,6 km — 18 buche in un parco storico.</p></div>
+      <div class="feature-card fade-in"><h4 style="margin-bottom:8px;">⛳ Golf Club Padova</h4><p style="font-size:0.9rem;">8,6 km — 27 buche, facile e panoramico.</p></div>
+      <div class="feature-card fade-in"><h4 style="margin-bottom:8px;">⛳ Ca' della Nave</h4><p style="font-size:0.9rem;">Martellago — 18 buche, a 25 minuti.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="ristorante">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Gastronomia</span>
+      <h2>Ristorante & Cucina Veneta</h2>
+      <p>La tradizione culinaria veneta incontra la creatività del nostro chef in un ambiente raffinato e accogliente.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+      <div class="fade-in" style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);">
+        <img src="https://img02.restaurantguru.com/64096dec8ecd2cdf8bd79cae8fbeab2a5437b053.jpg" alt="Ristorante" style="width:100%;height:320px;object-fit:cover;display:block;">
       </div>
-      <div class="feature-card fade-in">
-        <h4 style="margin-bottom:8px;">⛳ Frassanelle</h4>
-        <p style="font-size:0.9rem;">9,6 km — 18 buche in un parco storico.</p>
-      </div>
-      <div class="feature-card fade-in">
-        <h4 style="margin-bottom:8px;">⛳ Golf Club Padova</h4>
-        <p style="font-size:0.9rem;">8,6 km — 27 buche, facile e panoramico.</p>
-      </div>
-      <div class="feature-card fade-in">
-        <h4 style="margin-bottom:8px;">⛳ Ca' della Nave</h4>
-        <p style="font-size:0.9rem;">Martellago — 18 buche, a 25 minuti.</p>
+      <div class="fade-in">
+        <h3 style="margin-bottom:16px;">Sapori autentici dei Colli Euganei</h3>
+        <p style="margin-bottom:16px;">Il ristorante dell'Hotel Terme Leonardo propone una cucina che valorizza i prodotti del territorio: oli extravergini dei Colli Euganei, vini DOC, risotti, paste fresche e carni selezionate.</p>
+        <p style="margin-bottom:16px;">Ogni piatto è preparato con cura per offrire un'esperienza gastronomica che completa il benessere del soggiorno termale.</p>
+        <ul style="list-style:none;padding:0;">
+          <li style="padding:6px 0;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> Menù à la carte e menu di degustazione</li>
+          <li style="padding:6px 0;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> Opzioni vegetariane e per intolleranze</li>
+          <li style="padding:6px 0;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> Colazione a buffet con prodotti freschi</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- OFFERTE -->
-<section class="section section-alt" id="offerte">
+<section class="section" id="offerte">
   <div class="container">
     <div class="section-header fade-in">
       <span class="section-label">Promozioni</span>
@@ -302,9 +269,7 @@
     </div>
     <div class="offers-grid">
       <div class="offer-card fade-in">
-        <div class="offer-img" style="background-image:url('https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=600&q=80');">
-          <span class="offer-badge">Golf</span>
-        </div>
+        <div class="offer-img" style="background-image:url('https://q-xx.bstatic.com/xdata/images/hotel/max500x500/f9a35458788bd76fde8f5de5eaf28a2d1bffe2ff.jpg');"><span class="offer-badge">Golf</span></div>
         <div class="offer-body">
           <h3>7 Giorni di Golf</h3>
           <p>Settimana dedicata al golf con accesso alla driving range, green fee ridotti e relax termale al termine della giornata.</p>
@@ -313,9 +278,7 @@
         </div>
       </div>
       <div class="offer-card fade-in">
-        <div class="offer-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80');">
-          <span class="offer-badge">Wellness</span>
-        </div>
+        <div class="offer-img" style="background-image:url('https://q-xx.bstatic.com/xdata/images/hotel/max500x500/e409d9fdd18ab072c65b16b7cd45dd010a6ddbf7.jpg');"><span class="offer-badge">Wellness</span></div>
         <div class="offer-body">
           <h3>Deluxe — 3 Notti & Massaggio</h3>
           <p>Soggiorno di 3 notti con trattamento benessere incluso: massaggio rilassante e accesso illimitato a piscine e grotte termali.</p>
@@ -324,9 +287,7 @@
         </div>
       </div>
       <div class="offer-card fade-in">
-        <div class="offer-img" style="background-image:url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80');">
-          <span class="offer-badge">Smart</span>
-        </div>
+        <div class="offer-img" style="background-image:url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/00240d3f94c7d3b8fc60dc73bee9370ba95ddadf.jpg');"><span class="offer-badge">Smart</span></div>
         <div class="offer-body">
           <h3>Smart — 1 Notte & Massaggio</h3>
           <p>Perfetto per una pausa breve: una notte con colazione e un massaggio rigenerante di 50 minuti.</p>
@@ -335,9 +296,7 @@
         </div>
       </div>
       <div class="offer-card fade-in">
-        <div class="offer-img" style="background-image:url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=600&q=80');">
-          <span class="offer-badge">Terme</span>
-        </div>
+        <div class="offer-img" style="background-image:url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/071b45482fd442c25c9fb9d800bd10808a3314a7.jpg');"><span class="offer-badge">Terme</span></div>
         <div class="offer-body">
           <h3>Thermal Escape — 2 Notti</h3>
           <p>Weekend termale con accesso alle piscine, grotte e trattamento di fangoterapia o inalazioni.</p>
@@ -350,7 +309,6 @@
   </div>
 </section>
 
-<!-- GALLERY -->
 <section class="section">
   <div class="container">
     <div class="section-header fade-in">
@@ -358,17 +316,16 @@
       <h2>Scopri l'Hotel</h2>
     </div>
     <div class="gallery-grid">
-      <div class="gallery-item wide" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80');" data-label="Esterno Hotel"></div>
-      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=400&q=80');" data-label="Piscina Termale"></div>
-      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400&q=80');" data-label="Spa & Wellness"></div>
-      <div class="gallery-item tall" style="background-image:url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=400&q=80');" data-label="Camera"></div>
-      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=400&q=80');" data-label="Golf"></div>
-      <div class="gallery-item wide" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80');" data-label="Ristorante"></div>
+      <div class="gallery-item wide" style="background-image:url('https://images.trvl-media.com/lodging/7600000/7597000/7596682/7596682/9c8743d3a32949f5afed802325c3656b72600c4d.jpg');" data-label="Esterno Hotel"></div>
+      <div class="gallery-item" style="background-image:url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/071b45482fd442c25c9fb9d800bd10808a3314a7.jpg');" data-label="Piscina Termale"></div>
+      <div class="gallery-item" style="background-image:url('https://q-xx.bstatic.com/xdata/images/hotel/max500x500/e409d9fdd18ab072c65b16b7cd45dd010a6ddbf7.jpg');" data-label="Spa & Wellness"></div>
+      <div class="gallery-item tall" style="background-image:url('https://q-xx.bstatic.com/xdata/images/hotel/max500x500/0ab108d527aa7476c1b737b78f291e975934596f.jpg');" data-label="Camera"></div>
+      <div class="gallery-item" style="background-image:url('https://foto.hrsstatic.com/fotos/0/3/1098/700/80/000000/2d43f3e6a66fd126775b5494b30738f67960ba47.jpg');" data-label="Golf"></div>
+      <div class="gallery-item wide" style="background-image:url('https://img02.restaurantguru.com/64096dec8ecd2cdf8bd79cae8fbeab2a5437b053.jpg');" data-label="Ristorante"></div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
 <section class="testimonials">
   <div class="container">
     <h2 class="fade-in">Cosa dicono i nostri ospiti</h2>
@@ -392,7 +349,6 @@
   </div>
 </section>
 
-<!-- INFO UTILI -->
 <section class="section section-alt" id="info">
   <div class="container">
     <div class="section-header fade-in">
@@ -400,26 +356,10 @@
       <h2>Info Utili</h2>
     </div>
     <div class="info-grid">
-      <div class="info-item fade-in">
-        <div class="icon">🕐</div>
-        <h4>Check-in / Check-out</h4>
-        <p>Check-in dalle 15:00<br>Check-out entro le 11:00</p>
-      </div>
-      <div class="info-item fade-in">
-        <div class="icon">📍</div>
-        <h4>Come arrivare</h4>
-        <p>Via Monteortone, 46<br>35037 Abano Terme (PD)<br>A 1 km dal centro, 45 min da Venezia</p>
-      </div>
-      <div class="info-item fade-in">
-        <div class="icon">🏊</div>
-        <h4>Orari Piscine</h4>
-        <p>Tutti i giorni 08:00–19:30<br>Venerdì e sabato fino alle 22:30<br>Cuffia obbligatoria</p>
-      </div>
-      <div class="info-item fade-in">
-        <div class="icon">🚭</div>
-        <h4>Regole</h4>
-        <p>Divieto di fumo in camera<br>Consentito in balcone<br>Wi-Fi fibra gratuito ovunque</p>
-      </div>
+      <div class="info-item fade-in"><div class="icon">🕐</div><h4>Check-in / Check-out</h4><p>Check-in dalle 15:00<br>Check-out entro le 11:00</p></div>
+      <div class="info-item fade-in"><div class="icon">📍</div><h4>Come arrivare</h4><p>Via Monteortone, 46<br>35037 Abano Terme (PD)<br>A 1 km dal centro, 45 min da Venezia</p></div>
+      <div class="info-item fade-in"><div class="icon">🏊</div><h4>Orari Piscine</h4><p>Tutti i giorni 08:00–19:30<br>Venerdì e sabato fino alle 22:30<br>Cuffia obbligatoria</p></div>
+      <div class="info-item fade-in"><div class="icon">🚭</div><h4>Regole</h4><p>Divieto di fumo in camera<br>Consentito in balcone<br>Wi-Fi fibra gratuito ovunque</p></div>
     </div>
     <div style="text-align:center;margin-top:40px;">
       <a href="/pdf/hotel-leonardo-listino-prezzi.pdf" target="_blank" class="btn btn-outline" style="color:var(--primary);border-color:var(--primary);margin-right:12px;">Listino Prezzi Hotel (PDF)</a>
@@ -428,7 +368,6 @@
   </div>
 </section>
 
-<!-- NEWSLETTER -->
 <section class="newsletter">
   <div class="container">
     <div class="fade-in">
@@ -443,15 +382,11 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer" id="contatti">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="logo" style="color:#fff;">
-          <span class="logo-icon">☀</span>
-          Terme Leonardo
-        </a>
+        <a href="index.html" class="logo" style="color:#fff;"><span class="logo-icon">☀</span>Terme Leonardo</a>
         <p>Hotel 4 stelle ad Abano Terme, nel cuore dei Colli Euganei. Piscine termali, golf, spa e cure convenzionate SSN per una vacanza di benessere totale.</p>
         <div class="footer-social">
           <a href="https://www.facebook.com/HotelTermeLeonardoAbanoTerme" target="_blank" aria-label="Facebook">f</a>
@@ -500,7 +435,6 @@
   </div>
 </footer>
 
-<!-- COOKIE BANNER -->
 <div class="cookie-banner" id="cookie-banner">
   <p>Utilizziamo i cookie per garantire le funzionalità essenziali del sito e, solo con il tuo consenso, per analizzare il traffico. <a href="https://www.termeleonardo.com/it/cookies" target="_blank">Cookie Policy</a></p>
   <button class="cookie-btn accept" id="cookie-accept">Accetta tutti</button>
