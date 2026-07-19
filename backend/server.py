@@ -37,10 +37,54 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
+class BookingCreate(BaseModel):
+    nome: str
+    email: str
+    telefono: str = ""
+    check_in: str
+    check_out: str
+    ospiti: int = 2
+    tipo_camera: str = ""
+    pacchetto: str = ""
+    messaggio: str = ""
+
+class Booking(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    nome: str
+    email: str
+    telefono: str = ""
+    check_in: str
+    check_out: str
+    ospiti: int = 2
+    tipo_camera: str = ""
+    pacchetto: str = ""
+    messaggio: str = ""
+    stato: str = "ricevuta"
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
     return {"message": "Hello World"}
+
+@api_router.post("/bookings", response_model=Booking)
+async def create_booking(input: BookingCreate):
+    booking = Booking(**input.model_dump())
+    doc = booking.model_dump()
+    doc['created_at'] = doc['created_at'].isoformat()
+    await db.bookings.insert_one(doc)
+    logger.info(f"Nuova richiesta di prenotazione da {booking.email}")
+    return booking
+
+@api_router.get("/bookings", response_model=List[Booking])
+async def get_bookings():
+    bookings = await db.bookings.find({}, {"_id": 0}).sort("created_at", -1).to_list(1000)
+    for b in bookings:
+        if isinstance(b.get('created_at'), str):
+            b['created_at'] = datetime.fromisoformat(b['created_at'])
+    return bookings
 
 @api_router.post("/status", response_model=StatusCheck)
 async def create_status_check(input: StatusCheckCreate):
