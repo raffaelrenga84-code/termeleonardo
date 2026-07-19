@@ -12,6 +12,21 @@
 <link rel="alternate" hreflang="en" href="https://termeleonardo.vercel.app/en.html">
 <link rel="alternate" hreflang="de" href="https://termeleonardo.vercel.app/de.html">
 <link rel="alternate" hreflang="fr" href="https://termeleonardo.vercel.app/fr.html">
+
+<style>
+  /* Override colore primario - Verde Oliva Pastello */
+  :root {
+    --primary: #5a6b4a !important;
+    --primary-dark: #4a5a3a !important;
+    --primary-light: #6b7d5a !important;
+  }
+  .header, .footer, .cookie-banner { background: #5a6b4a !important; }
+  .btn-primary { background: #5a6b4a !important; }
+  .btn-primary:hover { background: #4a5a3a !important; }
+  .section-label { color: #5a6b4a !important; }
+  .gallery-filter.active { background: #5a6b4a !important; }
+  .hero::before { background: linear-gradient(135deg, #5a6b4a 50%, transparent 50%) !important; }
+</style>
 <base target="_blank">
 </head>
 <body>
@@ -364,7 +379,7 @@
 
     <!-- Filtri galleria -->
     <div class="gallery-filters" style="display:flex;gap:12px;justify-content:center;margin-bottom:32px;flex-wrap:wrap;">
-      <button class="gallery-filter active" data-filter="all" style="padding:8px 20px;border-radius:24px;border:1px solid var(--primary);background:var(--primary);color:#fff;cursor:pointer;font-family:Inter,sans-serif;font-size:0.9rem;">Tutte</button>
+      <button class="gallery-filter active" data-filter="all" style="padding:8px 20px;border-radius:24px;border:1px solid var(--primary);background:#5a6b4a;color:#fff;cursor:pointer;font-family:Inter,sans-serif;font-size:0.9rem;">Tutte</button>
       <button class="gallery-filter" data-filter="camere" style="padding:8px 20px;border-radius:24px;border:1px solid var(--primary);background:transparent;color:var(--primary);cursor:pointer;font-family:Inter,sans-serif;font-size:0.9rem;">Camere</button>
       <button class="gallery-filter" data-filter="ristorante" style="padding:8px 20px;border-radius:24px;border:1px solid var(--primary);background:transparent;color:var(--primary);cursor:pointer;font-family:Inter,sans-serif;font-size:0.9rem;">Ristorante</button>
       <button class="gallery-filter" data-filter="terme" style="padding:8px 20px;border-radius:24px;border:1px solid var(--primary);background:transparent;color:var(--primary);cursor:pointer;font-family:Inter,sans-serif;font-size:0.9rem;">Terme</button>
