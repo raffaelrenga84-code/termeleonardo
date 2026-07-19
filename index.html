@@ -18,13 +18,14 @@
 
 <header class="header">
   <div class="header-inner">
-    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;"><img src="https://res.cloudinary.com/u9uel4ty/image/upload/7157830d-3077-4e29-96bf-07c96b71b0d6_rwzuh3.png" alt="Hotel Terme Leonardo" style="height:36px;width:auto;display:block;background:var(--primary);padding:4px 8px;border-radius:4px;"></a>
+    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;"><img src="https://res.cloudinary.com/u9uel4ty/image/upload/7157830d-3077-4e29-96bf-07c96b71b0d6_rwzuh3.png" alt="Hotel Terme Leonardo" style="height:50px;width:auto;display:block;background:var(--primary);padding:6px 12px;border-radius:6px;"></a>
     <nav class="nav-desktop">
       <a href="#camere">Camere</a>
       <a href="#terme">Terme & Spa</a>
       <a href="#golf">Golf</a>
       <a href="#offerte">Offerte</a>
       <a href="#ristorante">Ristorante</a>
+      <a href="#day-spa">Day Spa</a>
       <a href="#info">Info Utili</a>
       <a href="#contatti">Contatti</a>
       <a href="https://www.termeleonardo.com/it/booking" target="_blank" class="nav-cta">Prenota Ora</a>
@@ -43,6 +44,7 @@
     <a href="#golf">Golf</a>
     <a href="#offerte">Offerte</a>
     <a href="#ristorante">Ristorante</a>
+    <a href="#day-spa">Day Spa</a>
     <a href="#info">Info Utili</a>
     <a href="#contatti">Contatti</a>
     <a href="https://www.termeleonardo.com/it/booking" target="_blank" class="mobile-cta">Prenota Ora</a>
@@ -752,5 +754,44 @@
 </div>
 
 <script src="main.js"></script>
+
+
+<script>
+// Imposta la data minima di arrivo a oggi
+document.addEventListener('DOMContentLoaded', function() {
+  const today = new Date().toISOString().split('T')[0];
+  const arrivalInput = document.getElementById('arrival');
+  const departureInput = document.getElementById('departure');
+
+  if (arrivalInput) {
+    arrivalInput.setAttribute('min', today);
+    arrivalInput.value = today;
+  }
+
+  if (departureInput) {
+    departureInput.setAttribute('min', today);
+    // Imposta la partenza a domani di default
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    departureInput.setAttribute('min', tomorrow.toISOString().split('T')[0]);
+    departureInput.value = tomorrow.toISOString().split('T')[0];
+  }
+
+  // Quando cambia l'arrivo, aggiorna il min della partenza
+  if (arrivalInput && departureInput) {
+    arrivalInput.addEventListener('change', function() {
+      const arrivalDate = new Date(this.value);
+      const minDeparture = new Date(arrivalDate);
+      minDeparture.setDate(minDeparture.getDate() + 1);
+      departureInput.setAttribute('min', minDeparture.toISOString().split('T')[0]);
+
+      // Se la partenza è prima della nuova data minima, aggiornala
+      if (new Date(departureInput.value) <= arrivalDate) {
+        departureInput.value = minDeparture.toISOString().split('T')[0];
+      }
+    });
+  }
+});
+</script>
 </body>
 </html>
