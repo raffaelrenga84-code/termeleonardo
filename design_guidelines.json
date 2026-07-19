@@ -1,0 +1,126 @@
+{
+  "project_name": "Hotel Terme Leonardo Redesign",
+  "theme_preference": "light",
+  "design_concept": "Elegant Luxury Wellness Retreat. Cinematic narrative structure (Arrival, Transformation, Return). Minimal 'Alpine Fresh' / Organic & Earthy archetype to evoke calm and sophistication. High visual impact with generous white space.",
+  "colors": {
+    "background": "#F9F6F0",
+    "background_secondary": "#F1EFEB",
+    "primary": "#1A3626",
+    "primary_foreground": "#FFFFFF",
+    "accent": "#D4AF37",
+    "text_main": "#1C1C1C",
+    "text_muted": "#5A5A5A",
+    "border": "#E5E0D8"
+  },
+  "typography": {
+    "headings": {
+      "font": "Cormorant Garamond",
+      "style": "Elegant, tight tracking (-0.02em) for large text, varying weights (Light to Bold)."
+    },
+    "body": {
+      "font": "Manrope",
+      "style": "Clean, highly legible sans-serif, relaxed line-height (1.6)."
+    },
+    "labels": {
+      "style": "Uppercase, wide letter spacing (tracking-widest), tiny size (text-xs)."
+    }
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing (2-3x more than typical). Use py-24 to py-32 for section padding.",
+    "grids": "Use 'Bento Grid' protocol for the Offerte/Day Spa sections. Asymmetric 'Tetris' grid for Marketing sections (Benessere, Camere). Grid items must be direct children.",
+    "mobile_first": true,
+    "alignment": "Optical alignment over geometrical. Left-align dense text, explicitly align headings. Avoid generic centering."
+  },
+  "components_and_surfaces": {
+    "headers": "Crystal Glassmorphism: backdrop-blur-xl bg-[#F9F6F0]/80, with a delicate 1px bottom border (#1A3626/10). Sticky top z-50.",
+    "cards": "Flat solid background or minimal neumorphism (clay & crisp). 1px subtle border, very soft ambient shadow on hover. No heavy card usage; prefer cardless or bento rectangles.",
+    "buttons": "Pill-shaped or slightly rounded (rounded-md) with sharp interaction animations. Primary uses #1A3626 background. Hover state must explicitly set text color and background.",
+    "forms": "Stepped booking request form using Shadcn UI components. Customized to remove generic Vercel look, matching the earthy luxury palette.",
+    "icons_library": "lucide-react (default) or @phosphor-icons/react for high-end duotone weight."
+  },
+  "motion_and_interactions": {
+    "scrolling": "MANDATORY: Use `lenis` for smooth scrolling to provide a premium, weighty feel.",
+    "animations": "Framer-motion for scroll-triggered staggered text reveals, subtle parallax on hero images. Image hover zooms (scale-105 with long transition).",
+    "accessibility": "Respect prefers-reduced-motion. Ensure hover states and focus rings (focus:ring-2 focus:ring-[#1A3626]) are clearly visible."
+  },
+  "media_and_images": {
+    "hero": "Hero overlay MUST NOT exceed bg-black/40. Use gradient overlay if text needs contrast.",
+    "image_urls": [
+      {
+        "category": "Hero / Spa Pools",
+        "url": "https://images.unsplash.com/photo-1631689655398-8b92be79d165",
+        "description": "Large indoor luxury swimming pool with blue water"
+      },
+      {
+        "category": "Wellness / Spa",
+        "url": "https://images.unsplash.com/photo-1680609989998-6183fcea718b",
+        "description": "Large indoor swimming pool in a building with elegant architecture"
+      },
+      {
+        "category": "Rooms & Suites",
+        "url": "https://images.unsplash.com/photo-1618773928121-c32242e63f39",
+        "description": "Elegant white bed linen suite bedroom"
+      },
+      {
+        "category": "Restaurant / Fine Dining",
+        "url": "https://images.unsplash.com/photo-1616671285410-2a676a9a433d",
+        "description": "Gourmet Italian fine dining plate setup"
+      },
+      {
+        "category": "Golf / Sport",
+        "url": "https://images.pexels.com/photos/7041600/pexels-photo-7041600.jpeg",
+        "description": "Relaxing spa / nature representation"
+      }
+    ]
+  },
+  "content_structure": [
+    {
+      "section": "Hero",
+      "content": "Full screen cinematic image. H1: 'Riscopri il Tuo Equilibrio'. Subtext: 'L\\'Hotel Terme Leonardo, il tuo 4 stelle termale ad Abano Terme immerso nella quiete dei Colli Euganei.' CTA: 'Prenota Ora'."
+    },
+    {
+      "section": "Benessere (Wellness)",
+      "content": "Asymmetrical layout. Text: 'Oasi per corpo e mente. Immergiti nelle piscine termali a 30-35°C...'"
+    },
+    {
+      "section": "Sport e Natura (Golf)",
+      "content": "Image of nature. Text: 'Gioca, respira, rilassati. Circondato da un parco privato...'"
+    },
+    {
+      "section": "Le Camere",
+      "content": "Grid showcasing elegant rooms. Text: 'Comfort, eleganza e viste spettacolari... 77 camere e 21 suite.'"
+    },
+    {
+      "section": "Gusto e Cucina Veneta",
+      "content": "Fine dining image. Text: 'Nel nostro ristorante e Bistrot potrai assaporare la cucina veneta...'"
+    },
+    {
+      "section": "Offerte & Day Spa",
+      "content": "Bento Grid layout displaying the 4 packages: '7 giorni di Golf (€820)', 'Deluxe (€400)', 'Smart (€180)', 'Escape (€280)'. And 'Day Spa' info."
+    },
+    {
+      "section": "Booking Request Form",
+      "content": "Stepped form for reservations. Fields: Dates, Guests, Room Type, Intention, Email. Low friction."
+    },
+    {
+      "section": "Footer",
+      "content": "Contacts, location, privacy/cookie policy, massive logo at the bottom."
+    }
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not use generic centered layouts or simplistic gradients.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur) for sticky navs.",
+    "Never apply `transition: all`. Target specific properties.",
+    "Do not center align the app container (.App { text-align: center; }).",
+    "Use modern pill-shaped or sharp buttons with hover animations.",
+    "Never use AI assistant Emoji characters (🤖🧠💭💡🔮🎯).",
+    "Every interaction needs micro-animations (hover, entrance, stagger).",
+    "Use 2-3x more spacing than feels comfortable (py-24, py-32).",
+    "Use subtle grain textures or noise overlays if possible.",
+    "Use Shadcn UI components for complex interactions (Dropdown, Calendar, Select).",
+    "Add `data-testid` to all interactive elements for robust testing.",
+    "NEVER use placeholder image URLs. Use the provided image_urls strictly."
+  ],
+  "instructions_to_main_agent": "Read this JSON. Use pure HTML/Tailwind for structural marketing sections (Hero, Features). Use Shadcn UI solely for interactive elements like the booking form, calendars, and dialogs. Implement Framer Motion for scroll reveals and Lenis for smooth scrolling. Adhere strictly to the color palette and typography. Do not center everything; use grids and asymmetric alignments."
+}
