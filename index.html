@@ -1,32 +1,53 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hotel Terme Leonardo | 4 Stelle ad Abano Terme — Terme, Golf & Benessere</title>
-  <meta name="description" content="Hotel 4 stelle ad Abano Terme con piscine termali, golf, spa e cure convenzionate SSN. Prenota direttamente per il miglior prezzo garantito.">
+  <meta name="description" content="Hotel 4 stelle ad Abano Terme con piscine termali, golf, spa e cure convenzionate SSN. Prenota direttamente per il miglior prezzo garantito." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="alternate" hreflang="it" href="https://termeleonardo.vercel.app/">
-  <link rel="alternate" hreflang="en" href="https://termeleonardo.vercel.app/en.html">
-  <link rel="alternate" hreflang="de" href="https://termeleonardo.vercel.app/de.html">
-  <link rel="alternate" hreflang="fr" href="https://termeleonardo.vercel.app/fr.html">
+  <link rel="alternate" hreflang="it" href="https://termeleonardo.vercel.app/" />
+  <link rel="alternate" hreflang="en" href="https://termeleonardo.vercel.app/en.html" />
+  <link rel="alternate" hreflang="de" href="https://termeleonardo.vercel.app/de.html" />
+  <link rel="alternate" hreflang="fr" href="https://termeleonardo.vercel.app/fr.html" />
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<!-- HEADER -->
-<header class="header">
-  <div class="header-inner">
-    <a href="index.html" class="logo">
-      <img src="https://res.cloudinary.com/u9uel4ty/image/upload/7157830d-3077-4e29-96bf-07c96b71b0d6_rwzuh3.png" alt="Hotel Terme Leonardo">
-    </a>
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <div class="header-inner container">
+      <a href="index.html" class="logo" aria-label="Hotel Terme Leonardo">
+        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/7157830d-3077-4e29-96bf-07c96b71b0d6_rwzuh3.png" alt="Hotel Terme Leonardo" />
+      </a>
 
-    <nav class="nav-desktop">
+      <nav class="nav-desktop" role="navigation" aria-label="Main navigation">
+        <a href="#camere">Camere</a>
+        <a href="#terme">Terme & Spa</a>
+        <a href="#golf">Golf</a>
+        <a href="#offerte">Offerte</a>
+        <a href="#ristorante">Ristorante</a>
+        <a href="#day-spa">Day Spa</a>
+        <a href="#info">Info Utili</a>
+        <a href="#contatti">Contatti</a>
+        <a href="https://www.termeleonardo.com/it/booking" target="_blank" rel="noopener" class="nav-cta">Prenota Ora</a>
+
+        <div class="lang-switcher" aria-hidden="false">
+          <a href="index.html" class="active" aria-current="page">IT</a>
+          <a href="en.html">EN</a>
+          <a href="de.html">DE</a>
+          <a href="fr.html">FR</a>
+        </div>
+      </nav>
+
+      <button class="mobile-toggle" aria-label="Apri menu mobile" aria-expanded="false">☰</button>
+    </div>
+
+    <nav class="nav-mobile" aria-hidden="true" id="mobileNav">
       <a href="#camere">Camere</a>
       <a href="#terme">Terme & Spa</a>
       <a href="#golf">Golf</a>
@@ -35,330 +56,358 @@
       <a href="#day-spa">Day Spa</a>
       <a href="#info">Info Utili</a>
       <a href="#contatti">Contatti</a>
-      <a href="https://www.termeleonardo.com/it/booking" target="_blank" class="nav-cta">Prenota Ora</a>
-
-      <div class="lang-switcher">
-        <a href="index.html" class="active">IT</a>
-        <a href="en.html">EN</a>
-        <a href="de.html">DE</a>
-        <a href="fr.html">FR</a>
-      </div>
+      <a href="https://www.termeleonardo.com/it/booking" class="mobile-cta" target="_blank" rel="noopener">Prenota Ora</a>
     </nav>
+  </header>
 
-    <button class="mobile-toggle">☰</button>
-  </div>
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-img" style="background-image:url('https://res.cloudinary.com/u9uel4ty/image/upload/2025_HotelTermeLeonardo_Generiche_5_it8qsa.jpg');" role="img" aria-hidden="true"></div>
 
-  <nav class="nav-mobile">
-    <a href="#camere">Camere</a>
-    <a href="#terme">Terme & Spa</a>
-    <a href="#golf">Golf</a>
-    <a href="#offerte">Offerte</a>
-    <a href="#ristorante">Ristorante</a>
-    <a href="#day-spa">Day Spa</a>
-    <a href="#info">Info Utili</a>
-    <a href="#contatti">Contatti</a>
-    <a href="https://www.termeleonardo.com/it/booking" class="mobile-cta">Prenota Ora</a>
-  </nav>
-</header>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">★★★★ Hotel 4 Stelle</div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-img" style="background-image:url('https://res.cloudinary.com/u9uel4ty/image/upload/2025_HotelTermeLeonardo_Generiche_5_it8qsa.jpg');"></div>
+        <h1>Un'esperienza da vivere tra terme e golf sui Colli Euganei</h1>
 
+        <p class="hero-subtitle">
+          Piscine termali a 30–35°C, grotte wellness, cure convenzionate SSN e campo pratica golf immerso in 38.000 m² di parco.
+        </p>
+
+        <div class="hero-btns">
+          <a href="https://www.termeleonardo.com/it/booking" class="btn btn-primary" target="_blank" rel="noopener">Prenota il soggiorno →</a>
+          <a href="https://www.termeleonardo.com/it/day-spa/prenotazioni" class="btn btn-outline" target="_blank" rel="noopener">Prenota Day-Spa</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING BAR -->
   <div class="container">
-    <div class="hero-content">
-      <div class="hero-badge">★★★★ Hotel 4 Stelle</div>
-
-      <h1>Un'esperienza da vivere tra terme e golf sui Colli Euganei</h1>
-
-      <p class="hero-subtitle">
-        Piscine termali a 30–35°C, grotte wellness, cure convenzionate SSN e campo pratica golf immerso in 38.000 m² di parco.
-      </p>
-
-      <div class="hero-btns">
-        <a href="https://www.termeleonardo.com/it/booking" class="btn btn-primary">Prenota il soggiorno →</a>
-        <a href="https://www.termeleonardo.com/it/day-spa/prenotazioni" class="btn btn-outline">Prenota Day-Spa</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BOOKING BAR -->
-<div class="container">
-  <form class="booking-bar" id="booking-form">
-    <div>
-      <label>Arrivo</label>
-      <input type="date" id="arrival" required>
-    </div>
-
-    <div>
-      <label>Partenza</label>
-      <input type="date" id="departure" required>
-    </div>
-
-    <div>
-      <label>Adulti</label>
-      <select id="adults">
-        <option value="1">1</option>
-        <option value="2" selected>2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-      </select>
-    </div>
-
-    <div>
-      <label>Bambini</label>
-      <select id="children">
-        <option value="0" selected>0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-      </select>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Cerca disponibilità</button>
-  </form>
-</div>
-
-<!-- PERCHÉ SCEGLIERCI -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Perché sceglierci</span>
-      <h2>Il tuo rifugio di benessere ad Abano Terme</h2>
-      <p>Un’oasi dove rigenerare corpo e spirito tra acque termali, natura e sport.</p>
-    </div>
-
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🏊</div>
-        <h3>Piscine Termali</h3>
-        <p>Acque salso-bromo-iodiche a 30–35°C con idromassaggi e percorso Kneipp.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">⛳</div>
-        <h3>Campo Pratica Golf</h3>
-        <p>10 postazioni, putting green, pitching green e bunker.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">🧖</div>
-        <h3>Grotte & Wellness</h3>
-        <p>Biogrotta, bagno turco, docce emozionali e biosauna.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">🏥</div>
-        <h3>Cure Convenzionate SSN</h3>
-        <p>Fangoterapia, inalazioni, aerosol e fisioterapia.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">🍽️</div>
-        <h3>Ristorante Veneta</h3>
-        <p>Ingredienti locali e sapori dei Colli Euganei.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">🌿</div>
-        <h3>Parco di 38.000 m²</h3>
-        <p>A pochi minuti dal centro di Abano Terme.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CAMERE -->
-<section class="section" id="camere">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Dove dormire</span>
-      <h2>Camere e Suite</h2>
-      <p>98 camere con comfort 4 stelle e balcone.</p>
-    </div>
-
-    <div class="rooms-grid">
-
-      <div class="room-card">
-        <div class="room-img" style="background-image:url('https://res.cloudinary.com/u9uel4ty/image/upload/2018_HotelTermeLeonardo_Camere_2_ndaysp.jpg');">
-          <span class="room-tag">Camera Singola</span>
-        </div>
-        <div class="room-info">
-          <h3>Camera Singola</h3>
-          <p>Letto singolo 1,45 m, ideale per viaggiatori solitari.</p>
-          <div class="room-amenities">
-            <span>Balcone</span><span>Wi-Fi</span><span>TV Sat</span><span>Aria condizionata</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="room-card">
-        <div class="room-img" style="background-image:url('https://res.cloudinary.com/u9uel4ty/image/upload/2023_HotelTermeLeonardo_Stanze_Queen_1_gqsfzw.jpg');">
-          <span class="room-tag">Matrimoniale</span>
-        </div>
-        <div class="room-info">
-          <h3>Camera Matrimoniale</h3>
-          <p>Letto queen 1,60 m, arredi eleganti e balcone.</p>
-          <div class="room-amenities">
-            <span>Balcone</span><span>Doccia</span><span>Parquet</span><span>Minibar</span><span>Cassaforte</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="room-card">
-        <div class="room-img" style="background-image:url('https://res.cloudinary.com/u9uel4ty/image/upload/2023_HotelTermeLeonardo_Stanze_Queen_3_gnyoxh.jpg');">
-          <span class="room-tag">Junior Suite</span>
-        </div>
-        <div class="room-info">
-          <h3>Junior Suite</h3>
-          <p>Soggiorno separato, doppio lavabo e balcone panoramico.</p>
-          <div class="room-amenities">
-            <span>Doppio lavabo</span><span>Wi-Fi fibra</span><span>Scrivania</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="room-card">
-        <div class="room-img" style="background-image:url('https://res.cloudinary.com/u9uel4ty/image/upload/2023_HotelTermeLeonardo_Stanze_Queen_9_tnm4wx.jpg');">
-          <span class="room-tag">Suite</span>
-        </div>
-        <div class="room-info">
-          <h3>Suite</h3>
-          <p>Camera ampia, salotto, bagno lussuoso e vista.</p>
-          <div class="room-amenities">
-            <span>Salotto</span><span>Doppio lavabo</span><span>Accappatoio</span><span>Telo piscina</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div style="text-align:center;margin-top:32px;">
-      <a href="https://www.termeleonardo.com/it/booking" class="btn btn-primary">Vedi tutte le camere →</a>
-    </div>
-  </div>
-</section>
-
-<!-- TERME -->
-<section class="section section-alt" id="terme">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Benessere</span>
-      <h2>Terme & Benessere</h2>
-      <p>Acque ipertermali a ~75°C per cure e relax.</p>
-    </div>
-
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🌊</div>
-        <h3>Piscine Termali</h3>
-        <p>Vasche interne ed esterne a 34–35°C, idromassaggi e Kneipp.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">🪨</div>
-        <h3>Grotte Termali</h3>
-        <p>Biogrotta, grotta a vapore, cascate termali e cromoterapia.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">💆</div>
-        <h3>Cure Convenzionate</h3>
-        <p>Fanghi, inalazioni, aerosol, balneoterapia e fisioterapia.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">✨</div>
-        <h3>Day Spa</h3>
-        <p>Accesso giornaliero alle piscine e alla zona wellness.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DAY SPA -->
-<section class="section section-alt" id="day-spa">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Day Spa</span>
-      <h2>Ingresso Giornaliero alle Terme</h2>
-      <p>Relax completo anche senza pernottare.</p>
-    </div>
-
-    <div class="two-col">
+    <form class="booking-bar" id="booking-form" aria-label="Barra prenotazioni">
       <div>
-        <h3>La tua oasi di benessere</h3>
-        <p>Accesso alle piscine termali, grotte, cromoterapia e trattamenti.</p>
-
-        <ul class="check-list">
-          <li><span>✓</span> Piscine interne ed esterne</li>
-          <li><span>✓</span> Grotte termali e biosauna</li>
-          <li><span>✓</span> Docce emozionali</li>
-          <li><span>✓</span> Acquario con cromoterapia</li>
-          <li><span>✓</span> Massaggi su prenotazione</li>
-          <li><span>✓</span> Parcheggio gratuito</li>
-        </ul>
-
-        <div style="margin-top:20px;display:flex;gap:12px;">
-          <a href="https://www.termeleonardo.com/it/day-spa/prenotazioni" class="btn btn-primary">Prenota Day-Spa →</a>
-          <a href="https://www.termeleonardo.com/pdf/listino-spa-trattamenti-e-massaggi-hotel-leonardo-da-vinci-terme.pdf" class="btn btn-outline">Listino Spa (PDF)</a>
-        </div>
+        <label for="arrival">Arrivo</label>
+        <input type="date" id="arrival" name="arrival" required />
       </div>
 
       <div>
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/2022_HotelTermeLeonardo_SPA_28_t2ylpo.jpg" alt="Day Spa">
-      </div>
-    </div>
-
-    <div class="info-grid" style="margin-top:40px;">
-      <div class="info-item">
-        <div class="icon">🕘</div>
-        <h4>Orari</h4>
-        <p>09:00–18:30<br>Venerdì e sabato fino alle 22:30</p>
+        <label for="departure">Partenza</label>
+        <input type="date" id="departure" name="departure" required />
       </div>
 
-      <div class="info-item">
-        <div class="icon">📝</div>
-        <h4>Prenotazione</h4>
-        <p>Obbligatoria online</p>
+      <div>
+        <label for="adults">Adulti</label>
+        <select id="adults" name="adults">
+          <option value="1">1</option>
+          <option value="2" selected>2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
       </div>
 
-      <div class="info-item">
-        <div class="icon">🎩</div>
-        <h4>Cuffia</h4>
-        <p>Obbligatoria in piscina</p>
+      <div>
+        <label for="children">Bambini</label>
+        <select id="children" name="children">
+          <option value="0" selected>0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
       </div>
 
-      <div class="info-item">
-        <div class="icon">🚗</div>
-        <h4>Parcheggio</h4>
-        <p>Gratuito per gli ospiti Day Spa</p>
-      </div>
-    </div>
+      <button type="submit" class="btn btn-primary">Cerca disponibilità</button>
+    </form>
   </div>
-</section>
 
-<!-- GOLF -->
-<section class="section" id="golf">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Sport</span>
-      <h2>Golf & Driving Range</h2>
-      <p>Campo pratica immerso nel verde dei Colli Euganei.</p>
-    </div>
-
-    <div class="two-col">
-      <div>
-        <h3>La nostra struttura</h3>
-        <ul class="check-list">
-          <li><span>✓</span> 10 postazioni</li>
-          <li><span>✓</span> Putting green</li>
-          <li><span>✓</span> Pitching green</li>
-          <li><span>✓</span> Bunker</li>
-          <li><span>✓</span> Green fee ridotti nei club vicini</li>
-        </ul>
+  <!-- WHY CHOOSE US -->
+  <section class="section section-alt" id="perche">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Perché sceglierci</span>
+        <h2>Il tuo rifugio di benessere ad Abano Terme</h2>
+        <p>Un’oasi dove rigenerare corpo e spirito tra acque termali, natura e sport.</p>
       </div>
 
+      <div class="features-grid">
+        <article class="feature-card" aria-labelledby="f1">
+          <div class="feature-icon">🏊</div>
+          <h3 id="f1">Piscine Termali</h3>
+          <p>Acque salso-bromo-iodiche a 30–35°C con idromassaggi e percorso Kneipp.</p>
+        </article>
+
+        <article class="feature-card" aria-labelledby="f2">
+          <div class="feature-icon">⛳</div>
+          <h3 id="f2">Campo Pratica Golf</h3>
+          <p>10 postazioni, putting green, pitching green e bunker.</p>
+        </article>
+
+        <article class="feature-card" aria-labelledby="f3">
+          <div class="feature-icon">🧖</div>
+          <h3 id="f3">Grotte & Wellness</h3>
+          <p>Biogrotta, bagno turco, docce emozionali e biosauna.</p>
+        </article>
+
+        <article class="feature-card" aria-labelledby="f4">
+          <div class="feature-icon">🏥</div>
+          <h3 id="f4">Cure Convenzionate SSN</h3>
+          <p>Fangoterapia, inalazioni, aerosol e fisioterapia.</p>
+        </article>
+
+        <article class="feature-card" aria-labelledby="f5">
+          <div class="feature-icon">🍽️</div>
+          <h3 id="f5">Ristorante Veneta</h3>
+          <p>Ingredienti locali e sapori dei Colli Euganei.</p>
+        </article>
+
+        <article class="feature-card" aria-labelledby="f6">
+          <div class="feature-icon">🌿</div>
+          <h3 id="f6">Parco di 38.000 m²</h3>
+          <p>A pochi minuti dal centro di Abano Terme.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROOMS -->
+  <section class="section" id="camere">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Dove dormire</span>
+        <h2>Camere e Suite</h2>
+        <p>98 camere con comfort 4 stelle e balcone.</p>
+      </div>
+
+      <div class="rooms-grid">
+        <article class="room-card">
+          <div class="room-img" style="background-image:url('https://res.cloudinary.com/u9uel4ty/image/upload/2018_HotelTermeLeonardo_Camere_2_ndaysp.jpg');" role="img" aria-hidden="true">
+            <span class="room-tag">Camera Singola</span>
+          </div>
+          <div class="room-info">
+            <h3>Camera Singola</h3>
+            <p>Letto singolo 1,45 m, ideale per viaggiatori solitari.</p>
+            <div class="room-amenities">
+              <span>Balcone</span><span>Wi-Fi</span><span>TV Sat</span><span>Aria condizionata</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="room-card">
+          <div class="room-img" style="background-image:url('https://res.cloudinary.com/u9uel4ty/image/upload/2023_HotelTermeLeonardo_Stanze_Queen_1_gqsfzw.jpg');" role="img" aria-hidden="true">
+            <span class="room-tag">Matrimoniale</span>
+          </div>
+          <div class="room-info">
+            <h3>Camera Matrimoniale</h3>
+            <p>Letto queen 1,60 m, arredi eleganti e balcone.</p>
+            <div class="room-amenities">
+              <span>Balcone</span><span>Doccia</span><span>Parquet</span><span>Minibar</span><span>Cassaforte</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="room-card">
+          <div class="room-img" style="background-image:url('https://res.cloudinary.com/u9uel4ty/image/upload/2023_HotelTermeLeonardo_Stanze_Queen_3_gnyoxh.jpg');" role="img" aria-hidden="true">
+            <span class="room-tag">Junior Suite</span>
+          </div>
+          <div class="room-info">
+            <h3>Junior Suite</h3>
+            <p>Soggiorno separato, doppio lavabo e balcone panoramico.</p>
+            <div class="room-amenities">
+              <span>Doppio lavabo</span><span>Wi-Fi fibra</span><span>Scrivania</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="room-card">
+          <div class="room-img" style="background-image:url('https://res.cloudinary.com/u9uel4ty/image/upload/2023_HotelTermeLeonardo_Stanze_Queen_9_tnm4wx.jpg');" role="img" aria-hidden="true">
+            <span class="room-tag">Suite</span>
+          </div>
+          <div class="room-info">
+            <h3>Suite</h3>
+            <p>Camera ampia, salotto, bagno lussuoso e vista.</p>
+            <div class="room-amenities">
+              <span>Salotto</span><span>Doppio lavabo</span><span>Accappatoio</span><span>Telo piscina</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div style="text-align:center;margin-top:32px;">
+        <a href="https://www.termeleonardo.com/it/booking" class="btn btn-primary" target="_blank" rel="noopener">Vedi tutte le camere →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TERME -->
+  <section class="section section-alt" id="terme">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Benessere</span>
+        <h2>Terme & Benessere</h2>
+        <p>Acque ipertermali a ~75°C per cure e relax.</p>
+      </div>
+
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon">🌊</div>
+          <h3>Piscine Termali</h3>
+          <p>Vasche interne ed esterne a 34–35°C, idromassaggi e Kneipp.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">🪨</div>
+          <h3>Grotte Termali</h3>
+          <p>Biogrotta, grotta a vapore, cascate termali e cromoterapia.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">💆</div>
+          <h3>Cure Convenzionate</h3>
+          <p>Fanghi, inalazioni, aerosol, balneoterapia e fisioterapia.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">✨</div>
+          <h3>Day Spa</h3>
+          <p>Accesso giornaliero alle piscine e alla zona wellness.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY SPA -->
+  <section class="section section-alt" id="day-spa">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Day Spa</span>
+        <h2>Ingresso Giornaliero alle Terme</h2>
+        <p>Relax completo anche senza pernottare.</p>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <h3>La tua oasi di benessere</h3>
+          <p>Accesso alle piscine termali, grotte, cromoterapia e trattamenti.</p>
+
+          <ul class="check-list" aria-hidden="false">
+            <li><span>✓</span> Piscine interne ed esterne</li>
+            <li><span>✓</span> Grotte termali e biosauna</li>
+            <li><span>✓</span> Docce emozionali</li>
+            <li><span>✓</span> Acquario con cromoterapia</li>
+            <li><span>✓</span> Massaggi su prenotazione</li>
+            <li><span>✓</span> Parcheggio gratuito</li>
+          </ul>
+
+          <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="https://www.termeleonardo.com/it/day-spa/prenotazioni" class="btn btn-primary" target="_blank" rel="noopener">Prenota Day-Spa →</a>
+            <a href="https://www.termeleonardo.com/pdf/listino-spa-trattamenti-e-massaggi-hotel-leonardo-da-vinci-terme.pdf" class="btn btn-outline" target="_blank" rel="noopener">Listino Spa (PDF)</a>
+          </div>
+        </div>
+
+        <div>
+          <img src="https://res.cloudinary.com/u9uel4ty/image/upload/2022_HotelTermeLeonardo_SPA_28_t2ylpo.jpg" alt="Piscine Day Spa" />
+        </div>
+      </div>
+
+      <div class="info-grid" style="margin-top:40px;">
+        <div class="info-item">
+          <div class="icon">🕘</div>
+          <h4>Orari</h4>
+          <p>09:00–18:30<br />Venerdì e sabato fino alle 22:30</p>
+        </div>
+
+        <div class="info-item">
+          <div class="icon">📝</div>
+          <h4>Prenotazione</h4>
+          <p>Obbligatoria online</p>
+        </div>
+
+        <div class="info-item">
+          <div class="icon">🎩</div>
+          <h4>Cuffia</h4>
+          <p>Obbligatoria in piscina</p>
+        </div>
+
+        <div class="info-item">
+          <div class="icon">🚗</div>
+          <h4>Parcheggio</h4>
+          <p>Gratuito per gli ospiti Day Spa</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOLF -->
+  <section class="section" id="golf">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Sport</span>
+        <h2>Golf & Driving Range</h2>
+        <p>Campo pratica immerso nel verde dei Colli Euganei.</p>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <h3>La nostra struttura</h3>
+          <ul class="check-list">
+            <li><span>✓</span> 10 postazioni</li>
+            <li><span>✓</span> Putting green</li>
+            <li><span>✓</span> Pitching green</li>
+            <li><span>✓</span> Bunker</li>
+            <li><span>✓</span> Green fee ridotti nei club vicini</li>
+          </ul>
+        </div>
+
+        <div>
+          <img src="https://res.cloudinary.com/u9uel4ty/image/upload/2023_HotelTermeLeonardo_Golf_5_af83ig.jpg" alt="Campo da golf" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-bottom">
+      <div>© Hotel Terme Leonardo — Abano Terme (PD)</div>
       <div>
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/2023_HotelTermeLeonardo_Golf_5_af83ig.jpg" alt="Campo da golf">
-      </
+        <a href="#contatti">Contatti</a> ·
+        <a href="#info">Info utili</a> ·
+        <a href="https://www.termeleonardo.com/it/privacy" target="_blank" rel="noopener">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Mobile menu toggle
+    (function () {
+      const toggle = document.querySelector('.mobile-toggle');
+      const mobileNav = document.getElementById('mobileNav');
+      if (!toggle || !mobileNav) return;
+
+      toggle.addEventListener('click', () => {
+        const isOpen = mobileNav.classList.toggle('open');
+        mobileNav.setAttribute('aria-hidden', String(!isOpen));
+        toggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    })();
+
+    // Booking form redirect
+    (function () {
+      const form = document.getElementById('booking-form');
+      if (!form) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const arrival = document.getElementById('arrival').value;
+        const departure = document.getElementById('departure').value;
+        const adults = document.getElementById('adults').value;
+        const children = document.getElementById('children').value;
+
+        if (!arrival || !departure) return;
+
+        const url = `https://www.termeleonardo.com/it/booking/rooms-available?rooms=1&arrival=${encodeURIComponent(arrival)}&departure=${encodeURIComponent(departure)}&adults1=${encodeURIComponent(adults)}&children1=${encodeURIComponent(children)}`;
+        window.open(url, '_blank', 'noopener');
+      });
+    })();
+  </script>
+</body>
+</html>
