@@ -14,739 +14,12 @@
   <link rel="alternate" hreflang="de" href="https://termeleonardo.vercel.app/de.html">
   <link rel="alternate" hreflang="fr" href="https://termeleonardo.vercel.app/fr.html">
 
-  <style>
-    :root {
-      --primary: #4A7F8A;
-      --primary-dark: #3A646C;
-      --primary-light: #6FA9B3;
-      --accent-gold: #C9A86A;
-      --text-dark: #1F1F1F;
-      --text-muted: #6F6F6F;
-      --bg-light: #F5F5F5;
-      --bg-soft: #FAFAFA;
-      --radius-sm: 6px;
-      --radius-md: 10px;
-      --radius-lg: 16px;
-      --shadow-sm: 0 2px 6px rgba(0,0,0,0.08);
-      --shadow-md: 0 8px 24px rgba(0,0,0,0.12);
-      --shadow-soft: 0 12px 30px rgba(0,0,0,0.12);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text-dark);
-      background: #ffffff;
-      line-height: 1.6;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* HEADER */
-
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: #ffffff;
-      border-bottom: 1px solid #e5e5e5;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-    }
-
-    .header-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo img {
-      height: 52px;
-      width: auto;
-      display: block;
-      background: #ffffff;
-      padding: 6px 14px;
-      border-radius: 10px;
-      border: 1px solid rgba(0,0,0,0.06);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .nav-desktop {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      font-size: 0.92rem;
-    }
-
-    .nav-desktop a {
-      color: var(--text-dark);
-      font-weight: 500;
-      padding: 6px 0;
-      position: relative;
-    }
-
-    .nav-desktop a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 0;
-      height: 2px;
-      background: var(--primary);
-      transition: width 0.2s ease;
-    }
-
-    .nav-desktop a:hover::after {
-      width: 100%;
-    }
-
-    .nav-cta {
-      padding: 8px 16px;
-      border-radius: 999px;
-      background: var(--primary);
-      color: #ffffff !important;
-      font-weight: 600;
-      box-shadow: var(--shadow-sm);
-      border: none;
-    }
-
-    .nav-cta:hover {
-      background: var(--primary-dark);
-      text-decoration: none;
-    }
-
-    .lang-switcher {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      margin-left: 8px;
-      padding-left: 12px;
-      border-left: 1px solid #e0e0e0;
-    }
-
-    .lang-switcher a {
-      font-size: 0.8rem;
-      padding: 4px 8px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      color: var(--text-muted);
-    }
-
-    .lang-switcher a.active {
-      background: var(--bg-light);
-      border-color: #e0e0e0;
-      color: var(--text-dark);
-      font-weight: 600;
-    }
-
-    .mobile-toggle {
-      display: none;
-      border: none;
-      background: transparent;
-      font-size: 1.4rem;
-      cursor: pointer;
-    }
-
-    .nav-mobile {
-      display: none;
-      flex-direction: column;
-      padding: 10px 20px 16px;
-      gap: 6px;
-      border-top: 1px solid #eee;
-      background: #ffffff;
-    }
-
-    .nav-mobile a {
-      padding: 8px 0;
-      font-size: 0.95rem;
-      color: var(--text-dark);
-    }
-
-    .mobile-cta {
-      margin-top: 8px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      background: var(--primary);
-      color: #ffffff !important;
-      font-weight: 600;
-      text-align: center;
-    }
-
-    /* HERO */
-
-    .hero {
-      position: relative;
-      min-height: 420px;
-      display: flex;
-      align-items: stretch;
-      background: #000;
-      color: #ffffff;
-    }
-
-    .hero-img {
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
-      filter: brightness(0.85);
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        120deg,
-        rgba(0,0,0,0.70) 0%,
-        rgba(0,0,0,0.45) 40%,
-        rgba(0,0,0,0.15) 70%,
-        rgba(0,0,0,0.0) 100%
-      );
-    }
-
-    .hero .container {
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero-content {
-      max-width: 560px;
-      padding: 70px 0 60px;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(0,0,0,0.55);
-      border: 1px solid rgba(255,255,255,0.18);
-      font-size: 0.8rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      font-family: "Playfair Display", serif;
-      font-size: 2.4rem;
-      line-height: 1.2;
-      margin: 18px 0 12px;
-    }
-
-    .hero-subtitle {
-      font-size: 1rem;
-      color: rgba(255,255,255,0.85);
-      max-width: 520px;
-    }
-
-    .hero-btns {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 22px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: all 0.18s ease;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: #ffffff;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .btn-primary:hover {
-      background: var(--primary-dark);
-      transform: translateY(-1px);
-      text-decoration: none;
-    }
-
-    .btn-outline {
-      background: transparent;
-      border-color: rgba(255,255,255,0.7);
-      color: #ffffff;
-    }
-
-    .btn-outline:hover {
-      background: rgba(255,255,255,0.08);
-      text-decoration: none;
-    }
-
-    /* BOOKING BAR */
-
-    .booking-bar {
-      margin-top: -32px;
-      margin-bottom: 32px;
-      padding: 14px 18px;
-      border-radius: var(--radius-lg);
-      background: #ffffff;
-      box-shadow: var(--shadow-soft);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      align-items: center;
-    }
-
-    .booking-bar > div {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      min-width: 140px;
-    }
-
-    .booking-bar label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--text-muted);
-    }
-
-    .booking-bar input,
-    .booking-bar select {
-      padding: 8px 10px;
-      border-radius: var(--radius-sm);
-      border: 1px solid #dcdcdc;
-      font-size: 0.9rem;
-      font-family: inherit;
-    }
-
-    .booking-bar input:focus,
-    .booking-bar select:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 1px rgba(74,127,138,0.25);
-    }
-
-    .booking-bar-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-left: auto;
-      flex-wrap: wrap;
-    }
-
-    .booking-bar .btn-primary {
-      padding-inline: 18px;
-    }
-
-    .booking-bar .btn-outline {
-      border-color: var(--primary);
-      color: var(--primary);
-      background: transparent;
-    }
-
-    .booking-bar .btn-outline:hover {
-      background: rgba(74,127,138,0.06);
-      text-decoration: none;
-    }
-
-    /* SECTIONS */
-
-    .section {
-      padding: 60px 0;
-      background: #ffffff;
-    }
-
-    .section-alt {
-      background: var(--bg-soft);
-    }
-
-    .section-header {
-      text-align: center;
-      max-width: 640px;
-      margin: 0 auto 32px;
-    }
-
-    .section-label {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(74,127,138,0.08);
-      color: var(--primary);
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .section-header h2 {
-      font-family: "Playfair Display", serif;
-      font-size: 1.8rem;
-      margin: 14px 0 8px;
-    }
-
-    .section-header p {
-      font-size: 0.98rem;
-      color: var(--text-muted);
-      margin: 0;
-    }
-
-    /* GRID GENERICO */
-
-    .features-grid,
-    .rooms-grid,
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    @media (max-width: 960px) {
-      .features-grid,
-      .rooms-grid,
-      .info-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .features-grid,
-      .rooms-grid,
-      .info-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* FEATURE CARD */
-
-    .feature-card {
-      background: #ffffff;
-      border-radius: var(--radius-md);
-      padding: 18px 18px 16px;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid #f0f0f0;
-    }
-
-    .feature-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 999px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(74,127,138,0.08);
-      margin-bottom: 10px;
-      font-size: 1.2rem;
-    }
-
-    .feature-card h3 {
-      margin: 4px 0 6px;
-      font-size: 1.02rem;
-      font-weight: 600;
-    }
-
-    .feature-card p {
-      margin: 0;
-      font-size: 0.92rem;
-      color: var(--text-muted);
-    }
-
-    /* ROOMS */
-
-    .rooms-grid {
-      margin-top: 10px;
-    }
-
-    .room-card {
-      background: #ffffff;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
-      border: 1px solid #f0f0f0;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .room-img {
-      position: relative;
-      height: 210px;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .room-tag {
-      position: absolute;
-      left: 14px;
-      bottom: 14px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(0,0,0,0.65);
-      color: #ffffff;
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
-
-    .room-info {
-      padding: 16px 16px 14px;
-    }
-
-    .room-info h3 {
-      margin: 0 0 6px;
-      font-size: 1.02rem;
-      font-weight: 600;
-    }
-
-    .room-info p {
-      margin: 0 0 10px;
-      font-size: 0.92rem;
-      color: var(--text-muted);
-    }
-
-    .room-amenities {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      font-size: 0.8rem;
-    }
-
-    .room-amenities span {
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: var(--bg-light);
-      color: var(--text-muted);
-    }
-
-    /* INFO GRID */
-
-    .info-grid {
-      margin-top: 10px;
-    }
-
-    .info-item {
-      background: #ffffff;
-      border-radius: var(--radius-md);
-      padding: 16px 16px 14px;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid #f0f0f0;
-    }
-
-    .info-item .icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(74,127,138,0.08);
-      margin-bottom: 8px;
-      font-size: 1.1rem;
-    }
-
-    .info-item h4 {
-      margin: 0 0 4px;
-      font-size: 0.98rem;
-      font-weight: 600;
-    }
-
-    .info-item p {
-      margin: 0;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
-    /* GOLF / DAY SPA LAYOUT */
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 32px;
-      align-items: center;
-      margin-bottom: 32px;
-    }
-
-    @media (max-width: 900px) {
-      .two-col {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .two-col img {
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-md);
-      height: 340px;
-      object-fit: cover;
-    }
-
-    .check-list {
-      list-style: none;
-      padding: 0;
-      margin: 12px 0 0;
-    }
-
-    .check-list li {
-      padding: 8px 0;
-      border-bottom: 1px solid #eee;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      font-size: 0.92rem;
-      color: var(--text-muted);
-    }
-
-    .check-list li span {
-      color: var(--primary);
-      font-weight: 700;
-    }
-
-    /* FOOTER */
-
-    .footer {
-      margin-top: 40px;
-      padding: 24px 0 30px;
-      background: #ffffff;
-      border-top: 1px solid #e5e5e5;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    .footer-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .footer a {
-      color: var(--primary);
-      font-weight: 500;
-    }
-
-    /* RESPONSIVE */
-
-    @media (max-width: 960px) {
-      .nav-desktop {
-        display: none;
-      }
-
-      .mobile-toggle {
-        display: block;
-      }
-
-      .hero {
-        min-height: 380px;
-      }
-
-      .hero-content {
-        padding: 60px 0 50px;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      .booking-bar {
-        margin-top: -24px;
-        padding: 14px 14px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .hero {
-        min-height: 360px;
-      }
-
-      .hero-content {
-        padding: 50px 0 40px;
-      }
-
-      h1 {
-        font-size: 1.7rem;
-      }
-
-      .booking-bar {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .booking-bar-actions {
-        margin-left: 0;
-        justify-content: flex-start;
-      }
-    }
-  </style>
-
-  <script>
-    // Toggle menu mobile
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggle = document.querySelector(".mobile-toggle");
-      const navMobile = document.querySelector(".nav-mobile");
-      if (!toggle || !navMobile) return;
-
-      toggle.addEventListener("click", () => {
-        const isOpen = navMobile.style.display === "flex";
-        navMobile.style.display = isOpen ? "none" : "flex";
-      });
-    });
-
-    // Booking bar redirect
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("booking-form");
-      if (!form) return;
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        const arrival = document.getElementById("arrival").value;
-        const departure = document.getElementById("departure").value;
-        const adults = document.getElementById("adults").value;
-        const children = document.getElementById("children").value;
-
-        if (!arrival || !departure) return;
-
-        const url = `https://www.termeleonardo.com/it/booking/rooms-available?rooms=1&arrival=${arrival}&departure=${departure}&adults1=${adults}&children1=${children}`;
-        window.open(url, "_blank");
-      });
-    });
-  </script>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<!-- HEADER -->
 <header class="header">
   <div class="header-inner">
     <a href="index.html" class="logo">
@@ -763,6 +36,7 @@
       <a href="#info">Info Utili</a>
       <a href="#contatti">Contatti</a>
       <a href="https://www.termeleonardo.com/it/booking" target="_blank" class="nav-cta">Prenota Ora</a>
+
       <div class="lang-switcher">
         <a href="index.html" class="active">IT</a>
         <a href="en.html">EN</a>
@@ -771,7 +45,7 @@
       </div>
     </nav>
 
-    <button class="mobile-toggle" aria-label="Menu">☰</button>
+    <button class="mobile-toggle">☰</button>
   </div>
 
   <nav class="nav-mobile">
@@ -783,43 +57,45 @@
     <a href="#day-spa">Day Spa</a>
     <a href="#info">Info Utili</a>
     <a href="#contatti">Contatti</a>
-    <a href="https://www.termeleonardo.com/it/booking" target="_blank" class="mobile-cta">Prenota Ora</a>
-    <div style="display:flex;gap:8px;padding:10px 0;">
-      <a href="index.html" style="background:var(--bg-light);color:var(--text-dark);border-radius:999px;padding:4px 10px;font-size:0.8rem;">IT</a>
-      <a href="en.html" style="font-size:0.8rem;">EN</a>
-      <a href="de.html" style="font-size:0.8rem;">DE</a>
-      <a href="fr.html" style="font-size:0.8rem;">FR</a>
-    </div>
+    <a href="https://www.termeleonardo.com/it/booking" class="mobile-cta">Prenota Ora</a>
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-img" style="background-image:url('https://res.cloudinary.com/u9uel4ty/image/upload/2025_HotelTermeLeonardo_Generiche_5_it8qsa.jpg');"></div>
+
   <div class="container">
     <div class="hero-content">
       <div class="hero-badge">★★★★ Hotel 4 Stelle</div>
+
       <h1>Un'esperienza da vivere tra terme e golf sui Colli Euganei</h1>
+
       <p class="hero-subtitle">
-        Hotel Terme Leonardo ad Abano Terme: piscine termali a 30–35°C, grotte wellness, cure convenzionate SSN e campo pratica golf in un parco di 38.000 m².
+        Piscine termali a 30–35°C, grotte wellness, cure convenzionate SSN e campo pratica golf immerso in 38.000 m² di parco.
       </p>
+
       <div class="hero-btns">
-        <a href="https://www.termeleonardo.com/it/booking" target="_blank" class="btn btn-primary">Prenota il soggiorno →</a>
-        <a href="https://www.termeleonardo.com/it/day-spa/prenotazioni" target="_blank" class="btn btn-outline">Prenota Day-Spa</a>
+        <a href="https://www.termeleonardo.com/it/booking" class="btn btn-primary">Prenota il soggiorno →</a>
+        <a href="https://www.termeleonardo.com/it/day-spa/prenotazioni" class="btn btn-outline">Prenota Day-Spa</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- BOOKING BAR -->
 <div class="container">
   <form class="booking-bar" id="booking-form">
     <div>
       <label>Arrivo</label>
       <input type="date" id="arrival" required>
     </div>
+
     <div>
       <label>Partenza</label>
       <input type="date" id="departure" required>
     </div>
+
     <div>
       <label>Adulti</label>
       <select id="adults">
@@ -829,6 +105,7 @@
         <option value="4">4</option>
       </select>
     </div>
+
     <div>
       <label>Bambini</label>
       <select id="children">
@@ -837,72 +114,78 @@
         <option value="2">2</option>
       </select>
     </div>
-    <div class="booking-bar-actions">
-      <button type="submit" class="btn btn-primary">Cerca disponibilità</button>
-      <a href="https://www.termeleonardo.com/it/day-spa/prenotazioni" target="_blank" class="btn btn-outline">Prenota Day-Spa</a>
-    </div>
+
+    <button type="submit" class="btn btn-primary">Cerca disponibilità</button>
   </form>
 </div>
 
+<!-- PERCHÉ SCEGLIERCI -->
 <section class="section section-alt">
   <div class="container">
     <div class="section-header">
       <span class="section-label">Perché sceglierci</span>
       <h2>Il tuo rifugio di benessere ad Abano Terme</h2>
-      <p>Più di un semplice hotel 4 stelle: un'oasi dove rigenerare corpo e spirito tra acque termali, natura e sport.</p>
+      <p>Un’oasi dove rigenerare corpo e spirito tra acque termali, natura e sport.</p>
     </div>
 
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon">🏊</div>
         <h3>Piscine Termali</h3>
-        <p>Piscina coperta collegata a due vasche esterne in un parco verde. Acque salso-bromo-iodiche a 30–35°C con idromassaggi e percorso Kneipp.</p>
+        <p>Acque salso-bromo-iodiche a 30–35°C con idromassaggi e percorso Kneipp.</p>
       </div>
+
       <div class="feature-card">
         <div class="feature-icon">⛳</div>
         <h3>Campo Pratica Golf</h3>
-        <p>15.000 m² adiacenti all'hotel: 10 postazioni (parzialmente coperte), putting green, pitching green e bunker. Green fee ridotti nei club vicini.</p>
+        <p>10 postazioni, putting green, pitching green e bunker.</p>
       </div>
+
       <div class="feature-card">
         <div class="feature-icon">🧖</div>
         <h3>Grotte & Wellness</h3>
-        <p>Biogrotta, grotta a vapore, cascate di acqua termale, docce emozionali con cromo-aromaterapia, bagno turco e biosauna.</p>
+        <p>Biogrotta, bagno turco, docce emozionali e biosauna.</p>
       </div>
+
       <div class="feature-card">
         <div class="feature-icon">🏥</div>
         <h3>Cure Convenzionate SSN</h3>
-        <p>Fangoterapia, inalazioni, aerosol, balneoterapia, bagno ozonizzato e fisioterapia eseguite da personale esperto.</p>
+        <p>Fangoterapia, inalazioni, aerosol e fisioterapia.</p>
       </div>
+
       <div class="feature-card">
         <div class="feature-icon">🍽️</div>
-        <h3>Ristorante & Cucina Veneta</h3>
-        <p>Piatti della tradizione veneta con ingredienti locali, in un ambiente elegante che valorizza i sapori dei Colli Euganei.</p>
+        <h3>Ristorante Veneta</h3>
+        <p>Ingredienti locali e sapori dei Colli Euganei.</p>
       </div>
+
       <div class="feature-card">
         <div class="feature-icon">🌿</div>
         <h3>Parco di 38.000 m²</h3>
-        <p>Un'oasi verde ai piedi dei Colli Euganei, a soli 10 minuti a piedi dal centro di Abano Terme e un'ora da Venezia.</p>
+        <p>A pochi minuti dal centro di Abano Terme.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- CAMERE -->
 <section class="section" id="camere">
   <div class="container">
     <div class="section-header">
       <span class="section-label">Dove dormire</span>
       <h2>Camere e Suite</h2>
-      <p>98 camere arredate individualmente con comfort 4 stelle, balcone e tutti i servizi per un soggiorno rigenerante.</p>
+      <p>98 camere con comfort 4 stelle e balcone.</p>
     </div>
 
     <div class="rooms-grid">
+
       <div class="room-card">
         <div class="room-img" style="background-image:url('https://res.cloudinary.com/u9uel4ty/image/upload/2018_HotelTermeLeonardo_Camere_2_ndaysp.jpg');">
           <span class="room-tag">Camera Singola</span>
         </div>
         <div class="room-info">
           <h3>Camera Singola</h3>
-          <p>Letto singolo 1,45 m, ideale per viaggiatori solitari che cercano comfort e tranquillità.</p>
+          <p>Letto singolo 1,45 m, ideale per viaggiatori solitari.</p>
           <div class="room-amenities">
             <span>Balcone</span><span>Wi-Fi</span><span>TV Sat</span><span>Aria condizionata</span>
           </div>
@@ -915,7 +198,7 @@
         </div>
         <div class="room-info">
           <h3>Camera Matrimoniale</h3>
-          <p>Letto queen 1,60 m, arredi eleganti e balcone con vista sul parco o sui Colli Euganei.</p>
+          <p>Letto queen 1,60 m, arredi eleganti e balcone.</p>
           <div class="room-amenities">
             <span>Balcone</span><span>Doccia</span><span>Parquet</span><span>Minibar</span><span>Cassaforte</span>
           </div>
@@ -928,9 +211,9 @@
         </div>
         <div class="room-info">
           <h3>Junior Suite</h3>
-          <p>Spazi generosi, bagno con doppio lavabo, soggiorno separato e balcone panoramico.</p>
+          <p>Soggiorno separato, doppio lavabo e balcone panoramico.</p>
           <div class="room-amenities">
-            <span>Doppio lavabo</span><span>Wi-Fi fibra</span><span>Asciugacapelli</span><span>Scrivania</span>
+            <span>Doppio lavabo</span><span>Wi-Fi fibra</span><span>Scrivania</span>
           </div>
         </div>
       </div>
@@ -941,158 +224,141 @@
         </div>
         <div class="room-info">
           <h3>Suite</h3>
-          <p>Il massimo del comfort: ampia camera da letto, salotto, bagno lussuoso e vista mozzafiato.</p>
+          <p>Camera ampia, salotto, bagno lussuoso e vista.</p>
           <div class="room-amenities">
             <span>Salotto</span><span>Doppio lavabo</span><span>Accappatoio</span><span>Telo piscina</span>
           </div>
         </div>
       </div>
+
     </div>
 
     <div style="text-align:center;margin-top:32px;">
-      <a href="https://www.termeleonardo.com/it/booking" target="_blank" class="btn btn-primary">Vedi tutte le camere e i prezzi →</a>
+      <a href="https://www.termeleonardo.com/it/booking" class="btn btn-primary">Vedi tutte le camere →</a>
     </div>
   </div>
 </section>
 
+<!-- TERME -->
 <section class="section section-alt" id="terme">
   <div class="container">
     <div class="section-header">
       <span class="section-label">Benessere</span>
       <h2>Terme & Benessere</h2>
-      <p>Acque salso-bromo-iodiche ipertermali (a bocca di pozzo ~75°C) per cure mediche, relax e rigenerazione.</p>
+      <p>Acque ipertermali a ~75°C per cure e relax.</p>
     </div>
 
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon">🌊</div>
         <h3>Piscine Termali</h3>
-        <p>Piscina coperta collegata a due piscine esterne nel parco. Temperature ~34–35°C e una vasca a ~30°C. Idromassaggi, giochi d'acqua e percorso Kneipp. Cuffia obbligatoria. Orari: 08:00–19:30, venerdì e sabato fino alle 22:30.</p>
+        <p>Vasche interne ed esterne a 34–35°C, idromassaggi e Kneipp.</p>
       </div>
+
       <div class="feature-card">
         <div class="feature-icon">🪨</div>
         <h3>Grotte Termali</h3>
-        <p>Biogrotta, grotta a vapore, cascate di acqua termale, docce emozionali con aroma e cromoterapia, bagno turco e biosauna.</p>
+        <p>Biogrotta, grotta a vapore, cascate termali e cromoterapia.</p>
       </div>
+
       <div class="feature-card">
         <div class="feature-icon">💆</div>
-        <h3>Cure Termali Convenzionate</h3>
-        <p>Fangoterapia, inalazioni, aerosol, balneoterapia, bagno ozonizzato e fisioterapia eseguite da personale esperto. Convenzione SSN.</p>
+        <h3>Cure Convenzionate</h3>
+        <p>Fanghi, inalazioni, aerosol, balneoterapia e fisioterapia.</p>
       </div>
+
       <div class="feature-card">
         <div class="feature-icon">✨</div>
         <h3>Day Spa</h3>
-        <p>Accedi a piscine e grotte termali anche solo in giornata, senza pernottare. Spogliatoi con docce, phon e armadietto. Ingresso serale venerdì e sabato 18:00–22:30. Prenotazione online obbligatoria.</p>
+        <p>Accesso giornaliero alle piscine e alla zona wellness.</p>
       </div>
-    </div>
-
-    <div style="text-align:center;margin-top:32px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-      <a href="https://www.termeleonardo.com/it/day-spa/prenotazioni" target="_blank" class="btn btn-primary">Prenota Day-Spa →</a>
-      <a href="https://www.termeleonardo.com/pdf/listino-spa-trattamenti-e-massaggi-hotel-leonardo-da-vinci-terme.pdf" target="_blank" class="btn btn-outline" style="border-color:var(--primary);color:var(--primary);">Listino Spa (PDF)</a>
     </div>
   </div>
 </section>
 
+<!-- DAY SPA -->
 <section class="section section-alt" id="day-spa">
   <div class="container">
     <div class="section-header">
       <span class="section-label">Day Spa</span>
       <h2>Ingresso Giornaliero alle Terme</h2>
-      <p>Coccolati anche solo per un giorno nelle nostre piscine e grotte termali, usufruendo di tutti i servizi senza dover pernottare.</p>
+      <p>Relax completo anche senza pernottare.</p>
     </div>
 
     <div class="two-col">
       <div>
-        <h3 style="margin-bottom:12px;">La tua oasi di benessere in giornata</h3>
-        <p style="margin-bottom:10px;">Con la <strong>Day Spa</strong> potrai accedere alle piscine termali e alla zona relax con cromoterapia, oltre a prenotare cure e trattamenti termali eseguiti da personale qualificato.</p>
-        <p style="margin-bottom:10px;">Le acque minerali <strong>salso-bromo-iodiche ipertermali</strong> a bocca di pozzo ~75°C trovano le loro prevalenti utilizzazioni nelle cure termali, balneoterapia, piscine termali e terapie inalatorie.</p>
+        <h3>La tua oasi di benessere</h3>
+        <p>Accesso alle piscine termali, grotte, cromoterapia e trattamenti.</p>
 
         <ul class="check-list">
-          <li><span>✓</span> Piscine termali coperte e scoperte</li>
+          <li><span>✓</span> Piscine interne ed esterne</li>
           <li><span>✓</span> Grotte termali e biosauna</li>
-          <li><span>✓</span> Docce emozionali con cromoterapia</li>
-          <li><span>✓</span> Acquario gigante con cromoterapia</li>
-          <li><span>✓</span> Trattamenti e massaggi su prenotazione</li>
+          <li><span>✓</span> Docce emozionali</li>
+          <li><span>✓</span> Acquario con cromoterapia</li>
+          <li><span>✓</span> Massaggi su prenotazione</li>
           <li><span>✓</span> Parcheggio gratuito</li>
         </ul>
 
-        <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;">
-          <a href="https://www.termeleonardo.com/it/day-spa/prenotazioni" target="_blank" class="btn btn-primary">Prenota Day-Spa →</a>
-          <a href="https://www.termeleonardo.com/pdf/listino-spa-trattamenti-e-massaggi-hotel-leonardo-da-vinci-terme.pdf" target="_blank" class="btn btn-outline" style="border-color:var(--primary);color:var(--primary);">Listino Spa (PDF)</a>
+        <div style="margin-top:20px;display:flex;gap:12px;">
+          <a href="https://www.termeleonardo.com/it/day-spa/prenotazioni" class="btn btn-primary">Prenota Day-Spa →</a>
+          <a href="https://www.termeleonardo.com/pdf/listino-spa-trattamenti-e-massaggi-hotel-leonardo-da-vinci-terme.pdf" class="btn btn-outline">Listino Spa (PDF)</a>
         </div>
       </div>
 
       <div>
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/2022_HotelTermeLeonardo_SPA_28_t2ylpo.jpg" alt="Day Spa - Piscine Termali">
+        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/2022_HotelTermeLeonardo_SPA_28_t2ylpo.jpg" alt="Day Spa">
       </div>
     </div>
 
-    <div class="info-grid" style="margin-top:24px;">
+    <div class="info-grid" style="margin-top:40px;">
       <div class="info-item">
         <div class="icon">🕘</div>
         <h4>Orari</h4>
-        <p>Tutti i giorni 09:00–18:30<br>Venerdì e sabato fino alle 22:30</p>
+        <p>09:00–18:30<br>Venerdì e sabato fino alle 22:30</p>
       </div>
+
       <div class="info-item">
         <div class="icon">📝</div>
         <h4>Prenotazione</h4>
-        <p>Obbligatoria on-line<br>Entro 24h prima</p>
+        <p>Obbligatoria online</p>
       </div>
+
       <div class="info-item">
         <div class="icon">🎩</div>
         <h4>Cuffia</h4>
-        <p>Obbligatoria in piscina<br>Disponibile in reception</p>
+        <p>Obbligatoria in piscina</p>
       </div>
+
       <div class="info-item">
         <div class="icon">🚗</div>
         <h4>Parcheggio</h4>
-        <p>Gratuito per gli ospiti Day Spa<br>Posti auto disponibili</p>
+        <p>Gratuito per gli ospiti Day Spa</p>
       </div>
     </div>
-
-    <p style="text-align:center;margin-top:26px;color:var(--text-muted);font-size:0.86rem;">
-      ⚠️ <strong>Divieto di pranzo al sacco</strong> — è possibile usufruire del ristorante dell'hotel su prenotazione.
-    </p>
   </div>
 </section>
 
+<!-- GOLF -->
 <section class="section" id="golf">
   <div class="container">
     <div class="section-header">
       <span class="section-label">Sport</span>
       <h2>Golf & Driving Range</h2>
-      <p>Campo pratica di 15.000 m² adiacente alle piscine, immerso nel verde dei Colli Euganei.</p>
+      <p>Campo pratica immerso nel verde dei Colli Euganei.</p>
     </div>
 
     <div class="two-col">
       <div>
-        <h3 style="margin-bottom:12px;">La nostra struttura</h3>
+        <h3>La nostra struttura</h3>
         <ul class="check-list">
-          <li><span>✓</span> 10 postazioni di allenamento (parzialmente coperte)</li>
+          <li><span>✓</span> 10 postazioni</li>
           <li><span>✓</span> Putting green</li>
           <li><span>✓</span> Pitching green</li>
           <li><span>✓</span> Bunker</li>
-          <li><span>✓</span> Green fee ridotti presso i club vicini</li>
+          <li><span>✓</span> Green fee ridotti nei club vicini</li>
         </ul>
       </div>
 
       <div>
         <img src="https://res.cloudinary.com/u9uel4ty/image/upload/2023_HotelTermeLeonardo_Golf_5_af83ig.jpg" alt="Campo da golf">
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="footer-inner">
-    <div>© Hotel Terme Leonardo — Abano Terme (PD)</div>
-    <div>
-      <a href="#contatti">Contatti</a> ·
-      <a href="#info">Info utili</a> ·
-      <a href="https://www.termeleonardo.com/it/privacy" target="_blank">Privacy</a>
-    </div>
-  </div>
-</footer>
-
-</body>
-</html>
+      </
