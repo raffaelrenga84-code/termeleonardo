@@ -1,120 +1,407 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hotel Terme Leonardo | 4 Sterne in Abano Terme — Thermalbäder, Golf & Wellness</title>
-  <meta name="description" content="4-Sterne-Hotel in Abano Terme mit Thermalpools, Golf, Spa und SSN-Behandlungen. Direkt buchen für besten Preis." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="alternate" hreflang="it" href="https://termeleonardo.vercel.app/it.html" />
-  <link rel="alternate" hreflang="en" href="https://termeleonardo.vercel.app/en.html" />
-  <link rel="alternate" hreflang="de" href="https://termeleonardo.vercel.app/de.html" />
-  <link rel="alternate" hreflang="fr" href="https://termeleonardo.vercel.app/fr.html" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Terme Leonardo | 4-Sterne-Thermalhotel in Abano Terme — Thermen, Golf & Wellness</title>
+  <meta name="description" content="4-Sterne-Thermalhotel in Abano Terme mit Thermalbecken, Golf, Spa und SSN-Kuren. Direkt buchen für die beste Preisgarantie.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="it" href="https://termeleonardo.vercel.app/">
+  <link rel="alternate" hreflang="en" href="https://termeleonardo.vercel.app/en.html">
+  <link rel="alternate" hreflang="de" href="https://termeleonardo.vercel.app/de.html">
+  <link rel="alternate" hreflang="fr" href="https://termeleonardo.vercel.app/fr.html">
 </head>
 <body>
-  <header class="header" role="banner">
-    <div class="header-inner container">
-      <a href="de.html" class="logo" aria-label="Hotel Terme Leonardo">
-        <img src="https://res.cloudinary.com/u9uel4ty/image/upload/7157830d-3077-4e29-96bf-07c96b71b0d6_rwzuh3.png" alt="Hotel Terme Leonardo" />
-      </a>
 
-      <nav class="nav-desktop" role="navigation" aria-label="Hauptnavigation">
-        <a href="#zimmer">Zimmer</a>
-        <a href="#therme">Therme & Spa</a>
-        <a href="#golf">Golf</a>
-        <a href="#angebote">Angebote</a>
-        <a href="#restaurant">Restaurant</a>
-        <a href="#day-spa">Day Spa</a>
-        <a href="#info">Nützliche Infos</a>
-        <a href="#kontakt">Kontakt</a>
-        <a href="https://www.termeleonardo.com/de/booking" class="nav-cta" target="_blank" rel="noopener">Jetzt buchen</a>
-
-        <div class="lang-switcher">
-          <a href="it.html">IT</a>
-          <a href="en.html">EN</a>
-          <a href="de.html" class="active" aria-current="page">DE</a>
-          <a href="fr.html">FR</a>
-        </div>
-      </nav>
-
-      <button class="mobile-toggle" aria-label="Mobiles Menü öffnen" aria-expanded="false">☰</button>
-    </div>
-
-    <nav class="nav-mobile" id="mobileNav" aria-hidden="true">
+<header class="header">
+  <div class="header-inner">
+    <a href="de.html" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;"><img src="data:image/png;base64,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" alt="Hotel Terme Leonardo" style="height:36px;width:auto;display:block;"></a>
+    <nav class="nav-desktop">
       <a href="#zimmer">Zimmer</a>
-      <a href="#therme">Therme & Spa</a>
+      <a href="#therme">Therme & Wellness</a>
       <a href="#golf">Golf</a>
       <a href="#angebote">Angebote</a>
       <a href="#restaurant">Restaurant</a>
-      <a href="#day-spa">Day Spa</a>
       <a href="#info">Nützliche Infos</a>
       <a href="#kontakt">Kontakt</a>
-      <a href="https://www.termeleonardo.com/de/booking" class="mobile-cta" target="_blank" rel="noopener">Jetzt buchen</a>
+      <a href="https://www.termeleonardo.com/de/booking" target="_blank" class="nav-cta">Jetzt buchen</a>
+      <div class="lang-switcher">
+        <a href="index.html">IT</a><a href="en.html">EN</a><a href="de.html" class="active">DE</a><a href="fr.html">FR</a>
+      </div>
     </nav>
-  </header>
+    <button class="mobile-toggle" aria-label="Menü">☰</button>
+  </div>
+  <nav class="nav-mobile">
+    <a href="#zimmer">Zimmer</a><a href="#therme">Therme & Wellness</a><a href="#golf">Golf</a>
+    <a href="#angebote">Angebote</a><a href="#restaurant">Restaurant</a><a href="#info">Nützliche Infos</a><a href="#kontakt">Kontakt</a>
+    <a href="https://www.termeleonardo.com/de/booking" target="_blank" class="mobile-cta">Jetzt buchen</a>
+    <div style="display:flex;gap:8px;padding:12px 16px;">
+      <a href="index.html">IT</a><a href="en.html">EN</a><a href="de.html" style="background:rgba(26,92,74,0.08);color:var(--primary);">DE</a><a href="fr.html">FR</a>
+    </div>
+  </nav>
+</header>
 
-  <section class="hero" aria-label="Hero">
-    <div class="hero-img" style="background-image:url('https://res.cloudinary.com/u9uel4ty/image/upload/2025_HotelTermeLeonardo_Generiche_5_it8qsa.jpg');" role="img" aria-hidden="true"></div>
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge">★★★★ 4 Sterne</div>
-        <h1>Erlebnis zwischen Thermalbädern und Golf in den Euganeischen Hügeln</h1>
-        <p class="hero-subtitle">Thermalpools 30–35°C, Wellnessgrotten, SSN-Behandlungen und Driving Range in einem 38.000 m² großen Park.</p>
-        <div class="hero-btns">
-          <a href="https://www.termeleonardo.com/de/booking" class="btn btn-primary" target="_blank" rel="noopener">Aufenthalt buchen →</a>
-          <a href="https://www.termeleonardo.com/de/day-spa/prenotazioni" class="btn btn-outline" target="_blank" rel="noopener">Day-Spa buchen</a>
-        </div>
+<section class="hero">
+  <div class="hero-img" style="background-image:url('https://images.trvl-media.com/lodging/7600000/7597000/7596682/7596682/9c8743d3a32949f5afed802325c3656b72600c4d.jpg');"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">★★★★ 4-Sterne-Hotel</div>
+      <h1>Ein Erlebnis zwischen Thermalbädern und Golf in den Euganeischen Hügeln</h1>
+      <p class="hero-subtitle">Hotel Terme Leonardo in Abano Terme: Thermalbecken bei 30–35°C, Wellnessgrotten, SSN-Kuren und eine Golf-Driving-Range in einem 38.000 m² großen Park.</p>
+      <div class="hero-btns">
+        <a href="https://www.termeleonardo.com/de/booking" target="_blank" class="btn btn-primary">Aufenthalt buchen →</a>
+        <a href="https://www.termeleonardo.com/it/day-spa/prenotazioni" target="_blank" class="btn btn-outline">Day-Spa buchen</a>
       </div>
     </div>
-  </section>
-
-  <div class="container">
-    <form class="booking-bar" id="booking-form-de" aria-label="Buchungsleiste">
-      <div><label for="arrival-de">Anreise</label><input id="arrival-de" type="date" required></div>
-      <div><label for="departure-de">Abreise</label><input id="departure-de" type="date" required></div>
-      <div><label for="adults-de">Erwachsene</label><select id="adults-de"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
-      <div><label for="children-de">Kinder</label><select id="children-de"><option selected>0</option><option>1</option><option>2</option></select></div>
-      <button type="submit" class="btn btn-primary">Verfügbarkeit prüfen</button>
-    </form>
   </div>
+</section>
 
-  <!-- (Sections translated to German; same structure as index.html) -->
-
-  <footer class="footer" role="contentinfo">
-    <div class="container footer-bottom">
-      <div>© Hotel Terme Leonardo — Abano Terme (PD)</div>
-      <div><a href="#kontakt">Kontakt</a> · <a href="#info">Infos</a> · <a href="https://www.termeleonardo.com/de/privacy" target="_blank" rel="noopener">Datenschutz</a></div>
+<div class="container">
+  <form class="booking-bar" id="booking-form">
+    <div><label>Anreise</label><input type="date" id="arrival" required></div>
+    <div><label>Abreise</label><input type="date" id="departure" required></div>
+    <div><label>Erwachsene</label><select id="adults"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option></select></div>
+    <div><label>Kinder</label><select id="children"><option value="0" selected>0</option><option value="1">1</option><option value="2">2</option></select></div>
+    <div style="display:flex;align-items:center;gap:12px;margin-left:auto;">
+      <button type="submit" class="btn btn-primary">Verfügbarkeit prüfen</button>
+      <a href="https://www.termeleonardo.com/it/day-spa/prenotazioni" target="_blank" class="btn btn-outline" style="color:var(--primary);border-color:var(--primary);white-space:nowrap;">Day-Spa buchen</a>
     </div>
-  </footer>
+  </form>
+</div>
 
-  <script>
-    (function () {
-      const toggle = document.querySelector('.mobile-toggle');
-      const mobileNav = document.getElementById('mobileNav');
-      if (toggle && mobileNav) {
-        toggle.addEventListener('click', () => {
-          const open = mobileNav.classList.toggle('open');
-          mobileNav.setAttribute('aria-hidden', String(!open));
-          toggle.setAttribute('aria-expanded', String(open));
-        });
-      }
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Warum wir</span>
+      <h2>Ihr Wellness-Rückzugsort in Abano Terme</h2>
+      <p>Mehr als ein einfaches 4-Sterne-Hotel: eine Oase, in der Körper und Geist zwischen Thermalwasser, Natur und Sport regenerieren.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card fade-in"><div class="feature-icon">🏊</div><h3>Thermalbecken</h3><p>Überdachter Pool mit zwei Außenbecken in einem grünen Park. Salz-Brom-Jod-Wasser bei 30–35°C mit Hydromassage und Kneipp-Becken.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">⛳</div><h3>Golf-Driving-Range</h3><p>15.000 m² direkt neben dem Hotel: 10 Abschlagstationen (teilweise überdacht), Putting-Green, Pitching-Green und Bunker. Ermäßigte Green Fees in nahegelegenen Clubs.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">🧖</div><h3>Grotten & Wellness</h3><p>Biogrotte, Dampfgrotte, Thermalwasserfälle, Erlebnisduschen mit Chromo-Aromatherapie, Türkisches Bad und Biosauna.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">🏥</div><h3>SSN-Kuren</h3><p>Fangotherapie, Inhalationen, Aerosol, Balneotherapie, ozonisiertes Bad und Physiotherapie durch erfahrenes Fachpersonal.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">🍽️</div><h3>Restaurant & Venetische Küche</h3><p>Traditionelle venetische Gerichte mit lokalen Zutaten in einem eleganten Ambiente, das die Aromen der Euganeischen Hügel hervorhebt.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">🌿</div><h3>38.000 m² Park</h3><p>Eine grüne Oase am Fuße der Euganeischen Hügel, nur 10 Gehminuten vom Zentrum von Abano Terme und eine Stunde von Venedig entfernt.</p></div>
+    </div>
+  </div>
+</section>
 
-      const form = document.getElementById('booking-form-de');
-      if (form) {
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
-          const arrival = document.getElementById('arrival-de').value;
-          const departure = document.getElementById('departure-de').value;
-          const adults = document.getElementById('adults-de').value;
-          const children = document.getElementById('children-de').value;
-          if (!arrival || !departure) return;
-          const url = `https://www.termeleonardo.com/de/booking/rooms-available?rooms=1&arrival=${encodeURIComponent(arrival)}&departure=${encodeURIComponent(departure)}&adults1=${encodeURIComponent(adults)}&children1=${encodeURIComponent(children)}`;
-          window.open(url, '_blank', 'noopener');
-        });
-      }
-    })();
-  </script>
+<section class="section" id="zimmer">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Unterkunft</span>
+      <h2>Zimmer & Suiten</h2>
+      <p>98 individuell eingerichtete Zimmer mit 4-Sterne-Komfort, Balkon und allen Annehmlichkeiten für einen erholsamen Aufenthalt.</p>
+    </div>
+    <div class="rooms-grid">
+      <div class="room-card fade-in">
+        <div class="room-img" style="background-image:url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/00240d3f94c7d3b8fc60dc73bee9370ba95ddadf.jpg');"><span class="room-tag">Einzelzimmer</span></div>
+        <div class="room-info"><h3>Einzelzimmer</h3><p>Einzelbett 1,45 m, ideal für Alleinreisende, die Komfort und Ruhe suchen.</p><div class="room-amenities"><span>Balkon</span><span>Wi-Fi</span><span>Sat-TV</span><span>Klimaanlage</span></div></div>
+      </div>
+      <div class="room-card fade-in">
+        <div class="room-img" style="background-image:url('https://q-xx.bstatic.com/xdata/images/hotel/max500x500/2b1b62144ababb76bf2295ac357e4bf77fa9fd27.jpg');"><span class="room-tag">Doppelzimmer</span></div>
+        <div class="room-info"><h3>Doppelzimmer</h3><p>Queen-Bett 1,60 m, elegante Einrichtung und Balkon mit Blick auf den Park oder die Euganeischen Hügel.</p><div class="room-amenities"><span>Balkon</span><span>Dusche</span><span>Parkett</span><span>Minibar</span><span>Safe</span></div></div>
+      </div>
+      <div class="room-card fade-in">
+        <div class="room-img" style="background-image:url('https://q-xx.bstatic.com/xdata/images/hotel/max500x500/ce00924d721578190da7024a6c047242a2a2141d.jpg');"><span class="room-tag">Junior Suite</span></div>
+        <div class="room-info"><h3>Junior Suite</h3><p>Großzügige Räume, Bad mit Doppelwaschbecken, separater Wohnbereich und Panoramabalkon.</p><div class="room-amenities"><span>Doppelwaschbecken</span><span>Glasfaser-Wi-Fi</span><span>Fön</span><span>Schreibtisch</span></div></div>
+      </div>
+      <div class="room-card fade-in">
+        <div class="room-img" style="background-image:url('https://images.trvl-media.com/lodging/7600000/7597000/7596682/7596682/fa0e8fa7f828afbd3af25a9134c91d9d5dd538c2.jpg');"><span class="room-tag">Suite</span></div>
+        <div class="room-info"><h3>Suite</h3><p>Höchster Komfort: großes Schlafzimmer, Wohnzimmer, luxuriöses Bad und atemberaubende Aussicht.</p><div class="room-amenities"><span>Wohnzimmer</span><span>Doppelwaschbecken</span><span>Bademantel</span><span>Poolhandtuch</span></div></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px;"><a href="https://www.termeleonardo.com/de/booking" target="_blank" class="btn btn-primary">Alle Zimmer und Preise →</a></div>
+  </div>
+</section>
+
+<section class="section section-alt" id="therme">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Wellness</span>
+      <h2>Therme & Wellness</h2>
+      <p>Salz-Brom-Jod-Hyperthermalwasser (Quelltemperatur ~75°C) für medizinische Behandlungen, Entspannung und Regeneration.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card fade-in"><div class="feature-icon">🌊</div><h3>Thermalbecken</h3><p>Überdachter Pool mit zwei Außenbecken im Park. Temperaturen ~34–35°C und ein Becken bei ~30°C. Hydromassage, Wasserspiele und Kneipp-Becken. Badekappe Pflicht. Öffnungszeiten: 08:00–19:30, Freitag und Samstag bis 22:30.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">🪨</div><h3>Thermalgrotten</h3><p>Biogrotte, Dampfgrotte, Thermalwasserfälle, Erlebnisduschen mit Aroma- und Chromotherapie, Türkisches Bad und Biosauna.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">💆</div><h3>Konventionelle Kuren</h3><p>Fangotherapie, Inhalationen, Aerosol, Balneotherapie, ozonisiertes Bad und Physiotherapie durch erfahrenes Fachpersonal. SSN-Vereinbarung.</p></div>
+      <div class="feature-card fade-in"><div class="feature-icon">✨</div><h3>Day Spa</h3><p>Zugang zu Becken und Thermalgrotten auch nur für einen Tag, ohne Übernachtung. Umkleidekabinen mit Duschen, Fön und Schließfach. Abendzugang Freitag und Samstag 18:00–22:30. Online-Buchung verpflichtend.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:36px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="https://www.termeleonardo.com/it/day-spa/prenotazioni" target="_blank" class="btn btn-primary">Day-Spa buchen →</a>
+      <a href="https://www.termeleonardo.com/pdf/listino-spa-trattamenti-e-massaggi-hotel-leonardo-da-vinci-terme.pdf" target="_blank" class="btn btn-outline" style="color:var(--primary);border-color:var(--primary);">Spa-Preisliste (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="day-spa">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Day Spa</span>
+      <h2>Tageseintritt in die Thermalbecken</h2>
+      <p>Verwöhnen Sie sich auch nur für einen Tag in unseren Thermalbecken und Grotten, ohne übernachten zu müssen.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-bottom:40px;">
+      <div class="fade-in">
+        <h3 style="margin-bottom:16px;">Ihre Wellness-Oase für den Tag</h3>
+        <p style="margin-bottom:16px;">Mit dem <strong>Day Spa</strong> können Sie die Thermalbecken und den Entspannungsbereich mit Chromotherapie nutzen sowie Thermalbehandlungen und Massagen bei qualifiziertem Personal buchen.</p>
+        <p style="margin-bottom:16px;">Die <strong>Salz-Brom-Jod-Hyperthermalwässer</strong> mit Quelltemperatur ~75°C finden ihre Hauptanwendung in Thermal-Kuren, Balneotherapie, Thermalbecken und Inhalationstherapien.</p>
+        <ul style="list-style:none;padding:0;">
+          <li style="padding:8px 0;border-bottom:1px solid #eee;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> Überdachte und Außen-Thermalbecken</li>
+          <li style="padding:8px 0;border-bottom:1px solid #eee;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> Thermalgrotten und Biosauna</li>
+          <li style="padding:8px 0;border-bottom:1px solid #eee;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> Erlebnisduschen mit Chromotherapie</li>
+          <li style="padding:8px 0;border-bottom:1px solid #eee;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> Riesiges Aquarium mit Chromotherapie</li>
+          <li style="padding:8px 0;border-bottom:1px solid #eee;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> Behandlungen und Massagen auf Anfrage</li>
+          <li style="padding:8px 0;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> Kostenloser Parkplatz</li>
+        </ul>
+        <div style="margin-top:24px;display:flex;gap:16px;flex-wrap:wrap;">
+          <a href="https://www.termeleonardo.com/it/day-spa/prenotazioni" target="_blank" class="btn btn-primary">Day-Spa buchen →</a>
+          <a href="https://www.termeleonardo.com/pdf/listino-spa-trattamenti-e-massaggi-hotel-leonardo-da-vinci-terme.pdf" target="_blank" class="btn btn-outline" style="color:var(--primary);border-color:var(--primary);">Spa-Preisliste (PDF)</a>
+        </div>
+      </div>
+      <div class="fade-in" style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);">
+        <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500x500/e409d9fdd18ab072c65b16b7cd45dd010a6ddbf7.jpg" alt="Day Spa - Thermalbecken" style="width:100%;height:360px;object-fit:cover;display:block;">
+      </div>
+    </div>
+    <div class="info-grid" style="margin-top:40px;">
+      <div class="info-item fade-in"><div class="icon">🕘</div><h4>Öffnungszeiten</h4><p>Täglich 09:00–18:30 Uhr<br>Freitag und Samstag bis 22:30 Uhr</p></div>
+      <div class="info-item fade-in"><div class="icon">📝</div><h4>Reservierung</h4><p>Online-Buchung verpflichtend<br>Mindestens 24h im Voraus</p></div>
+      <div class="info-item fade-in"><div class="icon">🎩</div><h4>Badekappe</h4><p>Im Becken Pflicht<br>Erhältlich an der Rezeption</p></div>
+      <div class="info-item fade-in"><div class="icon">🚗</div><h4>Parken</h4><p>Kostenlos für Day-Spa-Gäste<br>Parkplätze verfügbar</p></div>
+    </div>
+    <p style="text-align:center;margin-top:32px;color:var(--text-muted);font-size:0.9rem;">⚠️ <strong>Picknick verboten</strong> — das Hotelrestaurant ist auf Reservierung verfügbar.</p>
+  </div>
+</section>
+
+<section class="section" id="golf">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Sport</span>
+      <h2>Golf & Driving Range</h2>
+      <p>15.000 m² Driving Range direkt neben den Becken, eingebettet in die Grünflächen der Euganeischen Hügel.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-bottom:40px;">
+      <div class="fade-in">
+        <h3 style="margin-bottom:16px;">Unsere Anlage</h3>
+        <ul style="list-style:none;padding:0;">
+          <li style="padding:8px 0;border-bottom:1px solid #eee;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> 10 Übungsstationen (teilweise überdacht)</li>
+          <li style="padding:8px 0;border-bottom:1px solid #eee;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> Putting-Green</li>
+          <li style="padding:8px 0;border-bottom:1px solid #eee;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> Pitching-Green</li>
+          <li style="padding:8px 0;border-bottom:1px solid #eee;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> Bunker</li>
+          <li style="padding:8px 0;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> Ermäßigte Green Fees in nahegelegenen Clubs</li>
+        </ul>
+      </div>
+      <div class="fade-in" style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);">
+        <img src="https://foto.hrsstatic.com/fotos/0/3/1098/700/80/000000/2d43f3e6a66fd126775b5494b30738f67960ba47.jpg" alt="Golfplatz" style="width:100%;height:320px;object-fit:cover;display:block;">
+      </div>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card fade-in"><h4 style="margin-bottom:8px;">⛳ Golf Club Montecchia</h4><p style="font-size:0.9rem;">5,6 km — 27 Löcher, einer der prestigeträchtigsten Italiens.</p></div>
+      <div class="feature-card fade-in"><h4 style="margin-bottom:8px;">⛳ Frassanelle</h4><p style="font-size:0.9rem;">9,6 km — 18 Löcher in einem historischen Park.</p></div>
+      <div class="feature-card fade-in"><h4 style="margin-bottom:8px;">⛳ Golf Club Padova</h4><p style="font-size:0.9rem;">8,6 km — 27 Löcher, leicht und panoramisch.</p></div>
+      <div class="feature-card fade-in"><h4 style="margin-bottom:8px;">⛳ Ca' della Nave</h4><p style="font-size:0.9rem;">Martellago — 18 Löcher, 25 Minuten entfernt.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="restaurant">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Gastronomie</span>
+      <h2>Restaurant & Venetische Küche</h2>
+      <p>Venetianische Küchentradition trifft auf die Kreativität unseres Chefs in einem eleganten und einladenden Ambiente.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+      <div class="fade-in" style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);">
+        <img src="https://img02.restaurantguru.com/64096dec8ecd2cdf8bd79cae8fbeab2a5437b053.jpg" alt="Restaurant" style="width:100%;height:320px;object-fit:cover;display:block;">
+      </div>
+      <div class="fade-in">
+        <h3 style="margin-bottom:16px;">Authentische Aromen der Euganeischen Hügel</h3>
+        <p style="margin-bottom:16px;">Das Restaurant des Hotel Terme Leonardo bietet eine Küche, die lokale Produkte hervorhebt: natives Olivenöl extra aus den Euganeischen Hügeln, DOC-Weine, Risottos, frische Nudeln und ausgewählte Fleischsorten.</p>
+        <p style="margin-bottom:16px;">Jedes Gericht wird mit Sorgfalt zubereitet, um ein gastronomisches Erlebnis zu bieten, das das Wellness-Erlebnis des Thermalaufenthalts vervollständigt.</p>
+        <ul style="list-style:none;padding:0;">
+          <li style="padding:6px 0;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> À-la-carte- und Degustationsmenüs</li>
+          <li style="padding:6px 0;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> Vegetarische Optionen und für Unverträglichkeiten</li>
+          <li style="padding:6px 0;display:flex;gap:12px;align-items:center;"><span style="color:var(--primary);font-weight:700;">✓</span> Frühstücksbuffet mit frischen Produkten</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="angebote">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Aktionen</span>
+      <h2>Unsere Angebote</h2>
+      <p>Wellness-Pakete, Wochenenden, Last-Minute- und Saisonaktionen für Ihren Aufenthalt in Abano Terme.</p>
+    </div>
+    <div class="offers-grid">
+      <div class="offer-card fade-in">
+        <div class="offer-img" style="background-image:url('https://q-xx.bstatic.com/xdata/images/hotel/max500x500/f9a35458788bd76fde8f5de5eaf28a2d1bffe2ff.jpg');"><span class="offer-badge">Golf</span></div>
+        <div class="offer-body"><h3>7 Tage Golf</h3><p>Eine Woche dem Golf gewidmet mit Zugang zur Driving Range, ermäßigten Green Fees und Thermal-Entspannung am Ende des Tages.</p><div class="offer-price">ab €820 <small>/ 7 Nächte</small></div><a href="https://www.termeleonardo.com/it/offerte/7-giorni-di-golf" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;">Angebot entdecken →</a></div>
+      </div>
+      <div class="offer-card fade-in">
+        <div class="offer-img" style="background-image:url('https://q-xx.bstatic.com/xdata/images/hotel/max500x500/e409d9fdd18ab072c65b16b7cd45dd010a6ddbf7.jpg');"><span class="offer-badge">Wellness</span></div>
+        <div class="offer-body"><h3>Deluxe — 3 Nächte & Massage</h3><p>3-Nächte-Aufenthalt mit inklusivem Wellness-Behandlung: entspannende Massage und unbegrenzter Zugang zu Thermalbecken und Grotten.</p><div class="offer-price">ab €400 <small>/ 3 Nächte</small></div><a href="https://www.termeleonardo.com/de/booking" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;">Jetzt buchen →</a></div>
+      </div>
+      <div class="offer-card fade-in">
+        <div class="offer-img" style="background-image:url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/00240d3f94c7d3b8fc60dc73bee9370ba95ddadf.jpg');"><span class="offer-badge">Smart</span></div>
+        <div class="offer-body"><h3>Smart — 1 Nacht & Massage</h3><p>Perfekt für eine kurze Pause: eine Nacht mit Frühstück und einer 50-minütigen regenerierenden Massage.</p><div class="offer-price">ab €180 <small>/ 1 Nacht</small></div><a href="https://www.termeleonardo.com/de/booking" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;">Jetzt buchen →</a></div>
+      </div>
+      <div class="offer-card fade-in">
+        <div class="offer-img" style="background-image:url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/071b45482fd442c25c9fb9d800bd10808a3314a7.jpg');"><span class="offer-badge">Therme</span></div>
+        <div class="offer-body"><h3>Thermal Escape — 2 Nächte</h3><p>Thermales Wochenende mit Zugang zu Becken, Grotten und einer Fangotherapie- oder Inhalationsbehandlung.</p><div class="offer-price">ab €280 <small>/ 2 Nächte</small></div><a href="https://www.termeleonardo.com/de/booking" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;">Jetzt buchen →</a></div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:24px;color:var(--text-muted);font-size:0.9rem;">* Indikative Preise, vorbehaltlich Änderungen und Verfügbarkeit. Bestpreisgarantie auf der offiziellen Website.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in"><span class="section-label">Galerie</span><h2>Das Hotel entdecken</h2></div>
+    <div class="gallery-grid">
+      <div class="gallery-item wide" style="background-image:url('https://images.trvl-media.com/lodging/7600000/7597000/7596682/7596682/9c8743d3a32949f5afed802325c3656b72600c4d.jpg');" data-label="Hotel-Außenansicht"></div>
+      <div class="gallery-item" style="background-image:url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/071b45482fd442c25c9fb9d800bd10808a3314a7.jpg');" data-label="Thermalbecken"></div>
+      <div class="gallery-item" style="background-image:url('https://q-xx.bstatic.com/xdata/images/hotel/max500x500/e409d9fdd18ab072c65b16b7cd45dd010a6ddbf7.jpg');" data-label="Spa & Wellness"></div>
+      <div class="gallery-item tall" style="background-image:url('https://q-xx.bstatic.com/xdata/images/hotel/max500x500/0ab108d527aa7476c1b737b78f291e975934596f.jpg');" data-label="Zimmer"></div>
+      <div class="gallery-item" style="background-image:url('https://foto.hrsstatic.com/fotos/0/3/1098/700/80/000000/2d43f3e6a66fd126775b5494b30738f67960ba47.jpg');" data-label="Golf"></div>
+      <div class="gallery-item wide" style="background-image:url('https://img02.restaurantguru.com/64096dec8ecd2cdf8bd79cae8fbeab2a5437b053.jpg');" data-label="Restaurant"></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <h2 class="fade-in">Was unsere Gäste sagen</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card fade-in"><div class="stars">★★★★★</div><p>"Fantastischer Aufenthalt! Die Thermalbecken sind wunderbar, das Personal äußerst zuvorkommend und der Golfplatz in der Nähe ein echtes Plus. Wir kommen definitiv wieder."</p><div class="author">Marco R. <small>Verona, Italien</small></div></div>
+      <div class="testimonial-card fade-in"><div class="stars">★★★★★</div><p>"Wir haben die konventionellen Kuren genutzt: professioneller Fango und Inhalationen. Das Hotel liegt inmitten von Grün und ist sehr ruhig. Sehr empfohlen!"</p><div class="author">Anna B. <small>Mailand, Italien</small></div></div>
+      <div class="testimonial-card fade-in"><div class="stars">★★★★★</div><p>"Perfektes Thermal-Spa-Hotel! Die Becken sind fantastisch, der Golfplatz in der Nähe wunderschön und Venedig nur eine Stunde entfernt. Sehr empfohlen für einen erholsamen Urlaub."</p><div class="author">Thomas K. <small>München, Deutschland</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="info">
+  <div class="container">
+    <div class="section-header fade-in"><span class="section-label">Vor dem Aufenthalt</span><h2>Nützliche Infos</h2></div>
+    <div class="info-grid">
+      <div class="info-item fade-in"><div class="icon">🕐</div><h4>Check-in / Check-out</h4><p>Check-in ab 15:00 Uhr<br>Check-out bis 11:00 Uhr</p></div>
+      <div class="info-item fade-in"><div class="icon">📍</div><h4>Anreise</h4><p>Via Monteortone, 46<br>35037 Abano Terme (PD)<br>1 km vom Zentrum, 45 Min. von Venedig</p></div>
+      <div class="info-item fade-in"><div class="icon">🏊</div><h4>Beckenöffnungszeiten</h4><p>Täglich 08:00–19:30 Uhr<br>Freitag und Samstag bis 22:30 Uhr<br>Badekappe Pflicht</p></div>
+      <div class="info-item fade-in"><div class="icon">🚭</div><h4>Regeln</h4><p>Rauchverbot in den Zimmern<br>Auf dem Balkon erlaubt<br>Kostenloses Glasfaser-Wi-Fi überall</p></div>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="https://www.termeleonardo.com/pdf/hotel-leonardo-depliant.pdf" target="_blank" class="btn btn-outline" style="color:var(--primary);border-color:var(--primary);margin-right:12px;">Hotel-Prospekt (PDF)</a>
+      <a href="https://www.termeleonardo.com/pdf/listino-spa-trattamenti-e-massaggi-hotel-leonardo-da-vinci-terme.pdf" target="_blank" class="btn btn-outline" style="color:var(--primary);border-color:var(--primary);">Spa-Preisliste (PDF)</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Häufige Fragen</span>
+      <h2>FAQ — Häufig gestellte Fragen</h2>
+      <p>Alles, was Sie vor Ihrem Aufenthalt im Hotel Terme Leonardo wissen müssen.</p>
+    </div>
+    <div class="faq-grid" style="max-width:800px;margin:0 auto;">
+      <div class="faq-item fade-in">
+        <details style="background:var(--white);border-radius:var(--radius);border:1px solid rgba(0,0,0,0.06);overflow:hidden;">
+          <summary style="padding:20px 24px;font-weight:600;color:var(--text-dark);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:1.05rem;">Wie sind die Check-in- und Check-out-Zeiten? <span style="color:var(--primary);font-size:1.4rem;">+</span></summary>
+          <div style="padding:0 24px 20px;color:var(--text-muted);line-height:1.7;">Der Check-in ist ab 15:00 Uhr möglich, der Check-out muss bis 11:00 Uhr erfolgt sein. Bei früherer Anreise oder späterer Abreise kontaktieren Sie bitte die Rezeption, um die Verfügbarkeit zu prüfen.</div>
+        </details>
+      </div>
+      <div class="faq-item fade-in">
+        <details style="background:var(--white);border-radius:var(--radius);border:1px solid rgba(0,0,0,0.06);overflow:hidden;">
+          <summary style="padding:20px 24px;font-weight:600;color:var(--text-dark);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:1.05rem;">Ist das Hotel das ganze Jahr über geöffnet? <span style="color:var(--primary);font-size:1.4rem;">+</span></summary>
+          <div style="padding:0 24px 20px;color:var(--text-muted);line-height:1.7;">Ja, das Hotel Terme Leonardo ist 365 Tage im Jahr geöffnet. Die Thermen und der Wellnessbereich sind täglich, auch an Feiertagen, in Betrieb.</div>
+        </details>
+      </div>
+      <div class="faq-item fade-in">
+        <details style="background:var(--white);border-radius:var(--radius);border:1px solid rgba(0,0,0,0.06);overflow:hidden;">
+          <summary style="padding:20px 24px;font-weight:600;color:var(--text-dark);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:1.05rem;">Kann ich die Day Spa ohne Übernachtung nutzen? <span style="color:var(--primary);font-size:1.4rem;">+</span></summary>
+          <div style="padding:0 24px 20px;color:var(--text-muted);line-height:1.7;">Ja, die Day Spa ist auch für Nicht-Übernachtungsgäste verfügbar. Eine verpflichtende Online-Buchung ist mindestens 24 Stunden im Voraus erforderlich. Der Zugang umfasst Thermalbecken, Grotten und Entspannungsbereich.</div>
+        </details>
+      </div>
+      <div class="faq-item fade-in">
+        <details style="background:var(--white);border-radius:var(--radius);border:1px solid rgba(0,0,0,0.06);overflow:hidden;">
+          <summary style="padding:20px 24px;font-weight:600;color:var(--text-dark);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:1.05rem;">Sind Haustiere im Hotel erlaubt? <span style="color:var(--primary);font-size:1.4rem;">+</span></summary>
+          <div style="padding:0 24px 20px;color:var(--text-muted);line-height:1.7;">Ja, das Hotel ist haustierfreundlich und akzeptiert kleine Haustiere. Ein Reinigungszuschlag wird erhoben. Bitte kontaktieren Sie uns vor der Anreise, um den Aufenthalt Ihres vierbeinigen Freundes bestens zu organisieren.</div>
+        </details>
+      </div>
+      <div class="faq-item fade-in">
+        <details style="background:var(--white);border-radius:var(--radius);border:1px solid rgba(0,0,0,0.06);overflow:hidden;">
+          <summary style="padding:20px 24px;font-weight:600;color:var(--text-dark);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:1.05rem;">Welche Zahlungsmethoden werden akzeptiert? <span style="color:var(--primary);font-size:1.4rem;">+</span></summary>
+          <div style="padding:0 24px 20px;color:var(--text-muted);line-height:1.7;">Wir akzeptieren Barzahlung, Kreditkarten (Visa, Mastercard, American Express) und EC-Karten. Für Online-Buchungen ist eine Kreditkarte als Garantie erforderlich.</div>
+        </details>
+      </div>
+      <div class="faq-item fade-in">
+        <details style="background:var(--white);border-radius:var(--radius);border:1px solid rgba(0,0,0,0.06);overflow:hidden;">
+          <summary style="padding:20px 24px;font-weight:600;color:var(--text-dark);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:1.05rem;">Ist ein Parkplatz verfügbar? <span style="color:var(--primary);font-size:1.4rem;">+</span></summary>
+          <div style="padding:0 24px 20px;color:var(--text-muted);line-height:1.7;">Ja, das Hotel verfügt über einen großen privaten kostenlosen Parkplatz für Gäste. Der Parkplatz steht auch Day-Spa-Gästen zur Verfügung.</div>
+        </details>
+      </div>
+      <div class="faq-item fade-in">
+        <details style="background:var(--white);border-radius:var(--radius);border:1px solid rgba(0,0,0,0.06);overflow:hidden;">
+          <summary style="padding:20px 24px;font-weight:600;color:var(--text-dark);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:1.05rem;">Wie erreiche ich das Hotel von Venedig aus? <span style="color:var(--primary);font-size:1.4rem;">+</span></summary>
+          <div style="padding:0 24px 20px;color:var(--text-muted);line-height:1.7;">Vom Flughafen Marco Polo in Venedig sind es etwa 45 Minuten mit dem Auto. Mit dem Zug ist der nächste Bahnhof Padua (15 km), der von Frecciarossa- und Italo-Zügen bedient wird. Vom Bahnhof Padua sind es 20 Minuten mit dem Taxi oder Bus.</div>
+        </details>
+      </div>
+      <div class="faq-item fade-in">
+        <details style="background:var(--white);border-radius:var(--radius);border:1px solid rgba(0,0,0,0.06);overflow:hidden;">
+          <summary style="padding:20px 24px;font-weight:600;color:var(--text-dark);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:1.05rem;">Sind SSN-Thermalbehandlungen abgedeckt? <span style="color:var(--primary);font-size:1.4rem;">+</span></summary>
+          <div style="padding:0 24px 20px;color:var(--text-muted);line-height:1.7;">Ja, das Hotel Terme Leonardo ist mit dem Nationalen Gesundheitsdienst (SSN) für Thermalbehandlungen verbunden. Vereinbarungen bestehen mit INPS, INAIL und anderen Einrichtungen. Bitte kontaktieren Sie uns, um Ihre Abdeckung zu prüfen.</div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="container">
+    <div class="fade-in">
+      <h3>Newsletter abonnieren</h3>
+      <p>Erhalten Sie als Erste unsere Sonderangebote, Last-Minute-Aktionen und Neuigkeiten vom Hotel Terme Leonardo.</p>
+      <form class="newsletter-form" id="newsletter-form"><input type="email" placeholder="Ihre E-Mail" required><button type="submit">Abonnieren</button></form>
+      <p style="font-size:0.8rem;color:var(--text-muted);margin-top:16px;">Mit der Anmeldung stimmen Sie unserer <a href="https://www.termeleonardo.com/it/privacy" target="_blank" style="color:var(--primary);">Datenschutzerklärung</a> zu. Sie können sich jederzeit abmelden.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" id="kontakt">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="de.html" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;"><img src="data:image/png;base64,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" alt="Hotel Terme Leonardo" style="height:36px;width:auto;display:block;filter:brightness(0) invert(1);"></a>
+        <p>4-Sterne-Hotel in Abano Terme, im Herzen der Euganeischen Hügel. Thermalbecken, Golf, Spa und SSN-Kuren für einen Wellness-Urlaub der Extraklasse.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/HotelTermeLeonardoAbanoTerme" target="_blank" aria-label="Facebook">f</a>
+          <a href="https://www.instagram.com/hoteltermeleonardo" target="_blank" aria-label="Instagram">📷</a>
+          <a href="https://www.youtube.com/user/HotelLeonardoTerme" target="_blank" aria-label="YouTube">▶</a>
+          <a href="https://www.yelp.it/biz/hotel-leonardo-da-vinci-teolo-2" target="_blank" aria-label="Yelp">Y</a>
+        </div>
+      </div>
+      <div><h4>Entdecken</h4><ul class="footer-links"><li><a href="#zimmer">Zimmer & Suiten</a></li><li><a href="#therme">Therme & Wellness</a></li><li><a href="#golf">Golf & Driving Range</a></li><li><a href="#angebote">Angebote</a></li><li><a href="https://www.termeleonardo.com/it/shop" target="_blank">Gutscheine</a></li></ul></div>
+      <div><h4>Hotel</h4><ul class="footer-links"><li><a href="#info">Nützliche Infos</a></li><li><a href="https://www.termeleonardo.com/it/day-spa/prenotazioni" target="_blank">Day Spa</a></li><li><a href="#kontakt">Kontakt</a></li><li><a href="https://www.termeleonardo.com/it/privacy" target="_blank">Datenschutz</a></li><li><a href="https://www.termeleonardo.com/it/cookies" target="_blank">Cookie-Richtlinie</a></li></ul></div>
+      <div><h4>Kontakt</h4><ul class="footer-links"><li>📍 Via Monteortone, 46<br>35037 Abano Terme (PD)</li><li>📞 <a href="tel:+390499939200">+39 049 9939 200</a></li><li>✉️ <a href="mailto:info@termeleonardo.com">info@termeleonardo.com</a></li><li style="margin-top:12px;font-size:0.85rem;color:rgba(255,255,255,0.4);">Betreiber: Tria S.r.l.<br>MWSt. IT 02042330288</li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Hotel Terme Leonardo. Alle Rechte vorbehalten.</p><div><a href="https://www.termeleonardo.com/it/privacy" target="_blank">Datenschutz</a><a href="https://www.termeleonardo.com/it/cookies" target="_blank">Cookies</a></div></div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookie-banner">
+  <p>Wir verwenden Cookies für die wesentliche Funktionalität der Website und, nur mit Ihrer Zustimmung, zur Traffic-Analyse. <a href="https://www.termeleonardo.com/it/cookies" target="_blank">Cookie-Richtlinie</a></p>
+  <button class="cookie-btn accept" id="cookie-accept">Alle akzeptieren</button>
+  <button class="cookie-btn reject" id="cookie-reject">Nur notwendige</button>
+</div>
+
+<script src="main.js"></script>
 </body>
 </html>
