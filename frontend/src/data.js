@@ -58,7 +58,7 @@ export const DAYSPA = {
 
 export const OFFERS = [
   {
-    tag: "Golf",
+    slug: "7-giorni-di-golf", tag: "Golf",
     title: "7 Giorni di Golf",
     desc: "Offerta Golf, 7 Giorni all'Hotel Terme Leonardo ad Abano Terme.",
     price: "820",
@@ -67,7 +67,7 @@ export const OFFERS = [
     featured: true,
   },
   {
-    tag: "Deluxe",
+    slug: "deluxe", tag: "Deluxe",
     title: "Soggiorno Deluxe",
     desc: "3 Notti & Massaggio in camera Deluxe con vista sui Colli.",
     price: "400",
@@ -75,7 +75,7 @@ export const OFFERS = [
     img: `${BASE}/sommer-spezial-hotel-terme-leonardo.jpg`,
   },
   {
-    tag: "Smart",
+    slug: "smart", tag: "Smart",
     title: "Soggiorno Smart",
     desc: "1 Notte & Massaggio. La fuga breve dedicata al relax.",
     price: "180",
@@ -83,7 +83,7 @@ export const OFFERS = [
     img: `${BASE}/dolce-vita-mud-offer.jpg`,
   },
   {
-    tag: "Escape",
+    slug: "escape", tag: "Escape",
     title: "Thermal Escape",
     desc: "2 Notti immersi nelle piscine termali e nella natura.",
     price: "280",
@@ -101,4 +101,4 @@ export const WELLNESS_FEATURES = [
   { title: "Centro Benessere", desc: "Massaggi, trattamenti viso e corpo firmati dai nostri terapisti." },
 ];
 
-export const ROOM_TYPES = ["Camera Classic", "Camera Deluxe", "Junior Suite", "Suite Panoramica"];
+export const ROOM_TYPES = ["Singola senza balcone", "Singola Parco", "Doppia", "Matrimoniale Queen", "Junior Suite Abano", "Junior Suite Colli Euganei", "Junior Suite Monteortone", "Junior Suite Accessibile", "Suite Colli Euganei", "Suite Monteortone"];
