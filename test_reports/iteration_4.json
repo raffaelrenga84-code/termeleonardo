@@ -1,0 +1,22 @@
+{
+  "summary": "Frontend-only testing of the expanded Dining/Restaurant section for Hotel Terme Leonardo (IT/DE/FR/EN). Verified rendering, correct DOM position (between rooms-gallery-section and dayspa), board options (Bed & Breakfast + Half Board), 5 meal-time rows, Bistrot La Piazza highlighted card, full-board disclaimer, and language reactivity within the same session (no reload) across IT, EN, DE, FR. All 20 assertions passed. No runtime errors in console.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "Dining.jsx uses f.name as React key inside formulas.map — fine while names are unique per locale, but consider using stable index if names could collide.",
+    "Same for hours.map using h.t as key — currently unique but fragile if translations ever repeat a label."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A", "frontend": "100%"},
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Dining section fully verified across all 4 languages. Selector data-testid='dining-section' works; language switches via data-testid='lang-{it|en|de|fr}' are reactive without reload. Section order in DOM: benessere → golf → camere → rooms-gallery-section → ristorante → dayspa → cure → ...",
+  "rca of the issue": "N/A - no issues found"
+}

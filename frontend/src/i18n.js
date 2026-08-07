@@ -53,8 +53,23 @@ export const translations = {
     },
     dining: {
       label: "Gusto & Cucina Veneta", title: "I sapori autentici del territorio",
-      body: "Benessere, gusto e relax nel cuore di Abano Terme. Nel nostro ristorante e Bistrot potrai assaporare la cucina veneta con ingredienti freschi e genuini, per un'esperienza unica di armonia tra sapore e territorio.",
-      list: ["Ristorante con cucina veneta", "Bistrot informale", "Ingredienti freschi e locali", "Menù dedicati al benessere"],
+      body: "Benessere, gusto e relax nel cuore di Abano Terme: cucina veneta con ingredienti freschi e genuini, con opzioni vegetariane, senza glutine e senza lattosio su richiesta.",
+      formulasTitle: "Le nostre formule",
+      formulas: [
+        { name: "Pernottamento & Colazione", desc: "Ricca colazione a buffet per iniziare la giornata. Il pranzo è alla carta al Bistrot La Piazza." },
+        { name: "Mezza Pensione", desc: "Colazione + cena a buffet con antipasti, pasta, pesce, carne, insalate, dolci e formaggi." },
+      ],
+      noteFull: "Non proponiamo la pensione completa: a pranzo c'è il Bistrot, dove si può andare anche in accappatoio o costume.",
+      hoursTitle: "Orari dei pasti",
+      hours: [
+        { t: "Colazione a buffet", d: "7:30 – 10:00" },
+        { t: "Cena a buffet", d: "dalle 19:30 · ultimo ingresso 20:20" },
+        { t: "Bistrot — Pranzo", d: "12:30 – 14:30" },
+        { t: "Bistrot — Snack", d: "10:00 – 17:30" },
+        { t: "Bistrot — Bar", d: "10:00 – 23:30" },
+      ],
+      bistroTitle: "Bistrot La Piazza",
+      bistroDesc: "Il nostro ristorante informale à la carte: perfetto per un pranzo tra una nuotata e l'altra, accessibile direttamente in accappatoio o costume, senza doversi cambiare.",
     },
     dayspa: {
       label: "Day Spa", title: "Il relax di una giornata",
@@ -208,8 +223,23 @@ export const translations = {
     },
     dining: {
       label: "Taste & Veneto Cuisine", title: "The authentic flavours of the region",
-      body: "Wellness, taste and relaxation in the heart of Abano Terme. In our restaurant and Bistrot you can savour Veneto cuisine with fresh, genuine ingredients, for a unique experience of harmony between flavour and territory.",
-      list: ["Restaurant with Veneto cuisine", "Casual Bistrot", "Fresh local ingredients", "Wellness-oriented menus"],
+      body: "Wellness, taste and relaxation in the heart of Abano Terme: Veneto cuisine with fresh, genuine ingredients, with vegetarian, gluten-free and lactose-free options on request.",
+      formulasTitle: "Our board options",
+      formulas: [
+        { name: "Bed & Breakfast", desc: "A generous breakfast buffet to start the day. Lunch is à la carte at Bistrot La Piazza." },
+        { name: "Half Board", desc: "Breakfast + buffet dinner with starters, pasta, fish, meat, salads, desserts and cheeses." },
+      ],
+      noteFull: "We don't offer full board: for lunch there's the Bistrot, where you can go straight in your bathrobe or swimsuit.",
+      hoursTitle: "Meal times",
+      hours: [
+        { t: "Breakfast buffet", d: "7:30 am – 10:00 am" },
+        { t: "Dinner buffet", d: "from 7:30 pm · last entry 8:20 pm" },
+        { t: "Bistrot — Lunch", d: "12:30 pm – 2:30 pm" },
+        { t: "Bistrot — Snacks", d: "10:00 am – 5:30 pm" },
+        { t: "Bistrot — Bar", d: "10:00 am – 11:30 pm" },
+      ],
+      bistroTitle: "Bistrot La Piazza",
+      bistroDesc: "Our casual à la carte restaurant: perfect for a lunch between swims, accessible straight in your bathrobe or swimsuit, no need to change.",
     },
     dayspa: {
       label: "Day Spa", title: "The relaxation of a single day",
@@ -363,8 +393,23 @@ export const translations = {
     },
     dining: {
       label: "Genuss & Venetische Küche", title: "Die authentischen Aromen der Region",
-      body: "Wellness, Genuss und Entspannung im Herzen von Abano Terme. In unserem Restaurant und Bistrot genießen Sie die venetische Küche mit frischen, echten Zutaten – ein einzigartiges Erlebnis der Harmonie zwischen Geschmack und Region.",
-      list: ["Restaurant mit venetischer Küche", "Legeres Bistrot", "Frische regionale Zutaten", "Wellness-orientierte Menüs"],
+      body: "Wellness, Genuss und Entspannung im Herzen von Abano Terme: venetische Küche mit frischen, echten Zutaten, mit vegetarischen, glutenfreien und laktosefreien Optionen auf Anfrage.",
+      formulasTitle: "Unsere Verpflegung",
+      formulas: [
+        { name: "Übernachtung & Frühstück", desc: "Reichhaltiges Frühstücksbuffet für den Start in den Tag. Mittags à la carte im Bistrot La Piazza." },
+        { name: "Halbpension", desc: "Frühstück + Abendbuffet mit Vorspeisen, Pasta, Fisch, Fleisch, Salaten, Desserts und Käse." },
+      ],
+      noteFull: "Vollpension bieten wir nicht an: mittags gibt es das Bistrot, das Sie auch im Bademantel oder Badeanzug besuchen können.",
+      hoursTitle: "Essenszeiten",
+      hours: [
+        { t: "Frühstücksbuffet", d: "7:30 – 10:00 Uhr" },
+        { t: "Abendbuffet", d: "ab 19:30 · letzter Einlass 20:20 Uhr" },
+        { t: "Bistrot — Mittag", d: "12:30 – 14:30 Uhr" },
+        { t: "Bistrot — Snacks", d: "10:00 – 17:30 Uhr" },
+        { t: "Bistrot — Bar", d: "10:00 – 23:30 Uhr" },
+      ],
+      bistroTitle: "Bistrot La Piazza",
+      bistroDesc: "Unser legeres à-la-carte-Restaurant: ideal für ein Mittagessen zwischen zwei Bädern, direkt im Bademantel oder Badeanzug zugänglich, ganz ohne Umziehen.",
     },
     dayspa: {
       label: "Day Spa", title: "Entspannung für einen Tag",
@@ -518,8 +563,23 @@ export const translations = {
     },
     dining: {
       label: "Goût & Cuisine Vénète", title: "Les saveurs authentiques du territoire",
-      body: "Bien-être, goût et détente au cœur d'Abano Terme. Dans notre restaurant et Bistrot, savourez la cuisine vénète avec des ingrédients frais et authentiques, pour une expérience unique d'harmonie entre saveur et territoire.",
-      list: ["Restaurant de cuisine vénète", "Bistrot décontracté", "Ingrédients frais et locaux", "Menus dédiés au bien-être"],
+      body: "Bien-être, goût et détente au cœur d'Abano Terme : cuisine vénète avec des ingrédients frais et authentiques, avec des options végétariennes, sans gluten et sans lactose sur demande.",
+      formulasTitle: "Nos formules",
+      formulas: [
+        { name: "Nuitée & Petit-déjeuner", desc: "Riche petit-déjeuner buffet pour bien commencer la journée. Le déjeuner est à la carte au Bistrot La Piazza." },
+        { name: "Demi-pension", desc: "Petit-déjeuner + dîner buffet avec entrées, pâtes, poisson, viande, salades, desserts et fromages." },
+      ],
+      noteFull: "Nous ne proposons pas la pension complète : le midi, il y a le Bistrot, où l'on peut aller en peignoir ou en maillot.",
+      hoursTitle: "Horaires des repas",
+      hours: [
+        { t: "Petit-déjeuner buffet", d: "7h30 – 10h00" },
+        { t: "Dîner buffet", d: "dès 19h30 · dernière entrée 20h20" },
+        { t: "Bistrot — Déjeuner", d: "12h30 – 14h30" },
+        { t: "Bistrot — Snacks", d: "10h00 – 17h30" },
+        { t: "Bistrot — Bar", d: "10h00 – 23h30" },
+      ],
+      bistroTitle: "Bistrot La Piazza",
+      bistroDesc: "Notre restaurant décontracté à la carte : parfait pour un déjeuner entre deux baignades, accessible directement en peignoir ou en maillot, sans se changer.",
     },
     dayspa: {
       label: "Day Spa", title: "La détente d'une journée",
