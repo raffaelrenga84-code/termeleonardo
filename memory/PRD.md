@@ -40,3 +40,7 @@ React + Tailwind + Framer Motion + Lenis (smooth scroll). FastAPI + MongoDB (boo
 - Collegare i pulsanti "Prenota" al booking engine reale /{lang}/booking/select-dates (URL già individuato).
 - Rifinire sezioni Piscine (3 vasche, temperature), Ristorante (orari pasti, mezza pensione) e "Servizi inclusi".
 - Buoni regalo Day Spa, camera d'appoggio, condizioni cancellazione/caparra, accessibilità.
+
+## Update (Ristorante ampliato)
+- Sezione Ristorante estesa (IT/DE/FR/EN): formule B&B vs Mezza Pensione, orari pasti (colazione 7:30–10:00, cena dalle 19:30 ultimo ingresso 20:20, Bistrot pranzo/snack/bar), nota "niente pensione completa" e card dedicata Bistrot La Piazza.
+- Testing agent iteration_4: frontend 100% (20/20), reattività lingua IT/EN/DE/FR verificata, nessun errore.
