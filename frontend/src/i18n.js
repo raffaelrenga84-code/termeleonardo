@@ -169,13 +169,13 @@ export const translations = {
       cta: "Richiedi il transfer",
     },
     gift: {
-      label: "Regali", title: "Regala il benessere",
+      label: "Buoni Regalo", title: "Regala il benessere",
       body: "Un buono regalo dell'Hotel Terme Leonardo è il modo perfetto per sorprendere chi ami: piscine termali, grotte e massaggi in un dono di puro relax.",
       from: "da",
       cards: [
         { name: "Ingresso Day Spa", desc: "Una giornata tra piscine termali e grotte, 9:00–18:30.", price: "35" },
         { name: "Spa & Massaggio Relax", desc: "Ingresso Day Spa con massaggio rilassante all'olio di cacao (25 min).", price: "75" },
-        { name: "Giornata Wellness Deluxe", desc: "Day Spa con massaggio antistress da 55 minuti.", price: "90" },
+        { name: "Giornata Benessere Deluxe", desc: "Day Spa con massaggio antistress da 55 minuti.", price: "90" },
       ],
       conditions: ["Validità 12 mesi dall'acquisto", "Sempre su prenotazione, salvo disponibilità", "Non rimborsabile né convertibile in denaro"],
       cta: "Richiedi un buono regalo",

@@ -44,3 +44,9 @@ React + Tailwind + Framer Motion + Lenis (smooth scroll). FastAPI + MongoDB (boo
 ## Update (Ristorante ampliato)
 - Sezione Ristorante estesa (IT/DE/FR/EN): formule B&B vs Mezza Pensione, orari pasti (colazione 7:30–10:00, cena dalle 19:30 ultimo ingresso 20:20, Bistrot pranzo/snack/bar), nota "niente pensione completa" e card dedicata Bistrot La Piazza.
 - Testing agent iteration_4: frontend 100% (20/20), reattività lingua IT/EN/DE/FR verificata, nessun errore.
+
+## Update (Buoni Regalo Day Spa)
+- Nuova sezione "Buoni Regalo" (IT/DE/FR/EN) tra Day Spa e Cure: 3 idee regalo (Ingresso Day Spa €35, Spa & Massaggio Relax €75, Giornata Benessere Deluxe €90), condizioni (validità 12 mesi, su prenotazione, non rimborsabile) e CTA verso il form (#prenota).
+- Fix: il blocco IT `gift` era andato perso per edit paralleli sullo stesso file (blank page su IT default); ripristinato + guardia `if(!g) return null` nel componente.
+- Testing agent iteration_5: frontend 100% dopo fix; smoke test IT default OK (nessun blank).
+- Lezione: NON eseguire più search_replace in parallelo sullo stesso file.

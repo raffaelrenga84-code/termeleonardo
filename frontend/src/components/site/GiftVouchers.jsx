@@ -5,6 +5,7 @@ import { useLang } from "../../LanguageContext";
 export default function GiftVouchers() {
   const { t } = useLang();
   const g = t.gift;
+  if (!g) return null;
   return (
     <section id="regali" data-testid="gift-section" className="py-24 md:py-32 bg-[#F1EFEB]">
       <div className="max-w-7xl mx-auto px-6">
