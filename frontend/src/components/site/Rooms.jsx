@@ -1,5 +1,5 @@
 import { Reveal, Label } from "./Reveal";
-import { IMG, BOOKING_URL } from "../../data";
+import { IMG } from "../../data";
 import { useLang } from "../../LanguageContext";
 
 export default function Rooms() {
@@ -27,7 +27,7 @@ export default function Rooms() {
               <div><div className="font-serif-display text-5xl text-[#B08D57]">77</div><div className="text-sm text-[#5A5A5A] mt-1">{r.camere}</div></div>
               <div><div className="font-serif-display text-5xl text-[#B08D57]">21</div><div className="text-sm text-[#5A5A5A] mt-1">{r.suite}</div></div>
             </div>
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" data-testid="rooms-cta" className="inline-block mt-10 rounded-full bg-[#1A3626] text-[#F9F6F0] px-8 py-4 text-sm font-semibold hover:bg-[#B08D57] transition-colors">{r.cta}</a>
+            <a href="#rooms-gallery-section" data-testid="rooms-cta" className="inline-block mt-10 rounded-full bg-[#1A3626] text-[#F9F6F0] px-8 py-4 text-sm font-semibold hover:bg-[#B08D57] transition-colors">{r.cta}</a>
           </Reveal>
         </div>
       </div>
