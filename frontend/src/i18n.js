@@ -107,7 +107,7 @@ export const translations = {
       err_required: "Compila i campi obbligatori: nome, email e date del soggiorno.", err_generic: "Si è verificato un errore. Riprova tra poco.",
       success_title: "Richiesta ricevuta!", success_body: "Abbiamo ricevuto la tua richiesta di prenotazione e ti risponderemo all'indirizzo",
       success_soon: "il prima possibile.", success_thanks: "Grazie", reset: "Nuova richiesta",
-      rooms: ["Camera Classic", "Camera Deluxe", "Junior Suite", "Suite Panoramica"],
+      rooms: ["Singola senza balcone", "Singola Parco", "Doppia", "Matrimoniale Queen", "Junior Suite Abano", "Junior Suite Colli Euganei", "Junior Suite Monteortone", "Junior Suite Accessibile", "Suite Colli Euganei", "Suite Monteortone"],
     },
     info: {
       label: "Info & Contatti", title: "Tutto per il tuo soggiorno",
@@ -289,7 +289,7 @@ export const translations = {
       err_required: "Please fill in the required fields: name, email and stay dates.", err_generic: "An error occurred. Please try again shortly.",
       success_title: "Request received!", success_body: "We have received your booking request and will reply to",
       success_soon: "as soon as possible.", success_thanks: "Thank you", reset: "New request",
-      rooms: ["Classic Room", "Deluxe Room", "Junior Suite", "Panoramic Suite"],
+      rooms: ["Singola senza balcone", "Singola Parco", "Doppia", "Matrimoniale Queen", "Junior Suite Abano", "Junior Suite Colli Euganei", "Junior Suite Monteortone", "Junior Suite Accessibile", "Suite Colli Euganei", "Suite Monteortone"],
     },
     info: {
       label: "Info & Contact", title: "Everything for your stay",
@@ -471,7 +471,7 @@ export const translations = {
       err_required: "Bitte Pflichtfelder ausfüllen: Name, E-Mail und Aufenthaltsdaten.", err_generic: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es gleich erneut.",
       success_title: "Anfrage erhalten!", success_body: "Wir haben Ihre Buchungsanfrage erhalten und antworten an",
       success_soon: "so bald wie möglich.", success_thanks: "Danke", reset: "Neue Anfrage",
-      rooms: ["Classic Zimmer", "Deluxe Zimmer", "Junior Suite", "Panorama-Suite"],
+      rooms: ["Singola senza balcone", "Singola Parco", "Doppia", "Matrimoniale Queen", "Junior Suite Abano", "Junior Suite Colli Euganei", "Junior Suite Monteortone", "Junior Suite Accessibile", "Suite Colli Euganei", "Suite Monteortone"],
     },
     info: {
       label: "Info & Kontakt", title: "Alles für Ihren Aufenthalt",
@@ -653,7 +653,7 @@ export const translations = {
       err_required: "Veuillez remplir les champs obligatoires : nom, e-mail et dates du séjour.", err_generic: "Une erreur s'est produite. Veuillez réessayer sous peu.",
       success_title: "Demande reçue !", success_body: "Nous avons reçu votre demande de réservation et vous répondrons à",
       success_soon: "dès que possible.", success_thanks: "Merci", reset: "Nouvelle demande",
-      rooms: ["Chambre Classic", "Chambre Deluxe", "Junior Suite", "Suite Panoramique"],
+      rooms: ["Singola senza balcone", "Singola Parco", "Doppia", "Matrimoniale Queen", "Junior Suite Abano", "Junior Suite Colli Euganei", "Junior Suite Monteortone", "Junior Suite Accessibile", "Suite Colli Euganei", "Suite Monteortone"],
     },
     info: {
       label: "Infos & Contact", title: "Tout pour votre séjour",
