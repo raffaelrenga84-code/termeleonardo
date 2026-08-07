@@ -1,0 +1,28 @@
+{
+  "summary": "Frontend-only test of the new Gift Vouchers section. Found a CRITICAL bug: the IT (default) locale in /app/frontend/src/i18n.js was missing the `gift` block entirely, so on first load (IT), <GiftVouchers> tried to read `t.gift.label` on undefined → the entire React app crashed with a blank page (React error boundary triggered). I added the missing IT `gift` block to unblock testing. After the fix, all acceptance criteria pass: section renders between dayspa-section and cure-section, 3 cards with €35/€75/€90 render, conditions strip and CTA (#prenota) present, and IT/EN/DE/FR language switching updates copy live within the same session (no reload).",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [
+      {"component": "i18n.js (IT locale)", "issue": "Missing `gift` block for `it` locale caused `t.gift` undefined and threw 'Cannot read properties of undefined (reading \\'label\\')' in <GiftVouchers>, blank-screening the whole SPA on default language. Testing agent added a temporary IT translation to unblock verification — main agent should review the copy for brand-voice correctness.", "selector": "[data-testid='gift-section']", "priority": "CRITICAL"}
+    ],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [
+    "Review the IT `gift` translations added by the testing agent in /app/frontend/src/i18n.js (lines ~170-185) for brand-voice and finalize copy. Copy currently used: label 'Regali', title 'Regala il benessere', cta 'Richiedi un buono regalo', card names 'Ingresso Day Spa' / 'Spa & Massaggio Relax' / 'Giornata Wellness Deluxe'.",
+    "Consider wrapping section components (or the whole tree) in a React ErrorBoundary so a single missing translation key doesn't blank-screen the entire site."
+  ],
+  "critical_code_review_comments": [
+    "GiftVouchers.jsx assumes t.gift is always defined. Add a defensive guard (`if (!g) return null;`) or use optional chaining so a missing locale key degrades gracefully instead of crashing the app.",
+    "i18n.js has grown to 725 lines with four large locale blocks in one file. Consider splitting per-locale into i18n/it.js, i18n/en.js, i18n/de.js, i18n/fr.js — this would have made the missing IT block much easier to spot.",
+    "No React ErrorBoundary at the App root — a single throwing child section takes down the entire page."
+  ],
+  "updated_files": ["/app/frontend/src/i18n.js"],
+  "success_rate": {"backend": "N/A (skipped)", "frontend": "100% after fix"},
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Gift Vouchers section is fully working after adding the missing IT `gift` block. Ordering (dayspa → gift → cure) verified. Cards, prices (€35/€75/€90), conditions (3 items), CTA (#prenota) all present. Language switching IT/EN/DE/FR verified in-session with no reload. If main agent replaces the interim IT copy, just re-run a quick smoke on IT default load.",
+  "rca of the issue": "Root cause: /app/frontend/src/i18n.js contained `gift` blocks for en (line 341), de (line 523) and fr (line 705), but the it locale block (lines 9-177) had no `gift` key. Since IT is the default language, App mounts with `t = translations.it`, and `<GiftVouchers>` immediately evaluates `const g = t.gift; ... g.label` → TypeError → React unmounts the whole tree → user sees a blank cream-colored page. Reproduction: load site with default IT locale — blank page + console error 'Cannot read properties of undefined (reading \\'label\\')' originating from GiftVouchers. Mitigation applied: added an `it.gift` block mirroring the en/de/fr shape. Long-term mitigation: (1) add optional-chaining/null-guard in GiftVouchers, (2) add a top-level ErrorBoundary, (3) add a lightweight i18n schema/lint check to ensure every locale exposes the same keys."
+}

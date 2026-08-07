@@ -168,6 +168,18 @@ export const translations = {
       excursions: "Giro dei Colli Euganei da 140 € (2h) · Arquà Petrarca, Abbazia di Praglia, Castello del Catajo e altro su richiesta.",
       cta: "Richiedi il transfer",
     },
+    gift: {
+      label: "Regali", title: "Regala il benessere",
+      body: "Un buono regalo dell'Hotel Terme Leonardo è il modo perfetto per sorprendere chi ami: piscine termali, grotte e massaggi in un dono di puro relax.",
+      from: "da",
+      cards: [
+        { name: "Ingresso Day Spa", desc: "Una giornata tra piscine termali e grotte, 9:00–18:30.", price: "35" },
+        { name: "Spa & Massaggio Relax", desc: "Ingresso Day Spa con massaggio rilassante all'olio di cacao (25 min).", price: "75" },
+        { name: "Giornata Wellness Deluxe", desc: "Day Spa con massaggio antistress da 55 minuti.", price: "90" },
+      ],
+      conditions: ["Validità 12 mesi dall'acquisto", "Sempre su prenotazione, salvo disponibilità", "Non rimborsabile né convertibile in denaro"],
+      cta: "Richiedi un buono regalo",
+    },
     footer: {
       tagline: "Il tuo 4 stelle termale ad Abano Terme, immerso nella quiete dei Colli Euganei. Piscine termali, benessere, golf e cucina veneta.",
       navigate: "Naviga", contacts: "Contatti",
@@ -337,6 +349,18 @@ export const translations = {
       excursionsTitle: "Excursions with driver",
       excursions: "Euganean Hills tour from €140 (2h) · Arquà Petrarca, Praglia Abbey, Catajo Castle and more on request.",
       cta: "Request a transfer",
+    },
+    gift: {
+      label: "Gift Vouchers", title: "Give the gift of wellness",
+      body: "A Hotel Terme Leonardo gift voucher is the perfect way to surprise someone you love: thermal pools, grottoes and massages in a present of pure relaxation.",
+      from: "from",
+      cards: [
+        { name: "Day Spa Entry", desc: "A day among thermal pools and grottoes, 9:00 am–6:30 pm.", price: "35" },
+        { name: "Spa & Relax Massage", desc: "Day Spa entry with a relaxing cocoa-oil massage (25 min).", price: "75" },
+        { name: "Deluxe Wellness Day", desc: "Day Spa with a 55-minute anti-stress massage.", price: "90" },
+      ],
+      conditions: ["Valid 12 months from purchase", "Always by booking, subject to availability", "Non-refundable and not convertible to cash"],
+      cta: "Request a gift voucher",
     },
     footer: {
       tagline: "Your 4-star thermal hotel in Abano Terme, nestled in the quiet Euganean Hills. Thermal pools, wellness, golf and Veneto cuisine.",
@@ -508,6 +532,18 @@ export const translations = {
       excursions: "Euganeische Hügel ab 140 € (2 Std.) · Arquà Petrarca, Abtei Praglia, Schloss Catajo und mehr auf Anfrage.",
       cta: "Transfer anfragen",
     },
+    gift: {
+      label: "Geschenkgutscheine", title: "Wellness verschenken",
+      body: "Ein Geschenkgutschein des Hotels Terme Leonardo ist die perfekte Überraschung für Ihre Liebsten: Thermalbäder, Grotten und Massagen als Geschenk purer Entspannung.",
+      from: "ab",
+      cards: [
+        { name: "Day-Spa-Eintritt", desc: "Ein Tag in Thermalbädern und Grotten, 9:00–18:30 Uhr.", price: "35" },
+        { name: "Spa & Relax-Massage", desc: "Day-Spa-Eintritt mit entspannender Kakaoöl-Massage (25 Min.).", price: "75" },
+        { name: "Deluxe-Wellnesstag", desc: "Day Spa mit 55-minütiger Antistress-Massage.", price: "90" },
+      ],
+      conditions: ["12 Monate ab Kauf gültig", "Immer mit Reservierung, nach Verfügbarkeit", "Nicht erstattungsfähig, nicht in Bargeld umwandelbar"],
+      cta: "Geschenkgutschein anfragen",
+    },
     footer: {
       tagline: "Ihr 4-Sterne-Thermalhotel in Abano Terme, eingebettet in die Ruhe der Euganeischen Hügel. Thermalbäder, Wellness, Golf und venetische Küche.",
       navigate: "Navigation", contacts: "Kontakt",
@@ -677,6 +713,18 @@ export const translations = {
       excursionsTitle: "Excursions avec chauffeur",
       excursions: "Tour des Collines Euganéennes dès 140 € (2h) · Arquà Petrarca, abbaye de Praglia, château du Catajo et plus sur demande.",
       cta: "Demander un transfert",
+    },
+    gift: {
+      label: "Chèques Cadeaux", title: "Offrez le bien-être",
+      body: "Un chèque cadeau de l'Hôtel Terme Leonardo est l'idée parfaite pour surprendre ceux que vous aimez : piscines thermales, grottes et massages dans un cadeau de pure détente.",
+      from: "dès",
+      cards: [
+        { name: "Entrée Day Spa", desc: "Une journée entre piscines thermales et grottes, de 9h00 à 18h30.", price: "35" },
+        { name: "Spa & Massage Relax", desc: "Entrée Day Spa avec massage relaxant à l'huile de cacao (25 min).", price: "75" },
+        { name: "Journée Bien-être Deluxe", desc: "Day Spa avec massage antistress de 55 minutes.", price: "90" },
+      ],
+      conditions: ["Valable 12 mois à compter de l'achat", "Toujours sur réservation, selon disponibilité", "Non remboursable ni convertible en espèces"],
+      cta: "Demander un chèque cadeau",
     },
     footer: {
       tagline: "Votre 4 étoiles thermal à Abano Terme, niché dans le calme des Collines Euganéennes. Piscines thermales, bien-être, golf et cuisine vénète.",

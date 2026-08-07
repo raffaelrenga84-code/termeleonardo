@@ -11,6 +11,7 @@ import RoomGallery from "@/components/site/RoomGallery";
 import Dining from "@/components/site/Dining";
 import Offers from "@/components/site/Offers";
 import DaySpa from "@/components/site/DaySpa";
+import GiftVouchers from "@/components/site/GiftVouchers";
 import CureTermali from "@/components/site/CureTermali";
 import Treatments from "@/components/site/Treatments";
 import Transfer from "@/components/site/Transfer";
@@ -45,6 +46,7 @@ function App() {
           <RoomGallery />
           <Dining />
           <DaySpa />
+          <GiftVouchers />
           <CureTermali />
           <Treatments />
           <Offers />
