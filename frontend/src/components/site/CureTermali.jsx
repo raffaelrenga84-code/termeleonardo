@@ -26,7 +26,7 @@ export default function CureTermali() {
                 </div>
               ))}
             </div>
-            <p className="text-sm text-[#B08D57] font-semibold mt-6">{c.note}</p>
+            <p className="text-sm text-[#B08D57] font-semibold mt-6 whitespace-pre-line">{c.note}</p>
           </Reveal>
         </div>
       </div>
