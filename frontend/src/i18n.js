@@ -135,8 +135,7 @@ export const translations = {
         { t: "Ciclo fanghi", d: "Sei turni al mattino, dalle 5:50 alle 10:30. Tra fango, bagno terapeutico e pausa di reazione in piscina, circa un'ora." },
         { t: "Visita medica di ammissione", d: "Obbligatoria prima delle cure, su appuntamento (di norma la domenica pomeriggio)." },
         { t: "Ticket SSN", d: "Con impegnativa del medico: visita e ciclo fino a 12 fanghi. Ticket a carico dell'ospite € 55." },
-        { t: "Ospiti dalla Germania", d: "Hotel riconosciuto ai fini del §13 Abs. 4 SGB V: cure potenzialmente rimborsabili dalla Krankenkasse." },
-      ],
+        ],
       note: "Le cure si possono effettuare anche senza pernottare. Segreteria Cure: +39 049 9939234.",
     },
     treatments: {
