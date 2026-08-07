@@ -37,6 +37,20 @@ export const translations = {
       body: "Le 77 camere e 21 suite dell'Hotel Terme Leonardo offrono balconi privati e ambienti raffinati. Svegliarsi con la vista sulle piscine termali o sul verde dei Colli Euganei trasforma ogni soggiorno in un'esperienza di pura armonia.",
       camere: "Camere", suite: "Suite", cta: "Scopri le camere",
     },
+    roomsGallery: {
+      label: "Le Camere & Suite", title: "Sfoglia le nostre camere",
+      subtitle: "98 camere e suite, ognuna decorata individualmente e dotata di ogni comfort di un 4 stelle.",
+      amenitiesTitle: "Servizi inclusi in ogni camera", from: "a partire da", perUnit: "/ persona a notte",
+      book: "Prenota", prev: "Precedente", next: "Successiva",
+      amenities: ["Wi-Fi gratuito", "Minibar su richiesta", "Parcheggio gratuito", "Accesso alle Terme", "Balcone", "Accappatoio e telo piscina"],
+      items: [
+        { name: "Singola", desc: "Accogliente e luminosa, ideale per chi viaggia da solo.", spec: "Letto alla francese 1,45m · Balcone" },
+        { name: "Doppia", desc: "Spaziosa e confortevole, con due comodi letti singoli.", spec: "Letti singoli 1,00m · Balcone" },
+        { name: "Queen", desc: "Comfort superiore con un ampio e avvolgente letto queen.", spec: "Letto queen 1,60m · Balcone" },
+        { name: "Junior Suite", desc: "Eleganza e spazio in più, con bagno a doppio lavabo.", spec: "≈ 32 m² · Bagno doppio lavabo" },
+        { name: "Suite", desc: "Le nostre suite con letto King-Size, eleganti e dalla personalità unica.", spec: "50–65 m² · Letto King-Size" },
+      ],
+    },
     dining: {
       label: "Gusto & Cucina Veneta", title: "I sapori autentici del territorio",
       body: "Benessere, gusto e relax nel cuore di Abano Terme. Nel nostro ristorante e Bistrot potrai assaporare la cucina veneta con ingredienti freschi e genuini, per un'esperienza unica di armonia tra sapore e territorio.",
@@ -118,6 +132,20 @@ export const translations = {
       label: "The Rooms", title: "Comfort, elegance and spectacular views",
       body: "The 77 rooms and 21 suites of Hotel Terme Leonardo offer private balconies and refined interiors. Waking up to a view of the thermal pools or the green Euganean Hills turns every stay into an experience of pure harmony.",
       camere: "Rooms", suite: "Suites", cta: "Discover the rooms",
+    },
+    roomsGallery: {
+      label: "Rooms & Suites", title: "Browse our rooms",
+      subtitle: "98 rooms and suites, each individually decorated and equipped with every 4-star comfort.",
+      amenitiesTitle: "Included in every room", from: "starting from", perUnit: "/ person per night",
+      book: "Book", prev: "Previous", next: "Next",
+      amenities: ["Free Wi-Fi", "Minibar on request", "Free parking", "Access to the Spa", "Balcony", "Bathrobe & pool towel"],
+      items: [
+        { name: "Single", desc: "Cosy and bright, ideal for those travelling alone.", spec: "French bed 1.45m · Balcony" },
+        { name: "Double", desc: "Spacious and comfortable, with two single beds.", spec: "Single beds 1.00m · Balcony" },
+        { name: "Queen", desc: "Superior comfort with a wide, enveloping queen bed.", spec: "Queen bed 1.60m · Balcony" },
+        { name: "Junior Suite", desc: "Elegance and extra space, with a double-basin bathroom.", spec: "≈ 32 m² · Double-basin bathroom" },
+        { name: "Suite", desc: "Our suites with King-Size bed, elegant and full of character.", spec: "50–65 m² · King-Size bed" },
+      ],
     },
     dining: {
       label: "Taste & Veneto Cuisine", title: "The authentic flavours of the region",
@@ -201,6 +229,20 @@ export const translations = {
       body: "Die 77 Zimmer und 21 Suiten des Hotels Terme Leonardo bieten private Balkone und raffinierte Ambiente. Mit Blick auf die Thermalbäder oder das Grün der Euganeischen Hügel aufzuwachen macht jeden Aufenthalt zu einem Erlebnis purer Harmonie.",
       camere: "Zimmer", suite: "Suiten", cta: "Zimmer entdecken",
     },
+    roomsGallery: {
+      label: "Zimmer & Suiten", title: "Entdecken Sie unsere Zimmer",
+      subtitle: "98 Zimmer und Suiten, jedes individuell eingerichtet und mit jedem 4-Sterne-Komfort ausgestattet.",
+      amenitiesTitle: "In jedem Zimmer inklusive", from: "ab", perUnit: "/ Person pro Nacht",
+      book: "Buchen", prev: "Zurück", next: "Weiter",
+      amenities: ["Kostenloses WLAN", "Minibar auf Anfrage", "Kostenloser Parkplatz", "Zugang zur Therme", "Balkon", "Bademantel & Poolhandtuch"],
+      items: [
+        { name: "Einzelzimmer", desc: "Gemütlich und hell, ideal für Alleinreisende.", spec: "Französisches Bett 1,45m · Balkon" },
+        { name: "Doppelzimmer", desc: "Geräumig und komfortabel, mit zwei Einzelbetten.", spec: "Einzelbetten 1,00m · Balkon" },
+        { name: "Queen", desc: "Gehobener Komfort mit breitem, umhüllendem Queen-Bett.", spec: "Queen-Bett 1,60m · Balkon" },
+        { name: "Junior Suite", desc: "Eleganz und mehr Platz, mit Doppelwaschbecken-Bad.", spec: "≈ 32 m² · Bad mit Doppelwaschbecken" },
+        { name: "Suite", desc: "Unsere Suiten mit King-Size-Bett, elegant und voller Charakter.", spec: "50–65 m² · King-Size-Bett" },
+      ],
+    },
     dining: {
       label: "Genuss & Venetische Küche", title: "Die authentischen Aromen der Region",
       body: "Wellness, Genuss und Entspannung im Herzen von Abano Terme. In unserem Restaurant und Bistrot genießen Sie die venetische Küche mit frischen, echten Zutaten – ein einzigartiges Erlebnis der Harmonie zwischen Geschmack und Region.",
@@ -282,6 +324,20 @@ export const translations = {
       label: "Les Chambres", title: "Confort, élégance et vues spectaculaires",
       body: "Les 77 chambres et 21 suites de l'Hôtel Terme Leonardo offrent des balcons privés et des intérieurs raffinés. Se réveiller avec vue sur les piscines thermales ou la verdure des Collines Euganéennes transforme chaque séjour en une expérience d'harmonie pure.",
       camere: "Chambres", suite: "Suites", cta: "Découvrir les chambres",
+    },
+    roomsGallery: {
+      label: "Chambres & Suites", title: "Parcourez nos chambres",
+      subtitle: "98 chambres et suites, chacune décorée individuellement et dotée de tout le confort d'un 4 étoiles.",
+      amenitiesTitle: "Inclus dans chaque chambre", from: "à partir de", perUnit: "/ personne par nuit",
+      book: "Réserver", prev: "Précédent", next: "Suivant",
+      amenities: ["Wi-Fi gratuit", "Minibar sur demande", "Parking gratuit", "Accès au Spa", "Balcon", "Peignoir & serviette piscine"],
+      items: [
+        { name: "Simple", desc: "Chaleureuse et lumineuse, idéale pour voyager seul.", spec: "Lit à la française 1,45m · Balcon" },
+        { name: "Double", desc: "Spacieuse et confortable, avec deux lits simples.", spec: "Lits simples 1,00m · Balcon" },
+        { name: "Queen", desc: "Confort supérieur avec un grand lit queen enveloppant.", spec: "Lit queen 1,60m · Balcon" },
+        { name: "Junior Suite", desc: "Élégance et espace, avec salle de bain à double vasque.", spec: "≈ 32 m² · Salle de bain double vasque" },
+        { name: "Suite", desc: "Nos suites avec lit King-Size, élégantes et pleines de caractère.", spec: "50–65 m² · Lit King-Size" },
+      ],
     },
     dining: {
       label: "Goût & Cuisine Vénète", title: "Les saveurs authentiques du territoire",

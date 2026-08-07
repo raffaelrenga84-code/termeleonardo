@@ -7,6 +7,7 @@ import Hero from "@/components/site/Hero";
 import Wellness from "@/components/site/Wellness";
 import Golf from "@/components/site/Golf";
 import Rooms from "@/components/site/Rooms";
+import RoomGallery from "@/components/site/RoomGallery";
 import Dining from "@/components/site/Dining";
 import Offers from "@/components/site/Offers";
 import DaySpa from "@/components/site/DaySpa";
@@ -37,6 +38,7 @@ function App() {
           <Wellness />
           <Golf />
           <Rooms />
+          <RoomGallery />
           <Dining />
           <DaySpa />
           <Offers />

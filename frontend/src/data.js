@@ -12,6 +12,14 @@ export const IMG = {
   membership: `${BASE}/membership.jpg`,
 };
 
+export const ROOM_GALLERY = [
+  { key: "single", img: `${BASE}/single-room-hotel-leonardo-da-vinci-terme@2x.jpg`, price: "100" },
+  { key: "double", img: `${BASE}/double-room-hotel-terme-leonardo-@2x.jpg`, price: "90" },
+  { key: "queen", img: `${BASE}/queen-room-@2x.jpg`, price: "90" },
+  { key: "junior", img: `${BASE}/junior-suite-32-1-hotel-terme-leonardo@2x.jpg`, price: "105" },
+  { key: "suite", img: `${BASE}/suite-533-hotel-terme-lonardo-@2x.jpg`, price: "115" },
+];
+
 export const BOOKING_URL = "https://www.termeleonardo.com/it";
 export const DAYSPA_URL = "https://www.termeleonardo.com/it/day-spa/prenotazioni";
 
