@@ -19,3 +19,8 @@ React + Tailwind + Framer Motion + Lenis (smooth scroll). FastAPI + MongoDB (boo
 - Eventuale integrazione email di conferma (SendGrid/Resend) sul form.
 - URL esatto del booking engine hotel (ora punta alla home ufficiale).
 - Test end-to-end completo con testing agent.
+
+## Update (multilingua)
+- Sito ora multilingua IT/DE/FR/EN con switcher in navbar (default IT, persistito in localStorage).
+- Traduzioni complete in /app/frontend/src/i18n.js; stato via /app/frontend/src/LanguageContext.js.
+- Testing agent iteration_1: backend 100%, frontend 100% (switch lingua + form prenotazione + link nuova scheda verificati).
