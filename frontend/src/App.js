@@ -17,6 +17,7 @@ import Treatments from "@/components/site/Treatments";
 import Transfer from "@/components/site/Transfer";
 import InfoContatti from "@/components/site/InfoContatti";
 import BookingForm from "@/components/site/BookingForm";
+import CookieBanner from "@/components/site/CookieBanner";
 import Footer from "@/components/site/Footer";
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
           <BookingForm />
         </main>
         <Footer />
+        <CookieBanner />
       </div>
     </LanguageProvider>
   );

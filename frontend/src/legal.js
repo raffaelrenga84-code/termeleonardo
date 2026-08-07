@@ -1,0 +1,78 @@
+export const LEGAL = {
+  it: {
+    cookieLink: "Cookie Policy", transparencyLink: "Trasparenza ULSS", privacy: "Privacy", login: "Area Riservata", close: "Chiudi",
+    cookieTitle: "Cookie Policy",
+    cookieIntro: "Utilizziamo i cookie e tecnologie simili per garantire le funzionalità essenziali del sito — come prenotazioni, carrello e pagamenti sicuri — e, solo con il tuo consenso, per misurare il traffico e migliorare le nostre offerte.",
+    cats: [
+      { name: "Necessari", desc: "Indispensabili per le funzioni fondamentali come navigazione, carrello, accesso e pagamenti sicuri. Senza questi cookie il sito non può funzionare correttamente." },
+      { name: "Statistiche", desc: "Ci aiutano a capire come i visitatori utilizzano il sito, per poterlo migliorare. Tutti i dati sono aggregati e anonimi." },
+      { name: "Marketing", desc: "Utilizzati per misurare l'efficacia delle nostre campagne pubblicitarie." },
+    ],
+    manage: "Puoi rivedere o modificare il tuo consenso in qualsiasi momento e cancellare i cookie dalle impostazioni del browser. Domande? info@termeleonardo.com",
+    updated: "Ultimo aggiornamento: 10 luglio 2026",
+    banner: { text: "Utilizziamo i cookie per garantire le funzionalità essenziali del sito e, solo con il tuo consenso, per misurare il traffico.", accept: "Accetta tutti", reject: "Rifiuta non essenziali", prefs: "Preferenze", save: "Salva preferenze", always: "Sempre attivi" },
+    transparencyTitle: "Trasparenza ULSS",
+    transparency: [
+      "L'Hotel Terme Leonardo eroga cure termali in convenzione con il Servizio Sanitario Nazionale — ULSS 6 Euganea.",
+      "Con impegnativa del medico curante, l'ospite non esente paga il solo ticket sanitario di € 55,00; gli esenti € 3,10.",
+      "Gli accordi contrattuali con l'ULSS 6 Euganea e il listino delle prestazioni termali sono pubblicati ai sensi della normativa vigente e disponibili presso la Segreteria Cure (+39 049 9939234).",
+    ],
+  },
+  en: {
+    cookieLink: "Cookie Policy", transparencyLink: "ULSS Transparency", privacy: "Privacy", login: "Members Area", close: "Close",
+    cookieTitle: "Cookie Policy",
+    cookieIntro: "We use cookies and similar technologies to ensure the site's essential functions — such as bookings, cart and secure payments — and, only with your consent, to measure traffic and improve our offers.",
+    cats: [
+      { name: "Necessary", desc: "Essential for core functions such as navigation, cart, login and secure payments. Without these cookies the site cannot work properly." },
+      { name: "Statistics", desc: "They help us understand how visitors use the site so we can improve it. All data is aggregated and anonymous." },
+      { name: "Marketing", desc: "Used to measure the effectiveness of our advertising campaigns." },
+    ],
+    manage: "You can review or change your consent at any time and delete cookies from your browser settings. Questions? info@termeleonardo.com",
+    updated: "Last updated: 10 July 2026",
+    banner: { text: "We use cookies to ensure the site's essential functions and, only with your consent, to measure traffic.", accept: "Accept all", reject: "Reject non-essential", prefs: "Preferences", save: "Save preferences", always: "Always on" },
+    transparencyTitle: "ULSS Transparency",
+    transparency: [
+      "Hotel Terme Leonardo provides thermal cures under agreement with the Italian National Health Service — ULSS 6 Euganea.",
+      "With a doctor's referral, non-exempt guests pay only the health ticket of € 55.00; exempt guests € 3.10.",
+      "The contractual agreements with ULSS 6 Euganea and the list of thermal services are published under current regulations and available from the Cures Office (+39 049 9939234).",
+    ],
+  },
+  de: {
+    cookieLink: "Cookie-Richtlinie", transparencyLink: "ULSS-Transparenz", privacy: "Datenschutz", login: "Mitgliederbereich", close: "Schließen",
+    cookieTitle: "Cookie-Richtlinie",
+    cookieIntro: "Wir verwenden Cookies und ähnliche Technologien, um die wesentlichen Funktionen der Website — wie Buchungen, Warenkorb und sichere Zahlungen — zu gewährleisten und, nur mit Ihrer Zustimmung, den Traffic zu messen und unsere Angebote zu verbessern.",
+    cats: [
+      { name: "Notwendig", desc: "Unverzichtbar für Grundfunktionen wie Navigation, Warenkorb, Login und sichere Zahlungen. Ohne diese Cookies funktioniert die Website nicht korrekt." },
+      { name: "Statistik", desc: "Helfen uns zu verstehen, wie Besucher die Website nutzen, um sie zu verbessern. Alle Daten sind aggregiert und anonym." },
+      { name: "Marketing", desc: "Werden verwendet, um die Wirksamkeit unserer Werbekampagnen zu messen." },
+    ],
+    manage: "Sie können Ihre Zustimmung jederzeit überprüfen oder ändern und Cookies in den Browsereinstellungen löschen. Fragen? info@termeleonardo.com",
+    updated: "Zuletzt aktualisiert: 10. Juli 2026",
+    banner: { text: "Wir verwenden Cookies für die wesentlichen Funktionen der Website und, nur mit Ihrer Zustimmung, zur Messung des Traffics.", accept: "Alle akzeptieren", reject: "Nicht notwendige ablehnen", prefs: "Einstellungen", save: "Einstellungen speichern", always: "Immer aktiv" },
+    transparencyTitle: "ULSS-Transparenz",
+    transparency: [
+      "Das Hotel Terme Leonardo bietet Thermalkuren im Rahmen einer Vereinbarung mit dem italienischen Gesundheitsdienst — ULSS 6 Euganea.",
+      "Mit ärztlicher Überweisung zahlen nicht befreite Gäste nur das Gesundheitsticket von 55,00 €; befreite Gäste 3,10 €.",
+      "Die Vertragsvereinbarungen mit der ULSS 6 Euganea und das Verzeichnis der Thermalleistungen sind gemäß geltenden Vorschriften veröffentlicht und beim Kur-Sekretariat erhältlich (+39 049 9939234).",
+    ],
+  },
+  fr: {
+    cookieLink: "Politique de cookies", transparencyLink: "Transparence ULSS", privacy: "Confidentialité", login: "Espace Membres", close: "Fermer",
+    cookieTitle: "Politique de cookies",
+    cookieIntro: "Nous utilisons des cookies et technologies similaires pour garantir les fonctions essentielles du site — réservations, panier et paiements sécurisés — et, uniquement avec votre consentement, pour mesurer le trafic et améliorer nos offres.",
+    cats: [
+      { name: "Nécessaires", desc: "Indispensables aux fonctions de base comme la navigation, le panier, la connexion et les paiements sécurisés. Sans ces cookies, le site ne peut pas fonctionner correctement." },
+      { name: "Statistiques", desc: "Nous aident à comprendre comment les visiteurs utilisent le site pour l'améliorer. Toutes les données sont agrégées et anonymes." },
+      { name: "Marketing", desc: "Utilisés pour mesurer l'efficacité de nos campagnes publicitaires." },
+    ],
+    manage: "Vous pouvez revoir ou modifier votre consentement à tout moment et supprimer les cookies depuis les paramètres du navigateur. Questions ? info@termeleonardo.com",
+    updated: "Dernière mise à jour : 10 juillet 2026",
+    banner: { text: "Nous utilisons des cookies pour les fonctions essentielles du site et, uniquement avec votre consentement, pour mesurer le trafic.", accept: "Tout accepter", reject: "Refuser non essentiels", prefs: "Préférences", save: "Enregistrer", always: "Toujours actifs" },
+    transparencyTitle: "Transparence ULSS",
+    transparency: [
+      "L'Hôtel Terme Leonardo fournit des cures thermales dans le cadre d'une convention avec le service de santé italien — ULSS 6 Euganea.",
+      "Avec ordonnance du médecin, les clients non exemptés paient uniquement le ticket sanitaire de 55,00 € ; les exemptés 3,10 €.",
+      "Les accords contractuels avec l'ULSS 6 Euganea et la liste des prestations thermales sont publiés conformément à la réglementation en vigueur et disponibles auprès du Secrétariat des Cures (+39 049 9939234).",
+    ],
+  },
+};

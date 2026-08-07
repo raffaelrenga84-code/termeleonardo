@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
-import { NAV, BOOKING_URL } from "../../data";
+import { Menu, X, Lock } from "lucide-react";
+import { NAV, BOOKING_URL, loginUrl } from "../../data";
 import { LANGS } from "../../i18n";
+import { LEGAL } from "../../legal";
 import { useLang } from "../../LanguageContext";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const { lang, setLang, t } = useLang();
+  const L = LEGAL[lang] || LEGAL.it;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -62,6 +64,17 @@ export default function Navbar() {
             ))}
           </div>
           <a
+            href={loginUrl(lang)}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="nav-login-btn"
+            aria-label={L.login}
+            title={L.login}
+            className={`transition-colors hover:text-[#B08D57] ${scrolled ? "text-[#1A3626]" : "text-white/90"}`}
+          >
+            <Lock size={18} />
+          </a>
+          <a
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -101,6 +114,9 @@ export default function Navbar() {
               {labelFor(n.href)}
             </a>
           ))}
+          <a href={loginUrl(lang)} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} data-testid="nav-mobile-login" className="flex items-center gap-2 text-[#1A3626] text-base font-medium">
+            <Lock size={16} /> {L.login}
+          </a>
           <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="rounded-full bg-[#1A3626] text-[#F9F6F0] px-6 py-3 text-center font-semibold">
             {t.nav.prenota}
           </a>
