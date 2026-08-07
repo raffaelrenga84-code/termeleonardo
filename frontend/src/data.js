@@ -24,13 +24,13 @@ export const BOOKING_URL = "https://www.termeleonardo.com/it";
 export const DAYSPA_URL = "https://www.termeleonardo.com/it/day-spa/prenotazioni";
 
 export const NAV = [
-  { label: "Benessere", href: "#benessere" },
-  { label: "Sport & Natura", href: "#golf" },
-  { label: "Camere", href: "#camere" },
-  { label: "Ristorante", href: "#ristorante" },
-  { label: "Day Spa", href: "#dayspa" },
-  { label: "Offerte", href: "#offerte" },
-  { label: "Contatti", href: "#prenota" },
+  { href: "#benessere" },
+  { href: "#golf" },
+  { href: "#camere" },
+  { href: "#dayspa" },
+  { href: "#cure" },
+  { href: "#offerte" },
+  { href: "#info" },
 ];
 
 export const DAYSPA = {

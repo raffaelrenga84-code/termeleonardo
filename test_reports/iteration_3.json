@@ -1,0 +1,48 @@
+{
+  "summary": "Frontend-only regression of new content sections (Cure Termali, Treatments, Transfer, Info & Contatti) and multilingual reactivity on Hotel Terme Leonardo SPA. All requested checks passed in a single session using IT->EN->DE switching without reload.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_details": {
+    "existing_sections_present": {"benessere": true, "camere": true, "dayspa": true, "offerte": true},
+    "cure_section": "renders, 4 points visible incl. '§13 SGB V'",
+    "treatments_section": "price menu shows €40, €55, €65, €80",
+    "transfer_section": "prices 65/95/135/150/36/18 all present; transfer-cta href=#prenota",
+    "info_section": {
+      "address_Via_Monteortone_46": true,
+      "reception_+39_049_8669111": true,
+      "cures_+39_049_9939234": true,
+      "email_info@termeleonardo.com": true,
+      "pets_€13": true,
+      "swim_cap_€3": true,
+      "tourist_tax_note": "Italian formatting uses '1,50' (comma) instead of '1.50'; value present but with locale separator. Not a bug."
+    },
+    "season_banner_IT": "STAGIONE 2026 - Hotel e piscine aperti dal 14 febbraio al 29 novembre 2026.",
+    "info_map_iframe_exists": true,
+    "navbar": {
+      "nav-link-cure": {"href": "#cure", "text_IT": "Cure Termali", "text_EN": "Thermal Cures"},
+      "nav-link-info": {"href": "#info", "text_IT": "Info & Contatti", "text_EN": "Info & Contact"},
+      "ristorante_removed_from_nav": true,
+      "nav_items_IT": "Benessere, Sport & Natura, Camere, Day Spa, Cure Termali, Offerte, Info & Contatti"
+    },
+    "language_switching_same_session": {
+      "EN": {"cure_title_has_mud_therapy": true, "transfer_has_24h_note": true, "info_has_February_and_November": true, "nav_cure": "Thermal Cures", "nav_info": "Info & Contact"},
+      "DE": {"cure_has_Thermalkuren": true, "info_has_Kurtaxe": true}
+    },
+    "console_errors": "none critical"
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "Tourist tax value uses '1,50' (Italian) in copy; verify EN/DE/FR variants also display consistent number formatting."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (skipped per request)", "frontend": "100%"},
+  "seed_data_creation": "none",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "All new sections (cure-section, treatments-section, transfer-section, info-section with season-banner and info-map iframe) render correctly. Multilingual reactivity verified IT->EN->DE within same session (no reload). Existing sections still present. Prenota external booking not tested per user's request."
+}

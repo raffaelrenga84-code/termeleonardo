@@ -11,6 +11,10 @@ import RoomGallery from "@/components/site/RoomGallery";
 import Dining from "@/components/site/Dining";
 import Offers from "@/components/site/Offers";
 import DaySpa from "@/components/site/DaySpa";
+import CureTermali from "@/components/site/CureTermali";
+import Treatments from "@/components/site/Treatments";
+import Transfer from "@/components/site/Transfer";
+import InfoContatti from "@/components/site/InfoContatti";
 import BookingForm from "@/components/site/BookingForm";
 import Footer from "@/components/site/Footer";
 
@@ -41,7 +45,11 @@ function App() {
           <RoomGallery />
           <Dining />
           <DaySpa />
+          <CureTermali />
+          <Treatments />
           <Offers />
+          <Transfer />
+          <InfoContatti />
           <BookingForm />
         </main>
         <Footer />

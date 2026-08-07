@@ -22,9 +22,9 @@ export default function Footer() {
           <div>
             <h4 className="text-xs uppercase tracking-label text-[#E7C98B] mb-4">{f.contacts}</h4>
             <ul className="space-y-2 text-sm">
-              <li>{f.c1}</li>
-              <li>{f.c2}</li>
-              <li>{f.c3}</li>
+              <li>{t.info.address}</li>
+              <li><a href={`tel:${t.info.phone.replace(/\s/g, "")}`} className="hover:text-[#E7C98B] transition-colors">{t.info.phone}</a></li>
+              <li><a href={`mailto:${t.info.email}`} className="hover:text-[#E7C98B] transition-colors">{t.info.email}</a></li>
               <li><a href="#prenota" className="hover:text-[#E7C98B] transition-colors">{f.c4}</a></li>
             </ul>
           </div>
