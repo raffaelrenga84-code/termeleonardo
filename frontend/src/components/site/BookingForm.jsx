@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { CheckCircle2, Loader2 } from "lucide-react";
 import { Reveal, Label } from "./Reveal";
-import { ROOM_TYPES, OFFERS } from "../../data";
+import { useLang } from "../../LanguageContext";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -13,6 +13,8 @@ const empty = {
 };
 
 export default function BookingForm() {
+  const { t } = useLang();
+  const b = t.booking;
   const [form, setForm] = useState(empty);
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState("");
@@ -23,7 +25,7 @@ export default function BookingForm() {
     e.preventDefault();
     setError("");
     if (!form.nome || !form.email || !form.check_in || !form.check_out) {
-      setError("Compila i campi obbligatori: nome, email e date del soggiorno.");
+      setError(b.err_required);
       return;
     }
     setStatus("loading");
@@ -33,7 +35,7 @@ export default function BookingForm() {
     } catch (err) {
       console.error(err);
       setStatus("idle");
-      setError("Si è verificato un errore. Riprova tra poco.");
+      setError(b.err_generic);
     }
   };
 
@@ -42,18 +44,13 @@ export default function BookingForm() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid lg:grid-cols-5 gap-12">
           <Reveal className="lg:col-span-2">
-            <Label>Prenota</Label>
-            <h2 className="font-serif-display text-4xl md:text-6xl text-[#1A3626] mt-5 leading-tight font-light">
-              Richiedi il tuo soggiorno
-            </h2>
-            <p className="text-[#5A5A5A] text-lg mt-6">
-              Compila il modulo e il nostro staff ti ricontatterà con una proposta
-              su misura per la tua vacanza benessere ad Abano Terme.
-            </p>
+            <Label>{b.label}</Label>
+            <h2 className="font-serif-display text-4xl md:text-6xl text-[#1A3626] mt-5 leading-tight font-light">{b.title}</h2>
+            <p className="text-[#5A5A5A] text-lg mt-6">{b.body}</p>
             <div className="mt-10 space-y-2 text-[#1A3626]">
               <p className="font-semibold">Hotel Terme Leonardo</p>
-              <p className="text-sm text-[#5A5A5A]">Monteortone · Abano Terme (PD)</p>
-              <p className="text-sm text-[#5A5A5A]">Colli Euganei, Veneto — Italia</p>
+              <p className="text-sm text-[#5A5A5A]">{b.loc1}</p>
+              <p className="text-sm text-[#5A5A5A]">{b.loc2}</p>
             </div>
           </Reveal>
 
@@ -61,72 +58,48 @@ export default function BookingForm() {
             {status === "success" ? (
               <div data-testid="booking-success" className="bg-white rounded-2xl p-10 h-full flex flex-col items-center justify-center text-center border border-[#E5E0D8]">
                 <CheckCircle2 className="text-[#1A3626]" size={56} />
-                <h3 className="font-serif-display text-3xl text-[#1A3626] mt-5">Richiesta ricevuta!</h3>
+                <h3 className="font-serif-display text-3xl text-[#1A3626] mt-5">{b.success_title}</h3>
                 <p className="text-[#5A5A5A] mt-3 max-w-sm">
-                  Grazie {form.nome.split(" ")[0]}. Abbiamo ricevuto la tua richiesta di
-                  prenotazione e ti risponderemo all'indirizzo <b>{form.email}</b> il prima possibile.
+                  {b.success_thanks} {form.nome.split(" ")[0]}. {b.success_body} <b>{form.email}</b> {b.success_soon}
                 </p>
-                <button
-                  data-testid="booking-reset"
-                  onClick={() => { setForm(empty); setStatus("idle"); }}
-                  className="mt-8 rounded-full border border-[#1A3626] text-[#1A3626] px-7 py-3 text-sm font-semibold hover:bg-[#1A3626] hover:text-white transition-colors"
-                >
-                  Nuova richiesta
-                </button>
+                <button data-testid="booking-reset" onClick={() => { setForm(empty); setStatus("idle"); }}
+                  className="mt-8 rounded-full border border-[#1A3626] text-[#1A3626] px-7 py-3 text-sm font-semibold hover:bg-[#1A3626] hover:text-white transition-colors">{b.reset}</button>
               </div>
             ) : (
               <form data-testid="booking-form" onSubmit={submit} className="bg-white rounded-2xl p-7 md:p-9 border border-[#E5E0D8] space-y-5">
                 <div className="grid sm:grid-cols-2 gap-5">
-                  <Field label="Nome e cognome *">
-                    <input data-testid="booking-nome" value={form.nome} onChange={set("nome")} className={inputCls} placeholder="Mario Rossi" />
-                  </Field>
-                  <Field label="Email *">
-                    <input data-testid="booking-email" type="email" value={form.email} onChange={set("email")} className={inputCls} placeholder="mario@email.it" />
-                  </Field>
+                  <Field label={b.f_nome}><input data-testid="booking-nome" value={form.nome} onChange={set("nome")} className={inputCls} placeholder="Mario Rossi" /></Field>
+                  <Field label={b.f_email}><input data-testid="booking-email" type="email" value={form.email} onChange={set("email")} className={inputCls} placeholder="mario@email.it" /></Field>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-5">
-                  <Field label="Telefono">
-                    <input data-testid="booking-telefono" value={form.telefono} onChange={set("telefono")} className={inputCls} placeholder="+39 ..." />
-                  </Field>
-                  <Field label="Ospiti">
-                    <input data-testid="booking-ospiti" type="number" min="1" max="10" value={form.ospiti} onChange={set("ospiti")} className={inputCls} />
-                  </Field>
+                  <Field label={b.f_tel}><input data-testid="booking-telefono" value={form.telefono} onChange={set("telefono")} className={inputCls} placeholder="+39 ..." /></Field>
+                  <Field label={b.f_ospiti}><input data-testid="booking-ospiti" type="number" min="1" max="10" value={form.ospiti} onChange={set("ospiti")} className={inputCls} /></Field>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-5">
-                  <Field label="Check-in *">
-                    <input data-testid="booking-checkin" type="date" value={form.check_in} onChange={set("check_in")} className={inputCls} />
-                  </Field>
-                  <Field label="Check-out *">
-                    <input data-testid="booking-checkout" type="date" value={form.check_out} onChange={set("check_out")} className={inputCls} />
-                  </Field>
+                  <Field label={b.f_checkin}><input data-testid="booking-checkin" type="date" value={form.check_in} onChange={set("check_in")} className={inputCls} /></Field>
+                  <Field label={b.f_checkout}><input data-testid="booking-checkout" type="date" value={form.check_out} onChange={set("check_out")} className={inputCls} /></Field>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-5">
-                  <Field label="Tipo di camera">
+                  <Field label={b.f_camera}>
                     <select data-testid="booking-camera" value={form.tipo_camera} onChange={set("tipo_camera")} className={inputCls}>
-                      <option value="">Seleziona…</option>
-                      {ROOM_TYPES.map((r) => <option key={r} value={r}>{r}</option>)}
+                      <option value="">{b.camera_none}</option>
+                      {b.rooms.map((r) => <option key={r} value={r}>{r}</option>)}
                     </select>
                   </Field>
-                  <Field label="Pacchetto">
+                  <Field label={b.f_pacchetto}>
                     <select data-testid="booking-pacchetto" value={form.pacchetto} onChange={set("pacchetto")} className={inputCls}>
-                      <option value="">Nessuno / da definire</option>
-                      {OFFERS.map((o) => <option key={o.title} value={o.title}>{o.title}</option>)}
+                      <option value="">{b.pacchetto_none}</option>
+                      {t.offers.cards.map((o) => <option key={o.title} value={o.title}>{o.title}</option>)}
                     </select>
                   </Field>
                 </div>
-                <Field label="Messaggio">
-                  <textarea data-testid="booking-messaggio" value={form.messaggio} onChange={set("messaggio")} rows={3} className={inputCls} placeholder="Richieste particolari…" />
-                </Field>
+                <Field label={b.f_msg}><textarea data-testid="booking-messaggio" value={form.messaggio} onChange={set("messaggio")} rows={3} className={inputCls} placeholder={b.ph_msg} /></Field>
 
                 {error && <p data-testid="booking-error" className="text-sm text-red-700">{error}</p>}
 
-                <button
-                  data-testid="booking-submit"
-                  type="submit"
-                  disabled={status === "loading"}
-                  className="w-full rounded-full bg-[#1A3626] text-[#F9F6F0] py-4 font-semibold hover:bg-[#B08D57] transition-colors disabled:opacity-60 flex items-center justify-center gap-2"
-                >
-                  {status === "loading" ? <><Loader2 className="animate-spin" size={18} /> Invio…</> : "Invia richiesta"}
+                <button data-testid="booking-submit" type="submit" disabled={status === "loading"}
+                  className="w-full rounded-full bg-[#1A3626] text-[#F9F6F0] py-4 font-semibold hover:bg-[#B08D57] transition-colors disabled:opacity-60 flex items-center justify-center gap-2">
+                  {status === "loading" ? <><Loader2 className="animate-spin" size={18} /> {b.sending}</> : b.submit}
                 </button>
               </form>
             )}

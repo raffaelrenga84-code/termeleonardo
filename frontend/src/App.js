@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
 import "@/App.css";
+import { LanguageProvider } from "@/LanguageContext";
 import Navbar from "@/components/site/Navbar";
 import Hero from "@/components/site/Hero";
 import Wellness from "@/components/site/Wellness";
@@ -28,20 +29,22 @@ function App() {
   }, []);
 
   return (
-    <div className="App grain">
-      <Navbar />
-      <main>
-        <Hero />
-        <Wellness />
-        <Golf />
-        <Rooms />
-        <Dining />
-        <DaySpa />
-        <Offers />
-        <BookingForm />
-      </main>
-      <Footer />
-    </div>
+    <LanguageProvider>
+      <div className="App grain">
+        <Navbar />
+        <main>
+          <Hero />
+          <Wellness />
+          <Golf />
+          <Rooms />
+          <Dining />
+          <DaySpa />
+          <Offers />
+          <BookingForm />
+        </main>
+        <Footer />
+      </div>
+    </LanguageProvider>
   );
 }
 
