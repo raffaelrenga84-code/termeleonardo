@@ -177,7 +177,7 @@ export const translations = {
         { name: "Spa & Massaggio Relax", desc: "Ingresso Day Spa con massaggio rilassante all'olio di cacao (25 min).", price: "75" },
         { name: "Giornata Benessere Deluxe", desc: "Day Spa con massaggio antistress da 55 minuti.", price: "90" },
       ],
-      conditions: ["Validità 12 mesi dall'acquisto", "Sempre su prenotazione, salvo disponibilità", "Non rimborsabile né convertibile in denaro"],
+      conditions: ["Validità 12 mesi dall'acquisto *", "Sempre su prenotazione, salvo disponibilità", "Non rimborsabile né convertibile in denaro", "* non utilizzabile durante la chiusura stagionale"],
       cta: "Richiedi un buono regalo",
     },
     footer: {
@@ -359,7 +359,7 @@ export const translations = {
         { name: "Spa & Relax Massage", desc: "Day Spa entry with a relaxing cocoa-oil massage (25 min).", price: "75" },
         { name: "Deluxe Wellness Day", desc: "Day Spa with a 55-minute anti-stress massage.", price: "90" },
       ],
-      conditions: ["Valid 12 months from purchase", "Always by booking, subject to availability", "Non-refundable and not convertible to cash"],
+      conditions: ["Valid 12 months from purchase *", "Always by booking, subject to availability", "Non-refundable and not convertible to cash", "* not valid during the seasonal closure"],
       cta: "Request a gift voucher",
     },
     footer: {
@@ -541,7 +541,7 @@ export const translations = {
         { name: "Spa & Relax-Massage", desc: "Day-Spa-Eintritt mit entspannender Kakaoöl-Massage (25 Min.).", price: "75" },
         { name: "Deluxe-Wellnesstag", desc: "Day Spa mit 55-minütiger Antistress-Massage.", price: "90" },
       ],
-      conditions: ["12 Monate ab Kauf gültig", "Immer mit Reservierung, nach Verfügbarkeit", "Nicht erstattungsfähig, nicht in Bargeld umwandelbar"],
+      conditions: ["12 Monate ab Kauf gültig *", "Immer mit Reservierung, nach Verfügbarkeit", "Nicht erstattungsfähig, nicht in Bargeld umwandelbar", "* während der Saisonschließung nicht einlösbar"],
       cta: "Geschenkgutschein anfragen",
     },
     footer: {
@@ -723,7 +723,7 @@ export const translations = {
         { name: "Spa & Massage Relax", desc: "Entrée Day Spa avec massage relaxant à l'huile de cacao (25 min).", price: "75" },
         { name: "Journée Bien-être Deluxe", desc: "Day Spa avec massage antistress de 55 minutes.", price: "90" },
       ],
-      conditions: ["Valable 12 mois à compter de l'achat", "Toujours sur réservation, selon disponibilité", "Non remboursable ni convertible en espèces"],
+      conditions: ["Valable 12 mois à compter de l'achat *", "Toujours sur réservation, selon disponibilité", "Non remboursable ni convertible en espèces", "* non utilisable pendant la fermeture saisonnière"],
       cta: "Demander un chèque cadeau",
     },
     footer: {
