@@ -22,11 +22,14 @@ export default function Navbar() {
   return (
     <header
       data-testid="site-navbar"
-      className={`fixed top-0 inset-x-0 z-50 transition-[background-color,box-shadow,padding] duration-500 ${
-        scrolled ? "bg-[#F9F6F0]/85 backdrop-blur-xl border-b border-[#1A3626]/10 py-3" : "py-6"
+      className={`fixed top-0 inset-x-0 z-50 transition-[background-color,box-shadow,padding] duration-300 ${
+        scrolled ? "bg-[#F9F6F0] shadow-md border-b border-[#1A3626]/10 py-3" : "py-6"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      {!scrolled && (
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-transparent pointer-events-none" />
+      )}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 flex items-center justify-between">
         <a href="#top" data-testid="nav-logo" className="flex flex-col leading-none">
           <span className={`font-serif-display text-2xl md:text-3xl ${scrolled ? "text-[#1A3626]" : "text-white"} transition-colors`}>
             Terme Leonardo
