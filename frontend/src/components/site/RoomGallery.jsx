@@ -23,7 +23,7 @@ export default function RoomGallery() {
   const scrollNext = () => emblaApi && emblaApi.scrollNext();
 
   return (
-    <section data-testid="rooms-gallery-section" className="py-24 md:py-32 bg-[#F9F6F0]">
+        <section id="rooms-gallery-section" data-testid="rooms-gallery-section" className="py-24 md:py-32 bg-[#F9F6F0]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <Reveal>
