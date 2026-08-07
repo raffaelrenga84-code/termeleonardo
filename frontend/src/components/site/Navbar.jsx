@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Lock } from "lucide-react";
-import { NAV, BOOKING_URL, loginUrl } from "../../data";
+import { NAV, BOOKING_URL, loginUrl, dayspaUrl } from "../../data";
 import { LANGS } from "../../i18n";
 import { LEGAL } from "../../legal";
 import { useLang } from "../../LanguageContext";
@@ -75,6 +75,15 @@ export default function Navbar() {
             <Lock size={18} />
           </a>
           <a
+            href={dayspaUrl(lang)}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="nav-dayspa-btn"
+            className={`rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors hover:border-[#B08D57] hover:text-[#B08D57] ${scrolled ? "border-[#1A3626]/40 text-[#1A3626]" : "border-white/50 text-white"}`}
+          >
+            {t.dayspa.bookBtn}
+          </a>
+          <a
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -116,6 +125,9 @@ export default function Navbar() {
           ))}
           <a href={loginUrl(lang)} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} data-testid="nav-mobile-login" className="flex items-center gap-2 text-[#1A3626] text-base font-medium">
             <Lock size={16} /> {L.login}
+          </a>
+          <a href={dayspaUrl(lang)} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} data-testid="nav-mobile-dayspa" className="rounded-full border border-[#1A3626] text-[#1A3626] px-6 py-3 text-center font-semibold">
+            {t.dayspa.bookBtn}
           </a>
           <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="rounded-full bg-[#1A3626] text-[#F9F6F0] px-6 py-3 text-center font-semibold">
             {t.nav.prenota}
