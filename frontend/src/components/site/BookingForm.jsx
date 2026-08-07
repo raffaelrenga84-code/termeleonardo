@@ -30,7 +30,7 @@ export default function BookingForm() {
     }
     setStatus("loading");
     try {
-      await axios.post(`${API}/bookings`, { ...form, ospiti: Number(form.ospiti) });
+      window.location.href = "mailto:info@termeleonardo.com?subject=" + encodeURIComponent("Richiesta preventivo - " + form.nome) + "&body=" + encodeURIComponent("Nome: " + form.nome + "\nEmail: " + form.email + "\nTelefono: " + form.telefono + "\nArrivo: " + form.check_in + "\nPartenza: " + form.check_out + "\nOspiti: " + form.ospiti + "\nCamera: " + form.tipo_camera + "\nPacchetto: " + form.pacchetto + "\n\n" + form.messaggio);
       setStatus("success");
     } catch (err) {
       console.error(err);
