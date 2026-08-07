@@ -24,3 +24,19 @@ React + Tailwind + Framer Motion + Lenis (smooth scroll). FastAPI + MongoDB (boo
 - Sito ora multilingua IT/DE/FR/EN con switcher in navbar (default IT, persistito in localStorage).
 - Traduzioni complete in /app/frontend/src/i18n.js; stato via /app/frontend/src/LanguageContext.js.
 - Testing agent iteration_1: backend 100%, frontend 100% (switch lingua + form prenotazione + link nuova scheda verificati).
+
+## Update (contenuti mancanti dalla KB Voice AI)
+- Aggiunte sezioni multilingua (IT/DE/FR/EN):
+  - Cure Termali (ciclo fanghi, visita medica, ticket €55, §13 SGB V)
+  - Massaggi & Trattamenti (listino selezione)
+  - Transfer & Taxi (navetta/taxi con tariffe + escursioni)
+  - Info & Contatti: indirizzo Via Monteortone 46, tel reception +39 049 8669111, segreteria cure +39 049 9939234, email info@termeleonardo.com, mappa Google, "come arrivare" (distanze + autostrade + colonnine EV), banner apertura stagionale 14 feb–29 nov 2026, info utili (check-in/out, check-in online, tassa soggiorno €1,50, animali €13, cuffia €3).
+- Navbar aggiornata: aggiunti "Cure Termali" (#cure) e "Info & Contatti" (#info); rimosso "Ristorante" dalla nav (sezione ancora in pagina).
+- Contatti reali anche nel footer.
+- Testing agent iteration_3: frontend 100%, reattività lingua verificata, nessun errore.
+- Trovato URL reale booking engine: https://www.termeleonardo.com/{lang}/booking/select-dates (step "Select Room"). NON ancora collegato al pulsante Prenota su richiesta dell'utente (deprioritizzato).
+
+## Backlog residuo
+- Collegare i pulsanti "Prenota" al booking engine reale /{lang}/booking/select-dates (URL già individuato).
+- Rifinire sezioni Piscine (3 vasche, temperature), Ristorante (orari pasti, mezza pensione) e "Servizi inclusi".
+- Buoni regalo Day Spa, camera d'appoggio, condizioni cancellazione/caparra, accessibilità.
