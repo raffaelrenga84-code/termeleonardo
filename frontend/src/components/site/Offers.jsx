@@ -30,7 +30,7 @@ export default function Offers() {
                         <span className="text-[11px] text-white/60 block">{o.from}</span>
                         <span className="font-serif-display text-3xl">€ {offer.price}</span>
                       </div>
-                      <a href="#prenota" data-testid={`offer-cta-${i}`} className="rounded-full bg-white/15 hover:bg-[#B08D57] backdrop-blur-sm text-white px-5 py-2 text-sm font-semibold transition-colors">{o.request}</a>
+                      <a href={`https://www.termeleonardo.com/offerte/${offer.slug}`} target="_blank" rel="noopener noreferrer" data-testid={`offer-cta-${i}`} className="rounded-full bg-white/15 hover:bg-[#B08D57] backdrop-blur-sm text-white px-5 py-2 text-sm font-semibold transition-colors">{o.request}</a>
                     </div>
                   </div>
                 </div>
