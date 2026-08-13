@@ -1,9 +1,13 @@
 import { Reveal, Label } from "./Reveal";
 import { useLang } from "../../LanguageContext";
+import { RICHIESTA_URL } from "../../data";
 
 export default function Treatments() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const tr = t.treatments;
+  /* l'etichetta sta in t.booking accanto agli altri testi dei moduli di
+     richiesta, che vivono li' in tutte e quattro le lingue */
+  const b = t.booking;
   return (
     <section id="trattamenti" data-testid="treatments-section" className="py-24 md:py-32 bg-[#F9F6F0]">
       <div className="max-w-6xl mx-auto px-6">
@@ -26,6 +30,13 @@ export default function Treatments() {
                 </div>
               ))}
             </div>
+            {/* il listino c'era ma non c'era modo di chiedere niente: chi lo
+                leggeva doveva cercarsi il telefono da solo */}
+            <a href={RICHIESTA_URL("trattamenti", lang)} target="_blank" rel="noopener noreferrer"
+              data-testid="treatments-cta"
+              className="inline-block mt-8 rounded-full bg-[#1A3626] text-[#F9F6F0] px-8 py-4 text-sm font-semibold hover:bg-[#B08D57] transition-colors">
+              {b.ctaSpa}
+            </a>
           </div>
         </Reveal>
       </div>
