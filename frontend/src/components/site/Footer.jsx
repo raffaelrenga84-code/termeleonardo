@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NAV, COMPANY_LINE, loginUrl } from "../../data";
+import { NAV, COMPANY_LINE, loginUrl, ULSS_TRANSPARENCY } from "../../data";
 import { useLang } from "../../LanguageContext";
 import { LEGAL } from "../../legal";
 import Modal from "./Modal";
@@ -10,6 +10,8 @@ export default function Footer() {
   const L = LEGAL[lang] || LEGAL.it;
   const labelFor = (href) => t.nav[href.slice(1)] || href;
   const [modal, setModal] = useState(null); // 'cookie' | 'transparency'
+  const eur = (n) =>
+    n.toLocaleString(lang === "en" ? "en-GB" : lang || "it", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
   return (
     <footer data-testid="site-footer" className="bg-[#12241A] text-white/80">
@@ -71,6 +73,37 @@ export default function Footer() {
             </li>
           ))}
         </ul>
+
+        <h4 className="font-serif-display text-xl text-[#1A3626] mt-8">{L.transparencyTableTitle}</h4>
+        <div className="mt-4 overflow-x-auto rounded-xl border border-[#E5E0D8]">
+          <table data-testid="ulss-table" className="w-full min-w-[540px] border-collapse text-sm">
+            <thead>
+              <tr className="bg-[#F1EFEB]">
+                {L.transparencyCols.map((c, i) => (
+                  <th
+                    key={i}
+                    className={`align-bottom px-3 py-3 text-[11px] font-semibold uppercase tracking-wide text-[#1A3626] border-b border-[#E5E0D8] ${
+                      i === 0 ? "text-left w-16" : "text-right"
+                    }`}
+                  >
+                    {c}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {ULSS_TRANSPARENCY.map((r) => (
+                <tr key={r.y} className="border-b border-[#E5E0D8] last:border-b-0">
+                  <td className="px-3 py-2 font-medium text-[#1A3626]">{r.y}</td>
+                  <td className="px-3 py-2 text-right tabular-nums text-[#5A5A5A]">€ {eur(r.tot)}</td>
+                  <td className="px-3 py-2 text-right tabular-nums text-[#5A5A5A]">€ {eur(r.ticket)}</td>
+                  <td className="px-3 py-2 text-right tabular-nums text-[#5A5A5A]">€ {eur(r.ssr)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-[#B08D57] mt-4">{L.transparencyTableNote}</p>
       </Modal>
     </footer>
   );
