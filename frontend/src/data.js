@@ -23,6 +23,9 @@ export const ROOM_GALLERY = [
 export const BOOKING_URL = "https://www.termeleonardo.com/booking/select-dates";
 export const DAYSPA_URL = "https://www.termeleonardo.com/it/day-spa/prenotazioni";
 export const SHOP_URL = "https://www.termeleonardo.com/shop";
+/* i buoni regalo si comprano qui: pagina in IT/DE/EN/FR, pagamento con
+   carta e buono spedito per email dalla funzione `buoni` */
+export const REGALA_URL = "https://arrivo-terme-leonardo.vercel.app/buoni/regala/";
 export const dayspaUrl = (lang = "it") => `https://www.termeleonardo.com/${lang}/day-spa/prenotazioni`;
 export const COMPANY_LINE = "Hotel Terme Leonardo · Via Monteortone, 46 · 35037 Abano Terme · P: +39 049 9939 200 · info@termeleonardo.com · P.I. IT 02042330288 · CIN: IT028089A18QYO48ED";
 export const loginUrl = (lang = "it") => `https://www.termeleonardo.com/${lang}/login`;

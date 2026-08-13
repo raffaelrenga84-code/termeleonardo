@@ -1,10 +1,10 @@
 import { Reveal, Label } from "./Reveal";
 import { Gift, Check } from "lucide-react";
 import { useLang } from "../../LanguageContext";
-import { SHOP_URL } from "../../data";
+import { REGALA_URL } from "../../data";
 
 export default function GiftVouchers() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const g = t.gift;
   if (!g) return null;
   return (
@@ -41,7 +41,7 @@ export default function GiftVouchers() {
                 </li>
               ))}
             </ul>
-            <a href={SHOP_URL} target="_blank" rel="noopener noreferrer" data-testid="gift-cta" className="shrink-0 inline-flex items-center justify-center rounded-full bg-[#B08D57] text-white px-8 py-4 text-sm font-semibold hover:bg-[#E7C98B] hover:text-[#1A3626] transition-colors">
+            <a href={`${REGALA_URL}?l=${lang || "it"}`} target="_blank" rel="noopener noreferrer" data-testid="gift-cta" className="shrink-0 inline-flex items-center justify-center rounded-full bg-[#B08D57] text-white px-8 py-4 text-sm font-semibold hover:bg-[#E7C98B] hover:text-[#1A3626] transition-colors">
               {g.cta}
             </a>
           </div>
