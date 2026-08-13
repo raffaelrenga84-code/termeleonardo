@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Menu, X, Lock } from "lucide-react";
-import { NAV, BOOKING_URL, loginUrl, dayspaUrl } from "../../data";
+import { Menu, X, Lock, Gift } from "lucide-react";
+import { NAV, BOOKING_URL, REGALA_URL, loginUrl, dayspaUrl } from "../../data";
 import { LANGS } from "../../i18n";
 import { LEGAL } from "../../legal";
 import { useLang } from "../../LanguageContext";
@@ -67,6 +67,17 @@ export default function Navbar() {
             ))}
           </div>
           <a
+            href={`${REGALA_URL}?l=${lang || "it"}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="nav-gift-btn"
+            aria-label={t.gift?.label || "Buoni Regalo"}
+            title={t.gift?.label || "Buoni Regalo"}
+            className={`transition-colors hover:text-[#B08D57] ${scrolled ? "text-[#1A3626]" : "text-white/90"}`}
+          >
+            <Gift size={18} />
+          </a>
+          <a
             href={loginUrl(lang)}
             target="_blank"
             rel="noopener noreferrer"
@@ -126,6 +137,9 @@ export default function Navbar() {
               {labelFor(n.href)}
             </a>
           ))}
+          <a href={`${REGALA_URL}?l=${lang || "it"}`} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} data-testid="nav-mobile-gift" className="flex items-center gap-2 text-[#1A3626] text-base font-medium">
+            <Gift size={16} /> {t.gift?.label || "Buoni Regalo"}
+          </a>
           <a href={loginUrl(lang)} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} data-testid="nav-mobile-login" className="flex items-center gap-2 text-[#1A3626] text-base font-medium">
             <Lock size={16} /> {L.login}
           </a>
