@@ -30,6 +30,26 @@ export const dayspaUrl = (lang = "it") => `https://www.termeleonardo.com/${lang}
 export const COMPANY_LINE = "Hotel Terme Leonardo · Via Monteortone, 46 · 35037 Abano Terme · P: +39 049 9939 200 · info@termeleonardo.com · P.I. IT 02042330288 · CIN: IT028089A18QYO48ED";
 export const loginUrl = (lang = "it") => `https://www.termeleonardo.com/${lang}/login`;
 
+/* Trasparenza ULSS — cure termali erogate in convenzione con il SSR.
+   tot = fatturato totale · ticket = quota a carico del cittadino · ssr = contributo netto erogato */
+export const ULSS_TRANSPARENCY = [
+  { y: 2011, tot: 9997.8, ticket: 1784.1, ssr: 8213.7 },
+  { y: 2012, tot: 9027.6, ticket: 1405.8, ssr: 7621.8 },
+  { y: 2013, tot: 10066.4, ticket: 1699.6, ssr: 8366.8 },
+  { y: 2014, tot: 10803.06, ticket: 2087.2, ssr: 8715.86 },
+  { y: 2015, tot: 8026.12, ticket: 1734.1, ssr: 6292.02 },
+  { y: 2016, tot: 9494.18, ticket: 1861.5, ssr: 7632.68 },
+  { y: 2017, tot: 13101.25, ticket: 2463.4, ssr: 10637.85 },
+  { y: 2018, tot: 14064.38, ticket: 2692.7, ssr: 11371.68 },
+  { y: 2019, tot: 14365.42, ticket: 3007.2, ssr: 11358.22 },
+  { y: 2020, tot: 5471.89, ticket: 849.86, ssr: 4622.03 },
+  { y: 2021, tot: 9118.42, ticket: 1528.4, ssr: 7590.02 },
+  { y: 2022, tot: 22071.23, ticket: 3349.6, ssr: 18721.63 },
+  { y: 2023, tot: 34737.9, ticket: 5266.1, ssr: 29471.8 },
+  { y: 2024, tot: 52578.46, ticket: 7714.0, ssr: 44864.46 },
+  { y: 2025, tot: 83803.36, ticket: 12188.4, ssr: 71614.96 },
+];
+
 export const NAV = [
   { href: "#benessere" },
   { href: "#golf" },
