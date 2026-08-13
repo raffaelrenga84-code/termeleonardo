@@ -30,13 +30,17 @@ export default function Navbar() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-transparent pointer-events-none" />
       )}
       <div className="relative z-10 max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#top" data-testid="nav-logo" className="flex flex-col leading-none">
-          <span className={`font-serif-display text-2xl md:text-3xl ${scrolled ? "text-[#1A3626]" : "text-white"} transition-colors`}>
-            Terme Leonardo
-          </span>
-          <span className={`text-[10px] tracking-label uppercase ${scrolled ? "text-[#5A5A5A]" : "text-white/80"} transition-colors`}>
-            Abano Terme · 4 Stelle
-          </span>
+        {/* due file invece di ricolorare via CSS: il marchio e' incluso come
+            immagine e i selettori della pagina non arrivano dentro l'SVG.
+            Bianco sopra la foto, nero sulla barra chiara dopo lo scroll. */}
+        {/* shrink-0 e spazio a destra: il menu e' largo e senza questi
+            il marchio finisce attaccato alla prima voce */}
+        <a href="#top" data-testid="nav-logo" className="block shrink-0 pr-8">
+          <img
+            src={scrolled ? "/logo.svg" : "/logo-bianco.svg"}
+            alt="Hotel Terme Leonardo · Abano Terme · 4 stelle"
+            className="h-8 md:h-10 w-auto transition-opacity"
+          />
         </a>
 
         <nav className="hidden lg:flex items-center gap-7">
