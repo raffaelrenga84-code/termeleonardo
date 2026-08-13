@@ -17,6 +17,9 @@ export const LEGAL = {
       "Con impegnativa del medico curante, l'ospite non esente paga il solo ticket sanitario di € 55,00; gli esenti € 3,10.",
       "Gli accordi contrattuali con l'ULSS 6 Euganea e il listino delle prestazioni termali sono pubblicati ai sensi della normativa vigente e disponibili presso la Segreteria Cure (+39 049 9939234).",
     ],
+    transparencyTableTitle: "Cure termali erogate in convenzione",
+    transparencyCols: ["Anno", "Fatturato totale cure erogate in convenzione con il SSR (€)", "Ticket a carico del cittadino (€)", "Contributo netto erogato dal SSR (€)"],
+    transparencyTableNote: "Dati aggiornati al 31 dicembre 2025.",
   },
   en: {
     cookieLink: "Cookie Policy", transparencyLink: "ULSS Transparency", privacy: "Privacy", login: "Members Area", close: "Close",
@@ -36,6 +39,9 @@ export const LEGAL = {
       "With a doctor's referral, non-exempt guests pay only the health ticket of € 55.00; exempt guests € 3.10.",
       "The contractual agreements with ULSS 6 Euganea and the list of thermal services are published under current regulations and available from the Cures Office (+39 049 9939234).",
     ],
+    transparencyTableTitle: "Thermal cures provided under the public health agreement",
+    transparencyCols: ["Year", "Total revenue from cures provided under the NHS agreement (€)", "Patient co-payment (€)", "Net contribution paid by the NHS (€)"],
+    transparencyTableNote: "Figures updated to 31 December 2025.",
   },
   de: {
     cookieLink: "Cookie-Richtlinie", transparencyLink: "ULSS-Transparenz", privacy: "Datenschutz", login: "Mitgliederbereich", close: "Schließen",
@@ -55,6 +61,9 @@ export const LEGAL = {
       "Mit ärztlicher Überweisung zahlen nicht befreite Gäste nur das Gesundheitsticket von 55,00 €; befreite Gäste 3,10 €.",
       "Die Vertragsvereinbarungen mit der ULSS 6 Euganea und das Verzeichnis der Thermalleistungen sind gemäß geltenden Vorschriften veröffentlicht und beim Kur-Sekretariat erhältlich (+39 049 9939234).",
     ],
+    transparencyTableTitle: "Thermalkuren im Rahmen der Vereinbarung mit dem Gesundheitsdienst",
+    transparencyCols: ["Jahr", "Gesamtumsatz der im Rahmen der Vereinbarung erbrachten Kuren (€)", "Eigenanteil des Gastes (€)", "Nettobeitrag des Gesundheitsdienstes (€)"],
+    transparencyTableNote: "Daten mit Stand 31. Dezember 2025.",
   },
   fr: {
     cookieLink: "Politique de cookies", transparencyLink: "Transparence ULSS", privacy: "Confidentialité", login: "Espace Membres", close: "Fermer",
@@ -74,5 +83,8 @@ export const LEGAL = {
       "Avec ordonnance du médecin, les clients non exemptés paient uniquement le ticket sanitaire de 55,00 € ; les exemptés 3,10 €.",
       "Les accords contractuels avec l'ULSS 6 Euganea et la liste des prestations thermales sont publiés conformément à la réglementation en vigueur et disponibles auprès du Secrétariat des Cures (+39 049 9939234).",
     ],
+    transparencyTableTitle: "Cures thermales réalisées dans le cadre de la convention",
+    transparencyCols: ["Année", "Chiffre d'affaires total des cures conventionnées (€)", "Ticket à la charge du patient (€)", "Contribution nette versée par le service de santé (€)"],
+    transparencyTableNote: "Données arrêtées au 31 décembre 2025.",
   },
 };
