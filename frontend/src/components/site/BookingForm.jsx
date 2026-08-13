@@ -1,10 +1,16 @@
 import { useState } from "react";
-import axios from "axios";
 import { CheckCircle2, Loader2 } from "lucide-react";
 import { Reveal, Label } from "./Reveal";
 import { useLang } from "../../LanguageContext";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+/* La richiesta va a una funzione che la SALVA e poi avvisa l'hotel.
+   Prima questo form apriva un `mailto:` e dichiarava "inviato" comunque,
+   senza guardare se fosse successo qualcosa: su un telefono senza posta
+   configurata non partiva niente e l'ospite se ne andava convinto di aver
+   scritto. Ora si dice "ricevuta" solo se il server lo conferma. */
+const FUNZIONE = "https://mvuiuwakuseockotlcnp.supabase.co/functions/v1/richieste";
+
+const oggiISO = () => new Date().toISOString().slice(0, 10);
 
 const empty = {
   nome: "", email: "", telefono: "",
@@ -13,11 +19,12 @@ const empty = {
 };
 
 export default function BookingForm() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const b = t.booking;
   const [form, setForm] = useState(empty);
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState("");
+  const [riferimento, setRiferimento] = useState("");
 
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
 
@@ -30,12 +37,26 @@ export default function BookingForm() {
     }
     setStatus("loading");
     try {
-      window.location.href = "mailto:info@termeleonardo.com?subject=" + encodeURIComponent("Richiesta preventivo - " + form.nome) + "&body=" + encodeURIComponent("Nome: " + form.nome + "\nEmail: " + form.email + "\nTelefono: " + form.telefono + "\nArrivo: " + form.check_in + "\nPartenza: " + form.check_out + "\nOspiti: " + form.ospiti + "\nCamera: " + form.tipo_camera + "\nPacchetto: " + form.pacchetto + "\n\n" + form.messaggio);
+      const r = await fetch(FUNZIONE, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ ...form, lingua: lang, origine: window.location.href }),
+      });
+      const d = await r.json().catch(() => ({}));
+      if (!r.ok || !d.ok) {
+        /* qualunque intoppo lascia all'ospite un modo per arrivare a noi:
+           il messaggio di ripiego porta telefono e indirizzo */
+        console.error("richiesta non registrata:", r.status, d);
+        setStatus("idle");
+        setError(b.err_fallback);
+        return;
+      }
+      setRiferimento(d.numero || "");
       setStatus("success");
     } catch (err) {
       console.error(err);
       setStatus("idle");
-      setError(b.err_generic);
+      setError(b.err_fallback);
     }
   };
 
@@ -62,7 +83,14 @@ export default function BookingForm() {
                 <p className="text-[#5A5A5A] mt-3 max-w-sm">
                   {b.success_thanks} {form.nome.split(" ")[0]}. {b.success_body} <b>{form.email}</b> {b.success_soon}
                 </p>
-                <button data-testid="booking-reset" onClick={() => { setForm(empty); setStatus("idle"); }}
+                {/* il riferimento e' la prova che la richiesta esiste davvero:
+                    l'ospite puo' citarlo al telefono */}
+                {riferimento && (
+                  <p data-testid="booking-riferimento" className="mt-5 text-sm text-[#5A5A5A]">
+                    {b.success_rif} <b className="font-mono text-[#1A3626]">{riferimento}</b>
+                  </p>
+                )}
+                <button data-testid="booking-reset" onClick={() => { setForm(empty); setRiferimento(""); setStatus("idle"); }}
                   className="mt-8 rounded-full border border-[#1A3626] text-[#1A3626] px-7 py-3 text-sm font-semibold hover:bg-[#1A3626] hover:text-white transition-colors">{b.reset}</button>
               </div>
             ) : (
@@ -76,8 +104,11 @@ export default function BookingForm() {
                   <Field label={b.f_ospiti}><input data-testid="booking-ospiti" type="number" min="1" max="10" value={form.ospiti} onChange={set("ospiti")} className={inputCls} /></Field>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-5">
-                  <Field label={b.f_checkin}><input data-testid="booking-checkin" type="date" value={form.check_in} onChange={set("check_in")} className={inputCls} /></Field>
-                  <Field label={b.f_checkout}><input data-testid="booking-checkout" type="date" value={form.check_out} onChange={set("check_out")} className={inputCls} /></Field>
+                  {/* min sui due campi: il calendario stesso impedisce la data
+                      passata e la partenza prima dell'arrivo, che sono gli
+                      unici due errori che il server rifiuterebbe davvero */}
+                  <Field label={b.f_checkin}><input data-testid="booking-checkin" type="date" min={oggiISO()} value={form.check_in} onChange={set("check_in")} className={inputCls} /></Field>
+                  <Field label={b.f_checkout}><input data-testid="booking-checkout" type="date" min={form.check_in || oggiISO()} value={form.check_out} onChange={set("check_out")} className={inputCls} /></Field>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-5">
                   <Field label={b.f_camera}>
