@@ -77,6 +77,26 @@ export default function ChatWidget() {
   const { lang } = useLang();
   const t = T[lang] || T.it;
   const [aperto, setAperto] = useState(false);
+  /* Il banner dei cookie occupa tutta la larghezza in basso con z-index 90 e
+     si mangiava il clic sulla bolla: il pulsante c'era, si vedeva, e non
+     faceva niente. Invece di alzare la bolla sopra un consenso di legge, la
+     bolla aspetta: il banner e' una cosa che si vede una volta sola. */
+  const [cookieDecisi, setCookieDecisi] = useState(
+    () => typeof window !== "undefined" && !!localStorage.getItem("tl_cookie_consent")
+  );
+
+  useEffect(() => {
+    if (cookieDecisi) return;
+    /* il banner scrive in localStorage, che non emette eventi nella stessa
+       scheda: si guarda a intervalli finche' non ha deciso */
+    const id = setInterval(() => {
+      if (localStorage.getItem("tl_cookie_consent")) {
+        setCookieDecisi(true);
+        clearInterval(id);
+      }
+    }, 800);
+    return () => clearInterval(id);
+  }, [cookieDecisi]);
   const [messaggi, setMessaggi] = useState([]);
   const [bozza, setBozza] = useState("");
   const [attesa, setAttesa] = useState(false);
@@ -131,6 +151,10 @@ export default function ChatWidget() {
       setAttesa(false);
     }
   };
+
+  /* finche' il banner dei cookie e' aperto la bolla non compare: sarebbe
+     coperta e il clic andrebbe perso */
+  if (!cookieDecisi) return null;
 
   return (
     <>
