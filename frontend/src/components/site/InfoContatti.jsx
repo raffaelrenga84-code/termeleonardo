@@ -30,7 +30,15 @@ export default function InfoContatti() {
               <ul className="mt-6 space-y-4 text-[#1A3626]">
                 <li className="flex items-start gap-3"><MapPin size={18} className="text-[#B08D57] mt-0.5 shrink-0" /><span>{i.address}</span></li>
                 <li className="flex items-center gap-3"><Phone size={18} className="text-[#B08D57] shrink-0" /><a href={`tel:${i.phone.replace(/\s/g, "")}`} className="hover:text-[#B08D57]">{i.phoneLabel}: {i.phone}</a></li>
-                <li className="flex items-center gap-3"><Stethoscope size={18} className="text-[#B08D57] shrink-0" /><a href={`tel:${i.curePhone.replace(/\s/g, "")}`} className="hover:text-[#B08D57]">{i.cureLabel}: {i.curePhone}</a></li>
+                {/* l'orario accanto al numero: un numero senza orario fa
+                    telefonare a vuoto il mercoledi, che e' il giorno di
+                    chiusura */}
+                <li className="flex items-start gap-3"><Stethoscope size={18} className="text-[#B08D57] shrink-0 mt-1" />
+                  <span>
+                    <a href={`tel:${i.curePhone.replace(/\s/g, "")}`} className="hover:text-[#B08D57]">{i.cureLabel}: {i.curePhone}</a>
+                    {i.cureOrari && <span className="block text-sm opacity-70">{i.cureOrari}</span>}
+                  </span>
+                </li>
                 <li className="flex items-center gap-3"><Mail size={18} className="text-[#B08D57] shrink-0" /><a href={`mailto:${i.email}`} className="hover:text-[#B08D57]">{i.email}</a></li>
               </ul>
               <div className="mt-6 rounded-xl overflow-hidden h-56 border border-[#E5E0D8]">

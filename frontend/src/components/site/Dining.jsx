@@ -1,11 +1,23 @@
 import { Reveal, Label } from "./Reveal";
-import { UtensilsCrossed, Clock } from "lucide-react";
+import { UtensilsCrossed, Clock, Download } from "lucide-react";
 import { IMG } from "../../data";
 import { useLang } from "../../LanguageContext";
+
+/* I tre menu in PDF. Stavano solo nella pagina "welcome" del sito vecchio,
+   dove non ci arriva nessuno: qui sono accanto alla descrizione del posto
+   che raccontano. Tutti e tre verificati raggiungibili. */
+const MENU_PDF = [
+  { k: "bistro", file: "hotel-terme-leonardo-menu-bistro.pdf" },
+  { k: "bar", file: "hotel-terme-leonardo-bar-menu.pdf" },
+  { k: "vini", file: "listino-vini.pdf" },
+];
 
 export default function Dining() {
   const { t } = useLang();
   const d = t.dining;
+  /* le etichette dei PDF stanno in t.booking accanto agli altri testi dei
+     moduli, dove sono state aggiunte in tutte e quattro le lingue */
+  const etichette = (t.booking && t.booking.menuPdf) || {};
   return (
     <section id="ristorante" data-testid="dining-section" className="py-24 md:py-32 bg-[#F9F6F0]">
       <div className="max-w-7xl mx-auto px-6">
@@ -64,6 +76,22 @@ export default function Dining() {
               <span className="text-xs uppercase tracking-label text-[#E7C98B]">Bistrot</span>
               <h3 className="font-serif-display text-3xl mt-3">{d.bistroTitle}</h3>
               <p className="text-white/75 mt-4">{d.bistroDesc}</p>
+
+              <div className="mt-7 flex flex-col gap-2.5">
+                {MENU_PDF.map((m) => (
+                  <a
+                    key={m.k}
+                    href={`https://www.termeleonardo.com/pdf/${m.file}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid={`dining-pdf-${m.k}`}
+                    className="flex items-center gap-2.5 text-[15px] text-[#E7C98B] hover:text-white transition-colors"
+                  >
+                    <Download size={16} className="shrink-0" />
+                    {etichette[m.k] || m.k}
+                  </a>
+                ))}
+              </div>
             </div>
           </Reveal>
         </div>

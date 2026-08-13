@@ -18,6 +18,8 @@ import Transfer from "@/components/site/Transfer";
 import InfoContatti from "@/components/site/InfoContatti";
 import BookingForm from "@/components/site/BookingForm";
 import CookieBanner from "@/components/site/CookieBanner";
+import Faq from "@/components/site/Faq";
+import ChatWidget from "@/components/site/ChatWidget";
 import Footer from "@/components/site/Footer";
 
 function App() {
@@ -52,11 +54,14 @@ function App() {
           <Treatments />
           <Offers />
           <Transfer />
+          <Faq />
           <InfoContatti />
           <BookingForm />
         </main>
         <Footer />
         <CookieBanner />
+        {/* fuori da <main>: e' un pannello fisso, non contenuto della pagina */}
+        <ChatWidget />
       </div>
     </LanguageProvider>
   );

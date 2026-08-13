@@ -7,7 +7,7 @@ export const LANGS = [
 
 export const translations = {
   it: {
-    nav: { benessere: "Benessere", golf: "Sport & Natura", camere: "Camere", ristorante: "Ristorante", dayspa: "Day Spa", cure: "Cure Termali", offerte: "Offerte", info: "Info & Contatti", contatti: "Contatti", prenota: "Prenota" },
+    nav: { benessere: "Benessere", golf: "Sport & Natura", camere: "Camere", ristorante: "Ristorante", dayspa: "Day Spa", cure: "Cure Termali", offerte: "Offerte", faq: "FAQ", info: "Info & Contatti", contatti: "Contatti", prenota: "Prenota" },
     hero: {
       badge: "Colli Euganei · Monteortone",
       title1: "Riscopri il tuo", titleEm: "equilibrio",
@@ -16,11 +16,11 @@ export const translations = {
     },
     wellness: {
       label: "Benessere", title: "Un'oasi per corpo e mente",
-      body: "Nel cuore di Monteortone, immergiti nelle piscine termali a 30–35°C, rilassati nelle grotte sudatorie naturali e lasciati avvolgere dalle docce emozionali. Un percorso rigenerante che rende il Terme Leonardo uno degli alberghi più apprezzati ad Abano Terme.",
+      body: "Nel cuore di Monteortone, immergiti nelle piscine termali a 30–35°C, rilassati nelle grotte sudatorie e lasciati avvolgere dalle docce emozionali. Un percorso rigenerante che rende il Terme Leonardo uno degli alberghi più apprezzati ad Abano Terme.",
       tempCaption: "La temperatura naturale delle nostre acque termali",
       features: [
         { title: "Piscine Termali 30–35°C", desc: "Piscine interne ed esterne alimentate dalle acque termali dei Colli Euganei." },
-        { title: "Grotte Sudatorie Naturali", desc: "Un percorso rigenerante nel calore avvolgente delle grotte naturali." },
+        { title: "Grotte Sudatorie", desc: "Un percorso rigenerante nel calore avvolgente delle grotte." },
         { title: "Lettini Idromassaggianti", desc: "Getti d'acqua che sciolgono le tensioni e riattivano la circolazione." },
         { title: "Docce Emozionali", desc: "Cromoterapia e profumi per un risveglio sensoriale completo." },
         { title: "Fangoterapia Medica", desc: "Trattamenti di fango termale maturo dalle proprietà curative." },
@@ -106,6 +106,7 @@ export const translations = {
       submit: "Invia richiesta", sending: "Invio…",
       err_required: "Compila i campi obbligatori: nome, email e date del soggiorno.",
       golfConv: "Convenzionati con tre circoli a pochi minuti: Montecchia, Golf Club Padova e Frassanelle. Prenotiamo noi la partenza — e il taxi per arrivarci.", ctaGreen: "Richiedi un green fee", ctaMaestro: "Lezione col maestro", ctaSpa: "Richiedi un trattamento", err_generic: "Si è verificato un errore. Riprova tra poco.",
+      menuPdf: {"bistro":"Menu del Bistrot","bar":"Listino bar","vini":"Carta dei vini"},
       err_fallback: "Non siamo riusciti a registrare la richiesta. Chiamaci allo +39 049 9939200 o scrivi a info@termeleonardo.com: ti rispondiamo subito.", success_rif: "Riferimento",
       success_title: "Richiesta ricevuta!", success_body: "Abbiamo ricevuto la tua richiesta di prenotazione e ti risponderemo all'indirizzo",
       success_soon: "il prima possibile.", success_thanks: "Grazie", reset: "Nuova richiesta",
@@ -115,7 +116,7 @@ export const translations = {
       label: "Info & Contatti", title: "Tutto per il tuo soggiorno",
       seasonTitle: "Stagione 2026", season: "Hotel e piscine aperti dal 14 febbraio al 29 novembre 2026.",
       contactsTitle: "Contatti", address: "Via Monteortone 46, 35037 Abano Terme (PD)",
-      phoneLabel: "Reception", phone: "+39 049 9939 200", cureLabel: "Segreteria Cure", curePhone: "+39 049 9939234", email: "info@termeleonardo.com",
+      phoneLabel: "Reception", phone: "+39 049 9939 200", cureLabel: "Segreteria Cure", curePhone: "+39 049 9939234", cureOrari: "Lun–Sab 8:00–13:00, chiuso il mercoledì", email: "info@termeleonardo.com",
       getThereTitle: "Come arrivare",
       distances: ["Centro di Abano Terme — 1,5 km", "Stazione Terme Euganee — 7 km", "Padova — 12 km", "Aeroporto di Venezia — 60 km", "Aeroporto di Treviso — 70 km"],
       highway: "In auto: A13 uscita \u201cTerme Euganee\u201d o A4 uscita \u201cPadova Ovest\u201d.",
@@ -138,7 +139,7 @@ export const translations = {
         { t: "Visita medica di ammissione", d: "Obbligatoria prima delle cure, su appuntamento (di norma la domenica pomeriggio)." },
         { t: "Ticket SSN", d: "Con impegnativa del medico: visita e ciclo fino a 12 fanghi. Ticket a carico dell'ospite € 55." },
         ],
-      note: "Le cure si possono effettuare anche senza pernottare. Segreteria Cure: +39 049 9939234.",
+      note: "Le cure si possono effettuare anche senza pernottare. Segreteria Cure: +39 049 9939234, dal lunedì al sabato 8:00–13:00, chiuso il mercoledì.",
     },
     treatments: {
       label: "Massaggi & Trattamenti", title: "Il nostro benessere su misura",
@@ -190,7 +191,7 @@ export const translations = {
   },
 
   en: {
-    nav: { benessere: "Wellness", golf: "Sport & Nature", camere: "Rooms", ristorante: "Restaurant", dayspa: "Day Spa", cure: "Thermal Cures", offerte: "Offers", info: "Info & Contact", contatti: "Contact", prenota: "Book" },
+    nav: { benessere: "Wellness", golf: "Sport & Nature", camere: "Rooms", ristorante: "Restaurant", dayspa: "Day Spa", cure: "Thermal Cures", offerte: "Offers", faq: "FAQ", info: "Info & Contact", contatti: "Contact", prenota: "Book" },
     hero: {
       badge: "Euganean Hills · Monteortone",
       title1: "Rediscover your", titleEm: "balance",
@@ -289,6 +290,7 @@ export const translations = {
       submit: "Send request", sending: "Sending…",
       err_required: "Please fill in the required fields: name, email and stay dates.",
       golfConv: "We work with three clubs a few minutes away: Montecchia, Golf Club Padova and Frassanelle. We book the tee time — and the taxi to get there.", ctaGreen: "Request a green fee", ctaMaestro: "Lesson with the pro", ctaSpa: "Request a treatment", err_generic: "An error occurred. Please try again shortly.",
+      menuPdf: {"bistro":"Bistrot menu","bar":"Bar list","vini":"Wine list"},
       err_fallback: "We could not register your request. Please call +39 049 9939200 or write to info@termeleonardo.com: we will reply right away.", success_rif: "Reference",
       success_title: "Request received!", success_body: "We have received your booking request and will reply to",
       success_soon: "as soon as possible.", success_thanks: "Thank you", reset: "New request",
@@ -298,7 +300,7 @@ export const translations = {
       label: "Info & Contact", title: "Everything for your stay",
       seasonTitle: "2026 Season", season: "Hotel and pools open from 14 February to 29 November 2026.",
       contactsTitle: "Contacts", address: "Via Monteortone 46, 35037 Abano Terme (PD), Italy",
-      phoneLabel: "Reception", phone: "+39 049 9939 200", cureLabel: "Thermal Cures Office", curePhone: "+39 049 9939234", email: "info@termeleonardo.com",
+      phoneLabel: "Reception", phone: "+39 049 9939 200", cureLabel: "Thermal Cures Office", curePhone: "+39 049 9939234", cureOrari: "Mon–Sat 8:00–13:00, closed on Wednesdays", email: "info@termeleonardo.com",
       getThereTitle: "How to reach us",
       distances: ["Abano Terme centre — 1.5 km", "Terme Euganee station — 7 km", "Padua — 12 km", "Venice airport — 60 km", "Treviso airport — 70 km"],
       highway: "By car: A13 exit \u201cTerme Euganee\u201d or A4 exit \u201cPadova Ovest\u201d.",
@@ -322,7 +324,7 @@ export const translations = {
         { t: "NHS ticket", d: "With a doctor's referral: visit and a cycle of up to 12 mud treatments. Guest ticket € 55." },
         { t: "Guests from Germany", d: "Hotel recognised under §13 Abs. 4 SGB V: cures potentially refundable by the Krankenkasse." },
       ],
-      note: "Cures are also available without staying overnight. Thermal Cures Office: +39 049 9939234.",
+      note: "Cures are also available without staying overnight. Thermal Cures Office: +39 049 9939234, Monday to Saturday 8:00–13:00, closed on Wednesdays.",
     },
     treatments: {
       label: "Massages & Treatments", title: "Our tailor-made wellness",
@@ -374,7 +376,7 @@ export const translations = {
   },
 
   de: {
-    nav: { benessere: "Wellness", golf: "Sport & Natur", camere: "Zimmer", ristorante: "Restaurant", dayspa: "Day Spa", cure: "Thermalkuren", offerte: "Angebote", info: "Info & Kontakt", contatti: "Kontakt", prenota: "Buchen" },
+    nav: { benessere: "Wellness", golf: "Sport & Natur", camere: "Zimmer", ristorante: "Restaurant", dayspa: "Day Spa", cure: "Thermalkuren", offerte: "Angebote", faq: "FAQ", info: "Info & Kontakt", contatti: "Kontakt", prenota: "Buchen" },
     hero: {
       badge: "Euganeische Hügel · Monteortone",
       title1: "Entdecke deine", titleEm: "Balance",
@@ -383,11 +385,11 @@ export const translations = {
     },
     wellness: {
       label: "Wellness", title: "Eine Oase für Körper und Geist",
-      body: "Im Herzen von Monteortone tauchen Sie in die Thermalbäder bei 30–35°C ein, entspannen in den natürlichen Schwitzgrotten und lassen sich von den Erlebnisduschen umhüllen. Ein regenerierender Weg, der das Terme Leonardo zu einem der beliebtesten Hotels in Abano Terme macht.",
+      body: "Im Herzen von Monteortone tauchen Sie in die Thermalbäder bei 30–35°C ein, entspannen in den Schwitzgrotten und lassen sich von den Erlebnisduschen umhüllen. Ein regenerierender Weg, der das Terme Leonardo zu einem der beliebtesten Hotels in Abano Terme macht.",
       tempCaption: "Die natürliche Temperatur unserer Thermalwässer",
       features: [
         { title: "Thermalbäder 30–35°C", desc: "Innen- und Außenbecken, gespeist von den Thermalquellen der Euganeischen Hügel." },
-        { title: "Natürliche Schwitzgrotten", desc: "Ein regenerierender Weg in der wohligen Wärme der natürlichen Grotten." },
+        { title: "Schwitzgrotten", desc: "Ein regenerierender Weg in der wohligen Wärme der Grotten." },
         { title: "Hydromassage-Liegen", desc: "Wasserstrahlen lösen Verspannungen und beleben den Kreislauf." },
         { title: "Erlebnisduschen", desc: "Chromotherapie und Düfte für ein vollständiges sinnliches Erwachen." },
         { title: "Medizinische Fangotherapie", desc: "Behandlungen mit reifem Thermalfango mit heilenden Eigenschaften." },
@@ -473,6 +475,7 @@ export const translations = {
       submit: "Anfrage senden", sending: "Senden…",
       err_required: "Bitte Pflichtfelder ausfüllen: Name, E-Mail und Aufenthaltsdaten.",
       golfConv: "Wir arbeiten mit drei Clubs in wenigen Minuten Entfernung: Montecchia, Golf Club Padova und Frassanelle. Wir buchen die Startzeit — und das Taxi dorthin.", ctaGreen: "Green Fee anfragen", ctaMaestro: "Stunde mit dem Pro", ctaSpa: "Anwendung anfragen", err_generic: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es gleich erneut.",
+      menuPdf: {"bistro":"Bistrot-Karte","bar":"Barkarte","vini":"Weinkarte"},
       err_fallback: "Wir konnten Ihre Anfrage nicht speichern. Bitte rufen Sie uns unter +39 049 9939200 an oder schreiben Sie an info@termeleonardo.com: wir antworten sofort.", success_rif: "Referenz",
       success_title: "Anfrage erhalten!", success_body: "Wir haben Ihre Buchungsanfrage erhalten und antworten an",
       success_soon: "so bald wie möglich.", success_thanks: "Danke", reset: "Neue Anfrage",
@@ -482,7 +485,7 @@ export const translations = {
       label: "Info & Kontakt", title: "Alles für Ihren Aufenthalt",
       seasonTitle: "Saison 2026", season: "Hotel und Thermalbäder geöffnet vom 14. Februar bis 29. November 2026.",
       contactsTitle: "Kontakt", address: "Via Monteortone 46, 35037 Abano Terme (PD), Italien",
-      phoneLabel: "Rezeption", phone: "+39 049 9939 200", cureLabel: "Kur-Sekretariat", curePhone: "+39 049 9939234", email: "info@termeleonardo.com",
+      phoneLabel: "Rezeption", phone: "+39 049 9939 200", cureLabel: "Kur-Sekretariat", curePhone: "+39 049 9939234", cureOrari: "Mo–Sa 8:00–13:00, mittwochs geschlossen", email: "info@termeleonardo.com",
       getThereTitle: "Anreise",
       distances: ["Zentrum Abano Terme — 1,5 km", "Bahnhof Terme Euganee — 7 km", "Padua — 12 km", "Flughafen Venedig — 60 km", "Flughafen Treviso — 70 km"],
       highway: "Mit dem Auto: A13 Ausfahrt \u201eTerme Euganee\u201c oder A4 Ausfahrt \u201ePadova Ovest\u201c.",
@@ -506,7 +509,7 @@ export const translations = {
         { t: "Ticket (SSN)", d: "Mit ärztlicher Überweisung: Untersuchung und Zyklus bis zu 12 Fango-Anwendungen. Gästeticket 55 €." },
         { t: "Gäste aus Deutschland", d: "Hotel anerkannt gemäß §13 Abs. 4 SGB V: Kuren ggf. von der Krankenkasse erstattungsfähig." },
       ],
-      note: "Die Kuren sind auch ohne Übernachtung möglich. Kur-Sekretariat: +39 049 9939234.",
+      note: "Die Kuren sind auch ohne Übernachtung möglich. Kur-Sekretariat: +39 049 9939234, Montag bis Samstag 8:00–13:00 Uhr, mittwochs geschlossen.",
     },
     treatments: {
       label: "Massagen & Behandlungen", title: "Unser maßgeschneidertes Wellness",
@@ -558,7 +561,7 @@ export const translations = {
   },
 
   fr: {
-    nav: { benessere: "Bien-être", golf: "Sport & Nature", camere: "Chambres", ristorante: "Restaurant", dayspa: "Day Spa", cure: "Cures Thermales", offerte: "Offres", info: "Infos & Contact", contatti: "Contact", prenota: "Réserver" },
+    nav: { benessere: "Bien-être", golf: "Sport & Nature", camere: "Chambres", ristorante: "Restaurant", dayspa: "Day Spa", cure: "Cures Thermales", offerte: "Offres", faq: "FAQ", info: "Infos & Contact", contatti: "Contact", prenota: "Réserver" },
     hero: {
       badge: "Collines Euganéennes · Monteortone",
       title1: "Redécouvrez votre", titleEm: "équilibre",
@@ -657,6 +660,7 @@ export const translations = {
       submit: "Envoyer la demande", sending: "Envoi…",
       err_required: "Veuillez remplir les champs obligatoires : nom, e-mail et dates du séjour.",
       golfConv: "Partenaires de trois clubs à quelques minutes : Montecchia, Golf Club Padova et Frassanelle. Nous réservons le départ — et le taxi pour y aller.", ctaGreen: "Demander un green fee", ctaMaestro: "Cours avec le professeur", ctaSpa: "Demander un soin", err_generic: "Une erreur s'est produite. Veuillez réessayer sous peu.",
+      menuPdf: {"bistro":"Carte du Bistrot","bar":"Carte du bar","vini":"Carte des vins"},
       err_fallback: "Nous n'avons pas pu enregistrer votre demande. Appelez-nous au +39 049 9939200 ou écrivez à info@termeleonardo.com : nous répondons tout de suite.", success_rif: "Référence",
       success_title: "Demande reçue !", success_body: "Nous avons reçu votre demande de réservation et vous répondrons à",
       success_soon: "dès que possible.", success_thanks: "Merci", reset: "Nouvelle demande",
@@ -666,7 +670,7 @@ export const translations = {
       label: "Infos & Contact", title: "Tout pour votre séjour",
       seasonTitle: "Saison 2026", season: "Hôtel et piscines ouverts du 14 février au 29 novembre 2026.",
       contactsTitle: "Contacts", address: "Via Monteortone 46, 35037 Abano Terme (PD), Italie",
-      phoneLabel: "Réception", phone: "+39 049 9939 200", cureLabel: "Secrétariat des Cures", curePhone: "+39 049 9939234", email: "info@termeleonardo.com",
+      phoneLabel: "Réception", phone: "+39 049 9939 200", cureLabel: "Secrétariat des Cures", curePhone: "+39 049 9939234", cureOrari: "Lun–Sam 8h00–13h00, fermé le mercredi", email: "info@termeleonardo.com",
       getThereTitle: "Comment nous rejoindre",
       distances: ["Centre d'Abano Terme — 1,5 km", "Gare Terme Euganee — 7 km", "Padoue — 12 km", "Aéroport de Venise — 60 km", "Aéroport de Trévise — 70 km"],
       highway: "En voiture : A13 sortie \u201cTerme Euganee\u201d ou A4 sortie \u201cPadova Ovest\u201d.",
@@ -690,7 +694,7 @@ export const translations = {
         { t: "Ticket (SSN)", d: "Avec ordonnance du médecin : visite et cycle jusqu'à 12 boues. Ticket à la charge du client 55 €." },
         { t: "Clients d'Allemagne", d: "Hôtel reconnu au titre du §13 Abs. 4 SGB V : cures potentiellement remboursables par la Krankenkasse." },
       ],
-      note: "Les cures sont possibles même sans séjourner. Secrétariat des Cures : +39 049 9939234.",
+      note: "Les cures sont possibles même sans séjourner. Secrétariat des Cures : +39 049 9939234, du lundi au samedi 8h00–13h00, fermé le mercredi.",
     },
     treatments: {
       label: "Massages & Soins", title: "Notre bien-être sur mesure",

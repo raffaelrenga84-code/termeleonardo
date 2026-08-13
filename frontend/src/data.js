@@ -69,6 +69,7 @@ export const NAV = [
   { href: "#dayspa" },
   { href: "#cure" },
   { href: "#offerte" },
+  { href: "#faq" },
   { href: "#info" },
 ];
 
@@ -129,7 +130,7 @@ export const OFFERS = [
 
 export const WELLNESS_FEATURES = [
   { title: "Piscine Termali 30–35°C", desc: "Piscine interne ed esterne alimentate dalle acque termali dei Colli Euganei." },
-  { title: "Grotte Sudatorie Naturali", desc: "Un percorso rigenerante nel calore avvolgente delle grotte naturali." },
+  { title: "Grotte Sudatorie", desc: "Un percorso rigenerante nel calore avvolgente delle grotte." },
   { title: "Lettini Idromassaggianti", desc: "Getti d'acqua che sciolgono le tensioni e riattivano la circolazione." },
   { title: "Docce Emozionali", desc: "Cromoterapia e profumi per un risveglio sensoriale completo." },
   { title: "Fangoterapia Medica", desc: "Trattamenti di fango termale maturo dalle proprietà curative." },
