@@ -26,6 +26,10 @@ export const SHOP_URL = "https://www.termeleonardo.com/shop";
 /* i buoni regalo si comprano qui: pagina in IT/DE/EN/FR, pagamento con
    carta e buono spedito per email dalla funzione `buoni` */
 export const REGALA_URL = "https://arrivo-terme-leonardo.vercel.app/buoni/regala/";
+/* le richieste (transfer, e presto green fee, maestro e trattamenti) vivono
+   nelle pagine statiche: sono gia' multilingua e non richiedono un router */
+export const RICHIESTA_URL = (tipo, lang = "it") =>
+  `https://arrivo-terme-leonardo.vercel.app/richieste/${tipo}/?l=${lang}`;
 export const dayspaUrl = (lang = "it") => `https://www.termeleonardo.com/${lang}/day-spa/prenotazioni`;
 export const COMPANY_LINE = "Hotel Terme Leonardo · Via Monteortone, 46 · 35037 Abano Terme · P: +39 049 9939 200 · info@termeleonardo.com · P.I. IT 02042330288 · CIN: IT028089A18QYO48ED";
 export const loginUrl = (lang = "it") => `https://www.termeleonardo.com/${lang}/login`;

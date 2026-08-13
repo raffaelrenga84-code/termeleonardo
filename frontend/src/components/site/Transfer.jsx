@@ -1,9 +1,10 @@
 import { Reveal, Label } from "./Reveal";
 import { Plane } from "lucide-react";
 import { useLang } from "../../LanguageContext";
+import { RICHIESTA_URL } from "../../data";
 
 export default function Transfer() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const tr = t.transfer;
   return (
     <section id="transfer" data-testid="transfer-section" className="py-24 md:py-32 bg-[#12241A] text-white">
@@ -19,7 +20,12 @@ export default function Transfer() {
               </div>
               <p className="text-sm text-white/70 mt-3">{tr.excursions}</p>
             </div>
-            <a href="#prenota" data-testid="transfer-cta" className="inline-block mt-8 rounded-full bg-[#B08D57] text-white px-8 py-4 text-sm font-semibold hover:bg-[#E7C98B] hover:text-[#1A3626] transition-colors">{tr.cta}</a>
+            {/* portava a #prenota, cioe' al modulo del preventivo: chi vuole
+                un taxi finiva a chiedere un soggiorno. Ora va alla pagina
+                dedicata, che chiede quello che serve davvero ai tassisti */}
+            <a href={RICHIESTA_URL("transfer", lang)} target="_blank" rel="noopener noreferrer"
+              data-testid="transfer-cta"
+              className="inline-block mt-8 rounded-full bg-[#B08D57] text-white px-8 py-4 text-sm font-semibold hover:bg-[#E7C98B] hover:text-[#1A3626] transition-colors">{tr.cta}</a>
           </Reveal>
           <Reveal className="lg:col-span-3" delay={0.12}>
             <div className="divide-y divide-white/10">
