@@ -25,25 +25,52 @@ export const ROOM_GALLERY = [
 export const BOOKING_URL = "https://www.termeleonardo.com/booking/select-dates";
 export const DAYSPA_URL = "https://www.termeleonardo.com/it/day-spa/prenotazioni";
 export const SHOP_URL = "https://www.termeleonardo.com/shop";
-/* i buoni regalo si comprano qui: pagina in IT/DE/EN/FR, pagamento con
-   carta e buono spedito per email dalla funzione `buoni` */
-export const REGALA_URL = "https://arrivo-terme-leonardo.vercel.app/buoni/regala/";
-/* Le richieste vivono nelle pagine statiche: sono gia' multilingua e non
-   richiedono un router.
+/* Tutti gli indirizzi rivolti all'ospite stanno sul dominio dell'hotel e sono
+   serviti dalle riscritture in `vercel.json`: le pagine restano dove sono,
+   su arrivo-terme-leonardo.vercel.app, e i link gia' partiti nelle email dei
+   buoni — che valgono un anno — continuano a rispondere. Indirizzo nuovo in
+   aggiunta, mai al posto.
 
-   Due forme di indirizzo, e non per capriccio: il transfer ha una pagina
-   sua perche' porta l'elenco chiuso delle 189 destinazioni dei tassisti,
-   mentre green fee, maestro e trattamenti condividono una pagina sola che
-   cambia in base al tipo — tre file quasi identici divergerebbero come e'
-   gia' successo con l'anteprima del buono. */
-const BASE_RICHIESTE = "https://arrivo-terme-leonardo.vercel.app/richieste";
-export const TRANSFER_URL = (lang = "it") => `${BASE_RICHIESTE}/transfer/?l=${lang}`;
-export const RICHIESTA_URL = (tipo, lang = "it") =>
-  `${BASE_RICHIESTE}/?tipo=${tipo}&l=${lang}`;
-/* La prenotazione camere sta nelle pagine statiche come le altre richieste:
-   gia' multilingua, nessun router. */
-export const PRENOTA_URL = (lang = "it") =>
-  `https://arrivo-terme-leonardo.vercel.app/prenota/?l=${lang}`;
+   Il percorso e' tradotto perche' un ospite tedesco che condivide il link non
+   debba mandare in giro parole italiane. La lingua sta davanti, come nel sito
+   vecchio, cosi' ogni lingua ha un indirizzo suo. */
+const SITO = "https://www.hoteltermeleonardo.com";
+
+const percorsi = (mappa) => (lang = "it") => `${SITO}${mappa[lang] || mappa.it}`;
+
+export const REGALA_URL_LANG = percorsi({
+  it: "/it/buoni-regalo", de: "/de/gutscheine",
+  en: "/en/gift-vouchers", fr: "/fr/cheques-cadeaux",
+});
+export const REGALA_URL = REGALA_URL_LANG("it");
+
+/* Il transfer ha una pagina sua perche' porta l'elenco chiuso delle 189
+   destinazioni dei tassisti; green fee, maestro e trattamenti condividono una
+   pagina sola che cambia in base al tipo — tre file quasi identici
+   divergerebbero come e' gia' successo con l'anteprima del buono. Qui pero'
+   l'ospite vede quattro indirizzi distinti: la pagina condivisa e' un fatto
+   nostro, non suo. */
+export const TRANSFER_URL = percorsi({
+  it: "/it/transfer", de: "/de/transfer", en: "/en/transfer", fr: "/fr/transfert",
+});
+
+const RICHIESTA_PERCORSI = {
+  greenfee: { it: "/it/green-fee", de: "/de/greenfee", en: "/en/green-fee", fr: "/fr/green-fee" },
+  maestro: { it: "/it/maestro-di-golf", de: "/de/golflehrer", en: "/en/golf-pro", fr: "/fr/pro-de-golf" },
+  trattamenti: { it: "/it/trattamenti", de: "/de/behandlungen", en: "/en/treatments", fr: "/fr/soins" },
+};
+
+export const RICHIESTA_URL = (tipo, lang = "it") => {
+  const m = RICHIESTA_PERCORSI[tipo];
+  /* un tipo non ancora battezzato non deve rompere il pulsante: passa dalla
+     pagina condivisa, che sa gia' leggersi il tipo dal parametro */
+  if (!m) return `${SITO}/richieste/?tipo=${tipo}&l=${lang}`;
+  return `${SITO}${m[lang] || m.it}`;
+};
+
+export const PRENOTA_URL = percorsi({
+  it: "/it/prenota", de: "/de/buchen", en: "/en/book", fr: "/fr/reserver",
+});
 export const dayspaUrl = (lang = "it") => `https://www.termeleonardo.com/${lang}/day-spa/prenotazioni`;
 export const COMPANY_LINE = "Hotel Terme Leonardo · Via Monteortone, 46 · 35037 Abano Terme · P: +39 049 9939 200 · info@termeleonardo.com · P.I. IT 02042330288 · CIN: IT028089A18QYO48ED";
 export const loginUrl = (lang = "it") => `https://www.termeleonardo.com/${lang}/login`;
