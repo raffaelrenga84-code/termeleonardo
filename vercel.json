@@ -1,38 +1,117 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
-    { "source": "/it/buoni-regalo", "destination": "https://arrivo-terme-leonardo.vercel.app/buoni/regala/?l=it" },
-    { "source": "/de/gutscheine", "destination": "https://arrivo-terme-leonardo.vercel.app/buoni/regala/?l=de" },
-    { "source": "/en/gift-vouchers", "destination": "https://arrivo-terme-leonardo.vercel.app/buoni/regala/?l=en" },
-    { "source": "/fr/cheques-cadeaux", "destination": "https://arrivo-terme-leonardo.vercel.app/buoni/regala/?l=fr" },
-
-    { "source": "/it/prenota", "destination": "https://arrivo-terme-leonardo.vercel.app/prenota/?l=it" },
-    { "source": "/de/buchen", "destination": "https://arrivo-terme-leonardo.vercel.app/prenota/?l=de" },
-    { "source": "/en/book", "destination": "https://arrivo-terme-leonardo.vercel.app/prenota/?l=en" },
-    { "source": "/fr/reserver", "destination": "https://arrivo-terme-leonardo.vercel.app/prenota/?l=fr" },
-
-    { "source": "/it/transfer", "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/transfer/?l=it" },
-    { "source": "/de/transfer", "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/transfer/?l=de" },
-    { "source": "/en/transfer", "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/transfer/?l=en" },
-    { "source": "/fr/transfert", "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/transfer/?l=fr" },
-
-    { "source": "/it/green-fee", "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=greenfee&l=it" },
-    { "source": "/de/greenfee", "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=greenfee&l=de" },
-    { "source": "/en/green-fee", "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=greenfee&l=en" },
-    { "source": "/fr/green-fee", "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=greenfee&l=fr" },
-
-    { "source": "/it/maestro-di-golf", "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=maestro&l=it" },
-    { "source": "/de/golflehrer", "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=maestro&l=de" },
-    { "source": "/en/golf-pro", "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=maestro&l=en" },
-    { "source": "/fr/pro-de-golf", "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=maestro&l=fr" },
-
-    { "source": "/it/trattamenti", "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=trattamenti&l=it" },
-    { "source": "/de/behandlungen", "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=trattamenti&l=de" },
-    { "source": "/en/treatments", "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=trattamenti&l=en" },
-    { "source": "/fr/soins", "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=trattamenti&l=fr" },
-
-    { "source": "/buoni/:percorso*", "destination": "https://arrivo-terme-leonardo.vercel.app/buoni/:percorso*" },
-    { "source": "/prenota/:percorso*", "destination": "https://arrivo-terme-leonardo.vercel.app/prenota/:percorso*" },
-    { "source": "/richieste/:percorso*", "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/:percorso*" }
+    {
+      "source": "/it/buoni-regalo",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/buoni/regala/?l=it"
+    },
+    {
+      "source": "/de/gutscheine",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/buoni/regala/?l=de"
+    },
+    {
+      "source": "/en/gift-vouchers",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/buoni/regala/?l=en"
+    },
+    {
+      "source": "/fr/cheques-cadeaux",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/buoni/regala/?l=fr"
+    },
+    {
+      "source": "/it/prenota",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/prenota/?l=it"
+    },
+    {
+      "source": "/de/buchen",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/prenota/?l=de"
+    },
+    {
+      "source": "/en/book",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/prenota/?l=en"
+    },
+    {
+      "source": "/fr/reserver",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/prenota/?l=fr"
+    },
+    {
+      "source": "/it/transfer",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/transfer/?l=it"
+    },
+    {
+      "source": "/de/transfer",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/transfer/?l=de"
+    },
+    {
+      "source": "/en/transfer",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/transfer/?l=en"
+    },
+    {
+      "source": "/fr/transfert",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/transfer/?l=fr"
+    },
+    {
+      "source": "/it/green-fee",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=greenfee&l=it"
+    },
+    {
+      "source": "/de/greenfee",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=greenfee&l=de"
+    },
+    {
+      "source": "/en/green-fee",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=greenfee&l=en"
+    },
+    {
+      "source": "/fr/green-fee",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=greenfee&l=fr"
+    },
+    {
+      "source": "/it/maestro-di-golf",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=maestro&l=it"
+    },
+    {
+      "source": "/de/golflehrer",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=maestro&l=de"
+    },
+    {
+      "source": "/en/golf-pro",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=maestro&l=en"
+    },
+    {
+      "source": "/fr/pro-de-golf",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=maestro&l=fr"
+    },
+    {
+      "source": "/it/trattamenti",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=trattamenti&l=it"
+    },
+    {
+      "source": "/de/behandlungen",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=trattamenti&l=de"
+    },
+    {
+      "source": "/en/treatments",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=trattamenti&l=en"
+    },
+    {
+      "source": "/fr/soins",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=trattamenti&l=fr"
+    },
+    {
+      "source": "/gestione/buoni",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/buoni/"
+    },
+    {
+      "source": "/buoni/:percorso*",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/buoni/:percorso*"
+    },
+    {
+      "source": "/prenota/:percorso*",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/prenota/:percorso*"
+    },
+    {
+      "source": "/richieste/:percorso*",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/:percorso*"
+    }
   ]
 }
