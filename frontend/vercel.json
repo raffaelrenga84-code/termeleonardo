@@ -1,5 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "//": "Le pagine statiche vivono nel repo termeleonardo-infra, sotto pagine/, e sono servite dal progetto Vercel arrivo-terme-leonardo. Qui si riscrivono sul dominio dell hotel. REGOLA: ogni cartella di primo livello di pagine/ deve avere qui la sua riga di passaggio, altrimenti i moduli e le immagini di quella cartella tornano index.html con tipo text/html, il browser rifiuta di eseguirli e la pagina resta bianca. Oggi: buoni, comune, prenota, richieste.",
   "rewrites": [
     {
       "source": "/it/buoni-regalo",
@@ -112,6 +113,10 @@
     {
       "source": "/richieste/:percorso*",
       "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/:percorso*"
+    },
+    {
+      "source": "/comune/:percorso*",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/comune/:percorso*"
     }
   ]
 }
