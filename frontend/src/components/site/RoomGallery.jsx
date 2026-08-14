@@ -2,11 +2,11 @@ import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { Reveal, Label } from "./Reveal";
-import { ROOM_GALLERY, BOOKING_URL } from "../../data";
+import { ROOM_GALLERY, PRENOTA_URL } from "../../data";
 import { useLang } from "../../LanguageContext";
 
 export default function RoomGallery() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const g = t.roomsGallery;
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
   const [selected, setSelected] = useState(0);
@@ -64,7 +64,7 @@ export default function RoomGallery() {
                       </div>
                       <p className="text-xs uppercase tracking-wider text-[#B08D57] mt-2">{info.spec}</p>
                       <p className="text-sm text-[#5A5A5A] mt-3 flex-grow">{info.desc}</p>
-                      <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" data-testid={`room-book-${room.key}`}
+                      <a href={PRENOTA_URL(lang)} target="_blank" rel="noopener noreferrer" data-testid={`room-book-${room.key}`}
                         className="mt-6 inline-flex items-center justify-center rounded-full bg-[#1A3626] text-[#F9F6F0] py-3 text-sm font-semibold hover:bg-[#B08D57] transition-colors">
                         {g.book}
                       </a>

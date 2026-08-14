@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Lock, Gift } from "lucide-react";
-import { NAV, BOOKING_URL, REGALA_URL, loginUrl, dayspaUrl } from "../../data";
+import { NAV, PRENOTA_URL, REGALA_URL, loginUrl, dayspaUrl } from "../../data";
 import { LANGS } from "../../i18n";
 import { LEGAL } from "../../legal";
 import { useLang } from "../../LanguageContext";
@@ -102,7 +102,7 @@ export default function Navbar() {
             {t.dayspa.bookBtn}
           </a>
           <a
-            href={BOOKING_URL}
+            href={PRENOTA_URL(lang)}
             target="_blank"
             rel="noopener noreferrer"
             data-testid="nav-book-btn"
@@ -150,7 +150,7 @@ export default function Navbar() {
           <a href={dayspaUrl(lang)} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} data-testid="nav-mobile-dayspa" className="rounded-full border border-[#1A3626] text-[#1A3626] px-6 py-3 text-center font-semibold">
             {t.dayspa.bookBtn}
           </a>
-          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="rounded-full bg-[#1A3626] text-[#F9F6F0] px-6 py-3 text-center font-semibold">
+          <a href={PRENOTA_URL(lang)} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="rounded-full bg-[#1A3626] text-[#F9F6F0] px-6 py-3 text-center font-semibold">
             {t.nav.prenota}
           </a>
         </div>

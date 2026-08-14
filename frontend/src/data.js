@@ -20,6 +20,8 @@ export const ROOM_GALLERY = [
   { key: "suite", img: `${BASE}/suite-533-hotel-terme-lonardo-@2x.jpg`, price: "115" },
 ];
 
+/* Motore di prenotazione vecchio: resta definito come riserva, ma nessun
+   pulsante del sito ci punta piu' (vedi PRENOTA_URL sotto). */
 export const BOOKING_URL = "https://www.termeleonardo.com/booking/select-dates";
 export const DAYSPA_URL = "https://www.termeleonardo.com/it/day-spa/prenotazioni";
 export const SHOP_URL = "https://www.termeleonardo.com/shop";
@@ -38,6 +40,10 @@ const BASE_RICHIESTE = "https://arrivo-terme-leonardo.vercel.app/richieste";
 export const TRANSFER_URL = (lang = "it") => `${BASE_RICHIESTE}/transfer/?l=${lang}`;
 export const RICHIESTA_URL = (tipo, lang = "it") =>
   `${BASE_RICHIESTE}/?tipo=${tipo}&l=${lang}`;
+/* La prenotazione camere sta nelle pagine statiche come le altre richieste:
+   gia' multilingua, nessun router. */
+export const PRENOTA_URL = (lang = "it") =>
+  `https://arrivo-terme-leonardo.vercel.app/prenota/?l=${lang}`;
 export const dayspaUrl = (lang = "it") => `https://www.termeleonardo.com/${lang}/day-spa/prenotazioni`;
 export const COMPANY_LINE = "Hotel Terme Leonardo · Via Monteortone, 46 · 35037 Abano Terme · P: +39 049 9939 200 · info@termeleonardo.com · P.I. IT 02042330288 · CIN: IT028089A18QYO48ED";
 export const loginUrl = (lang = "it") => `https://www.termeleonardo.com/${lang}/login`;

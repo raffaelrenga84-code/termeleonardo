@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import { IMG, BOOKING_URL } from "../../data";
+import { IMG, PRENOTA_URL } from "../../data";
 import { useLang } from "../../LanguageContext";
 
 export default function Hero() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const h = t.hero;
   return (
     <section id="top" data-testid="hero-section" className="relative min-h-screen flex items-end overflow-hidden">
@@ -19,7 +19,7 @@ export default function Hero() {
           </h1>
           <p className="text-white/85 text-lg md:text-xl mt-8 max-w-xl font-light">{h.subtitle}</p>
           <div className="flex flex-wrap gap-4 mt-10">
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" data-testid="hero-book-btn"
+            <a href={PRENOTA_URL(lang)} target="_blank" rel="noopener noreferrer" data-testid="hero-book-btn"
               className="rounded-full bg-[#F9F6F0] text-[#1A3626] px-8 py-4 text-sm font-semibold hover:bg-[#B08D57] hover:text-white transition-colors">{h.book}</a>
             <a href="#benessere" data-testid="hero-discover-btn"
               className="rounded-full border border-white/60 text-white px-8 py-4 text-sm font-semibold hover:bg-white/10 transition-colors">{h.discover}</a>
