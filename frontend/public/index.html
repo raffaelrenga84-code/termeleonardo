@@ -29,6 +29,100 @@
         Learn how to configure a non-root public URL by running `npm run build`.
         -->
                     <title>Hotel Terme Leonardo | 4 stelle termale ad Abano Terme</title>
+
+        <!-- ============================================================
+             INDIRIZZO CANONICO E LINGUE
+
+             Il sito e' UNA PAGINA SOLA e la lingua vive in ?lang=. Senza
+             canonical, "/", "/?lang=it" e "/?lang=de" sono tre indirizzi
+             che per un motore di ricerca portano la stessa pagina, e la
+             forza si divide fra copie invece di sommarsi su una.
+
+             hreflang dichiara che sono la stessa pagina in lingue diverse:
+             finora tedesco, inglese e francese, per Google, non esistevano.
+             x-default e' la versione da mostrare a chi non rientra in
+             nessuna delle quattro.
+             ============================================================ -->
+        <link rel="canonical" href="https://www.hoteltermeleonardo.com/" />
+        <link rel="alternate" hreflang="it" href="https://www.hoteltermeleonardo.com/?lang=it" />
+        <link rel="alternate" hreflang="de" href="https://www.hoteltermeleonardo.com/?lang=de" />
+        <link rel="alternate" hreflang="en" href="https://www.hoteltermeleonardo.com/?lang=en" />
+        <link rel="alternate" hreflang="fr" href="https://www.hoteltermeleonardo.com/?lang=fr" />
+        <link rel="alternate" hreflang="x-default" href="https://www.hoteltermeleonardo.com/" />
+
+        <!-- ============================================================
+             ANTEPRIMA QUANDO IL LINK VIENE CONDIVISO
+
+             Un albergo si passa fra amici che organizzano un weekend: il
+             link finisce su WhatsApp, e senza questi tag arrivava come una
+             riga di testo nuda, senza foto e senza titolo. E' vetrina
+             regalata a nessuno.
+             ============================================================ -->
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Hotel Terme Leonardo" />
+        <meta property="og:locale" content="it_IT" />
+        <meta property="og:title" content="Hotel Terme Leonardo — 4 stelle termale ad Abano Terme" />
+        <meta property="og:description" content="Piscine termali 30-35 °C, centro grotte, cure convenzionate SSN e campo pratica golf, sui Colli Euganei." />
+        <meta property="og:url" content="https://www.hoteltermeleonardo.com/" />
+        <meta property="og:image" content="https://arrivo-terme-leonardo.vercel.app/buoni/img/dayspa.jpg" />
+        <meta property="og:image:alt" content="Le piscine termali dell'Hotel Terme Leonardo" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <!-- ============================================================
+             DATI STRUTTURATI — la scheda dell'hotel per i motori
+
+             E' quello che alimenta i risultati ricchi e le schede alberghi.
+             Non era dichiarato niente: il sito diceva a Google "sono una
+             pagina web", non "sono un albergo a quattro stelle in questo
+             indirizzo, con questo telefono".
+
+             ⟨verificare⟩ L'INDIRIZZO E' QUELLO POSTALE, dato dalla
+             proprieta' il 15 agosto 2026. Attenzione: pagine/documenti.html
+             dell'altro repository riporta ancora "Monteortone di Teolo" in
+             tre punti — una delle due versioni e' vecchia e vanno
+             allineate, perche' un indirizzo sbagliato qui finisce nelle
+             mappe.
+
+             Le coordinate GPS NON sono dichiarate di proposito: non le ho
+             verificate, e coordinate sbagliate mettono l'albergo nel posto
+             sbagliato sulla mappa — peggio che non averle. Si aggiungono
+             quando qualcuno le conferma.
+             ============================================================ -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Hotel",
+          "name": "Hotel Terme Leonardo",
+          "url": "https://www.hoteltermeleonardo.com/",
+          "starRating": { "@type": "Rating", "ratingValue": "4" },
+          "description": "Hotel 4 stelle termale ad Abano Terme, sui Colli Euganei: piscine termali 30-35 °C, centro grotte, cure termali convenzionate SSN e campo pratica golf.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Via Monteortone 46",
+            "addressLocality": "Monteortone di Abano Terme",
+            "postalCode": "35037",
+            "addressRegion": "PD",
+            "addressCountry": "IT"
+          },
+          "telephone": "+39 049 9939200",
+          "email": "info@termeleonardo.com",
+          "priceRange": "€€",
+          "currenciesAccepted": "EUR",
+          "paymentAccepted": "Contanti, Bancomat, Visa, Mastercard, bonifico",
+          "petsAllowed": true,
+          "checkinTime": "15:00",
+          "checkoutTime": "11:00",
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "Piscine termali", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Centro benessere e grotte", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Cure termali convenzionate SSN", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Campo pratica golf", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Wi-Fi gratuito", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Parcheggio gratuito", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Ristorante", "value": true }
+          ]
+        }
+        </script>
         <script>window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>
         <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
     </head>

@@ -1,0 +1,20 @@
+# Hotel Terme Leonardo — regole per i motori di ricerca.
+#
+# PERCHE' ESISTE QUESTO FILE. Fino al 15 agosto 2026 non c'era: la richiesta
+# di /robots.txt cadeva sul ripiego dell'applicazione e restituiva l'HTML
+# della home con codice 200. Un motore chiedeva le regole e riceveva una
+# pagina web — nessun errore visibile, nessuno se ne accorgeva, e la stessa
+# cosa succedeva a /sitemap.xml, che rende inutile qualunque sitemap inviata
+# a Search Console.
+
+User-agent: *
+Allow: /
+
+# Le pagine di servizio non hanno niente da offrire a chi cerca, e alcune
+# vogliono una chiave: indicizzarle sposta clic dalle pagine che vendono.
+Disallow: /gestione/
+Disallow: /buoni/stampa/
+Disallow: /richieste/
+Disallow: /comune/
+
+Sitemap: https://www.hoteltermeleonardo.com/sitemap.xml

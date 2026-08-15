@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Hotel Terme Leonardo — mappa del sito.
+
+  ONESTA' DI QUESTA SITEMAP. Il sito e' oggi UNA PAGINA SOLA: le sezioni
+  (camere, Day Spa, cure, golf) vivono tutte su "/" e non hanno un indirizzo
+  proprio. Elencare qui ancore tipo "/#day-spa" non servirebbe a niente: per
+  un motore di ricerca un'ancora non e' una pagina, e una sitemap gonfiata di
+  URL che non esistono e' peggio di una sitemap corta.
+
+  Quindi qui c'e' la home nelle quattro lingue, piu' le poche pagine vere che
+  esistono davvero. Il giorno che nasceranno le pagine per Day Spa, cure e
+  camere, questa sitemap crescera' con loro: e' quello il lavoro che sposta
+  il posizionamento, non questo file.
+
+  La lingua sta in ?lang= perche' e' cosi' che funziona il sito oggi. Non e'
+  la forma migliore — una cartella /de/ lo sarebbe — ma dichiarare il vero
+  vale piu' che dichiarare il desiderabile.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://www.hoteltermeleonardo.com/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.hoteltermeleonardo.com/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.hoteltermeleonardo.com/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hoteltermeleonardo.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.hoteltermeleonardo.com/?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hoteltermeleonardo.com/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hoteltermeleonardo.com/it/buoni-regalo</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.hoteltermeleonardo.com/it/buoni-regalo"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.hoteltermeleonardo.com/de/gutscheine"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hoteltermeleonardo.com/en/gift-vouchers"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.hoteltermeleonardo.com/fr/cheques-cadeaux"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hoteltermeleonardo.com/it/prenota</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
