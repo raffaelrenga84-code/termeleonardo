@@ -72,7 +72,7 @@ export const PRENOTA_URL = percorsi({
   it: "/it/prenota", de: "/de/buchen", en: "/en/book", fr: "/fr/reserver",
 });
 export const dayspaUrl = (lang = "it") => `https://www.termeleonardo.com/${lang}/day-spa/prenotazioni`;
-export const COMPANY_LINE = "Hotel Terme Leonardo · Via Monteortone, 46 · 35037 Abano Terme · P: +39 049 9939 200 · info@termeleonardo.com · P.I. IT 02042330288 · CIN: IT028089A18QYO48ED";
+export const COMPANY_LINE = "Hotel Terme Leonardo · Via Monteortone, 46 · 35037 Monteortone di Abano Terme (PD) · P: +39 049 9939 200 · info@termeleonardo.com · P.I. IT 02042330288 · CIN: IT028089A18QYO48ED";
 export const loginUrl = (lang = "it") => `https://www.termeleonardo.com/${lang}/login`;
 
 /* Trasparenza ULSS — cure termali erogate in convenzione con il SSR.
