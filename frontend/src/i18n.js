@@ -145,6 +145,7 @@ export const translations = {
       label: "Massaggi & Trattamenti", title: "Il nostro benessere su misura",
       body: "Massaggi e trattamenti viso e corpo, riservati ai maggiorenni. Prenotazione consigliata almeno due giorni prima, anche per gli ospiti Day Spa.",
       menuTitle: "Una selezione dal listino", from: "da",
+      scaricaListino: "Scarica il listino completo",
       items: [
         { n: "Relax con olio di cacao", d: "25 min", p: "40" },
         { n: "Antistress", d: "45–55 min", p: "55" },
@@ -330,6 +331,7 @@ export const translations = {
       label: "Massages & Treatments", title: "Our tailor-made wellness",
       body: "Face and body massages and treatments, for adults only. Booking recommended at least two days in advance, also for Day Spa guests.",
       menuTitle: "A selection from the menu", from: "from",
+      scaricaListino: "Download the full price list",
       items: [
         { n: "Cocoa-oil Relax", d: "25 min", p: "40" },
         { n: "Anti-stress", d: "45–55 min", p: "55" },
@@ -515,6 +517,7 @@ export const translations = {
       label: "Massagen & Behandlungen", title: "Unser maßgeschneidertes Wellness",
       body: "Gesichts- und Körpermassagen und -behandlungen, nur für Erwachsene. Reservierung mindestens zwei Tage im Voraus empfohlen, auch für Day-Spa-Gäste.",
       menuTitle: "Eine Auswahl aus der Liste", from: "ab",
+      scaricaListino: "Gesamte Preisliste herunterladen",
       items: [
         { n: "Relax mit Kakaoöl", d: "25 Min.", p: "40" },
         { n: "Antistress", d: "45–55 Min.", p: "55" },
@@ -700,6 +703,7 @@ export const translations = {
       label: "Massages & Soins", title: "Notre bien-être sur mesure",
       body: "Massages et soins visage et corps, réservés aux adultes. Réservation conseillée au moins deux jours à l'avance, également pour les clients Day Spa.",
       menuTitle: "Une sélection de la carte", from: "dès",
+      scaricaListino: "Télécharger la carte complète",
       items: [
         { n: "Relax à l'huile de cacao", d: "25 min", p: "40" },
         { n: "Antistress", d: "45–55 min", p: "55" },

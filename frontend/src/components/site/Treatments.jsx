@@ -30,13 +30,33 @@ export default function Treatments() {
                 </div>
               ))}
             </div>
-            {/* il listino c'era ma non c'era modo di chiedere niente: chi lo
-                leggeva doveva cercarsi il telefono da solo */}
-            <a href={RICHIESTA_URL("trattamenti", lang)} target="_blank" rel="noopener noreferrer"
-              data-testid="treatments-cta"
-              className="inline-block mt-8 rounded-full bg-[#1A3626] text-[#F9F6F0] px-8 py-4 text-sm font-semibold hover:bg-[#B08D57] transition-colors">
-              {b.ctaSpa}
-            </a>
+            {/* Due azioni, non una: chi ha già le idee chiare chiede, chi
+                vuole guardare con calma si scarica il listino intero. Sulla
+                pagina se ne vedono otto voci su trentasei — il resto era
+                invisibile, e chi cercava lo Shiatzu o un Programma pensava
+                che non li facessimo.
+                Il richiedi resta il pulsante pieno, lo scarica è secondario:
+                l'obiettivo della sezione è ricevere richieste. */}
+            <div className="flex flex-wrap items-center gap-3 mt-8">
+              <a href={RICHIESTA_URL("trattamenti", lang)} target="_blank" rel="noopener noreferrer"
+                data-testid="treatments-cta"
+                className="inline-block rounded-full bg-[#1A3626] text-[#F9F6F0] px-8 py-4 text-sm font-semibold hover:bg-[#B08D57] transition-colors">
+                {b.ctaSpa}
+              </a>
+              {/* download e non target="_blank": su un telefono il PDF si apre
+                  dentro il browser e l'ospite perde la pagina dell'hotel */}
+              <a href="/listino-trattamenti.pdf" download
+                data-testid="treatments-listino"
+                className="inline-flex items-center gap-2 rounded-full border border-[#1A3626] text-[#1A3626] px-8 py-4 text-sm font-semibold hover:bg-[#1A3626] hover:text-[#F9F6F0] transition-colors">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                {tr.scaricaListino}
+              </a>
+            </div>
           </div>
         </Reveal>
       </div>
