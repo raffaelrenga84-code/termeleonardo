@@ -24,7 +24,7 @@ export const translations = {
         { title: "Lettini Idromassaggianti", desc: "Getti d'acqua che sciolgono le tensioni e riattivano la circolazione." },
         { title: "Docce Emozionali", desc: "Cromoterapia e profumi per un risveglio sensoriale completo." },
         { title: "Fangoterapia Medica", desc: "Trattamenti di fango termale maturo dalle proprietà curative." },
-        { title: "Centro Benessere", desc: "Massaggi, trattamenti viso e corpo firmati dai nostri terapisti." },
+        { title: "Centro Benessere", desc: "Massaggi, trattamenti viso e corpo firmati dai nostri terapisti.", href: "#trattamenti", vai: "Vedi il listino e richiedi" },
       ],
     },
     golf: {
@@ -209,7 +209,7 @@ export const translations = {
         { title: "Hydromassage Loungers", desc: "Water jets that melt tension and reactivate circulation." },
         { title: "Emotional Showers", desc: "Chromotherapy and fragrances for a complete sensory awakening." },
         { title: "Medical Mud Therapy", desc: "Treatments with mature thermal mud with curative properties." },
-        { title: "Wellness Centre", desc: "Massages, face and body treatments by our therapists." },
+        { title: "Wellness Centre", desc: "Massages, face and body treatments by our therapists.", href: "#trattamenti", vai: "See the price list and request" },
       ],
     },
     golf: {
@@ -395,7 +395,7 @@ export const translations = {
         { title: "Hydromassage-Liegen", desc: "Wasserstrahlen lösen Verspannungen und beleben den Kreislauf." },
         { title: "Erlebnisduschen", desc: "Chromotherapie und Düfte für ein vollständiges sinnliches Erwachen." },
         { title: "Medizinische Fangotherapie", desc: "Behandlungen mit reifem Thermalfango mit heilenden Eigenschaften." },
-        { title: "Wellnesszentrum", desc: "Massagen, Gesichts- und Körperbehandlungen unserer Therapeuten." },
+        { title: "Wellnesszentrum", desc: "Massagen, Gesichts- und Körperbehandlungen unserer Therapeuten.", href: "#trattamenti", vai: "Preisliste ansehen und anfragen" },
       ],
     },
     golf: {
@@ -581,7 +581,7 @@ export const translations = {
         { title: "Transats Hydromassants", desc: "Des jets d'eau qui dénouent les tensions et réactivent la circulation." },
         { title: "Douches Sensorielles", desc: "Chromothérapie et parfums pour un réveil sensoriel complet." },
         { title: "Fangothérapie Médicale", desc: "Soins à la boue thermale mature aux propriétés curatives." },
-        { title: "Centre de Bien-être", desc: "Massages, soins visage et corps signés par nos thérapeutes." },
+        { title: "Centre de Bien-être", desc: "Massages, soins visage et corps signés par nos thérapeutes.", href: "#trattamenti", vai: "Voir la carte et demander" },
       ],
     },
     golf: {
