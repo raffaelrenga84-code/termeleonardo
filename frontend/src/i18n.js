@@ -148,8 +148,7 @@ export const translations = {
       scaricaListino: "Scarica il listino completo",
       items: [
         { n: "Relax con olio di cacao", d: "25 min", p: "40" },
-        { n: "Antistress", d: "45–55 min", p: "55" },
-        { n: "Californiano", d: "50 min", p: "60" },
+        { n: "Antistress", d: "45–55 min", p: "55" },
         { n: "Ayurveda", d: "55 min", p: "65" },
         { n: "Hot Stone", d: "55 min", p: "65" },
         { n: "Linfodrenaggio completo", d: "60 min", p: "65" },
@@ -334,8 +333,7 @@ export const translations = {
       scaricaListino: "Download the full price list",
       items: [
         { n: "Cocoa-oil Relax", d: "25 min", p: "40" },
-        { n: "Anti-stress", d: "45–55 min", p: "55" },
-        { n: "Californian", d: "50 min", p: "60" },
+        { n: "Anti-stress", d: "45–55 min", p: "55" },
         { n: "Ayurveda", d: "55 min", p: "65" },
         { n: "Hot Stone", d: "55 min", p: "65" },
         { n: "Full lymphatic drainage", d: "60 min", p: "65" },
@@ -521,7 +519,7 @@ export const translations = {
       items: [
         { n: "Relax mit Kakaoöl", d: "25 Min.", p: "40" },
         { n: "Antistress", d: "45–55 Min.", p: "55" },
-        { n: "Kalifornisch", d: "50 Min.", p: "60" },
+
         { n: "Ayurveda", d: "55 Min.", p: "65" },
         { n: "Hot Stone", d: "55 Min.", p: "65" },
         { n: "Lymphdrainage komplett", d: "60 Min.", p: "65" },
@@ -707,7 +705,7 @@ export const translations = {
       items: [
         { n: "Relax à l'huile de cacao", d: "25 min", p: "40" },
         { n: "Antistress", d: "45–55 min", p: "55" },
-        { n: "Californien", d: "50 min", p: "60" },
+
         { n: "Ayurveda", d: "55 min", p: "65" },
         { n: "Hot Stone", d: "55 min", p: "65" },
         { n: "Drainage lymphatique complet", d: "60 min", p: "65" },
