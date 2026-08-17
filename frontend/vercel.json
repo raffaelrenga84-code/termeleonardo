@@ -98,6 +98,22 @@
       "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=trattamenti&l=fr"
     },
     {
+      "source": "/it/day-spa",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=dayspa&l=it"
+    },
+    {
+      "source": "/de/day-spa",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=dayspa&l=de"
+    },
+    {
+      "source": "/en/day-spa",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=dayspa&l=en"
+    },
+    {
+      "source": "/fr/day-spa",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/?tipo=dayspa&l=fr"
+    },
+    {
       "source": "/gestione/buoni",
       "destination": "https://arrivo-terme-leonardo.vercel.app/buoni/"
     },
