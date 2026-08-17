@@ -33,7 +33,7 @@ export default function Treatments() {
             {/* Due azioni, non una: chi ha già le idee chiare chiede, chi
                 vuole guardare con calma si scarica il listino intero. Sulla
                 pagina se ne vedono otto voci su trentasei — il resto era
-                invisibile, e chi cercava lo Shiatzu o un Programma pensava
+                invisibile, e chi cercava lo Shiatsu o un Programma pensava
                 che non li facessimo.
                 Il richiedi resta il pulsante pieno, lo scarica è secondario:
                 l'obiettivo della sezione è ricevere richieste. */}
