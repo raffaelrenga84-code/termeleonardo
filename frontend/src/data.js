@@ -96,7 +96,13 @@ export const ULSS_TRANSPARENCY = [
 ];
 
 export const NAV = [
-  { href: "#benessere" },
+  /* «Benessere» porta ai massaggi e trattamenti, non all'introduzione: è lì
+     che c'è il listino e il pulsante per chiedere qualcosa. L'introduzione
+     resta raggiungibile scorrendo e dal pulsante «Scopri» della foto grande.
+     `voce` esiste perché altrimenti l'etichetta la deciderebbe la
+     destinazione (labelFor in Navbar.jsx) e la barra si leggerebbe
+     «#trattamenti» in tutte e quattro le lingue. */
+  { href: "#trattamenti", voce: "benessere" },
   { href: "#golf" },
   { href: "#camere" },
   { href: "#dayspa" },

@@ -17,7 +17,9 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const labelFor = (href) => t.nav[href.slice(1)] || href;
+  /* la voce del menu si chiama come dice `voce` e va dove dice `href`: due
+     cose diverse da quando «Benessere» porta ai trattamenti */
+  const labelFor = (n) => t.nav[n.voce || n.href.slice(1)] || n.href;
 
   return (
     <header
@@ -48,10 +50,10 @@ export default function Navbar() {
             <a
               key={n.href}
               href={n.href}
-              data-testid={`nav-link-${n.href.slice(1)}`}
+              data-testid={`nav-link-${n.voce || n.href.slice(1)}`}
               className={`text-sm font-medium transition-colors hover:text-[#B08D57] ${scrolled ? "text-[#1A3626]" : "text-white/90"}`}
             >
-              {labelFor(n.href)}
+              {labelFor(n)}
             </a>
           ))}
           <div className="flex items-center gap-1" data-testid="lang-switcher">
@@ -137,8 +139,8 @@ export default function Navbar() {
             ))}
           </div>
           {NAV.map((n) => (
-            <a key={n.href} href={n.href} onClick={() => setOpen(false)} data-testid={`nav-mobile-${n.href.slice(1)}`} className="text-[#1A3626] text-base font-medium">
-              {labelFor(n.href)}
+            <a key={n.href} href={n.href} onClick={() => setOpen(false)} data-testid={`nav-mobile-${n.voce || n.href.slice(1)}`} className="text-[#1A3626] text-base font-medium">
+              {labelFor(n)}
             </a>
           ))}
           <a href={`${REGALA_URL}?l=${lang || "it"}`} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} data-testid="nav-mobile-gift" className="flex items-center gap-2 text-[#1A3626] text-base font-medium">
