@@ -11,7 +11,7 @@ export default function CureTermali() {
         <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
           <Reveal delay={0.1}>
             <div className="overflow-hidden rounded-2xl h-[460px] group">
-              <img src={IMG.spaMassage} alt="" className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+              <img src={IMG.fango} alt="" className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
             </div>
           </Reveal>
           <Reveal>

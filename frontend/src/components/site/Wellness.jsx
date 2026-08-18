@@ -50,7 +50,7 @@ export default function Wellness() {
                 <img src={IMG.wellnessPool} alt="" className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
               </div>
               <div className="overflow-hidden rounded-2xl h-56 group">
-                <img src={IMG.spaMassage} alt="" className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+                <img src={IMG.idromassaggio} alt="" className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
               </div>
               <div className="rounded-2xl h-56 bg-[#1A3626] text-[#F9F6F0] flex flex-col justify-center px-6">
                 <span className="font-serif-display text-5xl text-[#E7C98B]">35°C</span>

@@ -16,7 +16,7 @@ export default function DaySpa() {
             <p className="text-[#5A5A5A] text-lg mt-6 max-w-lg">{d.intro}</p>
             <p className="text-sm text-[#B08D57] font-semibold mt-4">{d.orari}</p>
             <div className="mt-8 overflow-hidden rounded-2xl h-72 group">
-              <img src={IMG.spaMassage} alt="" className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+              <img src={IMG.grotta} alt="" className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
             </div>
             <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3 mt-8">
               {d.incluso.map((tx) => (
@@ -30,14 +30,28 @@ export default function DaySpa() {
             <div className="bg-[#1A3626] rounded-2xl p-8 md:p-10">
               <h3 className="font-serif-display text-3xl text-white">{d.panelTitle}</h3>
               <div className="mt-8 space-y-4">
+                {/* Ogni fascia porta la propria etichetta ACCANTO alla propria
+                    cifra. Prima la cifra grande era senza etichetta e sotto
+                    stava «Feriale · €45 Weekend e Festivi»: la parola
+                    «Feriale» si legge attaccata al €45 che la segue, e non si
+                    capiva se i 35 € fossero il feriale o altro. Sul
+                    l'abbonamento era peggio, perche' 300 e 400 sono due cifre
+                    grosse e nessuna delle due diceva quando vale. */}
                 {d.prezzi.map((p) => (
                   <div key={p.nome} className="flex items-center justify-between gap-4 border-b border-white/10 pb-4">
                     <div>
                       <div className="text-white font-semibold">{p.nome}</div>
                       <div className="text-sm text-white/60">{p.sub}</div>
-                      <div className="text-xs text-[#E7C98B] mt-1">{p.note}</div>
+                      {p.nota && <div className="text-xs text-[#E7C98B] mt-1">{p.nota}</div>}
                     </div>
-                    <div className="text-right shrink-0"><span className="font-serif-display text-3xl text-[#E7C98B]">€{p.price}</span></div>
+                    <div className="text-right shrink-0 space-y-0.5">
+                      {p.tariffe.map((f) => (
+                        <div key={f.quando || f.prezzo} className="flex items-baseline justify-end gap-3">
+                          {f.quando && <span className="text-xs text-white/70">{f.quando}</span>}
+                          <span className={`font-serif-display text-[#E7C98B] ${p.tariffe.length > 1 ? "text-2xl" : "text-3xl"}`}>€{f.prezzo}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 ))}
               </div>

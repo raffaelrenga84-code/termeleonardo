@@ -3,7 +3,17 @@ const BASE = "https://www.termeleonardo.com/img";
 export const IMG = {
   heroPool: `${BASE}/outdoor-pool-hotel-leonardo-da-vinci-terme.jpg`,
   wellnessPool: `${BASE}/view-hotel-leonardo-da-vinci-terme.jpg`,
-  spaMassage: `${BASE}/grotto-hotel-leonardo-da-vinci-terme.jpg`,
+  /* La grotta termale: sta bene sul Day Spa, che vende proprio piscine e
+     grotte. Prima questa stessa fotografia stava anche sulle Cure Termali e
+     sul Benessere — tre volte la stessa immagine, e sulle Cure Termali per
+     giunta a illustrare la FANGOTERAPIA, che coi lettini della grotta non
+     c'entra niente. */
+  grotta: `${BASE}/grotto-hotel-leonardo-da-vinci-terme.jpg`,
+  /* Il fango vero, dalla pagina delle cure del sito precedente. */
+  fango: `${BASE}/fango@2x.jpg`,
+  /* La piscina interna coi getti, per il Benessere: e' la prima cosa che
+     quella sezione elenca (piscine 30-35 gradi, lettini idromassaggianti). */
+  idromassaggio: `${BASE}/idromassaggio-piscine-termali-abano-terme-leonardo-da-vinci-m.jpg`,
   golf: `${BASE}/7-days-golf.jpg`,
   /* Il campo pratica e il maestro sono nostri davvero: due fotografie del
      posto, non un'immagine di repertorio con una pallina. Stanno da anni
@@ -117,24 +127,7 @@ export const NAV = [
   { href: "#info" },
 ];
 
-export const DAYSPA = {
-  intro:
-    "Con la formula Day Spa puoi coccolarti anche solo per un giorno nelle nostre piscine e grotte termali, usufruendo di tutti i servizi senza pernottare.",
-  orari: "Aperto ogni giorno dalle 9:00 alle 18:30 · Apertura serale Ven. e Sab. 18:00–22:30",
-  prezzi: [
-    { nome: "Ingresso Giornaliero", sub: "Piscine & Grotte Termali", price: "35", note: "Feriale · €45 Weekend e Festivi" },
-    { nome: "Ingresso Serale", sub: "Ven. e Sab. · 18:00–22:30", price: "29", note: "Percorso Spa + area relax" },
-    { nome: "Abbonamento", sub: "10 ingressi a persona", price: "300", note: "Feriale · €400 tutti i giorni" },
-  ],
-  incluso: [
-    "Ingresso Piscine Termali",
-    "Ingresso Grotte Termali",
-    "Bagno Turco & Bio-Grotta",
-    "Docce emozionali & Cromoterapia",
-    "Parcheggio gratuito",
-    "Wi-Fi gratuito",
-  ],
-};
+
 
 /* LE OFFERTE NON SONO LE STESSE IN TUTTE LE LINGUE.
 
