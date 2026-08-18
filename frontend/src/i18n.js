@@ -31,6 +31,7 @@ export const translations = {
       label: "Sport & Natura", title: "Gioca, respira, rilassati",
       body: "Circondato da un parco privato, l'hotel con campo pratica golf ad Abano Terme è il rifugio perfetto per chi ama sport, natura e tranquillità. La scelta ideale per chi cerca il giusto equilibrio tra movimento dolce, relax e benessere nei Colli Euganei.",
       stats: [{ n: "1 km", l: "dal centro di Abano" }, { n: "Parco", l: "privato immerso nel verde" }, { n: "Golf", l: "campo pratica dedicato" }],
+      campoEti: "Il nostro campo pratica", maestroEti: "Il nostro Maestro", maestroNome: "Niccolò Quintarelli",
     },
     rooms: {
       label: "Le Camere", title: "Comfort, eleganza e viste spettacolari",
@@ -215,6 +216,7 @@ export const translations = {
       label: "Sport & Nature", title: "Play, breathe, relax",
       body: "Surrounded by a private park, the hotel with golf practice range in Abano Terme is the perfect retreat for those who love sport, nature and tranquillity. The ideal choice for balance between gentle movement, relaxation and wellness in the Euganean Hills.",
       stats: [{ n: "1 km", l: "from Abano centre" }, { n: "Park", l: "private, surrounded by greenery" }, { n: "Golf", l: "dedicated practice range" }],
+      campoEti: "Our practice range", maestroEti: "Our golf pro", maestroNome: "Niccolò Quintarelli",
     },
     rooms: {
       label: "The Rooms", title: "Comfort, elegance and spectacular views",
@@ -400,6 +402,7 @@ export const translations = {
       label: "Sport & Natur", title: "Spielen, atmen, entspannen",
       body: "Umgeben von einem privaten Park ist das Hotel mit Golf-Übungsplatz in Abano Terme der perfekte Rückzugsort für alle, die Sport, Natur und Ruhe lieben. Die ideale Wahl für das Gleichgewicht aus sanfter Bewegung, Entspannung und Wellness in den Euganeischen Hügeln.",
       stats: [{ n: "1 km", l: "vom Zentrum von Abano" }, { n: "Park", l: "privat, im Grünen gelegen" }, { n: "Golf", l: "eigener Übungsplatz" }],
+      campoEti: "Unser Übungsplatz", maestroEti: "Unser Golflehrer", maestroNome: "Niccolò Quintarelli",
     },
     rooms: {
       label: "Die Zimmer", title: "Komfort, Eleganz und spektakuläre Ausblicke",
@@ -586,6 +589,7 @@ export const translations = {
       label: "Sport & Nature", title: "Jouez, respirez, détendez-vous",
       body: "Entouré d'un parc privé, l'hôtel avec practice de golf à Abano Terme est le refuge idéal pour les amoureux du sport, de la nature et de la tranquillité. Le choix parfait pour l'équilibre entre mouvement doux, détente et bien-être dans les Collines Euganéennes.",
       stats: [{ n: "1 km", l: "du centre d'Abano" }, { n: "Parc", l: "privé, au cœur de la verdure" }, { n: "Golf", l: "practice dédié" }],
+      campoEti: "Notre practice", maestroEti: "Notre professeur de golf", maestroNome: "Niccolò Quintarelli",
     },
     rooms: {
       label: "Les Chambres", title: "Confort, élégance et vues spectaculaires",

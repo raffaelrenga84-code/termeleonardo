@@ -5,6 +5,11 @@ export const IMG = {
   wellnessPool: `${BASE}/view-hotel-leonardo-da-vinci-terme.jpg`,
   spaMassage: `${BASE}/grotto-hotel-leonardo-da-vinci-terme.jpg`,
   golf: `${BASE}/7-days-golf.jpg`,
+  /* Il campo pratica e il maestro sono nostri davvero: due fotografie del
+     posto, non un'immagine di repertorio con una pallina. Stanno da anni
+     sulla pagina del campo pratica del sito precedente. */
+  drivingRange: `${BASE}/driving-range-hotel-leonardo-da-vinci-terme.jpg`,
+  maestro: `${BASE}/nicolo.jpg`,
   roomView: `${BASE}/-hotel-leonardo-da-vinci-terme-3.jpg`,
   roomBalcony: `${BASE}/suite-533-hotel-terme-lonardo-@2x.jpg`,
   roomJunior: `${BASE}/junior-suite-32-1-hotel-terme-leonardo@2x.jpg`,

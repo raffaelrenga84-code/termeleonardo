@@ -13,7 +13,7 @@ export default function Golf() {
     <section id="golf" data-testid="golf-section" className="relative py-24 md:py-32 overflow-hidden">
       <img src={IMG.golf} alt="" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-[#1A3626]/75" />
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-[minmax(0,1fr)_340px] gap-12 lg:gap-16 items-start">
         <Reveal className="max-w-2xl">
           <Label className="text-[#E7C98B]">{g.label}</Label>
           <h2 className="font-serif-display text-4xl md:text-6xl text-white mt-5 leading-tight font-light">{g.title}</h2>
@@ -46,6 +46,36 @@ export default function Golf() {
               </a>
             </div>
           </div>
+        </Reveal>
+
+        {/* Il campo pratica e il maestro: due fotografie del posto vero,
+            accanto al testo invece che sotto, perché la colonna destra di
+            questa sezione era vuota. Sul telefono la griglia collassa e
+            finiscono sotto i pulsanti, che è l'ordine giusto — prima si
+            capisce cosa si può chiedere, poi si vede chi te lo insegna. */}
+        <Reveal className="w-full flex flex-col gap-6">
+          <figure className="bg-white/10 rounded-2xl p-3 backdrop-blur-sm">
+            <img
+              src={IMG.drivingRange}
+              alt={g.campoEti}
+              loading="lazy"
+              className="w-full aspect-[4/3] object-cover rounded-xl"
+            />
+            <figcaption className="text-white/80 text-sm mt-3 px-1">{g.campoEti}</figcaption>
+          </figure>
+
+          <figure className="bg-white/10 rounded-2xl p-3 backdrop-blur-sm flex items-center gap-4">
+            <img
+              src={IMG.maestro}
+              alt={g.maestroNome}
+              loading="lazy"
+              className="w-20 h-20 shrink-0 object-cover rounded-full"
+            />
+            <figcaption className="min-w-0">
+              <div className="text-[#E7C98B] text-xs uppercase tracking-[0.14em]">{g.maestroEti}</div>
+              <div className="font-serif-display text-xl text-white mt-1 leading-snug">{g.maestroNome}</div>
+            </figcaption>
+          </figure>
         </Reveal>
       </div>
     </section>
