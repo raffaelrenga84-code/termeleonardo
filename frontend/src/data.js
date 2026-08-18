@@ -136,41 +136,35 @@ export const DAYSPA = {
   ],
 };
 
-export const OFFERS = [
-  {
-    slug: "7-giorni-di-golf", tag: "Golf",
-    title: "7 Giorni di Golf",
-    desc: "Offerta Golf, 7 Giorni all'Hotel Terme Leonardo ad Abano Terme.",
-    price: "820",
-    unit: "a persona",
-    img: `${BASE}/7-days-golf.jpg`,
-    featured: true,
-  },
-  {
-    slug: "deluxe", tag: "Deluxe",
-    title: "Soggiorno Deluxe",
-    desc: "3 Notti & Massaggio in camera Deluxe con vista sui Colli.",
-    price: "400",
-    unit: "a persona",
-    img: `${BASE}/sommer-spezial-hotel-terme-leonardo.jpg`,
-  },
-  {
-    slug: "smart", tag: "Smart",
-    title: "Soggiorno Smart",
-    desc: "1 Notte & Massaggio. La fuga breve dedicata al relax.",
-    price: "180",
-    unit: "a persona",
-    img: `${BASE}/dolce-vita-mud-offer.jpg`,
-  },
-  {
-    slug: "escape", tag: "Escape",
-    title: "Thermal Escape",
-    desc: "2 Notti immersi nelle piscine termali e nella natura.",
-    price: "280",
-    unit: "a persona",
-    img: `${BASE}/november-special.jpg`,
-  },
-];
+/* LE OFFERTE NON SONO LE STESSE IN TUTTE LE LINGUE.
+
+   Prima erano un elenco solo, tradotto quattro volte. Ma la clientela
+   italiana prenota soggiorni brevi — una o due notti, al massimo la
+   settimana di golf — mentre quella di lingua tedesca prenota le settimane
+   lunghe: sono due listini diversi, non due traduzioni. Chi sceglie quali
+   mostrare e' ogni lingua, in i18n.js (`offers.cards`).
+
+   Qui restano le due cose che NON cambiano con la lingua: il prezzo e la
+   fotografia. Stanno insieme, per `slug`, cosi' non si puo' pubblicare una
+   cifra diversa a un tedesco e a un italiano per la stessa offerta.
+
+   Prezzi e finestre presi il 18 agosto 2026 dalle pagine dell'hotel
+   (termeleonardo.com/it/offerte e /de/angebote). «Sommer Spezial» e
+   «Februar Spezial» NON sono qui: le loro finestre — giugno 2026 e
+   febbraio-marzo 2026 — erano gia' passate. Il sito precedente le mostra
+   ancora; non e' una ragione per ricopiarle. */
+export const OFFERTE = {
+  /* italiane: soggiorni brevi */
+  "7-giorni-di-golf": { price: "820", img: `${BASE}/7-days-golf.jpg`, featured: true },
+  deluxe: { price: "400", img: `${BASE}/sommer-spezial-hotel-terme-leonardo.jpg` },
+  smart: { price: "180", img: `${BASE}/dolce-vita-mud-offer.jpg` },
+  escape: { price: "280", img: `${BASE}/november-special.jpg` },
+  /* tedesche: settimane lunghe. Il golf e' lo stesso soggiorno e lo stesso
+     prezzo dell'italiano, con un indirizzo suo sul sito dell'hotel. */
+  "7-tage-golf": { price: "820", img: `${BASE}/7-days-golf.jpg`, featured: true },
+  "dolce-vita-fango-woche": { price: "1157,5", img: `${BASE}/dolce-vita-mud-offer.jpg` },
+  "november-spezial": { price: "108", img: `${BASE}/november-special.jpg` },
+};
 
 export const WELLNESS_FEATURES = [
   { title: "Piscine Termali 30–35°C", desc: "Piscine interne ed esterne alimentate dalle acque termali dei Colli Euganei." },

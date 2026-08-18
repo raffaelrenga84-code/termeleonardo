@@ -91,10 +91,10 @@ export const translations = {
       body: "Con la formula Day Spa accedi alle piscine e all'area wellness anche senza pernottare. Scopri le offerte dedicate per una giornata o un soggiorno più lungo.",
       from: "a partire da", request: "Richiedi",
       cards: [
-        { tag: "Golf", title: "7 Giorni di Golf", desc: "Offerta Golf, 7 Giorni all'Hotel Terme Leonardo ad Abano Terme." },
-        { tag: "Deluxe", title: "Soggiorno Deluxe", desc: "3 Notti & Massaggio in camera Deluxe con vista sui Colli." },
-        { tag: "Smart", title: "Soggiorno Smart", desc: "1 Notte & Massaggio. La fuga breve dedicata al relax." },
-        { tag: "Escape", title: "Thermal Escape", desc: "2 Notti immersi nelle piscine termali e nella natura." },
+        { slug: "7-giorni-di-golf", tag: "Golf", title: "7 Giorni di Golf", desc: "Offerta Golf, 7 Giorni all'Hotel Terme Leonardo ad Abano Terme.", pagina: "https://www.termeleonardo.com/it/offerte/7-giorni-di-golf" },
+        { slug: "deluxe", tag: "Deluxe", title: "Soggiorno Deluxe", desc: "3 Notti & Massaggio in camera Deluxe con vista sui Colli.", pagina: "https://www.termeleonardo.com/it/offerte/deluxe" },
+        { slug: "smart", tag: "Smart", title: "Soggiorno Smart", desc: "1 Notte & Massaggio. La fuga breve dedicata al relax.", pagina: "https://www.termeleonardo.com/it/offerte/smart" },
+        { slug: "escape", tag: "Escape", title: "Thermal Escape", desc: "2 Notti immersi nelle piscine termali e nella natura.", pagina: "https://www.termeleonardo.com/it/offerte/escape" },
       ],
     },
     booking: {
@@ -276,10 +276,9 @@ export const translations = {
       body: "With the Day Spa formula you can access the pools and wellness area without staying overnight. Discover the dedicated offers for a day or a longer stay.",
       from: "starting from", request: "Enquire",
       cards: [
-        { tag: "Golf", title: "7 Days of Golf", desc: "Golf Offer, 7 Days at Hotel Terme Leonardo in Abano Terme." },
-        { tag: "Deluxe", title: "Deluxe Stay", desc: "3 Nights & Massage in a Deluxe room with views of the hills." },
-        { tag: "Smart", title: "Smart Stay", desc: "1 Night & Massage. The short escape dedicated to relaxation." },
-        { tag: "Escape", title: "Thermal Escape", desc: "2 Nights immersed in the thermal pools and nature." },
+        { slug: "7-tage-golf", tag: "Golf", title: "7 Days of Golf", desc: "Golf package, seven days half board in Abano Terme." },
+        { slug: "dolce-vita-fango-woche", tag: "Dolce Vita", title: "Classic Gourmet Week", desc: "A thermal week of fine food and Italian joie de vivre." },
+        { slug: "november-spezial", tag: "November", title: "November Special", desc: "The Dolce Vita gourmet week in autumn, 8–29 November 2026." },
       ],
     },
     booking: {
@@ -462,10 +461,9 @@ export const translations = {
       body: "Mit der Day-Spa-Formel nutzen Sie die Bäder und den Wellnessbereich auch ohne Übernachtung. Entdecken Sie die Angebote für einen Tag oder einen längeren Aufenthalt.",
       from: "ab", request: "Anfragen",
       cards: [
-        { tag: "Golf", title: "7 Tage Golf", desc: "Golf-Angebot, 7 Tage im Hotel Terme Leonardo in Abano Terme." },
-        { tag: "Deluxe", title: "Deluxe-Aufenthalt", desc: "3 Nächte & Massage im Deluxe-Zimmer mit Blick auf die Hügel." },
-        { tag: "Smart", title: "Smart-Aufenthalt", desc: "1 Nacht & Massage. Die kurze Auszeit für Entspannung." },
-        { tag: "Escape", title: "Thermal Escape", desc: "2 Nächte, eingetaucht in Thermalbäder und Natur." },
+        { slug: "7-tage-golf", tag: "Golf", title: "7 Tage Golf", desc: "Golfangebot, sieben Tage in Halbpension in Abano Terme.", pagina: "https://www.termeleonardo.com/de/angebote/7-tage-golf" },
+        { slug: "dolce-vita-fango-woche", tag: "Dolce Vita", title: "Genusswoche Classic", desc: "Thermalurlaub, Kulinarik und italienische Lebensfreude erleben.", pagina: "https://www.termeleonardo.com/de/angebote/dolce-vita-fango-woche" },
+        { slug: "november-spezial", tag: "November", title: "November Spezial", desc: "Dolce Vita & Genusswoche im Herbst, 8.–29. November 2026.", pagina: "https://www.termeleonardo.com/de/angebote/november-spezial" },
       ],
     },
     booking: {
@@ -649,10 +647,9 @@ export const translations = {
       body: "Avec la formule Day Spa, accédez aux piscines et à l'espace bien-être même sans passer la nuit. Découvrez les offres dédiées pour une journée ou un séjour plus long.",
       from: "à partir de", request: "Demander",
       cards: [
-        { tag: "Golf", title: "7 Jours de Golf", desc: "Offre Golf, 7 Jours à l'Hôtel Terme Leonardo à Abano Terme." },
-        { tag: "Deluxe", title: "Séjour Deluxe", desc: "3 Nuits & Massage en chambre Deluxe avec vue sur les collines." },
-        { tag: "Smart", title: "Séjour Smart", desc: "1 Nuit & Massage. L'escapade courte dédiée à la détente." },
-        { tag: "Escape", title: "Thermal Escape", desc: "2 Nuits immergé dans les piscines thermales et la nature." },
+        { slug: "7-tage-golf", tag: "Golf", title: "7 jours de golf", desc: "Offre golf, sept jours en demi-pension à Abano Terme." },
+        { slug: "dolce-vita-fango-woche", tag: "Dolce Vita", title: "Semaine gourmande Classic", desc: "Séjour thermal, gastronomie et art de vivre à l'italienne." },
+        { slug: "november-spezial", tag: "Novembre", title: "Spécial novembre", desc: "La semaine gourmande Dolce Vita en automne, 8–29 novembre 2026." },
       ],
     },
     booking: {
