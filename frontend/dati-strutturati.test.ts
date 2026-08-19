@@ -105,10 +105,29 @@ Deno.test('il Day Spa dichiara le due fasce che ha davvero', () => {
   assertEquals(sera.dayOfWeek, ['Friday', 'Saturday'], 'la serata e solo venerdi e sabato');
 });
 
-Deno.test('il Bistrot dichiara l orario vero, non quello dei modelli email', () => {
+/* ============================================================
+   IL RISTORANTE DICHIARA QUANDO SI MANGIA, NON QUANDO E' APERTO IL BAR.
+
+   Deciso dalla proprieta' il 19 agosto 2026, correggendo la prima stesura.
+   Il Bistrot come locale sta aperto dalle 10:00 alle 23:00, ma la cucina
+   serve il pranzo dalle 12:30 alle 14:30. Un `Restaurant` che dichiara
+   10:00-23:00 dice a chi cerca «ristorante Abano» che alle nove di sera lo
+   servono: quello si presenta e trova la cucina chiusa. Meglio dichiarare
+   la fascia in cui la promessa e' vera.
+
+   L'apertura del locale non si perde: resta scritta nella descrizione, che
+   e' il posto dove una sfumatura si puo' spiegare invece che dichiarare.
+   ============================================================ */
+Deno.test('il ristorante dichiara l ora in cui si mangia', () => {
   const b = conTipo('Restaurant');
   const ore = b.openingHoursSpecification as Nodo[];
   assert(Array.isArray(ore) && ore.length === 1, 'un orario solo');
-  assertEquals(ore[0].opens, '10:00');
-  assertEquals(ore[0].closes, '23:00');
+  assertEquals(ore[0].opens, '12:30');
+  assertEquals(ore[0].closes, '14:30');
+});
+
+Deno.test('e l apertura del locale resta detta, ma a parole', () => {
+  const d = String(conTipo('Restaurant').description ?? '');
+  assert(/10:00/.test(d) && /23:00/.test(d), `la descrizione non dice quando apre: ${d}`);
+  assert(/17:30/.test(d), `la descrizione non dice fino a quando ci sono gli spuntini: ${d}`);
 });
