@@ -88,41 +88,174 @@
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
-          "@type": "Hotel",
-          "name": "Hotel Terme Leonardo",
-          "url": "https://www.hoteltermeleonardo.com/",
-          "starRating": { "@type": "Rating", "ratingValue": "4" },
-          "description": "Hotel 4 stelle termale ad Abano Terme, sui Colli Euganei: piscine termali 30-35 °C, centro grotte, cure termali convenzionate SSN e campo pratica golf.",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Via Monteortone 46",
-            "addressLocality": "Monteortone di Abano Terme",
-            "postalCode": "35037",
-            "addressRegion": "PD",
-            "addressCountry": "IT"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 45.349404,
-            "longitude": 11.754545
-          },
-          "hasMap": "https://www.google.com/maps?q=45.349404,11.754545",
-          "telephone": "+39 049 9939200",
-          "email": "info@termeleonardo.com",
-          "priceRange": "€€",
-          "currenciesAccepted": "EUR",
-          "paymentAccepted": "Contanti, Bancomat, Visa, Mastercard, bonifico",
-          "petsAllowed": true,
-          "checkinTime": "15:00",
-          "checkoutTime": "11:00",
-          "amenityFeature": [
-            { "@type": "LocationFeatureSpecification", "name": "Piscine termali", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Centro benessere e grotte", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Cure termali convenzionate SSN", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Campo pratica golf", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Wi-Fi gratuito", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Parcheggio gratuito", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Ristorante", "value": true }
+          "@graph": [
+            {
+              "@type": "Hotel",
+              "@id": "https://www.hoteltermeleonardo.com/#hotel",
+              "name": "Hotel Terme Leonardo",
+              "url": "https://www.hoteltermeleonardo.com/",
+              "starRating": {
+                "@type": "Rating",
+                "ratingValue": "4"
+              },
+              "description": "Hotel 4 stelle termale ad Abano Terme, sui Colli Euganei: piscine termali 30-35 °C, centro grotte, cure termali convenzionate SSN e campo pratica golf.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Via Monteortone 46",
+                "addressLocality": "Monteortone di Abano Terme",
+                "postalCode": "35037",
+                "addressRegion": "PD",
+                "addressCountry": "IT"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 45.349404,
+                "longitude": 11.754545
+              },
+              "hasMap": "https://www.google.com/maps?q=45.349404,11.754545",
+              "telephone": "+39 049 9939200",
+              "email": "info@termeleonardo.com",
+              "priceRange": "€€",
+              "currenciesAccepted": "EUR",
+              "paymentAccepted": "Contanti, Bancomat, Visa, Mastercard, bonifico",
+              "petsAllowed": true,
+              "checkinTime": "15:00",
+              "checkoutTime": "11:00",
+              "sameAs": [
+                "https://www.facebook.com/HotelTermeLeonardoAbanoTerme",
+                "https://www.instagram.com/hoteltermeleonardo",
+                "https://www.youtube.com/user/HotelLeonardoTerme"
+              ],
+              "image": [
+                "https://www.termeleonardo.com/img/outdoor-pool-hotel-leonardo-da-vinci-terme.jpg",
+                "https://www.termeleonardo.com/img/view-hotel-leonardo-da-vinci-terme.jpg"
+              ],
+              "amenityFeature": [
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Piscine termali",
+                  "value": true
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Centro benessere e grotte",
+                  "value": true
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Cure termali convenzionate SSN",
+                  "value": true
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Campo pratica golf",
+                  "value": true
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Wi-Fi gratuito",
+                  "value": true
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Parcheggio gratuito",
+                  "value": true
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Ristorante",
+                  "value": true
+                }
+              ]
+            },
+            {
+              "@type": "DaySpa",
+              "@id": "https://www.hoteltermeleonardo.com/#dayspa",
+              "name": "Day Spa — Hotel Terme Leonardo",
+              "description": "Ingresso giornaliero alle piscine termali e al centro grotte, aperto anche a chi non soggiorna in hotel.",
+              "url": "https://www.termeleonardo.com/it/day-spa",
+              "telephone": "+39 049 9939200",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Via Monteortone 46",
+                "addressLocality": "Monteortone di Abano Terme",
+                "postalCode": "35037",
+                "addressRegion": "PD",
+                "addressCountry": "IT"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 45.349404,
+                "longitude": 11.754545
+              },
+              "image": [
+                "https://arrivo-terme-leonardo.vercel.app/buoni/img/dayspa.jpg"
+              ],
+              "containedInPlace": {
+                "@id": "https://www.hoteltermeleonardo.com/#hotel"
+              },
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                    "Sunday"
+                  ],
+                  "opens": "09:00",
+                  "closes": "18:30"
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Friday",
+                    "Saturday"
+                  ],
+                  "opens": "18:00",
+                  "closes": "22:30"
+                }
+              ]
+            },
+            {
+              "@type": "Restaurant",
+              "@id": "https://www.hoteltermeleonardo.com/#bistrot",
+              "name": "Bistrot Bar La Piazza",
+              "description": "Bistrot a bordo piscina, con terrazza sul giardino. Pranzo dalle 12:30 alle 14:30, spuntini fino alle 17:30.",
+              "servesCuisine": "Italiana",
+              "url": "https://www.hoteltermeleonardo.com/",
+              "telephone": "+39 049 9939200",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Via Monteortone 46",
+                "addressLocality": "Monteortone di Abano Terme",
+                "postalCode": "35037",
+                "addressRegion": "PD",
+                "addressCountry": "IT"
+              },
+              "containedInPlace": {
+                "@id": "https://www.hoteltermeleonardo.com/#hotel"
+              },
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                    "Sunday"
+                  ],
+                  "opens": "10:00",
+                  "closes": "23:00"
+                }
+              ]
+            }
           ]
         }
         </script>
