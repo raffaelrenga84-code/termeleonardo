@@ -32,11 +32,16 @@ export default function Treatments() {
             </div>
             {/* Due azioni, non una: chi ha già le idee chiare chiede, chi
                 vuole guardare con calma si scarica il listino intero. Sulla
-                pagina se ne vedono otto voci su trentasei — il resto era
-                invisibile, e chi cercava lo Shiatsu o un Programma pensava
-                che non li facessimo.
+                pagina se ne vedono sette — il resto era invisibile, e chi
+                cercava un trattamento preciso o un Programma pensava che
+                non lo facessimo.
                 Il richiedi resta il pulsante pieno, lo scarica è secondario:
-                l'obiettivo della sezione è ricevere richieste. */}
+                l'obiettivo della sezione è ricevere richieste.
+
+                Qui c'era scritto «otto voci» e «chi cercava lo Shiatsu»:
+                lo Shiatsu non si fa più dal 20 agosto 2026 ed era proprio
+                l'ottava. Un commento che porta un esempio inesistente manda
+                chi legge a cercare una voce che non c'è. */}
             <div className="flex flex-wrap items-center gap-3 mt-8">
               <a href={RICHIESTA_URL("trattamenti", lang)} target="_blank" rel="noopener noreferrer"
                 data-testid="treatments-cta"
