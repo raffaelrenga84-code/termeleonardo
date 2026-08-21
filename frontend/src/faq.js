@@ -26,7 +26,7 @@ export const FAQ = {
     voci: [
       {
         d: "Dove si trova l'Hotel Terme Leonardo?",
-        r: "A Monteortone, in Via Monteortone 46, nel verde dei Colli Euganei e a 1,5 km dal centro di Abano Terme. La stazione Terme Euganee Abano-Montegrotto dista 7 km, Padova 12, l'aeroporto di Venezia 60.",
+        r: "A Monteortone, in Via Monteortone, 46, nel verde dei Colli Euganei e a 1,5 km dal centro di Abano Terme. La stazione Terme Euganee Abano-Montegrotto dista 7 km, Padova 12, l'aeroporto di Venezia 60.",
       },
       {
         d: "Quante piscine termali ci sono?",
@@ -81,7 +81,7 @@ export const FAQ = {
     voci: [
       {
         d: "Wo liegt das Hotel Terme Leonardo?",
-        r: "In Monteortone, Via Monteortone 46, im Grünen der Euganeischen Hügel und 1,5 km vom Zentrum von Abano Terme entfernt. Der Bahnhof Terme Euganee Abano-Montegrotto ist 7 km entfernt, Padua 12 km, der Flughafen Venedig 60 km.",
+        r: "In Monteortone, Via Monteortone, 46, im Grünen der Euganeischen Hügel und 1,5 km vom Zentrum von Abano Terme entfernt. Der Bahnhof Terme Euganee Abano-Montegrotto ist 7 km entfernt, Padua 12 km, der Flughafen Venedig 60 km.",
       },
       {
         d: "Wie viele Thermalbecken gibt es?",
@@ -136,7 +136,7 @@ export const FAQ = {
     voci: [
       {
         d: "Where is Hotel Terme Leonardo?",
-        r: "In Monteortone, at Via Monteortone 46, in the green of the Euganean Hills and 1.5 km from the centre of Abano Terme. Terme Euganee Abano-Montegrotto station is 7 km away, Padua 12 km, Venice airport 60 km.",
+        r: "In Monteortone, at Via Monteortone, 46, in the green of the Euganean Hills and 1.5 km from the centre of Abano Terme. Terme Euganee Abano-Montegrotto station is 7 km away, Padua 12 km, Venice airport 60 km.",
       },
       {
         d: "How many thermal pools are there?",
@@ -191,7 +191,7 @@ export const FAQ = {
     voci: [
       {
         d: "Où se trouve l'Hôtel Terme Leonardo ?",
-        r: "À Monteortone, Via Monteortone 46, dans la verdure des collines euganéennes et à 1,5 km du centre d'Abano Terme. La gare Terme Euganee Abano-Montegrotto est à 7 km, Padoue à 12 km, l'aéroport de Venise à 60 km.",
+        r: "À Monteortone, Via Monteortone, 46, dans la verdure des collines euganéennes et à 1,5 km du centre d'Abano Terme. La gare Terme Euganee Abano-Montegrotto est à 7 km, Padoue à 12 km, l'aéroport de Venise à 60 km.",
       },
       {
         d: "Combien y a-t-il de piscines thermales ?",

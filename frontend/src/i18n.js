@@ -116,7 +116,7 @@ export const translations = {
     info: {
       label: "Info & Contatti", title: "Tutto per il tuo soggiorno",
       seasonTitle: "Stagione 2026", season: "Hotel e piscine aperti dal 14 febbraio al 29 novembre 2026.",
-      contactsTitle: "Contatti", address: "Via Monteortone 46, 35037 Monteortone di Abano Terme (PD)",
+      contactsTitle: "Contatti", address: "Via Monteortone, 46, 35037 Monteortone di Abano Terme (PD)",
       phoneLabel: "Reception", phone: "+39 049 9939 200", cureLabel: "Segreteria Cure", curePhone: "+39 049 9939234", cureOrari: "Lun–Sab 8:00–13:00, chiuso il mercoledì", email: "info@termeleonardo.com",
       getThereTitle: "Come arrivare",
       distances: ["Centro di Abano Terme — 1,5 km", "Stazione Terme Euganee — 7 km", "Padova — 12 km", "Aeroporto di Venezia — 60 km", "Aeroporto di Treviso — 70 km"],
@@ -300,7 +300,7 @@ export const translations = {
     info: {
       label: "Info & Contact", title: "Everything for your stay",
       seasonTitle: "2026 Season", season: "Hotel and pools open from 14 February to 29 November 2026.",
-      contactsTitle: "Contacts", address: "Via Monteortone 46, 35037 Monteortone di Abano Terme (PD), Italy",
+      contactsTitle: "Contacts", address: "Via Monteortone, 46, 35037 Monteortone di Abano Terme (PD), Italy",
       phoneLabel: "Reception", phone: "+39 049 9939 200", cureLabel: "Thermal Cures Office", curePhone: "+39 049 9939234", cureOrari: "Mon–Sat 8:00–13:00, closed on Wednesdays", email: "info@termeleonardo.com",
       getThereTitle: "How to reach us",
       distances: ["Abano Terme centre — 1.5 km", "Terme Euganee station — 7 km", "Padua — 12 km", "Venice airport — 60 km", "Treviso airport — 70 km"],
@@ -485,7 +485,7 @@ export const translations = {
     info: {
       label: "Info & Kontakt", title: "Alles für Ihren Aufenthalt",
       seasonTitle: "Saison 2026", season: "Hotel und Thermalbäder geöffnet vom 14. Februar bis 29. November 2026.",
-      contactsTitle: "Kontakt", address: "Via Monteortone 46, 35037 Monteortone di Abano Terme (PD), Italien",
+      contactsTitle: "Kontakt", address: "Via Monteortone, 46, 35037 Monteortone di Abano Terme (PD), Italien",
       phoneLabel: "Rezeption", phone: "+39 049 9939 200", cureLabel: "Kur-Sekretariat", curePhone: "+39 049 9939234", cureOrari: "Mo–Sa 8:00–13:00, mittwochs geschlossen", email: "info@termeleonardo.com",
       getThereTitle: "Anreise",
       distances: ["Zentrum Abano Terme — 1,5 km", "Bahnhof Terme Euganee — 7 km", "Padua — 12 km", "Flughafen Venedig — 60 km", "Flughafen Treviso — 70 km"],
@@ -671,7 +671,7 @@ export const translations = {
     info: {
       label: "Infos & Contact", title: "Tout pour votre séjour",
       seasonTitle: "Saison 2026", season: "Hôtel et piscines ouverts du 14 février au 29 novembre 2026.",
-      contactsTitle: "Contacts", address: "Via Monteortone 46, 35037 Monteortone di Abano Terme (PD), Italie",
+      contactsTitle: "Contacts", address: "Via Monteortone, 46, 35037 Monteortone di Abano Terme (PD), Italie",
       phoneLabel: "Réception", phone: "+39 049 9939 200", cureLabel: "Secrétariat des Cures", curePhone: "+39 049 9939234", cureOrari: "Lun–Sam 8h00–13h00, fermé le mercredi", email: "info@termeleonardo.com",
       getThereTitle: "Comment nous rejoindre",
       distances: ["Centre d'Abano Terme — 1,5 km", "Gare Terme Euganee — 7 km", "Padoue — 12 km", "Aéroport de Venise — 60 km", "Aéroport de Trévise — 70 km"],
