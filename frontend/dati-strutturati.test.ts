@@ -229,3 +229,50 @@ Deno.test('almeno una fotografia dell hotel supera i 1200px', () => {
     }): la scheda su Google esce con quella piccola, o senza`,
   );
 });
+
+/* ============================================================
+   L'ANTEPRIMA SOCIAL. Aggiunta il 21 agosto 2026, dopo averla rotta.
+
+   og:image e' la fotografia che esce quando qualcuno incolla il sito su
+   WhatsApp, Facebook o LinkedIn — cioe' quando l'hotel viene consigliato
+   da una persona a un'altra, che e' il momento in cui l'immagine conta di
+   piu'. Puntava a /buoni/img/dayspa.jpg: un file che appartiene a un'altra
+   superficie (l'email del buono regalo) ed e' tagliato per quella, 654px.
+
+   Sostituendo quella fotografia il 21 agosto l'anteprima del sito e'
+   cambiata da sola, senza che nessuno la guardasse. Un file con due
+   padroni non ne ha nessuno: adesso l'anteprima ha il suo.
+
+   Open Graph chiede 1200x630 (1,91:1): sotto, i lettori la ritagliano o la
+   mostrano piccola di fianco al testo invece che grande sopra.
+   ============================================================ */
+Deno.test('l anteprima social ha la sua fotografia, sua e della misura giusta', () => {
+  const m = HTML.match(/<meta property="og:image" content="([^"]+)"/);
+  assert(m, 'og:image non dichiarato: chi incolla il link non vede nessuna fotografia');
+  const percorso = new URL(m[1]).pathname;
+
+  assert(
+    !percorso.startsWith('/buoni/'),
+    `og:image punta a ${percorso}, che appartiene all email del buono regalo: ` +
+      'cambiare quella fotografia cambierebbe di nascosto l anteprima del sito',
+  );
+
+  const b = Deno.readFileSync(new URL('./public' + percorso, import.meta.url));
+  let i = 2, largo = 0, alto = 0;
+  while (i < b.length) {
+    if (b[i] !== 0xff) { i++; continue; }
+    const k = b[i + 1];
+    if (k >= 0xc0 && k <= 0xcf && k !== 0xc4 && k !== 0xc8 && k !== 0xcc) {
+      alto = (b[i + 5] << 8) | b[i + 6];
+      largo = (b[i + 7] << 8) | b[i + 8];
+      break;
+    }
+    i += 2 + ((b[i + 2] << 8) | b[i + 3]);
+  }
+  assert(largo >= 1200, `og:image larga ${largo}px: Open Graph ne chiede almeno 1200`);
+  const r = largo / alto;
+  assert(
+    Math.abs(r - 1200 / 630) < 0.06,
+    `og:image ha rapporto ${r.toFixed(3)}, atteso ~1,905: i lettori la ritagliano`,
+  );
+});
