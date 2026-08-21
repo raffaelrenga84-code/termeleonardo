@@ -131,3 +131,101 @@ Deno.test('e l apertura del locale resta detta, ma a parole', () => {
   assert(/10:00/.test(d) && /23:00/.test(d), `la descrizione non dice quando apre: ${d}`);
   assert(/17:30/.test(d), `la descrizione non dice fino a quando ci sono gli spuntini: ${d}`);
 });
+
+/* ============================================================
+   LE FOTOGRAFIE DELLA SCHEDA. Aggiunte il 21 agosto 2026.
+
+   Tre difetti veri, trovati quel giorno guardando il blocco:
+
+   · il nodo Restaurant non dichiarava NESSUNA fotografia, e la scheda del
+     Bistrot usciva muta accanto a quelle dei locali vicini;
+   · niente verificava che il file dichiarato esistesse. Queste immagini non
+     le carica la pagina — le carica Googlebot: una che risponde 404 non si
+     vede rotta da nessuna parte, viene scartata in silenzio;
+   · la fotografia dell'hotel piu' grande era una sola, e la piscina stava a
+     650px, sotto il minimo di 1200 che Google consiglia.
+   ============================================================ */
+
+/* le fotografie di TUTTI i nodi, non del solo hotel */
+function fotografie(): { nodo: string; url: string }[] {
+  const tutte: { nodo: string; url: string }[] = [];
+  for (const n of grafo()) {
+    for (const u of ([] as unknown[]).concat(n.image ?? [])) {
+      tutte.push({ nodo: String(n['@type']), url: String(u) });
+    }
+  }
+  return tutte;
+}
+
+Deno.test('anche il Bistrot e il Day Spa hanno la loro fotografia', () => {
+  for (const tipo of ['Restaurant', 'DaySpa']) {
+    const n = conTipo(tipo);
+    const i = ([] as unknown[]).concat(n.image ?? []);
+    assert(i.length > 0, `il nodo ${tipo} non dichiara nessuna fotografia`);
+  }
+});
+
+Deno.test('ogni fotografia dichiarata e servita davvero', () => {
+  /* o e' un file dentro public/, o la copre una riscrittura di vercel.json:
+     una terza possibilita' non c'e' */
+  const vercel = JSON.parse(
+    Deno.readTextFileSync(new URL('./vercel.json', import.meta.url)),
+  ) as { rewrites?: { source: string }[] };
+  const riscritture = (vercel.rewrites ?? []).map((r) => r.source);
+
+  const coperta = (percorso: string) =>
+    riscritture.some((s) =>
+      s.includes(':') ? percorso.startsWith(s.slice(0, s.indexOf(':'))) : percorso === s
+    );
+
+  const rotte: string[] = [];
+  for (const { nodo, url } of fotografie()) {
+    const percorso = new URL(url).pathname;
+    if (coperta(percorso)) continue;
+    let servita = false;
+    try {
+      servita = Deno.statSync(new URL('./public' + percorso, import.meta.url)).isFile;
+    } catch { /* non esiste: resta false */ }
+    if (!servita) rotte.push(`${nodo}: ${percorso}`);
+  }
+  assertEquals(
+    rotte,
+    [],
+    "fotografie dichiarate che nessuno serve: ne' un file in public/, ne' una riscrittura",
+  );
+});
+
+Deno.test('almeno una fotografia dell hotel supera i 1200px', () => {
+  /* Google chiede il lato lungo sopra i 1200. La misura si legge dal file,
+     non si indovina dal nome: un file rimpiazzato con uno piccolo passerebbe
+     un controllo fatto sull'elenco. */
+  const misura = (percorso: string): number => {
+    const b = Deno.readFileSync(new URL('./public' + percorso, import.meta.url));
+    /* il marcatore SOFn di un JPEG porta altezza e larghezza */
+    let i = 2;
+    while (i < b.length) {
+      if (b[i] !== 0xff) { i++; continue; }
+      const k = b[i + 1];
+      if (k >= 0xc0 && k <= 0xcf && k !== 0xc4 && k !== 0xc8 && k !== 0xcc) {
+        const alto = (b[i + 5] << 8) | b[i + 6];
+        const largo = (b[i + 7] << 8) | b[i + 8];
+        return Math.max(alto, largo);
+      }
+      i += 2 + ((b[i + 2] << 8) | b[i + 3]);
+    }
+    return 0;
+  };
+
+  const proprie = (conTipo('Hotel').image as string[])
+    .map((u) => new URL(u).pathname)
+    .filter((p) => p.startsWith('/img/'));
+  assert(proprie.length > 0, 'nessuna fotografia servita da public/img');
+
+  const grandi = proprie.filter((p) => misura(p) >= 1200);
+  assert(
+    grandi.length > 0,
+    `nessuna fotografia sopra i 1200px (misurate: ${
+      proprie.map((p) => `${p} ${misura(p)}px`).join(', ')
+    }): la scheda su Google esce con quella piccola, o senza`,
+  );
+});
