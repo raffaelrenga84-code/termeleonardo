@@ -133,6 +133,10 @@
     {
       "source": "/comune/:percorso*",
       "destination": "https://arrivo-terme-leonardo.vercel.app/comune/:percorso*"
+    },
+    {
+      "source": "/arrivo/:percorso*",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/arrivo/:percorso*"
     }
   ]
 }
