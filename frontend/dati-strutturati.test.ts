@@ -47,7 +47,7 @@ Deno.test('il blocco e JSON valido: e la ragione per cui questa prova esiste', (
 Deno.test('l hotel dice dove sta, con indirizzo e coordinate', () => {
   const h = conTipo('Hotel');
   const a = h.address as Nodo;
-  assertEquals(a.streetAddress, 'Via Monteortone 46');
+  assertEquals(a.streetAddress, 'Via Monteortone, 46');
   assertEquals(a.addressCountry, 'IT');
   assert(h.geo, 'senza coordinate la scheda non sa dove mettere il punto');
   assert(String(h.telephone ?? '').startsWith('+39'), 'il telefono va in forma internazionale');
