@@ -5,7 +5,10 @@
     {
       "source": "/foto/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     }
   ],
@@ -137,6 +140,10 @@
     {
       "source": "/richieste/:percorso*",
       "destination": "https://arrivo-terme-leonardo.vercel.app/richieste/:percorso*"
+    },
+    {
+      "source": "/dayspa/:percorso*",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/dayspa/:percorso*"
     },
     {
       "source": "/comune/:percorso*",

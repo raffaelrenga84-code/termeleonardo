@@ -16,5 +16,8 @@ Disallow: /gestione/
 Disallow: /buoni/stampa/
 Disallow: /richieste/
 Disallow: /comune/
+# La pagina Day Spa e di prova (3 settembre 2026): quando andra in linea
+# questa riga sparisce e la pagina entra nella sitemap.
+Disallow: /dayspa/
 
 Sitemap: https://www.hoteltermeleonardo.com/sitemap.xml
