@@ -21,5 +21,6 @@ Disallow: /comune/
 Disallow: /dayspa/
 # Lo sportello del Day Spa: pagina del tablet della reception, riservata.
 Disallow: /ingresso/
+Disallow: /ingresso-totem
 
 Sitemap: https://www.hoteltermeleonardo.com/sitemap.xml

@@ -146,6 +146,11 @@
       "destination": "https://arrivo-terme-leonardo.vercel.app/dayspa/:percorso*"
     },
     {
+      "source": "/ingresso-totem",
+      "has": [{ "type": "header", "key": "x-real-ip", "value": "46.234.202.29" }],
+      "destination": "https://arrivo-terme-leonardo.vercel.app/ingresso/"
+    },
+    {
       "source": "/ingresso/:percorso*",
       "destination": "https://arrivo-terme-leonardo.vercel.app/ingresso/:percorso*"
     },
