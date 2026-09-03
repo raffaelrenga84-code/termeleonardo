@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# foto del sito precedente scaricate da strumenti/foto.js quando servono
+/.foto-vecchio
