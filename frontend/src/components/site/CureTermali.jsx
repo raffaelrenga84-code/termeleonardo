@@ -1,6 +1,7 @@
 import { Reveal, Label } from "./Reveal";
 import { IMG } from "../../data";
 import { useLang } from "../../LanguageContext";
+import Foto from "./Foto";
 
 export default function CureTermali() {
   const { t } = useLang();
@@ -11,7 +12,8 @@ export default function CureTermali() {
         <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
           <Reveal delay={0.1}>
             <div className="overflow-hidden rounded-2xl h-[460px] group">
-              <img src={IMG.fango} alt="" className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+              <Foto foto={IMG.fango} alt="" sizes="(min-width: 1024px) 620px, 100vw"
+                className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
             </div>
           </Reveal>
           <Reveal>

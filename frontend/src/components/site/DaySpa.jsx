@@ -2,6 +2,7 @@ import { Reveal, Label } from "./Reveal";
 import { Check } from "lucide-react";
 import { IMG, DAYSPA_URL } from "../../data";
 import { useLang } from "../../LanguageContext";
+import Foto from "./Foto";
 
 export default function DaySpa() {
   const { t } = useLang();
@@ -16,7 +17,8 @@ export default function DaySpa() {
             <p className="text-[#5A5A5A] text-lg mt-6 max-w-lg">{d.intro}</p>
             <p className="text-sm text-[#B08D57] font-semibold mt-4">{d.orari}</p>
             <div className="mt-8 overflow-hidden rounded-2xl h-72 group">
-              <img src={IMG.grotta} alt="" className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+              <Foto foto={IMG.grotta} alt="" sizes="(min-width: 1024px) 620px, 100vw"
+                className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
             </div>
             <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3 mt-8">
               {d.incluso.map((tx) => (

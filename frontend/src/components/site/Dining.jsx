@@ -2,6 +2,7 @@ import { Reveal, Label } from "./Reveal";
 import { UtensilsCrossed, Clock, Download } from "lucide-react";
 import { IMG } from "../../data";
 import { useLang } from "../../LanguageContext";
+import Foto from "./Foto";
 
 /* I tre menu in PDF. Stavano solo nella pagina "welcome" del sito vecchio,
    dove non ci arriva nessuno: qui sono accanto alla descrizione del posto
@@ -30,7 +31,8 @@ export default function Dining() {
         <div className="grid lg:grid-cols-2 gap-8 mt-12 items-stretch">
           <Reveal>
             <div className="overflow-hidden rounded-2xl h-full min-h-[320px] group">
-              <img src={IMG.dining} alt="" className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+              <Foto foto={IMG.dining} alt="" sizes="(min-width: 1024px) 620px, 100vw"
+                className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
             </div>
           </Reveal>
 

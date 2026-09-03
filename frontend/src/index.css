@@ -47,6 +47,18 @@ body {
     color: var(--bg);
 }
 
+/* Le due animazioni d'ingresso della prima schermata (Hero.jsx): la foto
+   che si avvicina piano, il testo che sale. In CSS e non in JavaScript:
+   partono appena la foto c'e', senza aspettare il pacchetto. Chi ha
+   chiesto al sistema meno movimento le vede ferme. */
+@keyframes hero-foto { from { transform: scale(1.15); } to { transform: scale(1); } }
+@keyframes hero-testo { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+.hero-foto { animation: hero-foto 2.2s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.hero-testo { animation: hero-testo 1s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both; }
+@media (prefers-reduced-motion: reduce) {
+    .hero-foto, .hero-testo { animation: none; }
+}
+
 /* Subtle film grain overlay */
 .grain::after {
     content: "";

@@ -1,6 +1,7 @@
 import { Reveal, Label } from "./Reveal";
 import { OFFERTE, PRENOTA_URL } from "../../data";
 import { useLang } from "../../LanguageContext";
+import Foto from "./Foto";
 
 export default function Offers() {
   const { t, lang } = useLang();
@@ -34,7 +35,8 @@ export default function Offers() {
             return (
               <Reveal key={c.slug} delay={i * 0.1}>
                 <div data-testid={`offer-card-${i}`} className="group relative h-full min-h-[380px] rounded-2xl overflow-hidden flex flex-col justify-end">
-                  <img src={offer.img} alt={c.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-110" />
+                  <Foto foto={offer.foto} alt={c.title} sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-110" />
                   <div className={`absolute inset-0 ${offer.featured ? "bg-gradient-to-t from-[#1A3626]/95 via-[#1A3626]/50 to-transparent" : "bg-gradient-to-t from-black/85 via-black/40 to-transparent"}`} />
                   <div className="relative p-7 text-white">
                     <span className="text-xs uppercase tracking-label text-[#E7C98B]">{c.tag}</span>

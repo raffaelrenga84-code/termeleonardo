@@ -1,38 +1,53 @@
-const BASE = "https://www.termeleonardo.com/img";
+import { FOTO } from "./foto";
 
+/* LE FOTOGRAFIE STANNO IN CASA, dal 3 settembre 2026.
+
+   Fino ad allora venivano prese dal sito precedente (termeleonardo.com/img):
+   JPEG da 300-400 KB serviti uguali al telefono e al computer, e quella a
+   tutto schermo in cima alla pagina era larga 650 px. Ora stanno in
+   public/foto/, in WebP e in tre misure, prodotte da strumenti/foto.js a
+   partire da strumenti/foto.json — che dice per ognuna da dove viene e
+   perche' e' stata scelta. Qui si decide solo QUALE foto va in QUALE posto.
+
+   Ogni voce si mostra con <Foto foto={IMG.x} sizes="..." />, mai con un
+   <img src> nudo: e' il componente che porta srcset, misure e caricamento
+   pigro. */
 export const IMG = {
-  heroPool: `${BASE}/outdoor-pool-hotel-leonardo-da-vinci-terme.jpg`,
-  wellnessPool: `${BASE}/view-hotel-leonardo-da-vinci-terme.jpg`,
+  /* la fotografia grande della home: il parco, le piscine e i colli */
+  heroPool: FOTO.vista,
+  /* la piscina termale coperta, dall'originale del fotografo */
+  wellnessPool: FOTO.piscinaTermale,
   /* La grotta termale: sta bene sul Day Spa, che vende proprio piscine e
      grotte. Prima questa stessa fotografia stava anche sulle Cure Termali e
      sul Benessere — tre volte la stessa immagine, e sulle Cure Termali per
      giunta a illustrare la FANGOTERAPIA, che coi lettini della grotta non
      c'entra niente. */
-  grotta: `${BASE}/grotto-hotel-leonardo-da-vinci-terme.jpg`,
+  grotta: FOTO.grotta,
   /* Il fango vero, dalla pagina delle cure del sito precedente. */
-  fango: `${BASE}/fango@2x.jpg`,
+  fango: FOTO.fango,
   /* La piscina interna coi getti, per il Benessere: e' la prima cosa che
      quella sezione elenca (piscine 30-35 gradi, lettini idromassaggianti). */
-  idromassaggio: `${BASE}/idromassaggio-piscine-termali-abano-terme-leonardo-da-vinci-m.jpg`,
-  golf: `${BASE}/7-days-golf.jpg`,
+  idromassaggio: FOTO.idromassaggio,
+  golf: FOTO.golf,
   /* Il campo pratica e il maestro sono nostri davvero: due fotografie del
      posto, non un'immagine di repertorio con una pallina. Stanno da anni
      sulla pagina del campo pratica del sito precedente. */
-  drivingRange: `${BASE}/driving-range-hotel-leonardo-da-vinci-terme.jpg`,
-  maestro: `${BASE}/nicolo.jpg`,
-  roomView: `${BASE}/-hotel-leonardo-da-vinci-terme-3.jpg`,
-  roomBalcony: `${BASE}/suite-533-hotel-terme-lonardo-@2x.jpg`,
-  roomJunior: `${BASE}/junior-suite-32-1-hotel-terme-leonardo@2x.jpg`,
-  dining: `${BASE}/sommer-spezial-hotel-terme-leonardo.jpg`,
-  membership: `${BASE}/membership.jpg`,
+  drivingRange: FOTO.campoPratica,
+  maestro: FOTO.maestro,
+  /* le due foto della sezione camere: la junior suite e la suite. Prima
+     nella grande c'era un bagno. */
+  roomView: FOTO.juniorSuite,
+  roomBalcony: FOTO.suite,
+  /* il Bistrot vero: prima la sezione ristorante mostrava la piscina */
+  dining: FOTO.bistrot,
 };
 
 export const ROOM_GALLERY = [
-  { key: "single", img: `${BASE}/single-room-hotel-leonardo-da-vinci-terme@2x.jpg`, price: "100" },
-  { key: "double", img: `${BASE}/double-room-hotel-terme-leonardo-@2x.jpg`, price: "90" },
-  { key: "queen", img: `${BASE}/queen-room-@2x.jpg`, price: "90" },
-  { key: "junior", img: `${BASE}/junior-suite-32-1-hotel-terme-leonardo@2x.jpg`, price: "105" },
-  { key: "suite", img: `${BASE}/suite-533-hotel-terme-lonardo-@2x.jpg`, price: "115" },
+  { key: "single", foto: FOTO.cameraSingola, price: "100" },
+  { key: "double", foto: FOTO.cameraDoppia, price: "90" },
+  { key: "queen", foto: FOTO.cameraQueen, price: "90" },
+  { key: "junior", foto: FOTO.juniorSuite, price: "105" },
+  { key: "suite", foto: FOTO.suite, price: "115" },
 ];
 
 /* Motore di prenotazione vecchio: resta definito come riserva, ma nessun
@@ -148,15 +163,15 @@ export const NAV = [
    ancora; non e' una ragione per ricopiarle. */
 export const OFFERTE = {
   /* italiane: soggiorni brevi */
-  "7-giorni-di-golf": { price: "820", img: `${BASE}/7-days-golf.jpg`, featured: true },
-  deluxe: { price: "400", img: `${BASE}/sommer-spezial-hotel-terme-leonardo.jpg` },
-  smart: { price: "180", img: `${BASE}/dolce-vita-mud-offer.jpg` },
-  escape: { price: "280", img: `${BASE}/november-special.jpg` },
+  "7-giorni-di-golf": { price: "820", foto: FOTO.offertaGolf, featured: true },
+  deluxe: { price: "400", foto: FOTO.offertaDeluxe },
+  smart: { price: "180", foto: FOTO.offertaFango },
+  escape: { price: "280", foto: FOTO.offertaNovembre },
   /* tedesche: settimane lunghe. Il golf e' lo stesso soggiorno e lo stesso
      prezzo dell'italiano, con un indirizzo suo sul sito dell'hotel. */
-  "7-tage-golf": { price: "820", img: `${BASE}/7-days-golf.jpg`, featured: true },
-  "dolce-vita-fango-woche": { price: "1157,5", img: `${BASE}/dolce-vita-mud-offer.jpg` },
-  "november-spezial": { price: "108", img: `${BASE}/november-special.jpg` },
+  "7-tage-golf": { price: "820", foto: FOTO.offertaGolf, featured: true },
+  "dolce-vita-fango-woche": { price: "1157,5", foto: FOTO.offertaFango },
+  "november-spezial": { price: "108", foto: FOTO.offertaNovembre },
 };
 
 export const WELLNESS_FEATURES = [

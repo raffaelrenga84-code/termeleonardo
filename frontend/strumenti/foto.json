@@ -1,0 +1,44 @@
+{
+  "_": [
+    "Le fotografie del sito: da dove vengono e come si tagliano.",
+    "Le legge strumenti/foto.js, che produce public/foto/*.webp e src/foto.js.",
+    "«da» dice la sorgente: img/… e' public/img (le foto della scheda Google),",
+    "proprieta/… sono gli originali del fotografo consegnati dalla proprieta'",
+    "il 21 agosto 2026 (Desktop/foto-leonardo, fuori dal repository: pesano",
+    "10-25 MB l'uno), vecchio/… sono le foto del sito precedente, scaricate",
+    "da https://www.termeleonardo.com/img/ quando servono.",
+    "«taglio» impone un rapporto (larghezza:altezza) quando l'originale e'",
+    "verticale o di proporzioni diverse da quelle in cui viene mostrato."
+  ],
+  "larghezze": [480, 960, 1600],
+  "qualita": 78,
+  "foto": {
+    "vista": {
+      "da": "img/hotel-vista.jpg",
+      "larghezze": [640, 1280, 1920],
+      "qualita": 72,
+      "nota": "La fotografia grande della home: il parco, le piscine e i colli dall'alto. Prima c'era la piscina esterna a 650 px, allargata a tutto schermo."
+    },
+    "piscinaTermale": {
+      "da": "proprieta/2018_HotelTermeLeonardo_SPA_3.jpg",
+      "taglio": "3:2",
+      "nota": "La piscina termale coperta, con le palme e la vetrata. Originale verticale del fotografo: si tiene la fascia centrale."
+    },
+    "idromassaggio": { "da": "vecchio/idromassaggio-piscine-termali-abano-terme-leonardo-da-vinci-m.jpg" },
+    "golf": { "da": "vecchio/7-days-golf.jpg", "nota": "Sfondo della sezione golf, sotto un velo verde al 75%: e' l'unica foto di golf che abbiamo." },
+    "campoPratica": { "da": "vecchio/driving-range-hotel-leonardo-da-vinci-terme.jpg" },
+    "maestro": { "da": "vecchio/nicolo.jpg", "larghezze": [160], "nota": "Mostrata in un tondo da 80 px: basta una misura." },
+    "juniorSuite": { "da": "vecchio/junior-suite-32-1-hotel-terme-leonardo@2x.jpg", "nota": "La foto grande delle camere. Prima li' c'era un bagno." },
+    "suite": { "da": "vecchio/suite-533-hotel-terme-lonardo-@2x.jpg" },
+    "cameraSingola": { "da": "vecchio/single-room-hotel-leonardo-da-vinci-terme@2x.jpg" },
+    "cameraDoppia": { "da": "vecchio/double-room-hotel-terme-leonardo-@2x.jpg" },
+    "cameraQueen": { "da": "vecchio/queen-room-@2x.jpg" },
+    "bistrot": { "da": "img/bistrot.jpg", "nota": "Il Bistrot La Piazza, dall'originale del fotografo. Prima la sezione ristorante mostrava la piscina con gli ombrelloni." },
+    "grotta": { "da": "img/dayspa-grotta.jpg", "qualita": 65, "nota": "La grotta termale per il Day Spa, 1920 px: prima c'era la sala dei lettini a 650 px. La roccia e' una grana fitta: a 78 pesava 390 KB." },
+    "fango": { "da": "vecchio/fango@2x.jpg" },
+    "offertaGolf": { "da": "vecchio/7-days-golf.jpg" },
+    "offertaDeluxe": { "da": "vecchio/sommer-spezial-hotel-terme-leonardo.jpg" },
+    "offertaFango": { "da": "vecchio/dolce-vita-mud-offer.jpg" },
+    "offertaNovembre": { "da": "vecchio/november-special.jpg" }
+  }
+}

@@ -1,6 +1,7 @@
 import { Reveal, Label } from "./Reveal";
 import { IMG } from "../../data";
 import { useLang } from "../../LanguageContext";
+import Foto from "./Foto";
 
 export default function Rooms() {
   const { t } = useLang();
@@ -12,10 +13,12 @@ export default function Rooms() {
           <Reveal>
             <div className="grid grid-cols-5 gap-4">
               <div className="col-span-3 overflow-hidden rounded-2xl h-[420px] group">
-                <img src={IMG.roomView} alt="" className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+                <Foto foto={IMG.roomView} alt="" sizes="(min-width: 1024px) 370px, 60vw"
+                  className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
               </div>
               <div className="col-span-2 overflow-hidden rounded-2xl h-[420px] mt-12 group">
-                <img src={IMG.roomBalcony} alt="" className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+                <Foto foto={IMG.roomBalcony} alt="" sizes="(min-width: 1024px) 250px, 40vw"
+                  className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
               </div>
             </div>
           </Reveal>

@@ -28,6 +28,20 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+        <!-- ============================================================
+             LA PRIMA FOTOGRAFIA, PREANNUNCIATA
+
+             E' la foto a tutto schermo in cima alla pagina, quella su cui
+             si misura quanto ci mette il sito ad aprirsi. Senza questa
+             riga il browser la scopre solo dopo aver scaricato ed
+             eseguito tutto il JavaScript: cosi' la chiede subito, nella
+             misura giusta per lo schermo. Indirizzo e misure sono quelli
+             di src/foto.js (voce «vista»): foto.test.ts controlla che
+             coincidano, perche' un preload di un file che poi non si usa
+             e' peso puro.
+             ============================================================ -->
+        <link rel="preload" as="image" href="/foto/vista.50cbd6ef.1280.webp" imagesrcset="/foto/vista.50cbd6ef.640.webp 640w, /foto/vista.50cbd6ef.1280.webp 1280w, /foto/vista.50cbd6ef.1920.webp 1920w" imagesizes="100vw" />
         <!--
         manifest.json provides metadata used when your web app is installed on a
         user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/

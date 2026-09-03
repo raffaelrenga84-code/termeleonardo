@@ -1,6 +1,7 @@
 import { Reveal, Label } from "./Reveal";
 import { IMG, RICHIESTA_URL } from "../../data";
 import { useLang } from "../../LanguageContext";
+import Foto from "./Foto";
 
 export default function Golf() {
   const { t, lang } = useLang();
@@ -11,7 +12,7 @@ export default function Golf() {
   const b = t.booking;
   return (
     <section id="golf" data-testid="golf-section" className="relative py-24 md:py-32 overflow-hidden">
-      <img src={IMG.golf} alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <Foto foto={IMG.golf} alt="" sizes="100vw" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-[#1A3626]/75" />
       <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-[minmax(0,1fr)_340px] gap-12 lg:gap-16 items-start">
         <Reveal className="max-w-2xl">
@@ -55,20 +56,20 @@ export default function Golf() {
             capisce cosa si può chiedere, poi si vede chi te lo insegna. */}
         <Reveal className="w-full flex flex-col gap-6">
           <figure className="bg-white/10 rounded-2xl p-3 backdrop-blur-sm">
-            <img
-              src={IMG.drivingRange}
+            <Foto
+              foto={IMG.drivingRange}
               alt={g.campoEti}
-              loading="lazy"
+              sizes="(min-width: 1024px) 340px, 100vw"
               className="w-full aspect-[4/3] object-cover rounded-xl"
             />
             <figcaption className="text-white/80 text-sm mt-3 px-1">{g.campoEti}</figcaption>
           </figure>
 
           <figure className="bg-white/10 rounded-2xl p-3 backdrop-blur-sm flex items-center gap-4">
-            <img
-              src={IMG.maestro}
+            <Foto
+              foto={IMG.maestro}
               alt={g.maestroNome}
-              loading="lazy"
+              sizes="80px"
               className="w-20 h-20 shrink-0 object-cover rounded-full"
             />
             <figcaption className="min-w-0">

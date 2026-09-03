@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { Reveal, Label } from "./Reveal";
 import { ROOM_GALLERY, PRENOTA_URL } from "../../data";
 import { useLang } from "../../LanguageContext";
+import Foto from "./Foto";
 
 export default function RoomGallery() {
   const { t, lang } = useLang();
@@ -52,7 +53,8 @@ export default function RoomGallery() {
                   className="flex-[0_0_88%] sm:flex-[0_0_60%] lg:flex-[0_0_38%] min-w-0">
                   <div className="group h-full bg-white rounded-2xl overflow-hidden border border-[#E5E0D8] flex flex-col">
                     <div className="h-72 overflow-hidden">
-                      <img src={room.img} alt={info.name} className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+                      <Foto foto={room.foto} alt={info.name} sizes="(min-width: 1024px) 38vw, (min-width: 640px) 60vw, 88vw"
+                        className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
                     </div>
                     <div className="p-7 flex flex-col flex-grow">
                       <div className="flex items-start justify-between gap-3">

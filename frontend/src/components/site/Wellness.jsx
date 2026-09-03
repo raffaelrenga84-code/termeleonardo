@@ -1,6 +1,7 @@
 import { Reveal, Label } from "./Reveal";
 import { IMG } from "../../data";
 import { useLang } from "../../LanguageContext";
+import Foto from "./Foto";
 
 export default function Wellness() {
   const { t } = useLang();
@@ -47,10 +48,12 @@ export default function Wellness() {
           <Reveal className="order-1 lg:order-2" delay={0.15}>
             <div className="grid grid-cols-2 gap-4">
               <div className="overflow-hidden rounded-2xl col-span-2 h-72 group">
-                <img src={IMG.wellnessPool} alt="" className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+                <Foto foto={IMG.wellnessPool} alt="" sizes="(min-width: 1024px) 620px, 100vw"
+                  className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
               </div>
               <div className="overflow-hidden rounded-2xl h-56 group">
-                <img src={IMG.idromassaggio} alt="" className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+                <Foto foto={IMG.idromassaggio} alt="" sizes="(min-width: 1024px) 300px, 50vw"
+                  className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
               </div>
               <div className="rounded-2xl h-56 bg-[#1A3626] text-[#F9F6F0] flex flex-col justify-center px-6">
                 <span className="font-serif-display text-5xl text-[#E7C98B]">35°C</span>
