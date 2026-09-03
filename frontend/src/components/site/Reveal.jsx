@@ -1,16 +1,41 @@
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
-export const Reveal = ({ children, delay = 0, y = 28, className = "" }) => (
-  <motion.div
-    className={className}
-    initial={{ opacity: 0, y }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-80px" }}
-    transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }}
-  >
-    {children}
-  </motion.div>
-);
+/* Un blocco che compare con una dissolvenza quando entra nello schermo.
+
+   Fino al 3 settembre 2026 lo faceva framer-motion: 110 KB di JavaScript
+   nel pacchetto, per questo e per le due animazioni della prima
+   schermata. Ora e' un IntersectionObserver di dieci righe e una regola
+   CSS in index.css (.reveal): stesso ritardo, stessa curva, stesso
+   margine di 80 px. Chi ha chiesto al sistema meno movimento vede tutto
+   fermo e subito visibile; un browser senza IntersectionObserver idem. */
+export const Reveal = ({ children, delay = 0, y = 28, className = "" }) => {
+  const ref = useRef(null);
+  const [visto, setVisto] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return undefined;
+    if (!("IntersectionObserver" in window)) { setVisto(true); return undefined; }
+    const io = new IntersectionObserver(
+      ([voce]) => {
+        if (voce.isIntersecting) { setVisto(true); io.disconnect(); }
+      },
+      { rootMargin: "-80px 0px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className={`reveal ${visto ? "reveal-visto" : ""} ${className}`}
+      style={{ "--reveal-y": `${y}px`, "--reveal-ritardo": `${delay}s` }}
+    >
+      {children}
+    </div>
+  );
+};
 
 export const Label = ({ children, className = "" }) => (
   <span className={`inline-block text-xs uppercase tracking-label text-[#B08D57] font-semibold ${className}`}>

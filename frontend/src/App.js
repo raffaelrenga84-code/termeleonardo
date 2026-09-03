@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import Lenis from "lenis";
 import "@/App.css";
 import { LanguageProvider } from "@/LanguageContext";
@@ -19,7 +19,10 @@ import InfoContatti from "@/components/site/InfoContatti";
 import BookingForm from "@/components/site/BookingForm";
 import CookieBanner from "@/components/site/CookieBanner";
 import Faq from "@/components/site/Faq";
-import ChatWidget from "@/components/site/ChatWidget";
+/* La chat e' un pannello che si apre su richiesta: il suo codice arriva in
+   un file a parte, dopo la pagina, invece di stare nel pacchetto che
+   bisogna scaricare prima di vedere qualcosa. */
+const ChatWidget = lazy(() => import("@/components/site/ChatWidget"));
 import Footer from "@/components/site/Footer";
 
 function App() {
@@ -61,7 +64,9 @@ function App() {
         <Footer />
         <CookieBanner />
         {/* fuori da <main>: e' un pannello fisso, non contenuto della pagina */}
-        <ChatWidget />
+        <Suspense fallback={null}>
+          <ChatWidget />
+        </Suspense>
       </div>
     </LanguageProvider>
   );

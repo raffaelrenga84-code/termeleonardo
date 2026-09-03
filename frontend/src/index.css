@@ -70,6 +70,24 @@ body {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
+/* La dissolvenza allo scorrimento (Reveal.jsx): il blocco parte un poco
+   piu' in basso e trasparente, e sale quando entra nello schermo. Chi ha
+   chiesto meno movimento lo vede fermo e subito visibile. */
+.reveal {
+    opacity: 0;
+    transform: translateY(var(--reveal-y, 28px));
+    transition:
+        opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-ritardo, 0s),
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-ritardo, 0s);
+}
+.reveal-visto {
+    opacity: 1;
+    transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: var(--bg-2); }
