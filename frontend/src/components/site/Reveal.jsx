@@ -37,8 +37,11 @@ export const Reveal = ({ children, delay = 0, y = 28, className = "" }) => {
   );
 };
 
+/* L'etichetta e' piccola (12 px): l'oro chiaro dei titoli qui non si legge
+   abbastanza (contrasto 2,9 sul crema, la soglia e' 4,5). Bronzo #8A6A38.
+   Sui fondi scuri chi la usa passa className="text-[#E7C98B]", che resta. */
 export const Label = ({ children, className = "" }) => (
-  <span className={`inline-block text-xs uppercase tracking-label text-[#B08D57] font-semibold ${className}`}>
+  <span className={`inline-block text-xs uppercase tracking-label text-[#8A6A38] font-semibold ${className}`}>
     {children}
   </span>
 );

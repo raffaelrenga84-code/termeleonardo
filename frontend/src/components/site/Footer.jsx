@@ -22,14 +22,16 @@ export default function Footer() {
             <p className="mt-4 max-w-sm text-sm">{f.tagline}</p>
           </div>
           <div>
-            <h4 className="text-xs uppercase tracking-label text-[#E7C98B] mb-4">{f.navigate}</h4>
+            {/* h3 e non h4: prima del footer l'ultimo titolo e' un h2, e
+                saltare un livello disorienta chi naviga coi titoli */}
+            <h3 className="text-xs uppercase tracking-label text-[#E7C98B] mb-4">{f.navigate}</h3>
             <ul className="space-y-2 text-sm">
               {NAV.map((n) => (<li key={n.href}><a href={n.href} className="hover:text-[#E7C98B] transition-colors">{labelFor(n.href)}</a></li>))}
               <li><a href={loginUrl(lang)} target="_blank" rel="noopener noreferrer" data-testid="footer-login" className="hover:text-[#E7C98B] transition-colors">{L.login}</a></li>
             </ul>
           </div>
           <div>
-            <h4 className="text-xs uppercase tracking-label text-[#E7C98B] mb-4">{f.contacts}</h4>
+            <h3 className="text-xs uppercase tracking-label text-[#E7C98B] mb-4">{f.contacts}</h3>
             <ul className="space-y-2 text-sm">
               <li>{t.info.address}</li>
               <li><a href={`tel:${t.info.phone.replace(/\s/g, "")}`} className="hover:text-[#E7C98B] transition-colors">{t.info.phone}</a></li>
@@ -40,12 +42,12 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 pt-6 border-t border-white/10 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs">
-          <button data-testid="footer-cookie" onClick={() => setModal("cookie")} className="text-white/60 hover:text-[#E7C98B] transition-colors">{L.cookieLink}</button>
-          <button data-testid="footer-transparency" onClick={() => setModal("transparency")} className="text-white/60 hover:text-[#E7C98B] transition-colors">{L.transparencyLink}</button>
-          <a href={loginUrl(lang)} target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-[#E7C98B] transition-colors">{L.login}</a>
+          <button data-testid="footer-cookie" onClick={() => setModal("cookie")} className="text-white/75 hover:text-[#E7C98B] transition-colors">{L.cookieLink}</button>
+          <button data-testid="footer-transparency" onClick={() => setModal("transparency")} className="text-white/75 hover:text-[#E7C98B] transition-colors">{L.transparencyLink}</button>
+          <a href={loginUrl(lang)} target="_blank" rel="noopener noreferrer" className="text-white/75 hover:text-[#E7C98B] transition-colors">{L.login}</a>
         </div>
 
-        <div className="mt-6 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between gap-3 text-[11px] text-white/45">
+        <div className="mt-6 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between gap-3 text-[11px] text-white/70">
           <span data-testid="footer-legal">{COMPANY_LINE}</span>
           <span className="whitespace-nowrap">© {new Date().getFullYear()} · {f.rights}</span>
         </div>
@@ -62,7 +64,7 @@ export default function Footer() {
           ))}
         </div>
         <p className="text-sm text-[#5A5A5A] mt-5">{L.manage}</p>
-        <p className="text-xs text-[#B08D57] mt-4">{L.updated}</p>
+        <p className="text-xs text-[#8A6A38] mt-4">{L.updated}</p>
       </Modal>
 
       <Modal open={modal === "transparency"} onClose={() => setModal(null)} title={L.transparencyTitle} closeLabel={L.close}>
@@ -103,7 +105,7 @@ export default function Footer() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-[#B08D57] mt-4">{L.transparencyTableNote}</p>
+        <p className="text-xs text-[#8A6A38] mt-4">{L.transparencyTableNote}</p>
       </Modal>
     </footer>
   );

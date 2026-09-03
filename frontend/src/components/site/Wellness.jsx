@@ -35,7 +35,7 @@ export default function Wellness() {
                     <p className="text-sm text-[#5A5A5A] mt-1">{f.desc}</p>
                     {f.href && (
                       <a href={f.href} data-testid="wellness-vai-trattamenti"
-                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1A3626] mt-2 border-b border-[#B08D57] pb-0.5 hover:text-[#B08D57] transition-colors">
+                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1A3626] mt-2 border-b border-[#B08D57] pb-0.5 hover:text-[#8A6A38] transition-colors">
                         {f.vai}
                         <span aria-hidden="true">→</span>
                       </a>

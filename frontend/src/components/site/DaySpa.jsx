@@ -15,7 +15,7 @@ export default function DaySpa() {
             <Label>{d.label}</Label>
             <h2 className="font-serif-display text-4xl md:text-6xl text-[#1A3626] mt-5 leading-tight font-light">{d.title}</h2>
             <p className="text-[#5A5A5A] text-lg mt-6 max-w-lg">{d.intro}</p>
-            <p className="text-sm text-[#B08D57] font-semibold mt-4">{d.orari}</p>
+            <p className="text-sm text-[#8A6A38] font-semibold mt-4">{d.orari}</p>
             <div className="mt-8 overflow-hidden rounded-2xl h-72 group">
               <Foto foto={IMG.grotta} alt="" sizes="(min-width: 1024px) 620px, 100vw"
                 className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />

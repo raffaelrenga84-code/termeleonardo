@@ -64,7 +64,7 @@ export default function RoomGallery() {
                           <span className="font-serif-display text-2xl text-[#B08D57]">€{room.price}</span>
                         </div>
                       </div>
-                      <p className="text-xs uppercase tracking-wider text-[#B08D57] mt-2">{info.spec}</p>
+                      <p className="text-xs uppercase tracking-wider text-[#8A6A38] mt-2">{info.spec}</p>
                       <p className="text-sm text-[#5A5A5A] mt-3 flex-grow">{info.desc}</p>
                       <a href={PRENOTA_URL(lang)} target="_blank" rel="noopener noreferrer" data-testid={`room-book-${room.key}`}
                         className="mt-6 inline-flex items-center justify-center rounded-full bg-[#1A3626] text-[#F9F6F0] py-3 text-sm font-semibold hover:bg-[#B08D57] transition-colors">
@@ -78,11 +78,15 @@ export default function RoomGallery() {
           </div>
         </div>
 
-        <div className="flex justify-center gap-2 mt-8">
+        {/* Il puntino e' alto 8 px: come pulsante era impossibile da centrare
+            col dito. Il bersaglio e' il pulsante con il suo margine interno
+            (24 px), il puntino e' solo il disegno dentro. */}
+        <div className="flex justify-center gap-1 mt-6">
           {ROOM_GALLERY.map((r, i) => (
             <button key={r.key} onClick={() => emblaApi && emblaApi.scrollTo(i)} data-testid={`room-dot-${i}`}
-              aria-label={`slide ${i + 1}`}
-              className={`h-2 rounded-full transition-all duration-300 ${selected === i ? "w-8 bg-[#B08D57]" : "w-2 bg-[#1A3626]/20"}`} />
+              aria-label={`slide ${i + 1}`} className="p-2 rounded-full">
+              <span className={`block h-2 rounded-full transition-all duration-300 ${selected === i ? "w-8 bg-[#B08D57]" : "w-2 bg-[#1A3626]/20"}`} />
+            </button>
           ))}
         </div>
 

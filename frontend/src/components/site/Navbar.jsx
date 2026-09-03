@@ -41,6 +41,8 @@ export default function Navbar() {
           <img
             src={scrolled ? "/logo.svg" : "/logo-bianco.svg"}
             alt="Hotel Terme Leonardo · Abano Terme · 4 stelle"
+            width="142"
+            height="40"
             className="h-8 md:h-10 w-auto transition-opacity"
           />
         </a>
