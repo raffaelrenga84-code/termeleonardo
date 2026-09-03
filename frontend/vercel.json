@@ -146,6 +146,10 @@
       "destination": "https://arrivo-terme-leonardo.vercel.app/dayspa/:percorso*"
     },
     {
+      "source": "/ingresso/:percorso*",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/ingresso/:percorso*"
+    },
+    {
       "source": "/comune/:percorso*",
       "destination": "https://arrivo-terme-leonardo.vercel.app/comune/:percorso*"
     },
