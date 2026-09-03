@@ -27,7 +27,14 @@
              ============================================================ -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <!-- media="print" e poi onload: il browser scarica il foglio dei
+             caratteri senza fermarsi ad aspettarlo, e lo applica appena
+             arriva. Con display=swap il testo intanto si legge col carattere
+             di riserva. Lighthouse sulla costruzione locale contava due
+             secondi di attesa su questo foglio. Il noscript e' per chi ha
+             JavaScript spento, che senza vedrebbe i caratteri di sistema. -->
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+        <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" /></noscript>
 
         <!-- ============================================================
              LA PRIMA FOTOGRAFIA, PREANNUNCIATA

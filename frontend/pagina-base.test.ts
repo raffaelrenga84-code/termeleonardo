@@ -37,16 +37,23 @@ Deno.test('nessuno script di terzi: ne emergent.sh ne PostHog', () => {
   assertEquals(esterni, [], `script esterni nel guscio: ${esterni.join(', ')}`);
 });
 
-Deno.test('i caratteri si chiedono dalla testa della pagina, una volta, con display=swap', () => {
+Deno.test('i caratteri si chiedono dalla testa della pagina, una volta, con display=swap, senza bloccare il disegno', () => {
   const vivo = senzaCommenti(HTML);
-  const fogli = [...vivo.matchAll(/<link[^>]+href=["'](https:\/\/fonts\.googleapis\.com[^"']+)["'][^>]*>/gi)]
-    .map((m) => m[1]);
-  assertEquals(fogli.length, 1, `un solo foglio da Google Fonts, trovati ${fogli.length}`);
-  const [url] = fogli;
+  const fogli = [...vivo.matchAll(/<link[^>]+href=["'](https:\/\/fonts\.googleapis\.com[^"']+)["'][^>]*>/gi)];
+  /* due tag con lo stesso indirizzo: quello vivo, che non blocca, e la
+     copia dentro <noscript> per chi ha JavaScript spento */
+  assertEquals(fogli.length, 2, `il foglio vivo e la copia in noscript, trovati ${fogli.length}`);
+  const url = fogli[0][1];
+  assertEquals(fogli[1][1], url, 'la copia in noscript deve chiedere lo stesso foglio');
   assert(/Cormorant\+Garamond/.test(url), 'manca il Cormorant dei titoli');
   assert(/Manrope/.test(url), 'manca il Manrope del testo');
   assert(/display=swap/.test(url), 'senza display=swap il testo resta invisibile finche il carattere non arriva');
   assert(!/Inter/.test(url), 'Inter non e usato da nessuna parte: non va scaricato');
+  const vivoTag = fogli[0][0];
+  assert(/media="print"/.test(vivoTag) && /onload="this\.media='all'"/.test(vivoTag),
+    'il foglio dei caratteri deve arrivare senza fermare il disegno (media=print + onload)');
+  const dentroNoscript = /<noscript>\s*<link[^>]+fonts\.googleapis[^>]*>\s*<\/noscript>/.test(vivo);
+  assert(dentroNoscript, 'manca la copia in noscript per chi ha JavaScript spento');
   assert(/<link rel="preconnect" href="https:\/\/fonts\.gstatic\.com" crossorigin/.test(vivo),
     'manca il preconnect a fonts.gstatic.com, da dove arrivano i file dei caratteri');
 });
