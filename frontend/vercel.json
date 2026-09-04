@@ -16,6 +16,13 @@
       ]
     }
   ],
+  "redirects": [
+    {
+      "source": "/buoni",
+      "destination": "/backend",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/it/buoni-regalo",
@@ -131,6 +138,11 @@
     },
     {
       "source": "/gestione/buoni",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/buoni/"
+    },
+    {
+      "source": "/backend",
+      "has": [{ "type": "header", "key": "x-real-ip", "value": "46.234.202.29" }],
       "destination": "https://arrivo-terme-leonardo.vercel.app/buoni/"
     },
     {

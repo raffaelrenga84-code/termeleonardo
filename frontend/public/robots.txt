@@ -24,5 +24,7 @@ Disallow: /ingresso/
 Disallow: /ingresso-totem
 # Il POS di Bistrot e ristorante: pagina dei palmari, solo dall IP dell hotel.
 Disallow: /pos
+# Il back office della reception, solo dall IP dell hotel.
+Disallow: /backend
 
 Sitemap: https://www.hoteltermeleonardo.com/sitemap.xml
