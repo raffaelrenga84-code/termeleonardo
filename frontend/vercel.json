@@ -3,6 +3,10 @@
   "trailingSlash": false,
   "headers": [
     {
+      "source": "/pos/sw.js",
+      "headers": [{ "key": "Service-Worker-Allowed", "value": "/pos" }]
+    },
+    {
       "source": "/foto/(.*)",
       "headers": [
         {
@@ -149,6 +153,16 @@
       "source": "/ingresso-totem",
       "has": [{ "type": "header", "key": "x-real-ip", "value": "46.234.202.29" }],
       "destination": "https://arrivo-terme-leonardo.vercel.app/ingresso/"
+    },
+    {
+      "source": "/pos",
+      "has": [{ "type": "header", "key": "x-real-ip", "value": "46.234.202.29" }],
+      "destination": "https://arrivo-terme-leonardo.vercel.app/pos/"
+    },
+    {
+      "source": "/pos/:percorso*",
+      "has": [{ "type": "header", "key": "x-real-ip", "value": "46.234.202.29" }],
+      "destination": "https://arrivo-terme-leonardo.vercel.app/pos/:percorso*"
     },
     {
       "source": "/ingresso/:percorso*",

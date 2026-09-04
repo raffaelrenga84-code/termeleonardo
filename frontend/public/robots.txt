@@ -22,5 +22,7 @@ Disallow: /dayspa/
 # Lo sportello del Day Spa: pagina del tablet della reception, riservata.
 Disallow: /ingresso/
 Disallow: /ingresso-totem
+# Il POS di Bistrot e ristorante: pagina dei palmari, solo dall IP dell hotel.
+Disallow: /pos
 
 Sitemap: https://www.hoteltermeleonardo.com/sitemap.xml
