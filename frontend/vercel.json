@@ -7,6 +7,10 @@
       "headers": [{ "key": "Service-Worker-Allowed", "value": "/pos" }]
     },
     {
+      "source": "/(ingresso-totem|pos)",
+      "headers": [{ "key": "Cache-Control", "value": "no-cache, must-revalidate" }]
+    },
+    {
       "source": "/foto/(.*)",
       "headers": [
         {
