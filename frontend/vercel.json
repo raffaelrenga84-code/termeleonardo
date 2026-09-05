@@ -182,10 +182,12 @@
     },
     {
       "source": "/ordina",
+      "has": [{ "type": "header", "key": "x-real-ip", "value": "46.234.202.29" }],
       "destination": "https://arrivo-terme-leonardo.vercel.app/ordina/"
     },
     {
       "source": "/ordina/:percorso*",
+      "has": [{ "type": "header", "key": "x-real-ip", "value": "46.234.202.29" }],
       "destination": "https://arrivo-terme-leonardo.vercel.app/ordina/:percorso*"
     },
     {
