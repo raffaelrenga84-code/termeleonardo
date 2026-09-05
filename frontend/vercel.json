@@ -181,6 +181,14 @@
       "destination": "https://arrivo-terme-leonardo.vercel.app/pos/:percorso*"
     },
     {
+      "source": "/ordina",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/ordina/"
+    },
+    {
+      "source": "/ordina/:percorso*",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/ordina/:percorso*"
+    },
+    {
       "source": "/ingresso/:percorso*",
       "destination": "https://arrivo-terme-leonardo.vercel.app/ingresso/:percorso*"
     },
