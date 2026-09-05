@@ -181,4 +181,41 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- Day Spa: gli ingressi si vendono da noi dal 5 settembre 2026 (pagina /dayspa del repo infra) -->
+  <url>
+    <loc>https://www.hoteltermeleonardo.com/dayspa?l=it</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.hoteltermeleonardo.com/dayspa?l=it"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.hoteltermeleonardo.com/dayspa?l=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hoteltermeleonardo.com/dayspa?l=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.hoteltermeleonardo.com/dayspa?l=fr"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hoteltermeleonardo.com/dayspa?l=de</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.hoteltermeleonardo.com/dayspa?l=it"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.hoteltermeleonardo.com/dayspa?l=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hoteltermeleonardo.com/dayspa?l=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.hoteltermeleonardo.com/dayspa?l=fr"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hoteltermeleonardo.com/dayspa?l=en</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.hoteltermeleonardo.com/dayspa?l=it"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.hoteltermeleonardo.com/dayspa?l=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hoteltermeleonardo.com/dayspa?l=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.hoteltermeleonardo.com/dayspa?l=fr"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hoteltermeleonardo.com/dayspa?l=fr</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.hoteltermeleonardo.com/dayspa?l=it"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.hoteltermeleonardo.com/dayspa?l=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hoteltermeleonardo.com/dayspa?l=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.hoteltermeleonardo.com/dayspa?l=fr"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

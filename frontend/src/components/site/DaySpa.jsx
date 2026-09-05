@@ -1,11 +1,11 @@
 import { Reveal, Label } from "./Reveal";
 import { Check } from "lucide-react";
-import { IMG, DAYSPA_URL } from "../../data";
+import { IMG, dayspaUrl } from "../../data";
 import { useLang } from "../../LanguageContext";
 import Foto from "./Foto";
 
 export default function DaySpa() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const d = t.dayspa;
   return (
     <section id="dayspa" data-testid="dayspa-section" className="py-24 md:py-32 bg-[#F9F6F0]">
@@ -58,7 +58,7 @@ export default function DaySpa() {
                 ))}
               </div>
               <p className="text-xs text-white/50 mt-5">{d.disclaimer}</p>
-              <a href={DAYSPA_URL} target="_blank" rel="noopener noreferrer" data-testid="dayspa-book-btn"
+              <a href={dayspaUrl(lang)} target="_blank" rel="noopener noreferrer" data-testid="dayspa-book-btn"
                 className="mt-7 w-full inline-flex items-center justify-center rounded-full bg-[#B08D57] text-white py-4 font-semibold hover:bg-[#E7C98B] hover:text-[#1A3626] transition-colors">{d.bookBtn}</a>
             </div>
           </Reveal>

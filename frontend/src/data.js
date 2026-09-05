@@ -53,7 +53,8 @@ export const ROOM_GALLERY = [
 /* Motore di prenotazione vecchio: resta definito come riserva, ma nessun
    pulsante del sito ci punta piu' (vedi PRENOTA_URL sotto). */
 export const BOOKING_URL = "https://www.termeleonardo.com/booking/select-dates";
-export const DAYSPA_URL = "https://www.termeleonardo.com/it/day-spa/prenotazioni";
+/* Il Day Spa si vende da noi dal 5 settembre 2026: la pagina /dayspa (repo infra), nella lingua del sito. */
+export const DAYSPA_URL = "/dayspa?l=it";
 export const SHOP_URL = "https://www.termeleonardo.com/shop";
 /* Tutti gli indirizzi rivolti all'ospite stanno sul dominio dell'hotel e sono
    serviti dalle riscritture in `vercel.json`: le pagine restano dove sono,
@@ -101,7 +102,7 @@ export const RICHIESTA_URL = (tipo, lang = "it") => {
 export const PRENOTA_URL = percorsi({
   it: "/it/prenota", de: "/de/buchen", en: "/en/book", fr: "/fr/reserver",
 });
-export const dayspaUrl = (lang = "it") => `https://www.termeleonardo.com/${lang}/day-spa/prenotazioni`;
+export const dayspaUrl = (lang = "it") => `/dayspa?l=${lang}`;
 export const COMPANY_LINE = "Hotel Terme Leonardo · Via Monteortone, 46 · 35037 Monteortone di Abano Terme (PD) · P: +39 049 9939 200 · info@termeleonardo.com · P.I. IT 02042330288 · CIN: IT028089A18QYO48ED";
 export const loginUrl = (lang = "it") => `https://www.termeleonardo.com/${lang}/login`;
 
