@@ -40,6 +40,31 @@
       "source": "/ordini",
       "destination": "/ordina",
       "permanent": false
+    },
+    {
+      "source": "/(Ordina|ORDINA)",
+      "destination": "/ordina",
+      "permanent": false
+    },
+    {
+      "source": "/(Ordini|ORDINI)",
+      "destination": "/ordina",
+      "permanent": false
+    },
+    {
+      "source": "/(Dayspa|DaySpa|DAYSPA|Day-spa|Day-Spa)",
+      "destination": "/dayspa",
+      "permanent": false
+    },
+    {
+      "source": "/(Backend|BACKEND)",
+      "destination": "/backend",
+      "permanent": false
+    },
+    {
+      "source": "/(Pos|POS)",
+      "destination": "/pos",
+      "permanent": false
     }
   ],
   "rewrites": [
@@ -221,24 +246,10 @@
     },
     {
       "source": "/ordina",
-      "has": [
-        {
-          "type": "header",
-          "key": "x-real-ip",
-          "value": "46.234.202.29"
-        }
-      ],
       "destination": "https://arrivo-terme-leonardo.vercel.app/ordina/"
     },
     {
       "source": "/ordina/:percorso*",
-      "has": [
-        {
-          "type": "header",
-          "key": "x-real-ip",
-          "value": "46.234.202.29"
-        }
-      ],
       "destination": "https://arrivo-terme-leonardo.vercel.app/ordina/:percorso*"
     },
     {
