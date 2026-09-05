@@ -4,11 +4,21 @@
   "headers": [
     {
       "source": "/pos/sw.js",
-      "headers": [{ "key": "Service-Worker-Allowed", "value": "/pos" }]
+      "headers": [
+        {
+          "key": "Service-Worker-Allowed",
+          "value": "/pos"
+        }
+      ]
     },
     {
       "source": "/(ingresso-totem|pos)",
-      "headers": [{ "key": "Cache-Control", "value": "no-cache, must-revalidate" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, must-revalidate"
+        }
+      ]
     },
     {
       "source": "/foto/(.*)",
@@ -25,6 +35,11 @@
       "source": "/buoni",
       "destination": "/backend",
       "permanent": true
+    },
+    {
+      "source": "/ordini",
+      "destination": "/ordina",
+      "permanent": false
     }
   ],
   "rewrites": [
@@ -146,7 +161,13 @@
     },
     {
       "source": "/backend",
-      "has": [{ "type": "header", "key": "x-real-ip", "value": "46.234.202.29" }],
+      "has": [
+        {
+          "type": "header",
+          "key": "x-real-ip",
+          "value": "46.234.202.29"
+        }
+      ],
       "destination": "https://arrivo-terme-leonardo.vercel.app/buoni/"
     },
     {
@@ -167,27 +188,57 @@
     },
     {
       "source": "/ingresso-totem",
-      "has": [{ "type": "header", "key": "x-real-ip", "value": "46.234.202.29" }],
+      "has": [
+        {
+          "type": "header",
+          "key": "x-real-ip",
+          "value": "46.234.202.29"
+        }
+      ],
       "destination": "https://arrivo-terme-leonardo.vercel.app/ingresso/"
     },
     {
       "source": "/pos",
-      "has": [{ "type": "header", "key": "x-real-ip", "value": "46.234.202.29" }],
+      "has": [
+        {
+          "type": "header",
+          "key": "x-real-ip",
+          "value": "46.234.202.29"
+        }
+      ],
       "destination": "https://arrivo-terme-leonardo.vercel.app/pos/"
     },
     {
       "source": "/pos/:percorso*",
-      "has": [{ "type": "header", "key": "x-real-ip", "value": "46.234.202.29" }],
+      "has": [
+        {
+          "type": "header",
+          "key": "x-real-ip",
+          "value": "46.234.202.29"
+        }
+      ],
       "destination": "https://arrivo-terme-leonardo.vercel.app/pos/:percorso*"
     },
     {
       "source": "/ordina",
-      "has": [{ "type": "header", "key": "x-real-ip", "value": "46.234.202.29" }],
+      "has": [
+        {
+          "type": "header",
+          "key": "x-real-ip",
+          "value": "46.234.202.29"
+        }
+      ],
       "destination": "https://arrivo-terme-leonardo.vercel.app/ordina/"
     },
     {
       "source": "/ordina/:percorso*",
-      "has": [{ "type": "header", "key": "x-real-ip", "value": "46.234.202.29" }],
+      "has": [
+        {
+          "type": "header",
+          "key": "x-real-ip",
+          "value": "46.234.202.29"
+        }
+      ],
       "destination": "https://arrivo-terme-leonardo.vercel.app/ordina/:percorso*"
     },
     {
