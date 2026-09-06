@@ -223,15 +223,25 @@
       "destination": "https://arrivo-terme-leonardo.vercel.app/ingresso/"
     },
     {
-      "source": "/pos/server.js",
-      "destination": "https://arrivo-terme-leonardo.vercel.app/pos/server.js"
-    },
-    {
       "source": "/cucina",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-real-ip",
+          "value": "46.234.202.29"
+        }
+      ],
       "destination": "https://arrivo-terme-leonardo.vercel.app/cucina/"
     },
     {
       "source": "/cucina/:percorso*",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-real-ip",
+          "value": "46.234.202.29"
+        }
+      ],
       "destination": "https://arrivo-terme-leonardo.vercel.app/cucina/:percorso*"
     },
     {
