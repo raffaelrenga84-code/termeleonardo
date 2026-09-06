@@ -231,7 +231,7 @@
           "value": "46.234.202.29"
         }
       ],
-      "destination": "https://arrivo-terme-leonardo.vercel.app/cucina/?k=:codice"
+      "destination": "https://arrivo-terme-leonardo.vercel.app/cucina/tv.html?k=:codice"
     },
     {
       "source": "/cucina",
