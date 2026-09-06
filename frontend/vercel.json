@@ -65,6 +65,11 @@
       "source": "/(Pos|POS)",
       "destination": "/pos",
       "permanent": false
+    },
+    {
+      "source": "/(Bacheca|BACHECA)",
+      "destination": "/bacheca",
+      "permanent": false
     }
   ],
   "rewrites": [
@@ -276,6 +281,14 @@
         }
       ],
       "destination": "https://arrivo-terme-leonardo.vercel.app/pos/:percorso*"
+    },
+    {
+      "source": "/bacheca",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/bacheca/"
+    },
+    {
+      "source": "/bacheca/:percorso*",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/bacheca/:percorso*"
     },
     {
       "source": "/ordina",
