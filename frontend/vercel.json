@@ -223,6 +223,18 @@
       "destination": "https://arrivo-terme-leonardo.vercel.app/ingresso/"
     },
     {
+      "source": "/pos/server.js",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/pos/server.js"
+    },
+    {
+      "source": "/cucina",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/cucina/"
+    },
+    {
+      "source": "/cucina/:percorso*",
+      "destination": "https://arrivo-terme-leonardo.vercel.app/cucina/:percorso*"
+    },
+    {
       "source": "/pos",
       "has": [
         {
