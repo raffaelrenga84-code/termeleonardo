@@ -223,6 +223,17 @@
       "destination": "https://arrivo-terme-leonardo.vercel.app/ingresso/"
     },
     {
+      "source": "/(tv|TV|Tv)/:codice",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-real-ip",
+          "value": "46.234.202.29"
+        }
+      ],
+      "destination": "https://arrivo-terme-leonardo.vercel.app/cucina/?k=:codice"
+    },
+    {
       "source": "/cucina",
       "has": [
         {
